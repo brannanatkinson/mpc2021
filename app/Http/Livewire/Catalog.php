@@ -10,6 +10,7 @@ class Catalog extends Component
     public function render()
     {
         return view('livewire.catalog')
-            ->withItems(Item::all());
+            ->withItems(Item::all())
+            ->layout('layouts.guest');;
     }
 }

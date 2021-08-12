@@ -14,6 +14,6 @@ class CatalogItem extends Component
     }
     public function render()
     {
-        return view('livewire.catalog-item');
+        return view('livewire.catalog-item')->layout('layouts.guest');;
     }
 }

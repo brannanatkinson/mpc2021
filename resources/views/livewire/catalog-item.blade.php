@@ -1,3 +1,4 @@
+@guest
 <div class="container mx-auto">
     <div class="text-3xl">
         {{ $CatalogItem->name }}
@@ -13,3 +14,4 @@
         </button>
     </div>
 </div>
+@endguest
