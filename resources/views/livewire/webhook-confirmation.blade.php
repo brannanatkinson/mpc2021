@@ -3,6 +3,6 @@
         <div class="text-3xl">Webhook Confirmation</div>
     </div>
     <div>
-        {{ $result['eventName'] }}
+        {{ $result['content']['items'] }}
     </div>
 </div>
