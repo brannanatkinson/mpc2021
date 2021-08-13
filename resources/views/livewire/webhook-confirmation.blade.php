@@ -3,6 +3,8 @@
         <div class="text-3xl">Webhook Confirmation</div>
     </div>
     <div>
-        {{ $result['content']['items'][0]['name'] }}
+        @foreach $result['contents'][items] as $item
+            $item['name']
+        @endforeach
     </div>
 </div>
