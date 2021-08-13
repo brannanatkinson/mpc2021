@@ -4,7 +4,7 @@
     </div>
     <div>
         @foreach ($result['content']['items'] as $item)
-            echo $item
+            {{ $item->name }}
         @endforeach
     </div>
 </div>
