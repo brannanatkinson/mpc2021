@@ -4,7 +4,7 @@
     </div>
     <div>
         @foreach ($results['content'][items] as $item)
-            $item['name']
+            test
         @endforeach
     </div>
 </div>
