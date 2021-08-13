@@ -8,10 +8,7 @@ use Livewire\Component;
 class WebhookConfirmation extends Component
 {    
     public $result;
-    public function mount()
-    {
-        $this->result = $request;
-    }
+    
 
     public function render()
     {
