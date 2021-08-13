@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 use App\Http\Livewire\Catalog;
 use App\Http\Livewire\CatalogItem;
 use App\Http\Livewire\WebhookConfirmation;
