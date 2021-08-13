@@ -11,7 +11,7 @@
     </div>
     <div class="mt-8">
         <button class="snipcart-add-item px-4 py-3 bg-indigo-700 text-white"
-            data-item-id="stock-the-pantry"
+            data-item-id="{{ $CatalogItem->name}}"
             data-item-price="{{ $CatalogItem->cost }}"
             data-item-url="/catalog/item/{{ $CatalogItem->id }}"
             data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
