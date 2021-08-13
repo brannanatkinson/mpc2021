@@ -10,7 +10,7 @@ class WebhookConfirmation extends Component
     public $publicRequest;
     public function mount(Request $request)
     {
-        $this->publicRequest = $this->$request;
+        $this->publicRequest = $request;
     }
     public function render(Request $request)
     {
