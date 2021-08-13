@@ -7,10 +7,7 @@ use Livewire\Component;
 class WebhookConfirmation extends Component
 {    
     public $result;
-    public function mount()
-    {
-        
-    }
+    
 
     public function render()
     {
