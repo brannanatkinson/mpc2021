@@ -2,12 +2,16 @@
 
 namespace App\Http\Livewire;
 
+use Illuminate\Http\Request;
 use Livewire\Component;
 
 class WebhookConfirmation extends Component
 {    
-    public $result;
-    
+    public Request $request;
+    public function mount(Request $request)
+    {
+        $this->request = $request;
+    }
 
     public function render()
     {
