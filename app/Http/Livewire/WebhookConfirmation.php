@@ -15,6 +15,6 @@ class WebhookConfirmation extends Component
 
     public function render()
     {
-        return view('livewire.webhook-confirmation');
+        return view('livewire.webhook-confirmation')->layout('layouts.guest');
     }
 }
