@@ -19,7 +19,11 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*'],
+    'allowed_origins' => [
+        '*.brannanatkinson.com',
+        '*localhost*',
+        '*.snipcart.com'
+    ],
 
     'allowed_origins_patterns' => [],
 
