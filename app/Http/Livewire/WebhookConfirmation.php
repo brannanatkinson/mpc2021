@@ -10,7 +10,7 @@ class WebhookConfirmation extends Component
     public $result;
     public function mount(Request $request)
     {
-        $this->result = $request;
+        $this->result = 'brannan';
     }
 
     public function render()
