@@ -6,6 +6,9 @@
     <div class="mt-4">
         {{ $CatalogItem->cost}}
     </div>
+    <div>
+        <img src="{{ Storage::url( $CatalogItem->img ) }}" alt="">
+    </div>
     <div class="mt-8">
         <button class="snipcart-add-item px-4 py-3 bg-indigo-700 text-white"
             data-item-id="stock-the-pantry"
