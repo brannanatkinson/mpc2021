@@ -26,6 +26,16 @@
         </div>
         <script async src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
         <div id="snipcart" data-api-key="YzI0NmM1NGUtMTM1Ny00YmQ0LWJkNzAtMGVlM2Q5MzdjNDFhNjM3Mjk5NDMxMDg0MzAwMzk2" hidden></div>
-
+        <script>
+            document.addEventListener('snipcart.ready', () => {
+              Snipcart.events.on('cart.confirmed', (cartConfirmResponse) => {
+                setTimeout(function(){
+                    var url = '/catalog';
+                    // var url = '/thankyou?order=' + cartConfirmResponse.token;
+                    window.location.href = url;
+                }, 3000);
+              });
+            });
+        </script>
     </body>
 </html>
