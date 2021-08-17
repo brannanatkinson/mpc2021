@@ -12,6 +12,7 @@ use App\Models\Host;
 class WebhookConfirmation extends Component
 {    
     public $result;
+    public $gift;
     public function mount(Request $request)
     {
         $this->result = $request->all();
@@ -36,7 +37,7 @@ class WebhookConfirmation extends Component
         foreach ( $this->result['content']['items'] as $newItem )
         {
             $itemToStore = Item::where('name', $newItem['name'])->first();
-            $gift->items()->attach( [ 'item_id' => 1 ], [ 'item_quanity' => 2 ] );
+            $this->gift->items()->attach( [ 'item_id' => 1 ], [ 'item_quanity' => 2 ] );
         }
 
     }
