@@ -18,7 +18,7 @@ class Host extends Model
 
     public function sales()
     {
-        return $this->belongsToMany(Item::class)->sum('item_quantity');
+        return $this->belongsToMany(Item::class)->withPivot(['item_quantity']);
         
     }
 }
