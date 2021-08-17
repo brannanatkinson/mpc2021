@@ -1,5 +1,8 @@
 <div>
     @foreach( $hosts as $host )
-    {{ $host->items }}
+    <h2 class="text-3xl">{{ $host-name }}</h2>
+    <div class="my-4">
+        {{ $host->items }}
+    </div>
     @endforeach
 </div>
