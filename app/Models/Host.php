@@ -16,9 +16,6 @@ class Host extends Model
         return $this->belongsToMany(Item::class);
     }
 
-    public function sales()
-    {
-       return Item::select('items.*')->get();
-    }
+    
 }
 
