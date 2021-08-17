@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Host extends Model
 {
     use HasFactory;
+    public function items()
+    {
+        return $this->belongsToMany(Item::class);
+    }
 }

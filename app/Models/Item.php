@@ -12,4 +12,9 @@ class Item extends Model
     {
         return $this->belongsToMany(Gitt::class);
     }
+
+    public function hosts()
+    {
+        return $this->belongsToMany(Host::class);
+    }
 }
