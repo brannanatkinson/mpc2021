@@ -18,7 +18,7 @@ class Host extends Model
 
     public function sales()
     {
-        return $this;
+        return $this->name;
         
     }
 }
