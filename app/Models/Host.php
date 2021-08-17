@@ -19,7 +19,7 @@ class Host extends Model
     public function sales()
     {
        return Item::select('name', DB::raw('SUM(host_item.item_quantity) as Quantity') )
-            ->join('host_item', 'hosts.id', '=', 'host_item.host_id')
+            ->join('host_item', 'id', '=', 'host_item.item_id')
             ->groupBy('name')
             ->where('host_item.host_id', '=', $this->id)
             ->get();
