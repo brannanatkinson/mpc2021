@@ -15,5 +15,14 @@ class Host extends Model
     {
         return $this->belongsToMany(Item::class)->withPivot(['item_quantity']);
     }
+    public function sales()
+    {
+        return Host::with(['items' => function($query) {
+            $query->select('items.name');
+            $query->where('id', '=', $this->id);
+        }])->get();
+    }
 }
+
+
 
