@@ -18,7 +18,13 @@ class Host extends Model
 
     public function totalSales()
     {
-        $this->items->sum('item_quantity');
+        $sales = DB::table('hosts')
+            ->join('gifts', 'hosts.id', '=', 'gifts.host_id')
+            ->select('hosts.name as host_name', DB::raw('SUM(gifts.gift_total) as sales') )
+            ->groupBy('hosts.name')
+            ->where('hosts.id', '=', $this->id )
+            ->get();
+        return $sales;
     }
 
     public function sales()
@@ -32,6 +38,7 @@ class Host extends Model
             ->get();
         return $sales;
     }
+
 }
 
 
