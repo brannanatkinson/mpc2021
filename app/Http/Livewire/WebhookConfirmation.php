@@ -4,7 +4,6 @@ namespace App\Http\Livewire;
 
 use Illuminate\Http\Request;
 use Livewire\Component;
-//use App\Models\Doner;
 use App\Models\Gift;
 use App\Models\Item;
 use App\Models\Host;
@@ -17,8 +16,8 @@ class WebhookConfirmation extends Component
         $this->result = $request->all();
 
         $donor = Donor::firstOrCreate([
-            'order_token' => $result['content']['token'],
-            'full_name' => $result['content']['billingAddressName'],
+            'order_token' => 'testtoken',
+            'full_name' => 'brannan atkinson',
         ]);
 
     }
