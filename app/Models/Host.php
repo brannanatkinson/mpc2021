@@ -23,7 +23,7 @@ class Host extends Model
             ->select('hosts.name as host_name', DB::raw('SUM(gifts.gift_total) as sales') )
             ->groupBy('hosts.name')
             ->where('hosts.id', '=', $this->id )
-            ->get();
+            ->first();
         return $sales;
     }
 
