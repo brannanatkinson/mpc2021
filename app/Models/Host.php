@@ -18,7 +18,7 @@ class Host extends Model
 
     public function sales()
     {
-       return Item::select('items.*')->join('host_item', 'items.id', '=', 'host_item.item_id')->where('host_item', 'host_item.host_id', '=', $this->id)->get();
+       return Item::select('items.*')->get();
     }
 }
 
