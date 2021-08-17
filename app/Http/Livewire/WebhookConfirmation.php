@@ -12,7 +12,7 @@ use App\Models\Host;
 class WebhookConfirmation extends Component
 {    
     public $result;
-    public Gift $gift;
+    public $gift;
     public function mount(Request $request)
     {
         $this->result = $request->all();
@@ -28,7 +28,7 @@ class WebhookConfirmation extends Component
             'postal_code' => $this->result['content']['billingAddressPostalCode'],
         ]);
 
-        $this->gift = Gift::create([
+        $gift = Gift::create([
             'order_token' => $this->result['content']['token'],
             'donor_id' => $donor->id,
             'gift_total' => $this->result['content']['finalGrandTotal']
