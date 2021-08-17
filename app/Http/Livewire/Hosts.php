@@ -11,8 +11,7 @@ class Hosts extends Component
     public function mount()
     {
         $hosts = DB::table('hosts')
-            ->join('host_item', 'hosts.id', '=', 'host_item.host_id')
-            ->select('hosts.name', 'host_item.item_quantity' )
+            ->select('hosts.name' )
             ->get();
     }
 
