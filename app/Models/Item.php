@@ -18,3 +18,4 @@ class Item extends Model
         return $this->belongsToMany(Host::class)->withPivot(['item_quantity']);
     }
 }
+
