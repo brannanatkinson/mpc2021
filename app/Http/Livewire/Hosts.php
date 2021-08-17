@@ -14,7 +14,7 @@ class Hosts extends Component
             ->join('host_item', 'hosts.id', '=', 'host_item.host_id')
             ->join('items', 'items.id', '=', 'host_item.item_id')
             ->select('hosts.name as Host Name', 'items.name as Item Name', DB::raw('SUM(host_item.item_quantity) as Quantity') )
-            ->groupBy('items.name')
+            ->groupBy('Item Name')
             ->where('hosts.id', '=', 2)
             ->get();
     }
