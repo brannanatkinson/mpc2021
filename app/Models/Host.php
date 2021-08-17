@@ -26,7 +26,7 @@ class Host extends Model
         $sales = DB::table('hosts')
             ->join('host_item', 'hosts.id', '=', 'host_item.host_id')
             ->join('items', 'items.id', '=', 'host_item.item_id')
-            ->select('items.name as item_name', DB::raw('SUM(host_item.item_quantity) as quantity') )
+            ->select('items.name as item_name', 'items.img', DB::raw('SUM(host_item.item_quantity) as quantity') )
             ->groupBy('items.name')
             ->where('hosts.id', '=', $this->id )
             ->get();
