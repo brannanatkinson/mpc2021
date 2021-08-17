@@ -1,5 +1,5 @@
 <div>
     @foreach( $hosts as $host )
-    {{ $host->items() }}
+    {{ $host->items }}
     @endforeach
 </div>
