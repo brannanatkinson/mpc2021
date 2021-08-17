@@ -16,8 +16,8 @@
             data-item-url="/catalog/item/{{ $CatalogItem->id }}"
             data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
             data-item-name="{{ $CatalogItem->name }}"
-            data-cart-custom1-name="Credit your virtual host"
-            data-cart-custom1-options="Ralphie Atkinson|Rinkle Atkinson">
+            data-item-custom1-name="Credit your virtual host"
+            data-item-custom1-options="Ralphie Atkinson|Rinkle Atkinson">
             Add to cart
         </button>
     </div>
