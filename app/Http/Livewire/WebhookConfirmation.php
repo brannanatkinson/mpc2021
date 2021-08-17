@@ -12,17 +12,16 @@ use App\Models\Host;
 class WebhookConfirmation extends Component
 {    
     public $result;
-    private Donor $donor;
-    private Gift $gift;
-    private Item $items;
+    public Donor $donor;
+    public Gift $gift;
+    public Item $items;
     public function mount(Request $request)
     {
         $this->result = $request->all();
 
         $donor = Donor::firstOrCreate([
             'order_token' => $result['content']['token'],
-            'full_name' => $result['content']['billingAddress']['fullName'],
-            'email_address' => $result['content']['email']
+            'full_name' => $result['content']['billingAddressName'],
         ]);
 
     }
