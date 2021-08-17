@@ -34,6 +34,8 @@ class WebhookConfirmation extends Component
             'gift_total' => $this->result['content']['finalGrandTotal']
         ]);
 
+        $this->gift = $gift;
+
         foreach ( $this->result['content']['items'] as $newItem )
         {
             $itemToStore = Item::where('name', $newItem['name'])->first();
