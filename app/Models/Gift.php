@@ -9,4 +9,9 @@ class Gift extends Model
 {
     use HasFactory;
     protected $fillable = ['donor_id', 'token', 'gift_total', 'host_id'];
+
+    public function items()
+    {
+        return $this->belongsToMany(Item::class);
+    }
 }
