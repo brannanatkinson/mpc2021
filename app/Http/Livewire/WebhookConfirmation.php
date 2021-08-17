@@ -29,7 +29,7 @@ class WebhookConfirmation extends Component
             'postal_code' => $this->result['content']['billingAddressPostalCode'],
         ]);
 
-        $host = Host::where('name', $this->result['content']['items'][0]['customFields'][0]['value']);
+        $host = Host::where('name', $this->result['content']['items'][0]['customFields'][0]['value'])->first();
 
         $gift = Gift::create([
             'order_token' => $this->result['content']['token'],
