@@ -13,6 +13,7 @@ class WebhookConfirmation extends Component
 {    
     public $result;
     public $gift;
+    public $host;
     public function mount(Request $request)
     {
         $this->result = $request->all();
@@ -28,11 +29,12 @@ class WebhookConfirmation extends Component
             'postal_code' => $this->result['content']['billingAddressPostalCode'],
         ]);
 
+        $this->host = $this->result['content']['items'][0]['customFields'][0]['value'];
+
         $gift = Gift::create([
             'order_token' => $this->result['content']['token'],
             'donor_id' => $donor->id,
-            'gift_total' => $this->result['content']['finalGrandTotal']
-            'host_id' => $this->result['content']['items'][0]['customFields'][0]['value']
+            'gift_total' => $this->result['content']['finalGrandTotal'],
         ]);
 
         $this->gift = $gift;
