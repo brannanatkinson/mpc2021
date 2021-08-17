@@ -1,7 +1,7 @@
 <div>
     @foreach( $hosts as $host )
     <h2 class="text-3xl">{{ $host->name }}</h2>
-    <h3>TOTAL SALES = {{ $host->totalSales() }}</h3>
+    <h3>TOTAL SALES = {{ $host->totalSales()->sales }}</h3>
     <div class="my-4">
         Total items sold - {{ $host->items->sum('pivot.item_quantity') }}<br>
         @foreach ( $host->sales() as $sale )
