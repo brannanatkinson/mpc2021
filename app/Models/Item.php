@@ -21,13 +21,7 @@ class Item extends Model
 
     public function sales()
     {
-        $sales = DB::table('items')
-            ->join('gift_item', 'items.id', '=', 'gift_item.host_id')
-            ->join('items', 'items.id', '=', 'gift_item.item_id')
-            ->select('items.name as item_name', DB::raw('SUM(gift_item.item_quantity) as quantity') )
-            ->groupBy('items.name')
-            ->where('items.id', '=', $this->id )
-            ->get();
+        $sales = DB::table('items')->get();
         return $sales;
     }
 }
