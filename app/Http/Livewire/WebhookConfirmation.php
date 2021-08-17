@@ -28,7 +28,7 @@ class WebhookConfirmation extends Component
             'postal_code' => $this->result['content']['billingAddressPostalCode'],
         ]);
 
-        $gift = Gift::create([
+        $this->gift = Gift::create([
             'order_token' => $this->result['content']['token'],
             'donor_id' => $donor->id,
             'gift_total' => $this->result['content']['finalGrandTotal']
@@ -37,7 +37,7 @@ class WebhookConfirmation extends Component
         foreach ( $this->result['content']['items'] as $newItem )
         {
             $itemToStore = Item::where('name', $newItem['name'])->first();
-            //$gift->items()->attach( [ 'item_id' => 1 ], [ 'item_quanity' => 1 ] );
+            $this->gift->items()->attach( [ 'item_id' => 1 ], [ 'item_quanity' => 1 ] );
         }
 
     }
