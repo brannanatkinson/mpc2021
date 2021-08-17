@@ -33,7 +33,7 @@ class WebhookConfirmation extends Component
             'gift_total' => $this->result['content']['finalGrandTotal']
         ]);
 
-        foreach ( $this->results['items'] as $newItem )
+        foreach ( $this->results['content']['items'] as $newItem )
         {
             $itemToStore = Item::where('name', $newItem['name']);
             $gift->items()->attach( ['item_id' => $itemToStore->id], ['item_quanity' => $itemToStore['quantity']] );
