@@ -5,7 +5,7 @@
         Total items sold - {{ $host->items->sum('pivot.item_quantity') }}<br>
         @foreach ( $host->sales() as $sale )
             {{ $sale->item_name }} - {{ $sale->quantity }}<br>
-            {{ $sale }}
+            {{ $sale->img }}
         @endforeach
     </div>
     @endforeach
