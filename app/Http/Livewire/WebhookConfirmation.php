@@ -23,7 +23,7 @@ class WebhookConfirmation extends Component
             'address' => $this->result['content']['billingAddressAddress1'],
             'address_2' => $this->result['content']['billingAddressAddress2'],
             'city' => $this->result['content']['billingAddressCity'],
-            'state' => $this->result['content']['billingAddressState'],
+            'state' => $this->result['content']['billingAddressProvince'],
             'postal_code' => $this->result['content']['billingAddressPostalCode'],
         ]);
 
