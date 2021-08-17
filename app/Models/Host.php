@@ -18,7 +18,7 @@ class Host extends Model
 
     public function sales()
     {
-        return $this->belongsToMany(Item::class, 'host_item')->sum('host_item.quantity');
+        return $this->belongsToMany(Item::class, 'host_item')->sum('item_quantity');
         
     }
 }
