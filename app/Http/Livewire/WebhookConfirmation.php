@@ -32,6 +32,7 @@ class WebhookConfirmation extends Component
             'order_token' => $this->result['content']['token'],
             'donor_id' => $donor->id,
             'gift_total' => $this->result['content']['finalGrandTotal']
+            'host_id' => $this->result['content']['items'][0]['customFields'][0]['value']
         ]);
 
         $this->gift = $gift;
