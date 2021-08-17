@@ -15,6 +15,12 @@ class Host extends Model
     {
         return $this->belongsToMany(Item::class)->withPivot(['item_quantity']);
     }
+
+    public function totalSales()
+    {
+        $this->items->pivot->sum('item_quantity');
+    }
+
     public function sales()
     {
         $sales = DB::table('hosts')
