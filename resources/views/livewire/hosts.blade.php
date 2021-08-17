@@ -1,0 +1,3 @@
+<div>
+    {{ dd($hosts) }}
+</div>
