@@ -3,7 +3,7 @@
     <h2 class="text-3xl">{{ $host->name }}</h2>
     <div class="my-4">
         @foreach ( $host->items as $item )
-        {{ $item->pivot->item_quantity }}
+        {{ $item->pivot->sum('item_quantity') }}
         @endforeach
     </div>
     @endforeach
