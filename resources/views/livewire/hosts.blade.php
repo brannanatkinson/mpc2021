@@ -3,7 +3,7 @@
     <h2 class="text-3xl">{{ $host->name }}</h2>
     <div class="my-4">
         @foreach ( $host->sales() as $sale )
-            {{ $sale->all() }}
+            {{ $sale }}
         @endforeach
     </div>
     @endforeach
