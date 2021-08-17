@@ -22,7 +22,7 @@ class WebhookConfirmation extends Component
         $donor = Donor::firstOrCreate([
             'order_token' => $result['content']['token'],
             'full_name' => $result['content']['billingAddress']['fullName']
-        ])
+        ]);
 
     }
 

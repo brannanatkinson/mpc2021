@@ -20,11 +20,11 @@ class CreateDonorsTable extends Migration
             $table->string('email_address');
             $table->string('order_token');
             $table->integer('gift_id')->nullable();
-            $table->string('address');
-            $table->string('address_2');
-            $table->string('city');
-            $table->string('state');
-            $table->string('postal_code');
+            $table->string('address')->nullable();
+            $table->string('address_2')->nullable();
+            $table->string('city')->nullable();
+            $table->string('state')->nullable();
+            $table->string('postal_code')->nullable();
         });
     }
 
