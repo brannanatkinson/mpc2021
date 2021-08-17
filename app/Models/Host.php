@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
-use App\Models\Items;
+use App\Models\Item;
 
 
 class Host extends Model
@@ -18,7 +18,7 @@ class Host extends Model
 
     public function sales()
     {
-       return Iteam::select('name', DB::raw('SUM(host_item.item_quantity) as Quantity') )
+       return Item::select('name', DB::raw('SUM(host_item.item_quantity) as Quantity') )
             ->join('host_item', 'hosts.id', '=', 'host_item.host_id')
             ->join('items', 'items.id', '=', 'host_item.item_id')
             ->groupBy('name')
