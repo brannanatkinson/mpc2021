@@ -3,7 +3,6 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-use Illuminate\Support\Facades\DB;
 use App\Models\Host;
 
 class Hosts extends Component
