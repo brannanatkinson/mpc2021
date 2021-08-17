@@ -18,7 +18,7 @@ class Host extends Model
 
     public function sales()
     {
-        $sales = Item::with('host')->whereId($this->id)->get();
+        $sales = Item::with('hosts')->whereId($this->id)->get();
         return $sales;
     }
 }
