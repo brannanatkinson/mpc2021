@@ -5,7 +5,7 @@
         Total items sold - {{ $host->items->sum('pivot.item_quantity') }}<br>
         @foreach ( $host->sales() as $sale )
             {{ $sale->item_name }} - {{ $sale->quantity }}<br>
-            {{ App\Models\Item::where('name', '=', $sale->item_name )->first() }}
+            {{ App\Models\Item::where('name', '=', $sale->item_name )->first() }}<br>
         @endforeach
     </div>
     @endforeach
