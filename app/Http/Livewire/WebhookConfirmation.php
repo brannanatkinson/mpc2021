@@ -27,6 +27,12 @@ class WebhookConfirmation extends Component
             'postal_code' => $this->result['content']['billingAddressPostalCode'],
         ]);
 
+        $gift = Gift::create([
+            'order_token' => $this->result['content']['token'],
+            'donor_id' => $donor->id,
+            'gift_total' => $this->result['content']['finalGrandTotal']
+        ]);
+
     }
 
     public function render()
