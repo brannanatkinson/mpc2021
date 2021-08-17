@@ -12,9 +12,6 @@ use App\Models\Host;
 class WebhookConfirmation extends Component
 {    
     public $result;
-    public Donor $donor;
-    public Gift $gift;
-    public Item $items;
     public function mount(Request $request)
     {
         $this->result = $request->all();
