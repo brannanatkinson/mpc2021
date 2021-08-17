@@ -3,7 +3,7 @@
     <h2 class="text-3xl">{{ $host->name }}</h2>
     <div class="my-4">
         
-        {{ $host->items->unique() }}
+        {{ $host->items->unique()->sum('item_quantity') }}
         
     </div>
     @endforeach
