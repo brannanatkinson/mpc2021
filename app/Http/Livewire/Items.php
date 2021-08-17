@@ -3,7 +3,7 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-use App\Models\Host;
+use App\Models\Item;
 
 class Items extends Component
 {
