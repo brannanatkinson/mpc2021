@@ -19,7 +19,7 @@ class Host extends Model
     {
         return Host::with(['items' => function($query) {
             $query->select('items.name');
-            $query->where('host_item.host_id', '=', $this->id);
+            $query->where('host_item.host_id', '=', $this->id());
         }])->get();
     }
 }
