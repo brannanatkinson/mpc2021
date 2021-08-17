@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Illuminate\Http\Request;
 use Livewire\Component;
+use App\Models\Donor;
 use App\Models\Gift;
 use App\Models\Item;
 use App\Models\Host;
