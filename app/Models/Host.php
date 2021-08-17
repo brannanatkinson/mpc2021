@@ -18,8 +18,8 @@ class Host extends Model
 
     public function sales()
     {
-        $sales = Item::with('hosts')->get();
-        return $sales;
+        return $this;
+        
     }
 }
 
