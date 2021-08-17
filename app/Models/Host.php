@@ -13,7 +13,7 @@ class Host extends Model
     use HasFactory;
     public function items()
     {
-        return $this->belongsToMany(Item::class)->withPivot(['item_quantity']);;
+        return $this->belongsToMany(Item::class)->withPivot(['item_quantity']);
     }
 }
 
