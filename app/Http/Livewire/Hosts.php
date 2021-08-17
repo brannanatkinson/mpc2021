@@ -12,7 +12,8 @@ class Hosts extends Component
     {
         $this->hosts = DB::table('hosts')
             ->join('host_item', 'hosts.id', '=', 'host_item.host_id')
-            ->select('hosts.name', 'host_item.item_quantity' )
+            ->join('items', 'items.id', '=', 'host_item.item_id')
+            ->select('hosts.name', 'items.name', 'host_item.item_quantity' )
             ->get();
     }
 
