@@ -10,8 +10,8 @@ class Hosts extends Component
     public $hosts;
     public function mount()
     {
-        $hosts = DB::table('hosts')
-            ->select('name' )
+        $this->$hosts = DB::table('hosts')
+            ->select('name')
             ->get();
     }
 
