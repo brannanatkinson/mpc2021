@@ -18,7 +18,7 @@ class Host extends Model
 
     public function totalSales()
     {
-        $this->items->pivot->sum('item_quantity');
+        $this->items->sum('item_quantity');
     }
 
     public function sales()
