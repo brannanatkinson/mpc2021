@@ -10,7 +10,7 @@ class Hosts extends Component
     public $hosts;
     public function mount()
     {
-        $this->hosts = Host::all();
+        $this->hosts = Host::with('items')->get();
     }
 
 
