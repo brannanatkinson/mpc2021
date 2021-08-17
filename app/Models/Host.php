@@ -18,7 +18,7 @@ class Host extends Model
 
     public function sales()
     {
-        return $this->belongsToMany('Hosts', 'host_item')->sum('quantity');
+        return $this->belongsToMany('Host', 'host_item')->sum('quantity');
         
     }
 }
