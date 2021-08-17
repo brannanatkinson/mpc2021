@@ -18,7 +18,7 @@ class WebhookConfirmation extends Component
         $this->result = $request->all();
 
         $donor = Donor::create([
-            'token' => $this->result['content']['token'],
+            'order_token' => $this->result['content']['token'],
             'full_name' => $this->result['content']['billingAddressName'],
             'email_address' => $this->result['content']['email'],
             'address' => $this->result['content']['billingAddressAddress1'],

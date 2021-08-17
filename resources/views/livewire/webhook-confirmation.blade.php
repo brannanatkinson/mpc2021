@@ -4,6 +4,5 @@
     </div>
     <div>
 
-        {{ $gift }}
     </div>
 </div>
