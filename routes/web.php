@@ -27,7 +27,7 @@ Route::get('/catalog', Catalog::class)->name('catalog');
 Route::get('/catalog/item/{id}', CatalogItem::class);
 Route::post('/webhook', WebhookConfirmation::class);
 Route::get('/hosts', Hosts::class);
-Route::get('/items', Hosts::class);
+Route::get('/items', Items::class);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
