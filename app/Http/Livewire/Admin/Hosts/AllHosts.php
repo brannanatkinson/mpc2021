@@ -34,7 +34,7 @@ class AllHosts extends Component
         $this->name = null;
         $this->email_address = null;
     }
-    public function store()
+    public function makestore()
     {
         $this->newmessage = 'done';
         // $this->validate();
