@@ -1200,6 +1200,9 @@ select {
 .mb-8 {
 	margin-bottom: 2rem;
 }
+.mt-12 {
+	margin-top: 3rem;
+}
 .block {
 	display: block;
 }

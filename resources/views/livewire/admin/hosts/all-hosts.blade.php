@@ -14,5 +14,13 @@
         </div> <!-- end card  -->
         @endforeach
     </div> <!-- end grid  -->
+
+    <div class="mt-12">
+        @if($updateMode)
+            @include('livewire.admin.hosts.update')
+        @else
+            @include('livewire.admin.hosts.create-host')
+        @endif
+    </div>
     
 </div>

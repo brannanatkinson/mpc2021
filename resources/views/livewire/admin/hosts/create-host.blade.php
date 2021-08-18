@@ -1,0 +1,11 @@
+<div>
+    <div class="">
+        <label for="">Enter Name</label>
+        <input type="text" wire:model="name" class="form-control input-sm"  placeholder="Name">
+    </div>
+    <div class="">
+        <label>Enter Email</label>
+        <input type="email" class="form-control input-sm" placeholder="Enter email" wire:model="email">
+    </div>
+    <button wire:click="store()" class="btn btn-primary">Submit</button>
+</div>
