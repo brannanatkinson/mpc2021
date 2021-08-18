@@ -18,7 +18,7 @@
         @livewireStyles
 
         <!-- Scripts -->
-        <script src="{{ mix('js/app.js') }}" defer></script>
+        <script src="{{ mix('js/app.js') }}"></script>
         <link rel="preconnect" href="https://app.snipcart.com">
         <link rel="preconnect" href="https://cdn.snipcart.com">
     </head>
