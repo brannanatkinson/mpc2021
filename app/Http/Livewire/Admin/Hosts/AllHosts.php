@@ -36,9 +36,10 @@ class AllHosts extends Component
     }
     public function store()
     {
+        $this->message = 'done';
         $this->validate();
 
-        $this->message = 'done';
+        
 
         Host::create([
             'name' => $this->name,
