@@ -33,7 +33,7 @@ class AllHosts extends Component
             'name' => 'required|min:5',
             'email_address' => 'required|email'
         ]);
-        Host::create([
+        $newHost = Host::create([
             'name' => $this->name,
             'email_address' => $this->email_address
         ]);
