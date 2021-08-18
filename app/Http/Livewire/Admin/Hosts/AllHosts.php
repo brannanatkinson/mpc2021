@@ -12,12 +12,12 @@ class AllHosts extends Component
 {
     public $hosts;
     public $name;
-    public $email_address;
+    public $email;
     public $updateMode = false;
 
     protected $rules = [
         'name' => 'required|min:6',
-        'email_address' => 'required|email',
+        'email' => 'required|email',
     ];
 
 
@@ -34,14 +34,14 @@ class AllHosts extends Component
     private function resetInput()
     {
         $this->name = null;
-        $this->email_address = null;
+        $this->email = null;
     }
     public function store()
     {
         $this->validate();
         $newHost = User::create([
             'name' => $this->name,
-            'email_address' => $this->email_address,
+            'email' => $this->email,
             'password' => Hash::make('password')
         ]);
         $newHost->givePermissionTo('edit host');

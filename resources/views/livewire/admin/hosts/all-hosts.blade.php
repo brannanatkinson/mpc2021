@@ -38,7 +38,7 @@
                 </div>
                 <div class="form-group">
                     <label>Enter Email</label>
-                    <input type="email" class="form-control input-sm" placeholder="Enter email" wire:model="email_address">
+                    <input type="email" class="form-control input-sm" placeholder="Enter email" wire:model="email">
                 </div>
                 <div>
                     <button type="submit" class="btn btn-primary">Submit</button>
