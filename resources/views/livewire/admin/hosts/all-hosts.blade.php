@@ -35,7 +35,7 @@
                 <div class="grid grid-cols-2">
                     <div class="">
                         <label for="">Enter Name</label>
-                        <input type="text" wire:model="form_name" class="form-control input-sm"  placeholder="Name">
+                        <input type="text" wire:model="form_name" class="form-control input-sm"  placeholder="Name" value="{{ $form_name }}">
                     </div>
                     <div class="">
                         <label>Enter Email</label>
