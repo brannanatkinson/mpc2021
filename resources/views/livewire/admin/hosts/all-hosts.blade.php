@@ -33,16 +33,6 @@
             <div>{{ $newmessage }}</div>
             <form wire:submit.prevent="store">
                 @csrf
-                <div class="grid grid-cols-2">
-                    <div class="">
-                        <label for="">Enter Name</label>
-                        <input type="text" wire:model="name" placeholder="Name">
-                        @error('name') <span class="error">{{ $message }}</span> @enderror
-                    </div>
-                    <div class="">
-                        <label>Enter Email</label>
-                        <input type="email" class="form-control input-sm" placeholder="Enter email" wire:model="email_address">
-                    </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </form>
