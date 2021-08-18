@@ -1197,6 +1197,9 @@ select {
 .-mt-px {
 	margin-top: -1px;
 }
+.mb-8 {
+	margin-bottom: 2rem;
+}
 .block {
 	display: block;
 }
@@ -1684,11 +1687,18 @@ select {
 	font-size: 1.875rem;
 	line-height: 2.25rem;
 }
+.text-4xl {
+	font-size: 2.25rem;
+	line-height: 2.5rem;
+}
 .font-medium {
 	font-weight: 500;
 }
 .font-semibold {
 	font-weight: 600;
+}
+.font-bold {
+	font-weight: 700;
 }
 .uppercase {
 	text-transform: uppercase;
@@ -2279,6 +2289,10 @@ select {
 
 	.lg\:col-span-4 {
 		grid-column: span 4 / span 4;
+	}
+
+	.lg\:grid-cols-3 {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 
 	.lg\:px-8 {
