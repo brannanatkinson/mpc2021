@@ -31,7 +31,7 @@
         <div class="mb-4 text-3xl">Create a new hosts</div>
         <div>
             <div>{{ $form_name }}</div>
-            <form wire:submit.prevent="what">
+            <form wire:submit.prevent="store">
                 <div class="grid grid-cols-2">
                     <div class="">
                         <label for="">Enter Name</label>
