@@ -30,7 +30,7 @@
         @endif
         <div class="mb-4 text-3xl">Create a new host</div>
         <div>
-            <div>{{ $message }}</div>
+            <div>{{ $newmessage }}</div>
             <form wire:submit.prevent="store">
                 @csrf
                 <div class="grid grid-cols-2">
