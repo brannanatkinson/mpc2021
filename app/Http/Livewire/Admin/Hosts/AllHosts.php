@@ -20,4 +20,22 @@ class AllHosts extends Component
     {
         return view('livewire.admin.hosts.all-hosts')->layout('layouts.guest');
     }
+
+    private function resetInput()
+    {
+        $this->name = null;
+        $this->email_address = null;
+    }
+    public function store()
+    {
+        $this->validate([
+            'name' => 'required|min:5',
+            'email_address' => 'required|email:rfc,dns'
+        ]);
+        Host::create([
+            'name' => $this->name,
+            'email_address' => $this->email_address
+        ]);
+        $this->resetInput();
+    }
 }
