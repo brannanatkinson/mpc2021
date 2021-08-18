@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css" />
         <link rel="preconnect" href="https://app.snipcart.com">
         <link rel="preconnect" href="https://cdn.snipcart.com">
-
+        @livewireStyles
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
@@ -24,6 +24,7 @@
         <div class="font-sans text-gray-900 antialiased">
             {{ $slot }}
         </div>
+        @livewireStyles
         <script async src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
         <div id="snipcart" data-api-key="YzI0NmM1NGUtMTM1Ny00YmQ0LWJkNzAtMGVlM2Q5MzdjNDFhNjM3Mjk5NDMxMDg0MzAwMzk2" hidden></div>
         <script>
