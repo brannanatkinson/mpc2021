@@ -16,7 +16,7 @@
     </div> <!-- end grid  -->
 
     <div class="mt-16">
-        
+
         @if (count($errors) > 0)
             <div class="alert alert-danger">
                 <a href="#" class="close" data-dismiss="alert">&times;</a>
@@ -30,16 +30,16 @@
         @endif
         <div class="mb-4 text-3xl">Create a new hosts</div>
         <div>
-            <div>{{ $name }}</div>
+            <div>{{ $form_name }}</div>
             <form wire:submit.prevent="what">
                 <div class="grid grid-cols-2">
                     <div class="">
                         <label for="">Enter Name</label>
-                        <input type="text" wire:model="name" class="form-control input-sm"  placeholder="Name">
+                        <input type="text" wire:model="form_name" class="form-control input-sm"  placeholder="Name">
                     </div>
                     <div class="">
                         <label>Enter Email</label>
-                        <input type="email" class="form-control input-sm" placeholder="Enter email" wire:model="email_address">
+                        <input type="email" class="form-control input-sm" placeholder="Enter email" wire:model="form_email_address">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>

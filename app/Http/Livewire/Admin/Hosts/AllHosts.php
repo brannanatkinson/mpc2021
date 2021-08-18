@@ -8,8 +8,8 @@ use App\Models\Host;
 class AllHosts extends Component
 {
     public $hosts;
-    public $name = 'brannan';
-    public $email_address;
+    public $form_name = 'brannan';
+    public $form_email_address;
     public $updateMode = false;
 
     public function mount()
