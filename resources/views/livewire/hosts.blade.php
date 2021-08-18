@@ -1,4 +1,4 @@
-<div>
+<div class="container">
     <div class="mb-8 text-4xl text-center">All Housing Hope 2021 Hosts</div>
     <div class="grid grid-cols-1 lg:grid-cols-3">
          @foreach( $hosts as $host )
