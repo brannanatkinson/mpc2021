@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Admin\Hosts;
 
 use Livewire\Component;
 use App\Models\Host;
 
-class Hosts extends Component
+class AllHosts extends Component
 {
     public $hosts;
     public function mount()
@@ -16,6 +16,6 @@ class Hosts extends Component
 
     public function render()
     {
-        return view('livewire.hosts')->layout('layouts.guest');
+        return view('livewire.admin.hosts.all-hosts')->layout('layouts.guest');
     }
 }
