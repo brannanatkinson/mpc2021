@@ -7,5 +7,5 @@
         <label>Enter Email</label>
         <input type="email" class="form-control input-sm" placeholder="Enter email" wire:model="email_address">
     </div>
-    <button wire:click="store()" class="btn btn-primary">Submit</button>
+    <button wire:click="store" class="btn btn-primary">Submit</button>
 </div>
