@@ -7,7 +7,7 @@
             <h2 class="mb-6 text-3xl text-center">{{ $host->name }}</h2>
             <h3 class="mb-4 text-2xl font-bold text-center">${{ $host->totalDonationAmount()->sales }}</h3>
             @php
-                $hostId = App\Models\Host::where('name', '=', $host->name)-first()->id 
+                $hostId = App\Models\Host::where('name', '=', $host->name)->first()->id 
             @endphp
             <h3 class="mb-4 text-xl text-center">{{ App\Models\Gift::where('host_id', '=', $hostId )->count() }} Gifts</h3>
             <h3 class="mb-4 text-xl text-center">{{ $host->items->sum('pivot.item_quantity') }} Items</h3>
