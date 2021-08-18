@@ -38,12 +38,12 @@ class AllHosts extends Component
     public function store()
     {
         $this->validate();
-        // $newHost = User::create([
-        //     'name' => $this->name,
-        //     'email_address' => $this->email_address,
-        //     'password' => Hash::make('password')
-        // ]);
-        // $newHost->givePermissionTo('edit host');
+        $newHost = User::create([
+            'name' => $this->name,
+            'email_address' => $this->email_address,
+            'password' => Hash::make('password')
+        ]);
+        $newHost->givePermissionTo('edit host');
         $this->resetInput();
     }
 }
