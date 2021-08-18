@@ -16,7 +16,7 @@ class Host extends Model
         return $this->belongsToMany(Item::class)->withPivot(['item_quantity']);
     }
 
-    public function totalSales()
+    public function totalDonationAmount()
     {
         $sales = DB::table('hosts')
             ->join('gifts', 'hosts.id', '=', 'gifts.host_id')
@@ -27,7 +27,7 @@ class Host extends Model
         return $sales;
     }
 
-    public function sales()
+    public function donatedItems()
     {
         $sales = DB::table('hosts')
             ->join('host_item', 'hosts.id', '=', 'host_item.host_id')

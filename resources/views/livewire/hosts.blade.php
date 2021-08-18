@@ -1,13 +1,13 @@
 <div>
-    @foreach( $hosts as $host )
-    <h2 class="text-3xl">{{ $host->name }}</h2>
-    <h3>TOTAL SALES = {{ $host->totalSales()->sales }}</h3>
-    <div class="my-4">
-        Total items sold - {{ $host->items->sum('pivot.item_quantity') }}<br>
-        @foreach ( $host->sales() as $sale )
-            {{ $sale->item_name }} - {{ $sale->quantity }}<br>
-            {{ App\Models\Item::where('name', '=', $sale->item_name )->first() }}<br>
+    <div class="mb-8 text-4xl text-center">All Housing Hope 2021 Hosts</div>
+    <div class="grid grid-cols-1 lg:grid-cols-3">
+         @foreach( $hosts as $host )
+        <div class="p-6 bg-white rounded-md">
+            <h2 class="mb-6 text-3xl text-center">{{ $host->name }}</h2>
+            <h3 class="mb-4 text-2xl font-bold text-center">${{ $host->totalDonationAmount()->sales }}</h3>
+            <h3 class="mb-4 text-2xl font-bold text-center">{{ $host->items->sum('pivot.item_quantity') }} Items</h3>
+        </div> <!-- end card  -->
         @endforeach
-    </div>
-    @endforeach
+    </div> <!-- end grid  -->
+    
 </div>
