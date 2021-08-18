@@ -32,6 +32,7 @@
         <div>
             <div>{{ $form_name }}</div>
             <form wire:submit.prevent="store">
+                @csrf
                 <div class="grid grid-cols-2">
                     <div class="">
                         <label for="">Enter Name</label>
