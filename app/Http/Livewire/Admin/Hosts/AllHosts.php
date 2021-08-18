@@ -41,7 +41,7 @@ class AllHosts extends Component
         $newHost = User::create([
             'name' => $this->name,
             'email_address' => $this->email_address,
-            'password' = Hash::make('password')
+            'password' => Hash::make('password')
         ]);
         $newHost->givePermissionTo('edit host');
         $this->resetInput();
