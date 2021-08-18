@@ -10,7 +10,7 @@ class AllHosts extends Component
     public $hosts;
     public $name = 'brannan';
     public $email_address;
-    public $newmessage;
+    public $newmessage = 'test';
     public $updateMode = false;
 
     protected $rules = [
@@ -34,7 +34,7 @@ class AllHosts extends Component
         $this->name = null;
         $this->email_address = null;
     }
-    public function makestore()
+    public function store()
     {
         $this->newmessage = 'done';
         // $this->validate();
