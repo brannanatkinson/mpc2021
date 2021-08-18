@@ -15,7 +15,7 @@ class AllHosts extends Component
 
     protected $rules = [
         'name' => 'required|min:6',
-        'email' => 'required|email',
+        'email_address' => 'required|email',
     ];
 
 
