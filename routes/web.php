@@ -6,6 +6,7 @@ use App\Http\Livewire\Catalog;
 use App\Http\Livewire\CatalogItem;
 use App\Http\Livewire\WebhookConfirmation;
 use App\Http\Livewire\Admin\Hosts\AllHosts;
+use App\Http\Livewire\Admin\Dashboard;
 use App\Http\Livewire\Items;
 
 /*
@@ -29,6 +30,4 @@ Route::post('/webhook', WebhookConfirmation::class);
 Route::get('/hosts', AllHosts::class)->middleware(['auth:sanctum', 'verified', 'can:admin']);
 Route::get('/items', Items::class)->middleware(['auth:sanctum', 'verified', 'can:admin']);
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::get('/dashboard', Dashboard::class)->middleware(['auth:sanctum', 'verified'])->name('dashboard');
