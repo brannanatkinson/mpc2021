@@ -31,7 +31,7 @@
         <div class="mb-4 text-3xl">Create a new host</div>
         <div>
             <div>{{ $newmessage }}</div>
-            <form wire:submit.prevent="makestore()">
+            <form wire:submit.prevent="makestore">
                 @csrf
                 <div>
                     <button type="submit" class="btn btn-primary">Submit</button>
