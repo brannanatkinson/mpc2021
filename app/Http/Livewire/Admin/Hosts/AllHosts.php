@@ -10,7 +10,7 @@ class AllHosts extends Component
     public $hosts;
     public $name = 'brannan';
     public $email_address;
-    public $newmessage;
+    public $newmessage = 'test';
     public $updateMode = false;
 
     protected $rules = [
@@ -36,7 +36,7 @@ class AllHosts extends Component
     }
     public function store()
     {
-        console.log('done');
+        $this->newmessage = 'done';
         // $this->validate();
 
         
