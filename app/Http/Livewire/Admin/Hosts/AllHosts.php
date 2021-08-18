@@ -10,7 +10,7 @@ class AllHosts extends Component
     public $hosts;
     public $name = 'brannan';
     public $email_address;
-    public $message;
+    public $message = 'test';
     public $updateMode = false;
 
     protected $rules = [
