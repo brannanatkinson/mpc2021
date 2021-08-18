@@ -30,7 +30,7 @@ class AllHosts extends Component
     {
         $this->validate([
             'name' => 'required|min:5',
-            'email_address' => 'required'
+            'email_address' => 'required|email'
         ]);
         Host::create([
             'name' => $this->name,
