@@ -30,11 +30,20 @@
         @endif
         <div class="mb-4 text-3xl">Create a new host</div>
         <div>
-            @if( $newmessage )
             <div>{{ $newmessage }}</div>
-            @endif
             <form wire:submit.prevent="store">
-                <button type="submit">Save Contact</button>
+                @csrf
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Enter Name</label>
+                    <input type="text" wire:model="name" class="form-control input-sm"  placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label>Enter Email</label>
+                    <input type="email" class="form-control input-sm" placeholder="Enter email" wire:model="email_address">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
             </form>
         </div>
     </div>
