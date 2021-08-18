@@ -9,7 +9,6 @@
             @php
                 $hostId = App\Models\Host::where('name', '=', $host->name)->id 
             @endphp
-            <h3 class="mb-4 text-xl text-center">{{ App\Models\Gift::where('host_id', '=', $hostId )->count() }} Gifts</h3>
             <h3 class="mb-4 text-xl text-center">{{ $host->items->sum('pivot.item_quantity') }} Items</h3>
         </div> <!-- end card  -->
         @endforeach
