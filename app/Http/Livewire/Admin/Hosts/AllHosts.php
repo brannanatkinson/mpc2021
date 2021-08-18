@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Admin\Hosts;
 
 use Livewire\Component;
 use App\Models\Host;
+use App\Models\User;
 
 class AllHosts extends Component
 {
@@ -37,12 +38,12 @@ class AllHosts extends Component
     public function store()
     {
         $this->validate();
-
-
-        Host::create([
+        $newHost = User::create([
             'name' => $this->name,
-            'email_address' => $this->email_address
+            'email_address' => $this->email_address,
+            'password' = Hash::make('password')
         ]);
+        $newHost->givePermissionTo('edit host');
         $this->resetInput();
     }
 }
