@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
-use App\Http\Livewire\Catalog\Catalog;
+use App\Http\Livewire\Store\Catalog;
 use App\Http\Livewire\CatalogItem;
 use App\Http\Livewire\WebhookConfirmation;
 use App\Http\Livewire\Hosts;
