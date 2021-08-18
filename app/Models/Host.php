@@ -11,6 +11,8 @@ use App\Models\Item;
 class Host extends Model
 {
     use HasFactory;
+    protected $fillable = ['name', 'email_address'];
+
     public function items()
     {
         return $this->belongsToMany(Item::class)->withPivot(['item_quantity']);
