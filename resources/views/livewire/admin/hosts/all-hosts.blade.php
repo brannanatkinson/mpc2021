@@ -15,7 +15,8 @@
         @endforeach
     </div> <!-- end grid  -->
 
-    <div class="mt-12">
+    <div class="mt-16">
+        <div class="mb-4 text-3xl">Create a new hosts</div>
         @if($updateMode)
             @include('livewire.admin.hosts.update')
         @else

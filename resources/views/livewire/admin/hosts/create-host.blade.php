@@ -1,4 +1,4 @@
-<div>
+<div class="grid grid-cols-2">
     <div class="">
         <label for="">Enter Name</label>
         <input type="text" wire:model="name" class="form-control input-sm"  placeholder="Name">
