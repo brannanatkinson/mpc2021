@@ -36,7 +36,7 @@ class AllHosts extends Component
     }
     public function store()
     {
-        $this->newmessage = 'done';
+        console.log('done');
         // $this->validate();
 
         
