@@ -1,3 +1,5 @@
+<div>
+<form wire:submit.prevent="store">
 <div class="grid grid-cols-2">
     <div class="">
         <label for="">Enter Name</label>
@@ -7,5 +9,7 @@
         <label>Enter Email</label>
         <input type="email" class="form-control input-sm" placeholder="Enter email" wire:model="email_address">
     </div>
-    <button wire:click="store" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+</form>
 </div>
