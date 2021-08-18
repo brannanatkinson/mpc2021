@@ -28,7 +28,7 @@
                 </ul>
             </div>
         @endif
-        <div class="mb-4 text-3xl">Create a new hosts</div>
+        <div class="mb-4 text-3xl">Create a new host</div>
         <div>
             <div>{{ $form_name }}</div>
             <form wire:submit.prevent="store">
