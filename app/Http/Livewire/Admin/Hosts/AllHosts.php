@@ -45,6 +45,6 @@ class AllHosts extends Component
         //     'name' => $this->name,
         //     'email_address' => $this->email_address
         // ]);
-        // $this->resetInput();
+        $this->resetInput();
     }
 }
