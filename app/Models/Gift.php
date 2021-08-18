@@ -14,4 +14,9 @@ class Gift extends Model
     {
         return $this->belongsToMany(Item::class);
     }
+
+    public function totalDonations()
+    {
+        return $this->withSum('gift_total');
+    }
 }
