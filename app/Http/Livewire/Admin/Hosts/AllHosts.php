@@ -37,14 +37,14 @@ class AllHosts extends Component
     public function store()
     {
         $this->message = 'done';
-        $this->validate();
+        // $this->validate();
 
         
 
-        Host::create([
-            'name' => $this->name,
-            'email_address' => $this->email_address
-        ]);
-        $this->resetInput();
+        // Host::create([
+        //     'name' => $this->name,
+        //     'email_address' => $this->email_address
+        // ]);
+        // $this->resetInput();
     }
 }
