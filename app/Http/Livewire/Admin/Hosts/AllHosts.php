@@ -5,13 +5,13 @@ namespace App\Http\Livewire\Admin\Hosts;
 use Livewire\Component;
 use App\Models\Host;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+
 
 class AllHosts extends Component
 {
     public $hosts;
-    public $name = 'brannan';
     public $email_address;
-    public $newmessage = 'test';
     public $updateMode = false;
 
     protected $rules = [
