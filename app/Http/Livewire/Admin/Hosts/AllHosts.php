@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Hash;
 class AllHosts extends Component
 {
     public $hosts;
+    public $name;
     public $email_address;
     public $updateMode = false;
 
