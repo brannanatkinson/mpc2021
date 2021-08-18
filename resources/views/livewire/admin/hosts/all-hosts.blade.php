@@ -16,7 +16,7 @@
     </div> <!-- end grid  -->
 
     <div class="mt-16">
-        <div>{{ $name }}</div>
+        
         @if (count($errors) > 0)
             <div class="alert alert-danger">
                 <a href="#" class="close" data-dismiss="alert">&times;</a>

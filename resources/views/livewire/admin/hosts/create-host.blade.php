@@ -1,4 +1,5 @@
 <div>
+    <div>{{ $name }}</div>
     <form wire:submit.prevent="what">
         <div class="grid grid-cols-2">
             <div class="">
