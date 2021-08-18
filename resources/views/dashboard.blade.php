@@ -6,7 +6,7 @@
     </x-slot>
     <div class="py-8">
         @auth
-                <div>userID {{ auth()->user->id }}</div>
+                <div>userID {{ auth()->user()->id }}</div>
                 @endauth
     </div>
 
