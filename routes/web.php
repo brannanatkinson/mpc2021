@@ -26,7 +26,7 @@ Route::get('/', function () {
 Route::get('/catalog', Catalog::class)->name('catalog');
 Route::get('/catalog/item/{id}', CatalogItem::class);
 Route::post('/webhook', WebhookConfirmation::class);
-Route::get('/hosts', AllHosts::class)->middleware(['auth:sanctum', 'verified']);
+Route::get('/hosts', AllHosts::class)->middleware(['auth:sanctum', 'verified'], 'can:admin' );
 Route::get('/items', Items::class)->middleware(['auth:sanctum', 'verified']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
