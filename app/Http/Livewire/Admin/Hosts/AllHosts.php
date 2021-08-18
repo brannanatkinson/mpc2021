@@ -8,9 +8,15 @@ use App\Models\Host;
 class AllHosts extends Component
 {
     public $hosts;
-    public $form_name = 'brannan';
-    public $form_email_address;
+    public $name = 'brannan';
+    public $email_address;
     public $updateMode = false;
+
+    protected $rules = [
+        'name' => 'required|min:6',
+        'email' => 'required|email',
+    ];
+
 
     public function mount()
     {
@@ -29,11 +35,9 @@ class AllHosts extends Component
     }
     public function store()
     {
-        $this->validate([
-            'name' => 'required|min:5',
-            'email_address' => 'required|email'
-        ]);
-        $newHost = Host::create([
+        $this->validate();
+
+        Host::create([
             'name' => $this->name,
             'email_address' => $this->email_address
         ]);
