@@ -11,9 +11,9 @@
     @php
         $hostNmaes = '--|';
         $hosts = App\Models\User::permission('edit host')->orderBy('name')->get();
-        @foreach ( $hosts as $host )
+        foreach ( $hosts as $host ) {
             $hostNames += $host->name . '|';
-        @endforeach
+        }
     @endphp
     <div class="mt-8">
         <button class="snipcart-add-item px-4 py-3 bg-indigo-700 text-white"
