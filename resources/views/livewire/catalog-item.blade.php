@@ -19,7 +19,7 @@
             data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
             data-item-name="{{ $CatalogItem->name }}"
             data-item-custom1-name="Credit your virtual host"
-            data-item-custom1-options="--|{{ $hostNames }}"
+            data-item-custom1-options="--|"
             data-item-custom1-value="Rinkle Atkinson">
             Add to cart
         </button>
