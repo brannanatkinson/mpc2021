@@ -54,6 +54,34 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function items()
+    {
+        return $this->belongsToMany(Item::class)->withPivot(['item_quantity']);
+    }
+
+    public function totalDonationAmount()
+    {
+        $sales = DB::table('users')
+            ->join('gifts', 'users.id', '=', 'gifts.user_id')
+            ->select('users.name as user_name', DB::raw('SUM(gifts.gift_total) as sales') )
+            ->groupBy('users.name')
+            ->where('users.id', '=', $this->id )
+            ->first();
+        return $sales;
+    }
+
+    public function donatedItems()
+    {
+        $sales = DB::table('users')
+            ->join('user_item', 'users.id', '=', 'user_item.user_id')
+            ->join('items', 'items.id', '=', 'user_item.item_id')
+            ->select('items.name as item_name', DB::raw('SUM(user_item.item_quantity) as quantity') )
+            ->groupBy('items.name')
+            ->where('users.id', '=', $this->id )
+            ->get();
+        return $sales;
+    }
+
     /**
      * The accessors to append to the model's array form.
      *

@@ -23,7 +23,7 @@ class AllHosts extends Component
 
     public function mount()
     {
-        $this->hosts = Host::with('items')->get();
+        $this->hosts = User::role('writer')->get()with('items')->get();
     }
 
     public function render()
@@ -44,6 +44,7 @@ class AllHosts extends Component
             'email' => $this->email,
             'password' => Hash::make('password')
         ]);
+        $newHost->assignRole('host');
         $newHost->givePermissionTo('edit host');
         $this->resetInput();
     }
