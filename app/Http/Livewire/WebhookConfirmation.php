@@ -8,6 +8,7 @@ use App\Models\Donor;
 use App\Models\Gift;
 use App\Models\Item;
 use App\Models\Host;
+use App\Models\User;
 
 class WebhookConfirmation extends Component
 {    
@@ -28,13 +29,13 @@ class WebhookConfirmation extends Component
             'postal_code' => $this->result['content']['billingAddressPostalCode'],
         ]);
 
-        $host = Host::where('name', $this->result['content']['items'][0]['customFields'][0]['value'])->first();
+        $user = User::where('name', $this->result['content']['items'][0]['customFields'][0]['value'])->first();
 
         $gift = Gift::create([
             'order_token' => $this->result['content']['token'],
             'donor_id' => $donor->id,
             'gift_total' => $this->result['content']['finalGrandTotal'],
-            'host_id' => $host->id
+            'user_id' => $user->id
         ]);
 
         $donor->gift_id = $gift->id;
@@ -44,9 +45,9 @@ class WebhookConfirmation extends Component
         {
             $itemToStore = Item::where('name', $newItem['name'])->first();
             $gift->items()->attach( [ 'item_id' => $itemToStore->id ], [ 'item_quantity' => $newItem['quantity'] ] );
-            if ( $host->name != '--' )
+            if ( $user->name != '--' )
             {
-                $host->items()->attach( [ 'item_id' => $itemToStore->id ], [ 'item_quantity' => $newItem['quantity'] ] );
+                $user->items()->attach( [ 'item_id' => $itemToStore->id ], [ 'item_quantity' => $newItem['quantity'] ] );
             }    
         }
 
