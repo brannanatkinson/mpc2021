@@ -73,9 +73,9 @@ class User extends Authenticatable
     public function donatedItems()
     {
         $sales = DB::table('users')
-            ->join('user_item', 'users.id', '=', 'user_item.user_id')
-            ->join('items', 'items.id', '=', 'user_item.item_id')
-            ->select('items.name as item_name', DB::raw('SUM(user_item.item_quantity) as quantity') )
+            ->join('item_user', 'users.id', '=', 'item_user.user_id')
+            ->join('items', 'items.id', '=', 'item_user.item_id')
+            ->select('items.name as item_name', DB::raw('SUM(item_user.item_quantity) as quantity') )
             ->groupBy('items.name')
             ->where('users.id', '=', $this->id )
             ->get();
