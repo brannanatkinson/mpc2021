@@ -12,9 +12,7 @@
     <div class="mt-8">
         @php 
             $hosts = App\Models\User::permission('edit host')->get()
-            $hostnames = "--|"
-            
-            dd( $hostnames )
+
         @endphp
 
         <button class="snipcart-add-item px-4 py-3 bg-indigo-700 text-white"
