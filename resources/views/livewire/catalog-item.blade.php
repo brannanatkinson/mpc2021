@@ -9,10 +9,10 @@
         <img src="{{ Storage::url( $CatalogItem->img ) }}" alt="">
     </div>
     @php
-        $hostNmaes = '--|'
-        $hosts = App\Models\User::permission('edit host')->orderBy('name')->get()
+        $hostNmaes = '--|';
+        $hosts = App\Models\User::permission('edit host')->orderBy('name')->get();
         @foreach ( $hosts as $host )
-            $hostNames += $host->name . '|'
+            $hostNames += $host->name . '|';
         @endforeach
     @endphp
     <div class="mt-8">
