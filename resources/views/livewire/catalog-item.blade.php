@@ -1,4 +1,3 @@
-@guest
 <div class="container mx-auto">
     <div class="text-3xl">
         {{ $CatalogItem->name }}
@@ -10,8 +9,6 @@
         <img src="{{ Storage::url( $CatalogItem->img ) }}" alt="">
     </div>
     <div class="mt-8">
-        
-
         <button class="snipcart-add-item px-4 py-3 bg-indigo-700 text-white"
             data-item-id="{{ $CatalogItem->name}}"
             data-item-price="{{ $CatalogItem->cost }}"
@@ -21,9 +18,7 @@
             data-item-custom1-name="Credit your virtual host"
             data-item-custom1-options="--|Rinkle|Ralphie"
             data-item-custom1-value="Rinkle Atkinson">
-
             Add to cart
         </button>
     </div>
 </div>
-@endguest
