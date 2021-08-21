@@ -9,7 +9,7 @@
         <img src="{{ Storage::url( $CatalogItem->img ) }}" alt="">
     </div>
     @php
-        $hostNmaes = '--|';
+        $hostNames = '--|';
         $hosts = App\Models\User::permission('edit host')->orderBy('name')->get();
         foreach ( $hosts as $host ) {
             $hostNames += $host->name . '|';
