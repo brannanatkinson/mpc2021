@@ -23,7 +23,7 @@ class AllHosts extends Component
 
     public function mount()
     {
-        $this->hosts = User::role('writer')->with('items')->get();
+        $this->hosts = User::role('host')->get();
     }
 
     public function render()
