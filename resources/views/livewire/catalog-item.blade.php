@@ -12,7 +12,7 @@
         $hostNames = '--|';
         $hosts = App\Models\User::permission('edit host')->orderBy('name')->get();
         foreach ( $hosts as $host ) {
-            $hostNames += $host->name . '|';
+            $hostNames =+ $host->name . '|';
         }
     @endphp
     <div class="mt-8">
