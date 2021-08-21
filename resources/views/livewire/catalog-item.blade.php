@@ -24,7 +24,7 @@
             data-item-name="{{ $CatalogItem->name }}"
             data-item-custom1-name="Credit your virtual host"
             data-item-custom1-options="@php echo $hostNames @endphp"
-            data-item-custom1-value="Rinkle Atkinson">
+            data-item-custom1-value="--">
             Add to cart
         </button>
     </div>
