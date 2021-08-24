@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="max-w-6xl mx-auto">
-            <div class="my-3 text-3xl font-bold">
+            <div class="mt-8 mb-6 text-3xl font-bold">
                 2021 Gift Summary
             </div>
             <div class="grid grid-cols-5 gap-8">
