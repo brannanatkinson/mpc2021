@@ -8,7 +8,7 @@ use App\Http\Livewire\WebhookConfirmation;
 use App\Http\Livewire\Admin\Hosts\AllHosts;
 use App\Http\Livewire\Admin\Dashboard;
 use App\Http\Livewire\Items;
-use App\Http\Livewire\HostPublicPage;
+use App\Http\Livewire\Hosts\HostPublicPage;
 
 /*
 |--------------------------------------------------------------------------
