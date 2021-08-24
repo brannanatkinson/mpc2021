@@ -1,3 +1,3 @@
 <div>
-    Public page for {{ $user->name }}
+    Public page for {{ $user }}
 </div>
