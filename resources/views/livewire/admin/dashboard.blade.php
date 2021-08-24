@@ -18,7 +18,8 @@
             <div class="grid grid-cols-5 gap 8">
                 @foreach( App\Models\User::permission('edit host')->orderBy('name')->get() as $host )
                 <div class="p-4 cols-span-2">{{ $host->name }}</div>
-                
+                <div class="p-4">${{ $host->totalDonationAmount() }} Raised</div>
+                <div class="p-4">{{ App\Models\Gift::where('user_id', '=', $host->id)->get()->count() }} Gifts</div>
                 @endforeach
             </div>
         </div>
