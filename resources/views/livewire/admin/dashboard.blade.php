@@ -42,7 +42,7 @@
                      {{ App\Models\Gift::where('user_id', '=', auth()->user()->id )->count() }} Gifts
                  </div>
                 <div class="p-8 text-center bg-gray-100 rounded-md">
-                    
+
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@
                 <div class="px-4">Amount Raised</div>
                 <div class="px-4">Total Gifts</div>
                 @foreach( App\Models\Gift::where('user_id', '=', auth()->user()->id)->get() as $gift )
-                <div class="px-4 col-span-2">{{ $gift->donor->name }}</div>
+                <div class="px-4 col-span-2">{{ $gift->token }}</div>
                 @endforeach
             </div>
         </div>
