@@ -46,17 +46,16 @@
                 </div>
             </div>
         </div>
-        <div class="max-w-6xl mx-auto">
+        <div class="max-w-4xl mx-auto">
             <div class="my-3 text-3xl font-bold">
                 2021 Donor Summary
             </div>
-            <div class="grid grid-cols-5 gap-8">
-                <div class="px-4 col-span-2">Donor Name</div>
+            <div class="grid grid-cols-2 gap-8">
+                <div class="px-4">Donor Name</div>
                 <div class="px-4">Amount </div>
-                <div class="px-4">Total Gifts</div>
-                <div></div>
                 @foreach( App\Models\Gift::where('user_id', '=', auth()->user()->id )->get() as $gift )
-                <div class="px-4 col-span-2">{{ $gift->donor->full_name }}</div>
+                <div class="px-4">{{ $gift->donor->full_name }}</div>
+                <div class="px-4">{{ $gift->gift_total }} </div>
                 @endforeach
             </div>
         </div>
