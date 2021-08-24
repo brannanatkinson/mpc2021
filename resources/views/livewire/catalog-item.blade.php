@@ -14,7 +14,14 @@
         foreach ( $hosts as $host ) {
             $hostNames .= $host->name . '|';
         }
-    @endphp
+    
+        @if(Session::has('host'))
+            $hostToCredit = {{ Session::get('host') }}
+        @else 
+            $hostToCredit = '--'
+        @endif
+    @endif
+
     <div class="mt-8">
         <button class="snipcart-add-item px-4 py-3 bg-indigo-700 text-white"
             data-item-id="{{ $CatalogItem->name}}"
@@ -24,7 +31,7 @@
             data-item-name="{{ $CatalogItem->name }}"
             data-item-custom1-name="Credit your virtual host"
             data-item-custom1-options="@php echo $hostNames @endphp"
-            data-item-custom1-value="--">
+            data-item-custom1-value="@php echo $hostToCredit @endphp">
             Add to cart
         </button>
     </div>
