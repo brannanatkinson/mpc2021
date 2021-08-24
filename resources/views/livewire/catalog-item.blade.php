@@ -21,7 +21,7 @@
         else {
             $hostToCredit = '--';
         }
-    @endif
+    @endphp
 
     <div class="mt-8">
         <button class="snipcart-add-item px-4 py-3 bg-indigo-700 text-white"
