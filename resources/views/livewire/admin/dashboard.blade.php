@@ -54,9 +54,7 @@
                 <div class="px-4 col-span-2">Donor Name</div>
                 <div class="px-4">Amount Raised</div>
                 <div class="px-4">Total Gifts</div>
-                @foreach( App\Models\Gift::where('user_id', '=', auth()->user()->id)->get() as $gift )
-                <div class="px-4 col-span-2">{{ $gift->donor->name }}</div>
-                @endforeach
+                
             </div>
         </div>
     @endcan
