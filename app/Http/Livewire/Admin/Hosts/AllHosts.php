@@ -43,7 +43,7 @@ class AllHosts extends Component
             'name' => $this->name,
             'email' => $this->email,
             'password' => Hash::make('password'),
-            'host_url' => preg_replace('/[[:space:]]+/', '-', $this->name)
+            'host_url' => strtolower( preg_replace('/[[:space:]]+/', '-', $this->name) )
         ]);
         $newHost->assignRole('host');
         $newHost->givePermissionTo('edit host');
