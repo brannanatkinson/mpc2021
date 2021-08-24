@@ -16,10 +16,13 @@
         </div>
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-5 gap-8">
+                <div class="px-4 col-span-2">Name</div>
+                <div class="px-4">Amount Raised</div>
+                <div class="px-4">Total Gifts</div>
                 @foreach( App\Models\User::permission('edit host')->orderBy('name')->get() as $host )
-                <div class="p-4 col-span-2">{{ $host->name }}</div>
-                <div class="p-4">${{ App\Models\Gift::where('user_id', '=', $host->id )->sum('gift_total') }} Raised</div>
-                <div class="p-4">{{ App\Models\Gift::where('user_id', '=', $host->id )->count() }} Gifts</div>
+                <div class="px-4 col-span-2">{{ $host->name }}</div>
+                <div class="px-4">${{ App\Models\Gift::where('user_id', '=', $host->id )->sum('gift_total') }} Raised</div>
+                <div class="px-4">{{ App\Models\Gift::where('user_id', '=', $host->id )->count() }} Gifts</div>
                 @endforeach
             </div>
         </div>
