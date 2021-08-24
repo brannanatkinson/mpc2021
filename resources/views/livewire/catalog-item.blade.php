@@ -13,7 +13,7 @@
         $hosts = App\Models\User::permission('edit host')->orderBy('name')->get();
         foreach ( $hosts as $host ) {
             if ( $hosts->last() ){
-                $hostNames .= $host->name 
+                $hostNames .= $host->name;
             }
             else {
                 $hostNames .= $host->name . '|';
