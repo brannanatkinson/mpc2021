@@ -21,6 +21,7 @@
                 <div class="p-4">${{ $host->totalDonationAmount() }} Raised</div>
                 <div class="p-4">{{ App\Model\Gift::where('user_id', '=', $host->id)->get() }} Gifts</div>
                 <div class="p-4">{{ $host->donatedItems() }} Items</div>
+                @endforeach
             </div>
         </div>
 
