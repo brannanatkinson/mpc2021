@@ -52,10 +52,11 @@
             </div>
             <div class="grid grid-cols-5 gap-8">
                 <div class="px-4 col-span-2">Donor Name</div>
-                <div class="px-4">Amount Raised</div>
+                <div class="px-4">Amount </div>
                 <div class="px-4">Total Gifts</div>
-                @foreach( App\Models\Gift::where('user_id', '=', auth()->user()->id)->get() as $gift )
-                <div class="px-4 col-span-2">{{ $gift->token }}</div>
+                <div></div>
+                @foreach( App\Models\Gift::where('user_id', '=', auth()->user()->id )->get() as $gift )
+                <div class="px-4 col-span-2">{{ $gift->order_token }}</div>
                 @endforeach
             </div>
         </div>
