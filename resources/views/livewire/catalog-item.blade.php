@@ -16,10 +16,10 @@
         }
     
         if(Session::has('host')) {
-            $hostToCredit = {{ Session::get('host') }}
+            $hostToCredit = Session::get('host') ;
         }
         else {
-            $hostToCredit = '--'
+            $hostToCredit = '--';
         }
     @endif
 
