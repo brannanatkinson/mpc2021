@@ -8,6 +8,7 @@ use App\Http\Livewire\WebhookConfirmation;
 use App\Http\Livewire\Admin\Hosts\AllHosts;
 use App\Http\Livewire\Admin\Dashboard;
 use App\Http\Livewire\Items;
+use App\Http\Livewire\HostPublicPage;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,7 @@ Route::get('/', function () {
 
 Route::get('/catalog', Catalog::class)->name('catalog');
 Route::get('/catalog/item/{id}', CatalogItem::class);
+Route::get('/hosts/{url}', HostPublicPage::class);
 Route::post('/webhook', WebhookConfirmation::class);
 Route::get('/hosts', AllHosts::class)->middleware(['auth:sanctum', 'verified', 'can:admin']);
 Route::get('/items', Items::class)->middleware(['auth:sanctum', 'verified', 'can:admin']);
