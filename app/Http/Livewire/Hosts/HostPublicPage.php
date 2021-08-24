@@ -11,6 +11,7 @@ class HostPublicPage extends Component
     public function mount($url)
     {
         $this->user = User::where('host_url', '=', $url)->first();
+        session([ 'host' => $this->user->name ]);
     }
     public function render()
     {
