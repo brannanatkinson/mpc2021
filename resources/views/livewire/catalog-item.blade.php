@@ -16,7 +16,7 @@
                 $hostNames .= $host->name . '|';
             }
             else {
-                $hostNames .= $host->name
+                $hostNames .= $host->name;
             }
             
         }
