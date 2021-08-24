@@ -63,6 +63,7 @@
                 </div>
             </div>
         </div>
+        <div>{{ App\Models\User::find( auth()->user()->id )->donatedItems() }}</div>
         <div class="max-w-4xl mx-auto">
             <div class="my-3 text-3xl font-bold">
                 2021 Donor Summary
