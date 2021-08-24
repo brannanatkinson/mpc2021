@@ -76,9 +76,8 @@ class User extends Authenticatable
         $sales = DB::table('users')
             ->join('item_user', 'users.id', '=', 'item_user.user_id')
             ->join('items', 'items.id', '=', 'item_user.item_id')
-            ->select('items.name as item_name', DB::raw('SUM(item_user.item_quantity) as quantity') )
-            ->groupBy('items.name')
-            ->orderBy('items.id')
+            ->select('items.id', 'items.name as item_name', DB::raw('SUM(item_user.item_quantity) as quantity') )
+            ->groupBy('items.id')
             ->where('users.id', '=', $this->id )
             ->get();
         return $sales;
