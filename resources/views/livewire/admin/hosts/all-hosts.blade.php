@@ -1,6 +1,6 @@
 <div class="container mx-auto">
     <div class="mb-4 text-4xl text-center">Housing Hope 2021 Hosts</div>
-    <div class="mb-8 text-4xl text-center">Total for all Hosts – ${{ App\Models\Gift::with('user')->sum('gift_total') }}</div>
+    <div class="mb-8 text-4xl text-center">Total for all Hosts – ${{ App\Models\Gift::where('user_id','!=', null)->sum('gift_total') }}</div>
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
          @foreach( $hosts as $host )
             @php
