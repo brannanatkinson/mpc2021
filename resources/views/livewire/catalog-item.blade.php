@@ -11,8 +11,9 @@
     @php
         $hostNames = '--|';
         $hosts = App\Models\User::permission('edit host')->orderBy('name')->get();
+        $lastElement = $host->last();
         foreach ( $hosts as $host ) {
-            if ( $hosts->last() ){
+            if ( $lastElement->name = $host->name ){
                 $hostNames .= $host->name;
             }
             else {
