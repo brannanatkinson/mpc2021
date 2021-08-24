@@ -10,7 +10,7 @@ class HostPublicPage extends Component
     public $user;
     public function mount($url)
     {
-        $this->user = User::where('host_url', '=', $url);
+        $this->user = User::where('host_url', '=', $url)->first();
     }
     public function render()
     {
