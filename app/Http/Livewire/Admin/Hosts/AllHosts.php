@@ -42,7 +42,8 @@ class AllHosts extends Component
         $newHost = User::create([
             'name' => $this->name,
             'email' => $this->email,
-            'password' => Hash::make('password')
+            'password' => Hash::make('password'),
+            'host_url' => preg_replace('/[[:space:]]+/', '-', $this->name);
         ]);
         $newHost->assignRole('host');
         $newHost->givePermissionTo('edit host');
