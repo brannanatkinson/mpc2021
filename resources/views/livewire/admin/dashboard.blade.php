@@ -19,7 +19,6 @@
                 @foreach( App\Models\User::permission('edit host')->orderBy('name')->get() as $host )
                 <div class="p-4 cols-span-2">{{ $host->name }}</div>
                 <div class="p-4">${{ $host->totalDonationAmount() }} Raised</div>
-                <div class="p-4">{{ $host }}</div>
                 @endforeach
             </div>
         </div>
