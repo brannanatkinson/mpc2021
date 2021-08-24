@@ -21,6 +21,6 @@ class Gift extends Model
     }
 
     public function donor(){
-        return $this->belongsTo(Donor::class)
+        return $this->belongsTo(Donor::class);
     }
 }
