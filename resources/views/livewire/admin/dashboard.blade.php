@@ -38,7 +38,7 @@
                 <div class="px-4">Amount</div>
                 <div class="px-4"></div>
                 @foreach( App\Models\Gift::orderBy('gift_total', 'DESC')->get() as $gift )
-                <div class="px-4 col-span-2">{{ $gift->donor->name }}</div>
+                <div class="px-4 col-span-2">{{ $gift->donor->full_name }}</div>
                 <div class="px-4">${{ $gift->gift_total }}</div>
                 <div class="px-4"></div>
                 @endforeach
