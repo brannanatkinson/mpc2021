@@ -15,9 +15,11 @@
             </div>
         </div>
         <div class="max-w-6xl mx-auto">
-            <div class="my-3 text-3xl font-bold">2021 Host Summary</div>
+            <div class="my-3 text-3xl font-bold">
+                2021 Host Summary
+            </div>
             <div class="grid grid-cols-5 gap-8">
-                <div class="px-4 col-span-2">Name</div>
+                <div class="px-4 col-span-2">Host Name</div>
                 <div class="px-4">Amount Raised</div>
                 <div class="px-4">Total Gifts</div>
                 @foreach( App\Models\User::permission('edit host')->orderBy('name')->get() as $host )
@@ -30,7 +32,33 @@
 
 
     @elsecan('edit host')
-        You're a host --  you're userId is {{ auth()->user()->id }}
+        <div class="my-6 text-3xl text-center">Housing Hope 2021 Dashboard for {{ auth()->user()->name }}</div>
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-3 gap-8">
+                <div class="p-8 text-center bg-gray-100 rounded-md">
+                     ${{ App\Models\Gift::where('user_id', '=', auth()->user()->id )->sum('gift_total') }} Raised
+                 </div>
+                <div class="p-8 text-center bg-gray-100 rounded-md">
+                     {{ App\Models\Gift::where('user_id', '=', auth()->user()->id )->count() }} Gifts
+                 </div>
+                <div class="p-8 text-center bg-gray-100 rounded-md">
+                     {{ App\Models\Donor::where('user_id', '=', auth()->user()->id )->count() }} Donors
+                 </div>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto">
+            <div class="my-3 text-3xl font-bold">
+                2021 Donor Summary
+            </div>
+            <div class="grid grid-cols-5 gap-8">
+                <div class="px-4 col-span-2">Donor Name</div>
+                <div class="px-4">Amount Raised</div>
+                <div class="px-4">Total Gifts</div>
+                @foreach( App\Models\Gift::where('user_id', '=', auth()->user()->id)->get() as $gift )
+                <div class="px-4 col-span-2">{{ $gift->donor->name }}</div>
+                @endforeach
+            </div>
+        </div>
     @endcan
 
     

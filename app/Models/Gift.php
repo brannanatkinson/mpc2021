@@ -19,4 +19,8 @@ class Gift extends Model
     {
         return Gift::all()->withSum('order_total');
     }
+
+    public function donor(){
+        return $this->belongsTo(Donor::class)
+    }
 }
