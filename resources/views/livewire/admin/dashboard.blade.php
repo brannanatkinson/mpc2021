@@ -16,10 +16,10 @@
         </div>
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-5 gap 8">
-                @foreach( App\Models\User::permission('edit host')->orderBy('name')->get() as $host)
+                @foreach( App\Models\User::permission('edit host')->orderBy('name')->get() as $host )
                 <div class="p-4 cols-span-2">{{ $host->name }}</div>
                 <div class="p-4">${{ $host->totalDonationAmount() }} Raised</div>
-                <div class="p-4">{{ App\Model\Gift::where('user_id', '=', $host->id) }} Gifts</div>
+                <div class="p-4">{{ App\Model\Gift::where('user_id', '=', $host->id)->get() }} Gifts</div>
                 <div class="p-4">{{ $host->donatedItems() }} Items</div>
             </div>
         </div>
