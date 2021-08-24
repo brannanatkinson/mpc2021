@@ -19,9 +19,7 @@
             else {
                 $hostNames .= $host->name . '|';
             }
-            
         }
-    
         if(Session::has('host')) {
             $hostToCredit = Session::get('host') ;
         }

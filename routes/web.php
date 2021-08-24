@@ -24,11 +24,12 @@ use App\Http\Livewire\Hosts\HostPublicPage;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/hosts/{url}', HostPublicPage::class);
 Route::get('/catalog', Catalog::class)->name('catalog');
 Route::get('/catalog/item/{id}', CatalogItem::class);
-Route::get('/hosts/{url}', HostPublicPage::class);
+
 Route::post('/webhook', WebhookConfirmation::class);
+
 Route::get('/hosts', AllHosts::class)->middleware(['auth:sanctum', 'verified', 'can:admin']);
 Route::get('/items', Items::class)->middleware(['auth:sanctum', 'verified', 'can:admin']);
 
