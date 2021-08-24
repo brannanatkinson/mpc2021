@@ -29,6 +29,21 @@
                 @endforeach
             </div>
         </div>
+        <div class="max-w-6xl mx-auto">
+            <div class="my-3 text-3xl font-bold">
+                2021 Gift Summary
+            </div>
+            <div class="grid grid-cols-5 gap-8">
+                <div class="px-4 col-span-2">Donor</div>
+                <div class="px-4">Amount</div>
+                <div class="px-4"></div>
+                @foreach( App\Models\Gift::orderBy('gift_total', 'DESC')->get() as $gift )
+                <div class="px-4 col-span-2">{{ $gift->donor->name }}</div>
+                <div class="px-4">${{ $gift->gift_total }}</div>
+                <div class="px-4"></div>
+                @endforeach
+            </div>
+        </div>
 
 
     @elsecan('edit host')
