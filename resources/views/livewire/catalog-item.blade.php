@@ -12,7 +12,13 @@
         $hostNames = '--|';
         $hosts = App\Models\User::permission('edit host')->orderBy('name')->get();
         foreach ( $hosts as $host ) {
-            $hostNames .= $host->name . '|';
+            if ( !$hosts->last() ){
+                $hostNames .= $host->name . '|';
+            }
+            else {
+                $hostNames .= $host->name
+            }
+            
         }
     
         if(Session::has('host')) {
