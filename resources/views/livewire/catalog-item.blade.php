@@ -15,11 +15,12 @@
             $hostNames .= $host->name . '|';
         }
     
-        @if(Session::has('host'))
+        if(Session::has('host')) {
             $hostToCredit = {{ Session::get('host') }}
-        @else 
+        }
+        else {
             $hostToCredit = '--'
-        @endif
+        }
     @endif
 
     <div class="mt-8">
