@@ -42,7 +42,6 @@
                      {{ App\Models\Gift::where('user_id', '=', auth()->user()->id )->count() }} Gifts
                  </div>
                 <div class="p-8 text-center bg-gray-100 rounded-md">
-                     {{ App\Models\Donor::where('user_id', '=', auth()->user()->id )->count() }} Donors
                  </div>
             </div>
         </div>
