@@ -60,19 +60,19 @@
                 <div class="px-4 font-bold">Total Items</div>
                 @foreach( App\Models\User::permission('edit host')->orderBy('name')->get() as $host )
                 <div class="px-4 col-span-2">{{ $host->name }}</div>
-                <div class="px-4">${{ App\Models\Gift::where('user_id', '=', $host->id )->sum('gift_total') }} Raised</div>
-                <div class="px-4">{{ App\Models\Gift::where('user_id', '=', $host->id )->count() }} Gifts</div>
-                <div class="px-4">{{ $host->items->sum('pivot.item_quantity') }} Items</div>
+                <div class="px-4">${{ App\Models\Gift::where('user_id', '=', $host->id )->sum('gift_total') }}</div>
+                <div class="px-4">{{ App\Models\Gift::where('user_id', '=', $host->id )->count() }}</div>
+                <div class="px-4">{{ $host->items->sum('pivot.item_quantity') }}</div>
                 @endforeach
             </div>
         </div>
-        <div class="max-w-6xl mx-auto">
+        <div class="max-w-5xl mx-auto">
             <div class="mt-8 mb-6 text-3xl font-bold">
                 2021 Gift Summary
             </div>
             <div class="grid grid-cols-5 gap-8">
-                <div class="px-4 col-span-2">Donor</div>
-                <div class="px-4">Amount</div>
+                <div class="px-4 col-span-2 font-bold">Donor</div>
+                <div class="px-4 font-bold">Amount</div>
                 <div class="px-4"></div>
                 @foreach( App\Models\Gift::orderBy('gift_total', 'DESC')->get() as $gift )
                 <div class="px-4 col-span-2">{{ $gift->donor->full_name }}</div>
