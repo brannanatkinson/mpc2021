@@ -113,7 +113,20 @@
                  </div>
             </div>
         </div>
-        <div>{{ App\Models\User::find( auth()->user()->id )->donatedItems() }}</div>
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-4 gap-8">
+                @foreach ( App\Models\User::find( auth()->user()->id )->donatedItems() as $item)
+                <div class="p-8 text-center bg-gray-200 rounded-md flex flex-col justify-center items-center">
+                    <div class="mb-6 uppercase">
+                        {{ $item->name }}
+                    </div>
+                    <div class="mb-8 text-4xl font-bold">
+                        {{ $item->quantity }}
+                    </div>
+                 </div>
+                @endforeach
+            </div>
+        </div>
         <div class="max-w-4xl mx-auto">
             <div class="my-3 text-3xl font-bold">
                 2021 Donor Summary
