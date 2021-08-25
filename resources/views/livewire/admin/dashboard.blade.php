@@ -100,7 +100,7 @@
                         Total Gifts
                     </div>
                     <div class="mb-8 text-4xl font-bold">
-                        {{ App\Models\Gift::where('user_id', '=', auth()->user()->id )->count() }} Gifts
+                        {{ App\Models\Gift::where('user_id', '=', auth()->user()->id )->count() }}
                     </div>
                 </div>
                 <div class="p-8 text-center bg-gray-200 rounded-md flex flex-col justify-center items-center">
@@ -129,17 +129,17 @@
             </div>
         </div>
         <div class="mt-10 max-w-5xl mx-auto">
-            <div class="my-3 text-3xl font-bold">
+            <div class="my-3 text-3xl">
                 2021 Donor Summary
             </div>
             <div class="grid grid-cols-3 gap-8">
-                <div class="px-4 font-bold">Donor Name</div>
-                <div class="px-4 font-bold">Amount </div>
-                 <div class="px-4 font-bold">Items </div>
+                <div class="font-bold">Donor Name</div>
+                <div class="font-bold">Amount </div>
+                 <div class="font-bold">Items </div>
                 @foreach( App\Models\Gift::where('user_id', '=', auth()->user()->id )->get() as $gift )
-                <div class="px-4">{{ $gift->donor->full_name }}</div>
-                <div class="px-4">${{ $gift->gift_total }} </div>
-                <div class="px-4">{{ $gift->items->sum('pivot.item_quantity') }}</div>
+                <div class="">{{ $gift->donor->full_name }}</div>
+                <div class="">${{ $gift->gift_total }} </div>
+                <div class="">{{ $gift->items->sum('pivot.item_quantity') }}</div>
                 @endforeach
             </div>
         </div>
