@@ -80,7 +80,7 @@
                 @foreach( App\Models\Gift::where('user_id', '=', auth()->user()->id )->get() as $gift )
                 <div class="px-4">{{ $gift->donor->full_name }}</div>
                 <div class="px-4">${{ $gift->gift_total }} </div>
-                <div class="px-4">{{ $gift->items->count() }} Items</div>
+                <div class="px-4">{{ $gift->items->sum('pivot.item_quantity') }}</div>
                 @endforeach
             </div>
         </div>

@@ -12,7 +12,7 @@ class Gift extends Model
 
     public function items()
     {
-        return $this->belongsToMany(Item::class);
+        return $this->belongsToMany(Item::class)->withPivot(['item_quantity']);
     }
 
     public function totalDonations()
