@@ -66,7 +66,7 @@
                 @endforeach
             </div>
         </div>
-        <div class="max-w-5xl mx-auto">
+        <div class="mb-16 max-w-5xl mx-auto">
             <div class="mt-8 mb-6 text-3xl font-bold">
                 2021 Gift Summary
             </div>
@@ -87,15 +87,30 @@
         <div class="my-6 text-3xl text-center">Housing Hope 2021 Dashboard for {{ auth()->user()->name }}</div>
         <div class="max-w-5xl mx-auto">
             <div class="grid grid-cols-3 gap-8">
-                <div class="p-8 text-center bg-gray-100 rounded-md">
-                     ${{ App\Models\Gift::where('user_id', '=', auth()->user()->id )->sum('gift_total') }} Raised
+                <div class="p-8 text-center bg-gray-200 rounded-md flex flex-col justify-center items-center">
+                    <div class="mb-6 uppercase">
+                        Total Raised
+                    </div>
+                    <div class="mb-8 text-4xl font-bold">
+                        ${{ App\Models\Gift::where('user_id', '=', auth()->user()->id )->sum('gift_total') }}
+                    </div>
                  </div>
-                <div class="p-8 text-center bg-gray-100 rounded-md">
-                     {{ App\Models\Gift::where('user_id', '=', auth()->user()->id )->count() }} Gifts
-                 </div>
-                <div class="p-8 text-center bg-gray-100 rounded-md">
-                    {{ App\Models\Gift::where('user_id', '=', auth()->user()->id )->count('donor_id') }} Donors
+                <div class="p-8 text-center bg-gray-200 rounded-md flex flex-col justify-center items-center">
+                    <div class="mb-6 uppercase">
+                        Total Gifts
+                    </div>
+                    <div class="mb-8 text-4xl font-bold">
+                        {{ App\Models\Gift::where('user_id', '=', auth()->user()->id )->count() }} Gifts
+                    </div>
                 </div>
+                <div class="p-8 text-center bg-gray-200 rounded-md flex flex-col justify-center items-center">
+                    <div class="mb-6 uppercase">
+                        Total Donors
+                    </div>
+                    <div class="mb-8 text-4xl font-bold">
+                        {{ App\Models\Gift::where('user_id', '=', auth()->user()->id )->count('donor_id') }}
+                    </div>
+                 </div>
             </div>
         </div>
         <div>{{ App\Models\User::find( auth()->user()->id )->donatedItems() }}</div>
