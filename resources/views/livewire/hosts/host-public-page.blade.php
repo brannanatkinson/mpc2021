@@ -8,7 +8,7 @@
                 Amount Raised
             </div>
             <div class="text-3xl font-bold text-center">
-                ${{ App\Models\Gift::where('user_id', '=', $hostId )->sum('gift_total') }}
+                ${{ App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') }}
             </div>
         </div>
 
