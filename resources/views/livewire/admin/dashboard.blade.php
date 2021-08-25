@@ -53,11 +53,11 @@
                 <div><!-- blank  --></div>
             </div>
             
-            <div class="grid grid-cols-5 gap-8">
-                <div class="px-4 col-span-2">Host Name</div>
-                <div class="px-4">Amount Raised</div>
-                <div class="px-4">Total Gifts</div>
-                <div class="px-4">Total Items</div>
+            <div class="mt-8 grid grid-cols-5 gap-8">
+                <div class="px-4 col-span-2 font-bold">Host Name</div>
+                <div class="px-4 font-bold">Amount Raised</div>
+                <div class="px-4 font-bold">Total Gifts</div>
+                <div class="px-4 font-bold">Total Items</div>
                 @foreach( App\Models\User::permission('edit host')->orderBy('name')->get() as $host )
                 <div class="px-4 col-span-2">{{ $host->name }}</div>
                 <div class="px-4">${{ App\Models\Gift::where('user_id', '=', $host->id )->sum('gift_total') }} Raised</div>
