@@ -118,7 +118,7 @@
                 @foreach ( App\Models\User::find( auth()->user()->id )->donatedItems() as $item)
                 <div class="p-8 text-center bg-gray-200 rounded-md flex flex-col justify-center items-center">
                     <div class="mb-6 uppercase">
-                        {{ $item->name }}
+                        {{ $item->item_name }}
                     </div>
                     <div class="mb-8 text-4xl font-bold">
                         {{ $item->quantity }}
