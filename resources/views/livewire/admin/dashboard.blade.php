@@ -7,16 +7,25 @@
                     <div class="mb-6 uppercase">
                         Total Dollars Raised
                     </div>
-                    <div class="mb-8 text-4xl font-bold">
+                    <div class="mb-8 text-5xl font-bold">
                         ${{ App\Models\Gift::all()->sum('gift_total') }}
                     </div>
-                     
                  </div>
-                <div class="p-8 text-center bg-gray-100 rounded-md">
-                     {{ App\Models\Gift::all()->count() }} gifts
+                 <div class="p-8 text-center bg-gray-200 rounded-md flex flex-col justify-center items-center">
+                    <div class="mb-6 uppercase">
+                        Total Gifts
+                    </div>
+                    <div class="mb-8 text-5xl font-bold">
+                        {{ App\Models\Gift::all()->count() }}
+                    </div>
                  </div>
-                <div class="p-8 text-center bg-gray-100 rounded-md">
-                     {{ App\Models\Donor::all()->count() }} donors
+                <div class="p-8 text-center bg-gray-200 rounded-md flex flex-col justify-center items-center">
+                    <div class="mb-6 uppercase">
+                        Total Number of Donors
+                    </div>
+                    <div class="mb-8 text-5xl font-bold">
+                        {{ App\Models\Donor::all()->count() }}
+                    </div>
                  </div>
             </div>
         </div>
