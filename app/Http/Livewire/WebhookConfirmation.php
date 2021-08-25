@@ -41,6 +41,8 @@ class WebhookConfirmation extends Component
         $donor->gift_id = $gift->id;
         $donor->save();
 
+        // send Donor thank you email
+
         foreach ( $this->result['content']['items'] as $newItem )
         {
             $itemToStore = Item::where('name', $newItem['name'])->first();
@@ -48,6 +50,7 @@ class WebhookConfirmation extends Component
             if ( $user->name != '--' )
             {
                 $user->items()->attach( [ 'item_id' => $itemToStore->id ], [ 'item_quantity' => $newItem['quantity'] ] );
+                // send Host email about donor gift
             }    
         }
 

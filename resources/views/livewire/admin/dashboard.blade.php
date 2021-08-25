@@ -18,6 +18,11 @@
             <div class="my-3 text-3xl font-bold">
                 2021 Host Summary
             </div>
+            <div class="grid grid-cols-3 gap-8">
+                <div class="px-4">Total Raised by Hosts – ${{ App\Models\Gift::where('user_id','!=', null)->sum('gift_total') }}</div>
+                <div class="px-4">Total Gifts by Hosts – ${{ App\Models\Gift::where('user_id','!=', null)->count() }}</div>
+                <div class="px-4"></div>
+            </div>
             <div class="grid grid-cols-5 gap-8">
                 <div class="px-4 col-span-2">Host Name</div>
                 <div class="px-4">Amount Raised</div>
