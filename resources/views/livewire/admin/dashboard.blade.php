@@ -113,7 +113,8 @@
                  </div>
             </div>
         </div>
-        <div class="max-w-5xl mx-auto">
+        <div class="mt-10 max-w-5xl mx-auto">
+            <div class="my-3 text-2xl">Items Donated</div>
             <div class="grid grid-cols-4 gap-8">
                 @foreach ( App\Models\User::find( auth()->user()->id )->donatedItems() as $item)
                 <div class="p-8 text-center bg-gray-200 rounded-md flex flex-col justify-center items-center">
