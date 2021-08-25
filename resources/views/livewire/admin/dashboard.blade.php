@@ -3,8 +3,14 @@
         <div class="my-6 text-3xl text-center">Housing Hope 2021 Dashboard</div>
         <div class="max-w-5xl mx-auto">
             <div class="grid grid-cols-3 gap-8">
-                <div class="p-8 text-center bg-gray-100 rounded-md">
-                     ${{ App\Models\Gift::all()->sum('gift_total') }}
+                <div class="p-8 text-center bg-gray-200 rounded-md flex flex-col justify-center items-center">
+                    <div class="mb-6 uppercase">
+                        Total Dollars Raised
+                    </div>
+                    <div class="mb-8">
+                        ${{ App\Models\Gift::all()->sum('gift_total') }}
+                    </div>text-4xl
+                     
                  </div>
                 <div class="p-8 text-center bg-gray-100 rounded-md">
                      {{ App\Models\Gift::all()->count() }} gifts
