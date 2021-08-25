@@ -76,9 +76,11 @@
             <div class="grid grid-cols-2 gap-8">
                 <div class="px-4">Donor Name</div>
                 <div class="px-4">Amount </div>
+                 <div class="px-4">Items </div>
                 @foreach( App\Models\Gift::where('user_id', '=', auth()->user()->id )->get() as $gift )
                 <div class="px-4">{{ $gift->donor->full_name }}</div>
                 <div class="px-4">${{ $gift->gift_total }} </div>
+                <div class="px-4">${{ $gift->items->count() }} </div>
                 @endforeach
             </div>
         </div>
