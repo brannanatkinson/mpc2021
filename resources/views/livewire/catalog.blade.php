@@ -4,7 +4,7 @@
          @foreach ($items as $item)
         <div class="overflow-hidden rounded-md">
             <div class="mb-4">
-                <img src="<img src="{{ Storage::url( $CatalogItem->img ) }}" alt="">" alt="">
+                <img src="<img src="{{ Storage::url( $item->img ) }}" alt="">" alt="">
             </div>
             <div class="mb-8 text-2xl">
                 {{ $item->name}}
