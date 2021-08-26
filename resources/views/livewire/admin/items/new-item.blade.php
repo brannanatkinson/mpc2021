@@ -5,11 +5,11 @@
         </div>
         <form wire:submit.prevent="saveNewItem" class="flex flex-col">
             <div>
-                <lable>Item Name</lable>
+                <label>Item Name</label>
                 <input type="text" class="mb-8 h-16 bg-green-100 rounded-md" wire:model="newItemName">
             </div>
             <div>
-                <lable>Item Description</lable>
+                <label>Item Description</label>
                 @error('newItemName') <span class="error">{{ $message }}</span> @enderror
             </div>
             <div>
