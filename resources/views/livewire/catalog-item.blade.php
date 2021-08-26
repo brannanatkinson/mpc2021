@@ -1,6 +1,6 @@
 <div class="container mx-auto">
     <div class="max-w-4xl mx-auto">
-        <img src="{{ asset('storage/app/' . $CatalogItem->img ) }}" class="h-full" alt="">
+        <img src="{{ Storage::url( $CatalogItem->img ) }}" alt="">
     </div>
     <div class="text-3xl">
         {{ $CatalogItem->name }}
@@ -8,9 +8,7 @@
     <div class="mt-4">
         {{ $CatalogItem->cost}}
     </div>
-    <div>
-        <img src="{{ Storage::url( $CatalogItem->img ) }}" alt="">
-    </div>
+    
     @php
         $hostNames = '--|';
         $hosts = App\Models\User::permission('edit host')->orderBy('name')->get();
