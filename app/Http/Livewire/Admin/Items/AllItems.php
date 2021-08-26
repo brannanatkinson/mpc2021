@@ -58,7 +58,7 @@ class AllItems extends Component
             'description' => $this->description,
             'img' => $photoPath,
             'excerpt' => $this->excerpt,
-            'category_id' => 1,
+            'category_id' => $this->category,
             'cost' => 25.00
         ]);
 
@@ -91,7 +91,8 @@ class AllItems extends Component
             $record->update([
                 'name' => $this->name,
                 'description' => $this->description,
-                'excerpt' => $this->excerpt
+                'excerpt' => $this->excerpt,
+                'category_id' => $this->category
             ]);
             $this->resetInput();
             $this->updateMode = false;

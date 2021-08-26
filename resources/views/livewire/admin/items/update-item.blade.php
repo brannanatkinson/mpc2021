@@ -22,6 +22,7 @@
             <div class="flex flex-col">
                 <label>Item Category</label>
                 <select name="" id="" wire:model="category">
+                    <option value="0">--</option>
                     @foreach ( App\Models\Category::orderBy('id')->get() as $category)
                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                     @endforeach
