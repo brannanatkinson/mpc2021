@@ -44,8 +44,6 @@ class AllCategories extends Component
     public function saveNewCategory(){
         $this->validate();
 
-        $photoPath = $this->image->store('public/photos/gifts');
-
         Category::create([
             'name' => $this->name,
             'description' => $this->description,
