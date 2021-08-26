@@ -20,6 +20,6 @@ class AllItems extends Component
 
     public function showNewItemForm()
     {
-        $this->updateMode = !$updateMode;
+        $this->updateMode = !$this->updateMode;
     }
 }
