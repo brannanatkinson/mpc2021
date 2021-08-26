@@ -10,17 +10,16 @@
             <div class="text-6xl font-bold text-center">
                 ${{ App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') }}
                 @php
-                    if ( $user->UserMeta->goal ){
+                    if ( $user->UserMeta->goal  ){
                         $hostGoalProgress = ( App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') / $user->UserMeta->goal ) * 100;
                     }
-                    
                 @endphp 
             </div>
-            @if ( $user->UserMeta->show_goal == true)
+            @if ( $user->UserMeta->show_goal == true )
             <div class="my-8">
                 <div class="relative pt-1">
                     <div class="mt-6 mb-4 text-xl text-center">
-                        Please help me reach my goal of raising <span class="text-green-700 font-bold">$1,000</span> for The Mary Parrish Center
+                        Please help me reach my goal of raising <span class="text-green-700 font-bold">{{ $user->UserMeta->goal }}</span> for The Mary Parrish Center
                     </div>
                     <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-green-200">
                         <div style="width:@php echo $hostGoalProgress @endphp%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
