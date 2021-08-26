@@ -9,6 +9,7 @@ class AllItems extends Component
 {
     public $items;
     public $updateMode = false;
+    public $message = null;
 
     public function mount(){
         $this->items = Item::orderBy('id')->get();
@@ -21,5 +22,10 @@ class AllItems extends Component
     public function showNewItemForm()
     {
         $this->updateMode = !$this->updateMode;
+    }
+
+    public function parent()
+    {
+        $this->message = 'you clicked child';
     }
 }
