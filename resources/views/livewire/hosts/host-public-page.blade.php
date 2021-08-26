@@ -9,6 +9,16 @@
             </div>
             <div class="text-6xl font-bold text-center">
                 ${{ App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') }}
+                @php
+                    $hostGoalProgress = {{ App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') }} / 100
+                @endphp 
+            </div>
+            <div class="my-8">
+                <div class="relative pt-1">
+                  <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-pink-200">
+                    <div style="width:@php echo $hostGoalProgress @endphp" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"></div>
+                  </div>
+                </div>
             </div>
         </div>
         <div class="text-center">
