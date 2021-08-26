@@ -37,7 +37,7 @@
             </div>
         </div>
         <div class="text-center">
-            <button href="{{ route('catalog') }}" class="px-4 py-3 text-2xl text-white bg-green-500">Shop the Giving Catalog</button>
+            <a href="{{ route('catalog') }}" class="px-4 py-3 text-2xl text-white bg-green-500">Shop the Giving Catalog</a>
         </div>
         <div class="my-6 p-8 bg-white rounded-md">
             <div class="mb-8 text-3xl text-center">Why I'm supporting Housing Hope</div>
