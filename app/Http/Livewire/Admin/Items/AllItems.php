@@ -4,6 +4,8 @@ namespace App\Http\Livewire\Admin\Items;
 
 use Livewire\Component;
 use App\Models\Item;
+use Livewire\WithFileUploads;
+
 
 class AllItems extends Component
 {
