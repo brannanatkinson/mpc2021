@@ -14,6 +14,7 @@
                 <textarea class="mb-8 h-32 bg-green-100 rounded-md w-full" wire:model="description"></textarea>
                 @error('description') <span class="error">{{ $message }}</span> @enderror
             </div>
+            <div>{{ $image }}</div>
             <div class="flex flex-col">
                 <label>Item Img</label>
                 <input type="file" wire:model="image"></textarea>

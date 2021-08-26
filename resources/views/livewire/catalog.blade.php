@@ -15,7 +15,7 @@
                 </a>
                 <div class="">${{ $item->cost }}</div>
             </div>
-            <div>{{ $image }}</div>
+            
             <div class="mb-6">
                 <a href="/catalog/item/{{ $item->id}}" class="px-4 py-3 bg-green-500 text-white">
                     Details
