@@ -4,13 +4,13 @@
          @foreach ($items as $item)
         <div class="overflow-hidden rounded-md">
             <div class="mb-4">
-                <img src="<img src="{{ Storage::url( $item->img ) }}" alt="">" alt="">
+                <img src="{{ Storage::url( $item->img ) }}" alt="">" alt="">
             </div>
             <div class="mb-8 text-2xl">
                 {{ $item->name}}
             </div>
-            <div>
-                <a href="/catalog/item/{{ $item->id}}" class="px-4 py-3 bg-green-800 text-white">
+            <div class="mb-6">
+                <a href="/catalog/item/{{ $item->id}}" class="px-4 py-3 bg-green-500 text-white">
                     Details
                 </a>
             </div>
