@@ -56,7 +56,7 @@ class AllItems extends Component
             'name' => $this->name,
             'description' => $this->description,
             'img' => $photoPath,
-            'excerpt' = $this->excerpt,
+            'excerpt' => $this->excerpt,
             'category_id' => 1,
             'cost' => 25.00
         ]);
