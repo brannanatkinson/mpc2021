@@ -38,7 +38,7 @@ class AllItems extends Component
     public function saveNewItem(){
         $this->validate();
 
-        $photoPath = $this->newItemImage->store('photos');
+        $photoPath = $this->newItemImage->store('photos.gifts');
 
         Item::create([
             'name' => $this->newItemName,
