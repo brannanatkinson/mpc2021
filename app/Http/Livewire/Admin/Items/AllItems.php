@@ -16,7 +16,7 @@ class AllItems extends Component
     public $updateMode = false;
     public $message = null;
     public $name, $description, $image, $category;
-    public $selectedItem;
+    public $selected_id;
 
     protected $rules = [
         'name' => 'required',
@@ -66,7 +66,7 @@ class AllItems extends Component
     public function edit($id)
     {
         $item = Item::findOrFail($id);
-        $this->selectedItem = $item->id;
+        $this->selected_id = $item->id;
         $this->name = $item->name;
         $this->description = $item->description;
         $this->updateMode = true;
