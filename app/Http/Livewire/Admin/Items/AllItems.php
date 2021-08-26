@@ -15,12 +15,13 @@ class AllItems extends Component
     public $createMode = false;
     public $updateMode = false;
     public $message = null;
-    public $name, $description, $image, $category;
+    public $name, $description, $image, $category, $excerpt;
     public $selected_id;
 
     protected $rules = [
         'name' => 'required',
         'description' => 'required',
+        'excerpt' => 'required',
         'image' => 'image|required',
     ];
 
@@ -55,6 +56,7 @@ class AllItems extends Component
             'name' => $this->name,
             'description' => $this->description,
             'img' => $photoPath,
+            'excerpt' = $this->excerpt,
             'category_id' => 1,
             'cost' => 25.00
         ]);
@@ -80,16 +82,14 @@ class AllItems extends Component
             if ( $this->image ){
                 $photoPath = $this->image->store('public/photos/gifts');
                 $record->update([
-                    'name' => $this->name,
-                    'description' => $this->description,
                     'img' => $photoPath,
                 ]);
-            } else {
-                 $record->update([
-                    'name' => $this->name,
-                    'description' => $this->description,
-                ]);
-            }
+            } 
+            $record->update([
+                'name' => $this->name,
+                'description' => $this->description,
+                'excerpt' => $this->excerpt
+            ]);
             $this->resetInput();
             $this->updateMode = false;
         }
