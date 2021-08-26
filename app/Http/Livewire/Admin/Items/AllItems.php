@@ -39,6 +39,7 @@ class AllItems extends Component
         $this->description = null;
         $this->image = null;
         $this->category = null;
+        $this->excerpt = null;
     }
 
     public function showNewItemForm()
@@ -77,6 +78,7 @@ class AllItems extends Component
 
     public function update()
     {
+        $this->createeMode = fales;
         if ($this->selected_id) {
             $record = Item::find($this->selected_id);
             if ( $this->image ){
