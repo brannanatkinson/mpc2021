@@ -2,8 +2,8 @@
     <h1 class="text-3xl">2021 Giving Catalog</h1>
     @foreach ( App\Models\Category::orderBy('id')->get() as $category )
     <div class="flex flex-row">
-        <div class="w-2/5">
-            <div class="flex flex-col justify-center">
+        <div class="w-2/5 h-full">
+            <div class="flex flex-col justify-center h-full">
                 <div class="text-3xl">
                     {{ $category->name }}
                 </div>
