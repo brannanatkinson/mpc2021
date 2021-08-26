@@ -11,6 +11,9 @@
                 ${{ App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') }}
             </div>
         </div>
+        <div>
+            <x-jet-nav-link href="{{ route('catalog') }}" class="px-4 py-3 text-2xl text-white bg-green-500">Shop the Giving Catalog</x-jet-nav-link>
+        </div>
 
     </div>
 </div>
