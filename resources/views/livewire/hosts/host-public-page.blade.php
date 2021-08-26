@@ -23,12 +23,12 @@
                     </div>
                     <div class="text-right">
                       <span class="text-xs font-semibold inline-block text-green-600">
-                        @php echo $hostGoalTotal @endphp%
+                        @php echo $hostGoalProgress @endphp%
                       </span>
                     </div>
                   </div>
                   <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-green-200">
-                    <div style="width:@php echo $hostGoalTotal @endphp%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
+                    <div style="width:@php echo $hostGoalProgress @endphp%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
                   </div>
                 </div>
             </div>
