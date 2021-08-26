@@ -16,6 +16,7 @@ class AllItems extends Component
     public $updateMode = false;
     public $message = null;
     public $name, $description, $image, $category;
+    public $selectedItem;
 
     protected $rules = [
         'name' => 'required',
@@ -31,18 +32,18 @@ class AllItems extends Component
         return view('livewire.admin.items.all-items');
     }
 
+    private function resetInput()
+    {
+        $this->name = null;
+        $this->description = null;
+        $this->image = null;
+        $this->category = null;
+    }
+
     public function showNewItemForm()
     {
         $this->createMode = !$this->createMode;
-    }
-
-    public function edit($id)
-    {
-        $item = Item::findOrFail($id);
-        $this->name = $item->name;
-        $this->description = $item->description;
-        $this->updateMode = true;
-        $this->createeMode = false;
+        $this->updateMode = false;
     }
 
     public function saveNewItem(){
@@ -57,5 +58,32 @@ class AllItems extends Component
             'category_id' => 1,
             'cost' => 25.00
         ]);
+
+        $this->resetInput();
+
+    }
+
+    public function edit($id)
+    {
+        $item = Item::findOrFail($id);
+        $this->selectedItem = $item->id;
+        $this->name = $item->name;
+        $this->description = $item->description;
+        $this->updateMode = true;
+        $this->createeMode = false;
+    }
+
+    public function update()
+    {
+        $this->validate();
+        if ($this->selected_id) {
+            $record = Item::find($this->selected_id);
+            $record->update([
+                'name' => $this->name,
+                'description' => $this->description
+            ]);
+            $this->resetInput();
+            $this->updateMode = false;
+        }
     }
 }
