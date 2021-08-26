@@ -8,6 +8,7 @@ use App\Http\Livewire\WebhookConfirmation;
 use App\Http\Livewire\Admin\Hosts\AllHosts;
 use App\Http\Livewire\Admin\Dashboard;
 use App\Http\Livewire\Admin\Items\AllItems;
+use App\Http\Livewire\Admin\Categories\AllCategories;
 use App\Http\Livewire\Items;
 use App\Http\Livewire\Hosts\HostPublicPage;
 
@@ -33,6 +34,7 @@ Route::post('/webhook', WebhookConfirmation::class);
 
 Route::get('/admin/hosts', AllHosts::class)->middleware(['auth:sanctum', 'verified', 'can:admin'])->name('admin.hosts');
 Route::get('/admin/items', AllItems::class)->middleware(['auth:sanctum', 'verified', 'can:admin'])->name('admin.items');
+Route::get('/admin/categories', AllCategories::class)->middleware(['auth:sanctum', 'verified', 'can:admin'])->name('admin.categories');
 
 Route::get('/items', Items::class)->middleware(['auth:sanctum', 'verified', 'can:admin']);
 

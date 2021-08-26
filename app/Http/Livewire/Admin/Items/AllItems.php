@@ -71,6 +71,7 @@ class AllItems extends Component
         $item = Item::findOrFail($id);
         $this->selected_id = $item->id;
         $this->name = $item->name;
+        $this->excerpt = $item->excerpt;
         $this->description = $item->description;
         $this->updateMode = true;
         $this->createeMode = false;
