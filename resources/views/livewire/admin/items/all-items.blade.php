@@ -6,7 +6,7 @@
         <div class="grid grid-cols-6 gap-8">
             @foreach ( $items as $item )
                 <div>Image</div>
-                <div class="col-span-4">{{ $item->name }} </div>
+                <div class="col-span-4"><span clsss="text-2xl">{{ $item->name }}</span> </div>
                 <div>Edit</div>
             @endforeach
         </div>

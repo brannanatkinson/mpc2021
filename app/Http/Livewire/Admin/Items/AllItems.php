@@ -39,6 +39,6 @@ class AllItems extends Component
             'name' => $this->newItemName,
             'description' => $this->newItemDescription,
             'category_id' => 1
-        ])
+        ]);
     }
 }
