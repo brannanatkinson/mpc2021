@@ -15,8 +15,8 @@
             </div>
             <div class="my-8">
                 <div class="relative pt-1">
-                  <div class="overflow-hidden h-4 mb-4 text-xs flex rounded bg-pink-200">
-                    <div style="width:@php echo $hostGoalProgress @endphp%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"></div>
+                  <div class="overflow-hidden h-4 mb-4 text-xs flex rounded bg-green-200">
+                    <div style="width:@php echo $hostGoalProgress @endphp%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
                   </div>
                 </div>
             </div>
