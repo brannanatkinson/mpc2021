@@ -11,7 +11,7 @@ class AllItems extends Component
     public $updateMode = false;
 
     public function mount(){
-        $this->items = Itee::orderBy('id')->get();
+        $this->items = Item::orderBy('id')->get();
     }
     public function render()
     {
