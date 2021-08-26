@@ -69,7 +69,6 @@ class AllItems extends Component
         $this->selected_id = $item->id;
         $this->name = $item->name;
         $this->description = $item->description;
-        $this->image = $item->img;
         $this->updateMode = true;
         $this->createeMode = false;
     }
