@@ -31,7 +31,7 @@
                     <div style="width:@php echo $hostGoalProgress @endphp%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
                   </div>
                 </div>
-                <div class="mt-6 text-center text-green-500">Please help me reach my goal of raising $1,000 for Mary Parrish Center</div>
+                <div class="mt-6 text-xl text-center">Please help me reach my goal of raising <span class="text-green-800 font-bold">$1,000</span> for Mary Parrish Center</div>
             </div>
         </div>
         <div class="text-center">
