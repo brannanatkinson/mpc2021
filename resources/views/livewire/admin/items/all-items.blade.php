@@ -1,5 +1,5 @@
-<div>
-    <div wire:click="showNewItemForm" class="px-4 py-3 bg-green text-white">Add new item</div>
+<div class="container">
+    <div wire:click="showNewItemForm" class="px-4 py-3 bg-green-800 text-white">Add new item</div>
     @if ( $updateMode == true )
     <div>Form will go here</div>
     @else
