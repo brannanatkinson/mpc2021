@@ -80,7 +80,7 @@ class AllItems extends Component
             $record = Item::find($this->selected_id);
             if ( $this->image ){
                 $photoPath = $this->image->store('public/photos/gifts');
-                 $record->update([
+                $record->update([
                     'name' => $this->name,
                     'description' => $this->description,
                     'img' => $photoPath,
