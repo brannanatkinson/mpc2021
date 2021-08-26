@@ -3,7 +3,7 @@
     @foreach ( App\Models\Category::orderBy('id')->get() as $category )
     <div class="flex flex-row">
         <div class="w-2/5 h-full">
-            <div class="flex flex-col justify-center h-full">
+            <div class="flex flex-col justify-center items-center h-full">
                 <div class="text-3xl">
                     {{ $category->name }}
                 </div>
