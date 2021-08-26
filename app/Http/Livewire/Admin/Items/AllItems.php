@@ -77,10 +77,19 @@ class AllItems extends Component
     {
         if ($this->selected_id) {
             $record = Item::find($this->selected_id);
-            $record->update([
-                'name' => $this->name,
-                'description' => $this->description
-            ]);
+            if ( $this->image ){
+                $photoPath = $this->image->store('photos/gifts');
+                 $record->update([
+                    'name' => $this->name,
+                    'description' => $this->description,
+                    'img' => $photoPath,
+                ]);
+            } else {
+                 $record->update([
+                    'name' => $this->name,
+                    'description' => $this->description,
+                ]);
+            }
             $this->resetInput();
             $this->updateMode = false;
         }
