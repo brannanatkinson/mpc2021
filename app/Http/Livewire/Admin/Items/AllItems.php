@@ -19,6 +19,7 @@ class AllItems extends Component
     protected $rules = [
         'newItemName' => 'required',
         'newItemDescription' => 'required',
+        'newItemDescription' => 'image|required',
     ];
 
     public function mount(){
@@ -37,9 +38,12 @@ class AllItems extends Component
     public function saveNewItem(){
         $this->validate();
 
+        $photoPath = $this->newItemImage->store('photos');
+
         Item::create([
             'name' => $this->newItemName,
             'description' => $this->newItemDescription,
+            'img' => $photoPath;
             'category_id' => 1,
             'cost' => 25.00
         ]);
