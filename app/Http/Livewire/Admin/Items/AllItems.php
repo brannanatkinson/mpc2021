@@ -23,6 +23,7 @@ class AllItems extends Component
         'description' => 'required',
         'excerpt' => 'required',
         'image' => 'image|required',
+        'category' => 'required',
     ];
 
     public function mount(){
@@ -73,6 +74,7 @@ class AllItems extends Component
         $this->name = $item->name;
         $this->excerpt = $item->excerpt;
         $this->description = $item->description;
+        $this->category = $item->category_id;
         $this->updateMode = true;
         $this->createeMode = false;
     }
