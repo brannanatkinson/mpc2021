@@ -43,7 +43,7 @@ class AllItems extends Component
         Item::create([
             'name' => $this->newItemName,
             'description' => $this->newItemDescription,
-            'img' => $photoPath;
+            'img' => $photoPath,
             'category_id' => 1,
             'cost' => 25.00
         ]);
