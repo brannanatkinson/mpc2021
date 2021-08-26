@@ -10,6 +10,6 @@ class UserMeta extends Model
     use HasFactory;
 
     public function user(){
-        $this->belongsTo(Class::User);
+        return $this->belongsTo(Class::User);
     }
 }

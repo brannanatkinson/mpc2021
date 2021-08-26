@@ -17,10 +17,10 @@ class CreateUserMetasTable extends Migration
             $table->id();
             $table->timestamps();
             $table->integer('user_id');
-            $table->integer('goal');
-            $table->boolean('show_goal');
-            $table->string('rationale');
-            $table->string('thank_you_message');
+            $table->integer('goal')->nullable();
+            $table->boolean('show_goal')->nullable();
+            $table->string('rationale')->nullable();
+            $table->string('thank_you_message')->nullable();
         });
     }
 
