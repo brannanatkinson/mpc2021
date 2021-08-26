@@ -1,4 +1,4 @@
-<div class="container">
+<div>
     <div class="my-12 max-w-5xl mx-auto">
         <div class="text-3xl">
             Giving Catalog Items
