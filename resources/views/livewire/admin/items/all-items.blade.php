@@ -7,7 +7,7 @@
             @foreach ( $items as $item )
                 <div>Image</div>
                 <div class="col-span-4"><span clsss="text-2xl">{{ $item->name }}</span> </div>
-                <div>Edit</div>
+                <div><a wire:click.prevent="edit({{ $item->id }})">Edit</a></div>
             @endforeach
         </div>
     </div>
