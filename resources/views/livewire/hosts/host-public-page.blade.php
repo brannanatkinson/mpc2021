@@ -10,7 +10,7 @@
             <div class="text-6xl font-bold text-center">
                 ${{ App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') }}
                 @php
-                    $hostGoalProgress = {{ App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') }} / 100;
+                    $hostGoalProgress = App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') / 100;
                 @endphp 
             </div>
             <div class="my-8">
