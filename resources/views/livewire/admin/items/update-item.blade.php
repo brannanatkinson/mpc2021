@@ -24,6 +24,7 @@
                 <select name="" id="" wire:model="category">
                     @foreach ( App\Models\Category::orderBy('id')->get() as $category)
                     <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    @endforeach
                 </select>
                 @error('category') <span class="error">{{ $message }}</span> @enderror
             </div>
