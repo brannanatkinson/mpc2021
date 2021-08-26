@@ -10,7 +10,10 @@
             <div class="text-6xl font-bold text-center">
                 ${{ App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') }}
                 @php
-                    $hostGoalProgress = ( App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') / $user->UserMeta->goal ) * 100;
+                    if ( $user->UserMeta->goal ){
+                        $hostGoalProgress = ( App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') / $user->UserMeta->goal ) * 100;
+                    }
+                    
                 @endphp 
             </div>
             @if ( $user->UserMeta->show_goal == true)
