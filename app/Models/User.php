@@ -56,6 +56,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function UserMeta(){
+        return $this->hasOne(UserMeta::class);
+    }
+
     public function items()
     {
         return $this->belongsToMany(Item::class)->withPivot(['item_quantity']);
