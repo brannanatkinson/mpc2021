@@ -1,4 +1,7 @@
 <div class="container mx-auto">
+    <div class="max-w-4xl mx-auto">
+        <img src="{{ $CatalogItem->img }}" alt="">
+    </div>
     <div class="text-3xl">
         {{ $CatalogItem->name }}
     </div>
