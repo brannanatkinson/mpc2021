@@ -20,6 +20,14 @@
                 @error('description') <span class="error">{{ $message }}</span> @enderror
             </div>
             <div class="flex flex-col">
+                <label>Item Category</label>
+                <select name="" id="" wire:model="category">
+                    @foreach ( App\Models\Category::orderBy('id')->get() as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                </select>
+                @error('category') <span class="error">{{ $message }}</span> @enderror
+            </div>
+            <div class="flex flex-col">
                 <label>Item Img</label>
                 <input type="file" wire:model="image"></textarea>
                 @error('image') <span class="error">{{ $message }}</span> @enderror
