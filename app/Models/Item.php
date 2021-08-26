@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\DB;
 class Item extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['name', 'description', 'category_id', 'sponsor_id', 'cost', 'img'];
+
     public function gifts()
     {
         return $this->belongsToMany(Gitt::class);
