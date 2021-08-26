@@ -19,7 +19,7 @@ class AllItems extends Component
     protected $rules = [
         'newItemName' => 'required',
         'newItemDescription' => 'required',
-        'newItemDescription' => 'image|required',
+        'newItemImage' => 'image|required',
     ];
 
     public function mount(){
