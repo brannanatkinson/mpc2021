@@ -5,7 +5,7 @@
         {{ $category->name }}
     </div>
     <div class="mt-8 grid grid-cols-4 gap-8 mb-4">
-         @foreach ( $category->items() as $item)
+         @foreach ( $category->items as $item)
         <div class="overflow-hidden rounded-md">
             <div class="mb-4">
                  <a href="/catalog/item/{{ $item->id}}">
