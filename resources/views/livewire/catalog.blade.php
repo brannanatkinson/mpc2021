@@ -2,13 +2,15 @@
     <h1 class="text-3xl">2021 Giving Catalog</h1>
     @foreach ( App\Models\Category::orderBy('id')->get() as $category )
     <div class="grid grid-cols-2 gap-8">
-        <div>
-             <div class="text-3xl">
-                {{ $category->name }}
+        <div class="w-2/5">
+            <div class="flex flex-col justify-center">
+                <div class="text-3xl">
+                    {{ $category->name }}
+                </div>
+                <div>{{ $category->description }}</div>
             </div>
-            <div>{{ $category->description }}</div>
         </div>
-        <div>
+        <div class="w-3/5">
             <div class="mt-8 grid grid-cols-2 gap-8 mb-4">
                  @foreach ( $category->items as $item)
                 <div class="overflow-hidden rounded-md">
