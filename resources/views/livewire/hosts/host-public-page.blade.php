@@ -10,9 +10,10 @@
             <div class="text-6xl font-bold text-center">
                 ${{ App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') }}
                 @php
-                    $hostGoalProgress = ( App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') / 1000 ) * 100;
+                    $hostGoalProgress = ( App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') / $user->UserMeta->goal ) * 100;
                 @endphp 
             </div>
+            @if ( $user->UserMeta->show_goal == true)
             <div class="my-8">
                 <div class="relative pt-1">
                     <div class="mt-6 mb-4 text-xl text-center">
@@ -35,6 +36,7 @@
                   </div>
                 </div>
             </div>
+            @endif
         </div>
         <div class="text-center">
             <a href="{{ route('catalog') }}" class="px-4 py-3 text-2xl text-white bg-green-500">Shop the Giving Catalog</a>
