@@ -6,9 +6,9 @@
             <div class="mb-4">
                 <img src="{{ Storage::url( $item->img ) }}" alt="">
             </div>
-            <div class="mb-8 text-2xl">
-                <div>{{ $item->name }}</div>
-                <div>${{ $item->cost }}</div>
+            <div class="mb-8">
+                <div class="text-2xl">{{ $item->name }}</div>
+                <div class="">${{ $item->cost }}</div>
             </div>
             <div class="mb-6">
                 <a href="/catalog/item/{{ $item->id}}" class="px-4 py-3 bg-green-500 text-white">
