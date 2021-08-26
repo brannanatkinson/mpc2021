@@ -7,9 +7,17 @@ use App\Models\Item;
 
 class AllItems extends Component
 {
+    use WithFileUploads;
+
     public $items;
     public $updateMode = false;
     public $message = null;
+    public $newItemName, $newItemDescription, $newItemImage, $newItemCategory;
+
+    protected $rules = [
+        'newItemName' => 'required',
+        'newItemDescription' => 'required',
+    ];
 
     public function mount(){
         $this->items = Item::orderBy('id')->get();
@@ -24,8 +32,13 @@ class AllItems extends Component
         $this->updateMode = !$this->updateMode;
     }
 
-    public function parent()
-    {
-        $this->message = 'you clicked child';
+    public function saveNewItem(){
+        $this->validate();
+
+        Item::create([
+            'name' => $this->newItemName,
+            'description' => $this->newItemDescription,
+            'category_id' => 1
+        ])
     }
 }
