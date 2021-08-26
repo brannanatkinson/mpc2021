@@ -40,7 +40,8 @@ class AllItems extends Component
         Item::create([
             'name' => $this->newItemName,
             'description' => $this->newItemDescription,
-            'category_id' => 1
+            'category_id' => 1,
+            'cost' => 25.00
         ]);
     }
 }
