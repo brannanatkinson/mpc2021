@@ -15,7 +15,7 @@
             </div>
             <div class="my-8">
                 <div class="relative pt-1">
-                    <div class="mt-6 text-xl text-center">
+                    <div class="mt-6 mb-4 text-xl text-center">
                         Please help me reach my goal of raising <span class="text-green-700 font-bold">$1,000</span> for The Mary Parrish Center
                     </div>
                     <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-green-200">
