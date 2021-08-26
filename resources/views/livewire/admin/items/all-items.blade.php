@@ -12,7 +12,10 @@
         </div>
     </div>
     <div wire:click="showNewItemForm" class="inline-flex px-4 py-3 bg-green-800 text-white">Add new item</div>
-    @if ( $updateMode == true )
+    @if ( $createMode == true )
     @include('livewire.admin.items.new-item')
+    @endif
+    @if ( $updateMode == true )
+    @include('livewire.admin.items.update-item')
     @endif
 </div>

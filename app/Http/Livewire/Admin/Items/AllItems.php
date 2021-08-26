@@ -12,14 +12,15 @@ class AllItems extends Component
     use WithFileUploads;
 
     public $items;
+    public $createMode = false;
     public $updateMode = false;
     public $message = null;
-    public $newItemName, $newItemDescription, $newItemImage, $newItemCategory;
+    public $name, $description, $image, $category;
 
     protected $rules = [
-        'newItemName' => 'required',
-        'newItemDescription' => 'required',
-        'newItemImage' => 'image|required',
+        'name' => 'required',
+        'description' => 'required',
+        'image' => 'image|required',
     ];
 
     public function mount(){
@@ -32,17 +33,26 @@ class AllItems extends Component
 
     public function showNewItemForm()
     {
-        $this->updateMode = !$this->updateMode;
+        $this->createMode = !$this->createMode;
+    }
+
+    public function edit($id)
+    {
+        $item = Item::findOrFail($id);
+        $this->name = $item->name;
+        $this->description = $item->description;
+        $this->updateMode = true;
+        $this->createeMode = false;
     }
 
     public function saveNewItem(){
         $this->validate();
 
-        $photoPath = $this->newItemImage->store('public/photos/gifts');
+        $photoPath = $this->image->store('public/photos/gifts');
 
         Item::create([
-            'name' => $this->newItemName,
-            'description' => $this->newItemDescription,
+            'name' => $this->name,
+            'description' => $this->description,
             'img' => $photoPath,
             'category_id' => 1,
             'cost' => 25.00
