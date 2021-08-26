@@ -3,8 +3,8 @@
         {{ $user->name }}
     </div>
     <div class="max-w-4xl mx-auto">
-        <div class="my-6">
-            <div class="text-center uppercase">
+        <div class="mt-6 mb-12">
+            <div class="mb-6 text-center uppercase">
                 Amount Raised
             </div>
             <div class="text-6xl font-bold text-center">
