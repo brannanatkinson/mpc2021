@@ -3,7 +3,7 @@
         <div class="text-3xl">
             Update Item
         </div>
-        <form wire:submit.prevent="updateItem" class="flex flex-col">
+        <form wire:submit.prevent="update" class="flex flex-col">
             <div class="flex flex-col">
                 <label>Item Name</label>
                 <input type="text" class="mb-8 h-16 bg-green-100 rounded-md w-full" wire:model="name">
