@@ -78,7 +78,7 @@ class AllItems extends Component
 
     public function update()
     {
-        $this->createeMode = fales;
+        $this->createeMode = false;
         if ($this->selected_id) {
             $record = Item::find($this->selected_id);
             if ( $this->image ){
