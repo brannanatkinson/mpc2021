@@ -6,20 +6,23 @@
         <form wire:submit.prevent="saveNewSponsor" class="flex flex-col">
             <div class="flex flex-col">
                 <label>Sponsor Name</label>
-                <input type="text" class="mb-8 h-16 bg-green-100 rounded-md w-full" wire:model="name">
+                <input type="text" class="mb-8 h-8 bg-green-100 rounded-md w-full" wire:model="name">
                 @error('name') <span class="error">{{ $message }}</span> @enderror
             </div>
-            <select name="" id="" wire:model="category">
-                <option value="title">Title</option>
-                <option value="catalog">Giving Catalog</option>
-                <option value="wall">Giving Wall</option>
-                <option value="champion">Champion of Hope</option>
-                <option value="matching">Matching</option>
-                <option value="promoter">Promoter of Hope</option>
-                <option value="advocate">Advocate of Hope</option>
-                <option value="bearer">Bearer of Hope</option>
-                <option value="supporter">Supporter of Hope</option>
-            </select>
+            <div class="flex flex-col">
+                <label>Sponsor Category</label>
+                <select name="" id="" wire:model="category">
+                    <option value="title">Title</option>
+                    <option value="catalog">Giving Catalog</option>
+                    <option value="wall">Giving Wall</option>
+                    <option value="champion">Champion of Hope</option>
+                    <option value="matching">Matching</option>
+                    <option value="promoter">Promoter of Hope</option>
+                    <option value="advocate">Advocate of Hope</option>
+                    <option value="bearer">Bearer of Hope</option>
+                    <option value="supporter">Supporter of Hope</option>
+                </select>
+            </div>
             @if ( $category == 'matching' )
             <div class="flex flex-col">
                 <label>Sponsor match</label>
@@ -36,7 +39,7 @@
             @endif
             <div class="flex flex-col">
                 <label>Sponsor Website</label>
-                <input type="text" class="mb-8 h-16 bg-green-100 rounded-md w-full" wire:model="website">
+                <input type="text" class="mb-8 h-8 bg-green-100 rounded-md w-full" wire:model="website">
             </div>
             <div class="flex flex-col">
                 <label>Sponsor Image</label>
