@@ -26,6 +26,11 @@ class Item extends Model
         return $this->belongsToMany(Host::class)->withPivot(['item_quantity']);
     }
 
+    public function sponsor()
+    {
+        return $this->belongsTo(Sponsor::class);
+    }
+
     public function sales()
     {
         $sales = DB::table('items')
