@@ -1709,6 +1709,10 @@ select {
 	padding-top: 2.5rem;
 	padding-bottom: 2.5rem;
 }
+.px-12 {
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
 .pt-6 {
 	padding-top: 1.5rem;
 }
@@ -1741,6 +1745,9 @@ select {
 }
 .pt-8 {
 	padding-top: 2rem;
+}
+.pt-16 {
+	padding-top: 4rem;
 }
 .text-center {
 	text-align: center;
