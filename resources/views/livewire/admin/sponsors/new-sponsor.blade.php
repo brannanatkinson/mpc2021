@@ -6,7 +6,7 @@
         <form wire:submit.prevent="saveNewSponsor" class="flex flex-col">
             <div class="mt-6 mb-6 flex flex-col">
                 <label>Sponsor Name</label>
-                <input type="text" class="mb-8 h-8 bg-green-100 rounded-md w-full" wire:model="name">
+                <input type="text" class="h-8 bg-green-100 rounded-md w-full" wire:model="name">
                 @error('name') <span class="error">{{ $message }}</span> @enderror
             </div>
             <div class="mb-6 flex flex-col">
@@ -24,9 +24,12 @@
                 </select>
             </div>
             @if ( $category == 'matching' )
+            <div class="mb-6 text-2xl">
+                Add the Sponsor Match
+            </div>
             <div class="mb-6 flex flex-col">
                 <label>Sponsor match</label>
-                <input type="number" class="mb-8 h-8 bg-green-100 rounded-md w-full" wire:model="match">
+                <input type="number" class="h-8 bg-green-100 rounded-md w-full" wire:model="match">
             </div>
             <div class="mb-6 flex flex-col">
                 <label>Matched Catalog Item</label>
@@ -39,7 +42,7 @@
             @endif
             <div class="mb-6 flex flex-col">
                 <label>Sponsor Website</label>
-                <input type="text" class="mb-8 h-8 bg-green-100 rounded-md w-full" wire:model="website">
+                <input type="text" class="h-8 bg-green-100 rounded-md w-full" wire:model="website">
             </div>
             <div class="mb-6 flex flex-col">
                 <label>Sponsor Image</label>
