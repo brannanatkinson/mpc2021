@@ -9,10 +9,20 @@
                 <div class="font-bold">Category</div>
                 <div class="font-bold">Item matched</div>
             @foreach ( $sponsors as $sponsor )
-                <div><img src="{{ Storage::url( $item->img ) }}" alt="" class="h-24 object-fit"></div>
-                <div class=""><a wire:click.prevent="edit({{ $sponsor->id }})"><span clsss="text-2xl">{{ $sponsor->name }}</span></a></div>
+                <div>
+                    @if( $sponsor->img )
+                    <img src="{{ Storage::url( $item->img ) }}" alt="" class="h-24 object-fit">
+                    @endif
+                </div>
+                <div class="">
+                    <a wire:click.prevent="edit({{ $sponsor->id }})"><span clsss="text-2xl">{{ $sponsor->name }}</span></a>
+                </div>
                 <div class="">{{ $sponsor->category }}</div>
-                <div>{{ App\Models\Item::where('sponsor_id', '=', $sponsor-id)->first()->name</div>
+                <div>
+                     @if( $sponsor->match > 0 )
+                        {{ App\Models\Item::where('sponsor_id', '=', $sponsor-id)->first()->name
+                    @endif
+                </div>
             @endforeach
         </div>
     </div>
