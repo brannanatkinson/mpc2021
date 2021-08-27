@@ -3,11 +3,11 @@
         <div class="text-3xl">
             Giving Catalog Items
         </div>
-        <div class="grid grid-cols-2 gap-6">
+        <div class="grid grid-cols-3 gap-6">
             @foreach ( $items as $item )
             <div class="flex flex-row items-center">
                 <img src="{{ Storage::url( $item->img ) }}" alt="" class="h-24 object-fit">
-                <div><span clsss="pl-8 text-2xl">{{ $item->name }}</span> – <a wire:click.prevent="edit({{ $item->id }})">Edit</a></div>
+                <div class="p-8"><span clsss="text-2xl">{{ $item->name }}</span> – <a wire:click.prevent="edit({{ $item->id }})">Edit</a></div>
             </div>  
             @endforeach
         </div>
