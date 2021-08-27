@@ -10,8 +10,8 @@
                 <div class="font-bold">Item matched</div>
             @foreach ( $sponsors as $sponsor )
                 <div>
-                    @if( $sponsor->img )
-                    <img src="{{ Storage::url( $item->img ) }}" alt="" class="h-24 object-fit">
+                    @if( $sponsor->img != null )
+                    <img src="{{ Storage::url( $sponsor->img ) }}" alt="" class="h-24 object-fit">
                     @endif
                 </div>
                 <div class="">
