@@ -20,7 +20,7 @@
                 <div class="">{{ $sponsor->category }}</div>
                 <div>
                      @if( $sponsor->match > 0 )
-                        {{ App\Models\Item::where('sponsor_id', '=', $sponsor-id)->first()->name
+                        {{ App\Models\Item::where('sponsor_id', '=', $sponsor-id)->first()->name }}
                     @endif
                 </div>
             @endforeach
