@@ -4,10 +4,15 @@
             Housing Hope Sponsors
         </div>
         <div class="grid grid-cols-6 gap-8">
+                <div class="font-bold"></div>
+                <div class="font-bold">Sponsor</div>
+                <div class="font-bold">Category</div>
+                <div class="font-bold">Item matched</div>
             @foreach ( $sponsors as $sponsor )
-                <div class="col-span-3"><span clsss="text-2xl">{{ $sponsor->name }}</span> </div>
-                <div class="col-span-2">{{ $sponsor->category }}</div>
-                <div><a wire:click.prevent="edit({{ $sponsor->id }})">Edit</a></div>
+                <div><img src="{{ Storage::url( $item->img ) }}" alt="" class="h-24 object-fit"></div>
+                <div class=""><a wire:click.prevent="edit({{ $sponsor->id }})"><span clsss="text-2xl">{{ $sponsor->name }}</span></a></div>
+                <div class="">{{ $sponsor->category }}</div>
+                <div>{{ App\Models\Item::where('sponsor_id', '=', $sponsor-id)->first()->name</div>
             @endforeach
         </div>
     </div>
