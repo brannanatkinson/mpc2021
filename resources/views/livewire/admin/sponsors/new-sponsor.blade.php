@@ -28,7 +28,7 @@
             </div>
             <div class="mb-6 flex flex-col">
                 <label>Sponsor Match Amount</label>
-                <input type="text" class="h-8 bg-green-100 rounded-md w-full" wire:model="match">
+                <input type="number" class="h-8 bg-green-100 rounded-md w-full" wire:model="match">
             </div>
             <div class="mb-6 flex flex-col">
                 <label>Matched Catalog Item</label>
