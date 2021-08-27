@@ -1,6 +1,6 @@
 <div>
     <div class="my-12 max-w-5xl mx-auto">
-        <div class="text-3xl">
+        <div class="mb-8 text-3xl">
             Housing Hope Sponsors
         </div>
         <div class="grid grid-cols-4 gap-8">
