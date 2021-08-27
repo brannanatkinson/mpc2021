@@ -30,9 +30,9 @@
             </div>
             <div class="flex flex-col">
                 <label>Matched Catalog Item</label>
-                <select name="" id="" wire:model="gift">
+                <select name="" id="" wire:model="item">
                     @foreach( App\Models\Item::orderBy('id')->get() as $item )
-                    <option value="{{ $gift->id }}">{{ $item->name }}</option>
+                    <option value="{{ $item->id }}">{{ $item->name }}</option>
                     @endforeach
                 </select>
             </div>

@@ -8,7 +8,7 @@ use App\Models\Sponsor;
 class AllSponsors extends Component
 {
     public $sponsors;
-    public $name, $category, $match, $gift, $image, $website;
+    public $name, $category, $match, $item, $image, $website;
     public $createMode = false;
     public $updateMode = false;
 
