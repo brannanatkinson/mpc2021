@@ -26,13 +26,13 @@
             @if ( $category == 'matching' )
             <div class="flex flex-col">
                 <label>Sponsor match</label>
-                <input type="number" class="mb-8 h-16 bg-green-100 rounded-md w-full" wire:model="match">
+                <input type="number" class="mb-8 h-8 bg-green-100 rounded-md w-full" wire:model="match">
             </div>
             <div class="flex flex-col">
-                <label>Matched Gift</label>
+                <label>Matched Catalog Item</label>
                 <select name="" id="" wire:model="gift">
-                    @foreach( App\Models\Gift::orderBy('id')->get() as $gift)
-                    <option value="{{ $gift->id }}">{{ $gift->name }}</option>
+                    @foreach( App\Models\Item::orderBy('id')->get() as $item )
+                    <option value="{{ $gift->id }}">{{ $item->name }}</option>
                     @endforeach
                 </select>
             </div>
