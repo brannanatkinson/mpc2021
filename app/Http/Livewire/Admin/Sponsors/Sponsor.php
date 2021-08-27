@@ -10,7 +10,7 @@ class Sponsor extends Component
     public $sponsors;
     public $name, $category, $match, $gift, $image, $website;
 
-    public mount()
+    public function mount()
     {
         $this->sponsors = Sponsor::orderBy('id')->get();
     }
