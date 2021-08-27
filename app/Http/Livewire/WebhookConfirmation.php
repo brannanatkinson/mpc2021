@@ -53,9 +53,9 @@ class WebhookConfirmation extends Component
         {
             $itemToStore = Item::where('name', $newItem['name'])->first();
             $gift->items()->attach( [ 'item_id' => $itemToStore->id ], [ 'item_quantity' => $newItem['quantity'] ] );
-            if ( $user->name != '--' )
+            if ( $userId != null )
             {
-                $user->items()->attach( [ 'item_id' => $itemToStore->id ], [ 'item_quantity' => $newItem['quantity'] ] );
+                User::find( $userId )->items()->attach( [ 'item_id' => $itemToStore->id ], [ 'item_quantity' => $newItem['quantity'] ] );
                 // send Host email about donor gift
             }    
         }
