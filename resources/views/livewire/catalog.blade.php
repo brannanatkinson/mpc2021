@@ -1,7 +1,7 @@
 <div class="py-12 container mx-auto">
     <h1 class="text-3xl">2021 Giving Catalog</h1>
     @foreach ( App\Models\Category::orderBy('id')->get() as $category )
-    <div class="flex flex-row">
+    <div class="max-w-6xl flex flex-row">
         <div class="w-1/4 ">
             <div class="h-full p-8 flex flex-col justify-center items-center">
                 <div class="text-3xl">
