@@ -22,6 +22,7 @@
                     <div class="mb-8">
                          <a href="/catalog/item/{{ $item->id}}">
                             <div class="text-2xl">{{ $item->name }}</div>
+                            <div class="text-xl">{{ $item->excerpt }}</div>
                         </a>
                         <div class="">${{ $item->cost }}</div>
                     </div>
