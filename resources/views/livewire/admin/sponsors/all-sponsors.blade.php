@@ -13,9 +13,9 @@
     </div>
     <div wire:click="showNewItemForm" class="inline-flex px-4 py-3 bg-green-800 text-white">Add new sponsor</div>
     @if ( $createMode == true )
-    @include('livewire.admin.categories.new-sponsor')
+    @include('livewire.admin.sponsors.new-sponsor')
     @endif
     <!-- @if ( $updateMode == true )
-    @include('livewire.admin.categories.update-sponsor')
+    @include('livewire.admin.sponsors.update-sponsor')
     @endif -->
 </div>
