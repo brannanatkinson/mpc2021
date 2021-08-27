@@ -55,7 +55,7 @@ class AllSponsors extends Component
             $photoPath = null;
         }
        
-        Category::create([
+        Sponsor::create([
             'name' => $this->name,
             'category' => $this->category,
             'match' => $this->match,
