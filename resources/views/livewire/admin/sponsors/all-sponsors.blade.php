@@ -3,7 +3,7 @@
         <div class="text-3xl">
             Housing Hope Sponsors
         </div>
-        <div class="grid grid-cols-6 gap-8">
+        <div class="grid grid-cols-4 gap-8">
                 <div class="font-bold"></div>
                 <div class="font-bold">Sponsor</div>
                 <div class="font-bold">Category</div>
