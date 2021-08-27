@@ -4,8 +4,7 @@
             Housing Hope Sponsors
         </div>
         <div class="grid grid-cols-6 gap-8">
-            @foreach ( $spons
-            ors as $sponsor )
+            @foreach ( $sponsors as $sponsor )
                 <div class="col-span-3"><span clsss="text-2xl">{{ $sponsor->name }}</span> </div>
                 <div class="col-span-2">{{ $sponsor->category }}</div>
                 <div><a wire:click.prevent="edit({{ $sponsor->id }})">Edit</a></div>
