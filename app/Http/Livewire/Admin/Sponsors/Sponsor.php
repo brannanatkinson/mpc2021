@@ -9,6 +9,6 @@ class Sponsor extends Component
     public $name, $category, $match, $gift, $image, $website;
     public function render()
     {
-        return view('livewire.admin.sponsos.sponsor');
+        return view('livewire.admin.sponsors.sponsor');
     }
 }
