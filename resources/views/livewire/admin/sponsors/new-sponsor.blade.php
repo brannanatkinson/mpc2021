@@ -4,12 +4,12 @@
             Add a New Sponsor
         </div>
         <form wire:submit.prevent="saveNewSponsor" class="flex flex-col">
-            <div class="flex flex-col">
+            <div class="mt-6 mb-6 flex flex-col">
                 <label>Sponsor Name</label>
                 <input type="text" class="mb-8 h-8 bg-green-100 rounded-md w-full" wire:model="name">
                 @error('name') <span class="error">{{ $message }}</span> @enderror
             </div>
-            <div class="flex flex-col">
+            <div class="mb-6 flex flex-col">
                 <label>Sponsor Category</label>
                 <select name="" id="" wire:model="category">
                     <option value="title">Title</option>
@@ -24,11 +24,11 @@
                 </select>
             </div>
             @if ( $category == 'matching' )
-            <div class="flex flex-col">
+            <div class="mb-6 flex flex-col">
                 <label>Sponsor match</label>
                 <input type="number" class="mb-8 h-8 bg-green-100 rounded-md w-full" wire:model="match">
             </div>
-            <div class="flex flex-col">
+            <div class="mb-6 flex flex-col">
                 <label>Matched Catalog Item</label>
                 <select name="" id="" wire:model="item">
                     @foreach( App\Models\Item::orderBy('id')->get() as $item )
@@ -37,11 +37,11 @@
                 </select>
             </div>
             @endif
-            <div class="flex flex-col">
+            <div class="mb-6 flex flex-col">
                 <label>Sponsor Website</label>
                 <input type="text" class="mb-8 h-8 bg-green-100 rounded-md w-full" wire:model="website">
             </div>
-            <div class="flex flex-col">
+            <div class="mb-6 flex flex-col">
                 <label>Sponsor Image</label>
                 <input type="file" wire:model="image"></textarea>
             </div>
