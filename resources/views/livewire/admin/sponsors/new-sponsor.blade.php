@@ -23,7 +23,6 @@
                     <option value="supporter">Supporter of Hope</option>
                 </select>
             </div>
-            @if ( $category == 'matching' )
             <div class="mb-6 text-2xl">
                 Add the Sponsor Match
             </div>
@@ -39,7 +38,6 @@
                     @endforeach
                 </select>
             </div>
-            @endif
             <div class="mb-6 flex flex-col">
                 <label>Sponsor Website</label>
                 <input type="text" class="h-8 bg-green-100 rounded-md w-full" wire:model="website">
