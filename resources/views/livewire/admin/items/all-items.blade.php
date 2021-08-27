@@ -1,13 +1,13 @@
 <div>
     <div class="my-12 max-w-5xl mx-auto">
-        <div class="text-3xl">
-            Giving Catalog Items
+        <div class="">
+            <div class="mb-4 text-3xl">Giving Catalog Items</div>
+            <p class="mb-8">Click an item image to edit</p>
         </div>
-        <div class="grid grid-cols-2 gap-2">
+        <div class="grid grid-cols-4 gap-2">
             @foreach ( $items as $item )
             <div class="flex flex-row items-center">
-                <img src="{{ Storage::url( $item->img ) }}" alt="" class="h-24 object-fit">
-                <div class="p-8"><span clsss="text-2xl">{{ $item->name }}</span> – <a wire:click.prevent="edit({{ $item->id }})">Edit</a></div>
+                <a wire:click.prevent="edit({{ $item->id }})"><img src="{{ Storage::url( $item->img ) }}" alt="" class="h-24 object-fit"></a>
             </div>  
             @endforeach
         </div>
