@@ -18,6 +18,12 @@ class AllSponsors extends Component
     }
     public function render()
     {
-        return view('livewire.admin.sponsors.sponsor');
+        return view('livewire.admin.sponsors.all-sponsors');
+    }
+
+    public function showNewItemForm()
+    {
+        $this->createMode = !$this->createMode;
+        $this->updateMode = false;
     }
 }
