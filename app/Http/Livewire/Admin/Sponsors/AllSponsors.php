@@ -12,6 +12,11 @@ class AllSponsors extends Component
     public $createMode = false;
     public $updateMode = false;
 
+    protected $rules = [
+        'name' => 'required',
+        'category' => 'required',
+    ];
+
     public function mount()
     {
         $this->sponsors = Sponsor::orderBy('id')->get();
@@ -25,5 +30,37 @@ class AllSponsors extends Component
     {
         $this->createMode = !$this->createMode;
         $this->updateMode = false;
+    }
+
+    private function resetInput()
+    {
+        $this->name = null;
+        $this->catetory = null;
+        $this->match = null;
+        $this->item = null;
+        $this->image = null;
+        $this->website = null;
+    }
+
+    public function saveNewSponsor(){
+        $this->validate();
+        if ( $this->image ){
+             $photoPath = $this->image->store('public/photos/gifts');
+        } else {
+            $photoPath = null;
+        }
+       
+        Category::create([
+            'name' => $this->name,
+            'category' => $this->category,
+            'match' => $this->match,
+            'item_id' => $this->item,
+            'img' => $photoPath,
+            'website' => $this->website,
+        ]);
+
+        $this->resetInput();
+        $this->createMode = false;
+
     }
 }

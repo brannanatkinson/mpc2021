@@ -28,7 +28,7 @@
                 Add the Sponsor Match
             </div>
             <div class="mb-6 flex flex-col">
-                <label>Sponsor match</label>
+                <label>Sponsor Match Amount</label>
                 <input type="number" class="h-8 bg-green-100 rounded-md w-full" wire:model="match">
             </div>
             <div class="mb-6 flex flex-col">
