@@ -4,9 +4,13 @@ namespace App\Http\Livewire\Admin\Sponsors;
 
 use Livewire\Component;
 use App\Models\Sponsor;
+use Livewire\WithFileUploads;
+
 
 class AllSponsors extends Component
 {
+    use WithFileUploads;
+
     public $sponsors;
     public $name, $category, $match, $item, $image, $website;
     public $createMode = false;
@@ -44,6 +48,7 @@ class AllSponsors extends Component
 
     public function saveNewSponsor(){
         $this->validate();
+
         if ( $this->image ){
              $photoPath = $this->image->store('public/photos/gifts');
         } else {
