@@ -28,14 +28,20 @@ class WebhookConfirmation extends Component
             'state' => $this->result['content']['billingAddressProvince'],
             'postal_code' => $this->result['content']['billingAddressPostalCode'],
         ]);
+        
+        // check if event host credited
 
-        $user = User::where('name', $this->result['content']['items'][0]['customFields'][0]['value'])->first();
+        if ( this->result['content']['items'][0]['customFields'][0]['value'] == '--' )
+            $userId = User::where('name', $this->result['content']['items'][0]['customFields'][0]['value'])->first()->id;
+        } else {
+            $userId = null;
+        } 
 
         $gift = Gift::create([
             'order_token' => $this->result['content']['token'],
             'donor_id' => $donor->id,
             'gift_total' => $this->result['content']['finalGrandTotal'],
-            'user_id' => $user->id
+            'user_id' => $userId,
         ]);
 
         $donor->gift_id = $gift->id;
