@@ -68,7 +68,7 @@
                 @endforeach
             </div>
         </div>
-        <div class="mb-16 max-w-5xl mx-auto">
+        <div class="pb-16 max-w-5xl mx-auto">
             <div class="mt-8 mb-6 text-3xl font-bold">
                 2021 Gift Summary
             </div>
