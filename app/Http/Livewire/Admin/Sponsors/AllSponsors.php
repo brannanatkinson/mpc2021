@@ -9,6 +9,7 @@ class AllSponsors extends Component
 {
     public $sponsors;
     public $name, $category, $match, $gift, $image, $website;
+    public $createMode, $updateMode;
 
     public function mount()
     {
