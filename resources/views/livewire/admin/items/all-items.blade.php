@@ -4,7 +4,7 @@
             <div class="mb-4 text-3xl">Giving Catalog Items</div>
             <p class="mb-8">Click an item image to edit</p>
         </div>
-        <div class="grid grid-cols-4 gap-2">
+        <div class="grid grid-cols-4 gap-6">
             @foreach ( $items as $item )
             <div class="flex flex-row items-center">
                 <a wire:click.prevent="edit({{ $item->id }})"><img src="{{ Storage::url( $item->img ) }}" alt="" class="h-24 object-fit"></a>
