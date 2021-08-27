@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="w-3/4">
-            <div class="mt-8 grid grid-cols-2 gap-8 mb-4">
+            <div class="mt-8 grid grid-cols-2 gap-12 mb-4">
                  @foreach ( $category->items as $item)
                 <div class="overflow-hidden rounded-md">
                     <div class="mb-4">
