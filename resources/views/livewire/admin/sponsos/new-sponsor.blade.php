@@ -31,6 +31,7 @@
                     @foreach( App\Models\Gift::orderBy('id')->get() as $gift)
                     <option value="{{ $gift->id }}">{{ $gift->name }}</option>
                     @endforeach
+                </select>
             </div>
             @endif
             <div class="flex flex-col">

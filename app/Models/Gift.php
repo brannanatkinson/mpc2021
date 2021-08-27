@@ -23,4 +23,9 @@ class Gift extends Model
     public function donor(){
         return $this->belongsTo(Donor::class);
     }
+
+    public function sponsor()
+    {
+        return $this->belongsTo(Sponsor::class);
+    }
 }
