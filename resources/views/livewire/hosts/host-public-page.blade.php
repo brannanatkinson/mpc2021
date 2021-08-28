@@ -49,8 +49,10 @@
             <div class="mb-6 grid grid-cols-4 gap-6">
                 @foreach ( $user->donatedItems() as $item )
                 <div class="bg-gray-100 text-center flex flex-col rounded-md overflow-hidden">
-                    <div class="mb-6"><img src="{{ Storage::url( App\Models\Item::find( $item->id )->img ) }}" alt="" class="h-24 object-fit"></div>
-                    <div class="text-3xl font-bold">{{ $item->quantity }}</div>
+                    <div class="mb-6 w-full">
+                        <img src="{{ Storage::url( App\Models\Item::find( $item->id )->img ) }}" alt="" class="object-fit">
+                    </div>
+                    <div class="pb-8 text-3xl font-bold">{{ $item->quantity }}</div>
                 </div>
                 @endforeach
             </div>
