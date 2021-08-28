@@ -15,6 +15,11 @@
                     }
                 @endphp 
             </div>
+            <div class="mb-12">
+                <div class="text-center">
+                    <a href="{{ route('catalog') }}" class="inline-block px-4 py-3 text-2xl text-white bg-green-500">Shop the Giving Catalog</a>
+                </div>  
+            </div>
             @if ( $user->UserMeta->show_goal == true )
             <div class="mb-8">
                 <div class="relative pt-1">
@@ -39,11 +44,6 @@
                 </div>
             </div>
             @endif
-        </div>
-        <div class="mb-12">
-            <div class="text-center">
-                <a href="{{ route('catalog') }}" class="inline-block px-4 py-3 text-2xl text-white bg-green-500">Shop the Giving Catalog</a>
-            </div>  
         </div>
         <div class="mt-6">
             <div class="mb-4 text-3xl">Thanks to my family and friends for giving these gifts</div>
