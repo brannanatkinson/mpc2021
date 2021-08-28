@@ -7,7 +7,7 @@
             <div class="mb-6 text-center uppercase">
                 Amount Raised
             </div>
-            <div class="mb-8 text-6xl font-bold text-center font-display">
+            <div class="mb-12 text-6xl text-center font-display">
                 ${{ App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') }}
                 @php
                     if ( $user->UserMeta->goal  ){
