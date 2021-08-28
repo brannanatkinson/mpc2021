@@ -25,7 +25,9 @@
                             <div class="text-xl">{{ $item->excerpt }}</div>
                         </a>
                         <div class="">${{ $item->cost }}</div>
-                        
+                        @if( $item->sponsor )
+                            Matched by {{ $item->sponsor->name }}
+                        @endif
                     </div>
                     
                     <div class="mb-6">
