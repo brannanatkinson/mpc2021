@@ -17,7 +17,7 @@
             </div>
             <div class="mb-12">
                 <div class="text-center">
-                    <a href="{{ route('catalog') }}" class="inline-block px-4 py-3 text-2xl text-white bg-green-500">Shop the Giving Catalog</a>
+                    <a href="{{ route('catalog') }}" class="inline-block px-4 py-3 text-2xl text-white bg-mp-blue-green">Shop the Giving Catalog</a>
                 </div>  
             </div>
             @if ( $user->UserMeta->show_goal == true )
