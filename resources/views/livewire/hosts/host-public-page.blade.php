@@ -47,10 +47,10 @@
             <div class="mb-4 text-3xl">Thanks to my family and friends for giving these gifts</div>
             @if( $user->donatedItems()->count() > 0 )
             <div class="mb-8 grid grid-cols-4">
-                @foreach ( $user->donatedItems() as $gift )
+                @foreach ( $user->donatedItems() as $item )
                 <div class="p-4 bg-gray-100 text-center flex flex-col">
-                    <div>{{ $gift->name }}</div>
-                    <div>{{ $gift->quantity }}</div>
+                    <div>{{ $item->item_name }}</div>
+                    <div>{{ $item->quantity }}</div>
                 </div>
                 @endforeach
             </div>
