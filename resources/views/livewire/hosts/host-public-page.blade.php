@@ -40,8 +40,21 @@
             </div>
             @endif
         </div>
-        <div class="text-center">
+        <div class="my-6 text-center">
             <a href="{{ route('catalog') }}" class="px-4 py-3 text-2xl text-white bg-green-500">Shop the Giving Catalog</a>
+        </div>
+        <div class="my-6">
+            <div class="mb-4 text-3xl">Thanks to my family and friends for giving these gifts</div>
+            @if( $user->dontatedItems()->count() > 0 )
+            <div class="mb-8 grid grid-cols-4">
+                @foreach ( $user->donatedItems() as $gift )
+                <div class="p-4 bg-gray-100 text-center flex flex-col">
+                    <div>{{ $gift->name }}</div>
+                    <div>{{ $gift->quantity }}</div>
+                </div>
+                @endforeach
+            </div>
+            @endif
         </div>
         <div class="my-6 p-8 bg-white rounded-md">
             <div class="mb-8 text-3xl text-center">Why I'm supporting Housing Hope</div>

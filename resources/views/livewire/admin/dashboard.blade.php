@@ -75,6 +75,7 @@
             <div class="grid grid-cols-5 gap-8">
                 <div class="px-4 col-span-2 font-bold">Donor</div>
                 <div class="px-4 font-bold">Amount</div>
+                <!-- add purchase date  -->
                 <div class="px-4"></div>
                 @foreach( App\Models\Gift::orderBy('gift_total', 'DESC')->get() as $gift )
                 <div class="px-4 col-span-2">{{ $gift->donor->full_name }}</div>
