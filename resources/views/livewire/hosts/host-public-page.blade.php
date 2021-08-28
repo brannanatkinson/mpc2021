@@ -41,20 +41,18 @@
             @endif
         </div>
         <div class="my-6">
-            <div class="text-center">
-                <a href="{{ route('catalog') }}" class="px-4 py-3 text-2xl text-white bg-green-500">Shop the Giving Catalog</a>
-            </div>
+                <a href="{{ route('catalog') }}" class="mx-auto px-4 py-3 text-2xl text-white bg-green-500">Shop the Giving Catalog</a>
         </div>
         <div class="my-6">
             <div class="mb-4 text-3xl">Thanks to my family and friends for giving these gifts</div>
             @if( $user->donatedItems()->count() > 0 )
-            <div class="mb-6 grid grid-cols-4 gap-6">
+            <div class="mb-6 grid grid-cols-3 gap-6">
                 @foreach ( $user->donatedItems() as $item )
                 <div class="bg-gray-100 text-center flex flex-col rounded-md overflow-hidden">
                     <div class="mb-6 w-full">
                         <img src="{{ Storage::url( App\Models\Item::find( $item->id )->img ) }}" alt="" class="object-fit">
                     </div>
-                    <div class="mb-8 text-3xl font-bold">{{ $item->quantity }}</div>
+                    <div class="mb-8 text-3xl">{{ $item->quantity }}</div>
                 </div>
                 @endforeach
             </div>
