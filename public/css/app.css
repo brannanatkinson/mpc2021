@@ -2038,6 +2038,10 @@ select{
 	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+.font-display{
+	font-family: Playfair Display, sans-serif;
+}
+
 .text-sm{
 	font-size: 0.875rem;
 	line-height: 1.25rem;
