@@ -66,7 +66,32 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed convallis tristique sem.  Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. 
             </p>
         </div>
-        
-
+    </div>
+    <div id="mpc" class="bg-mp-coral py-16">
+        <div class="container mx-auto px-4 lg:px-0">
+            <img src="@php echo asset('storage/mp_green_logo.png') @endphp" class="mx-auto w-64 mb-8" alt="">
+            <div class="mb-4 text-3xl lg:text-4xl text-center text-navy font-display italic leading-tight">About The Mary Parrish Center</div>
+            <p class="mb-12 max-w-4xl mx-auto text-xl lg:text-2xl text-white text-center leading-tight">The Mary Parrish Center provides vital services that help survivors through <b>the stages of
+                        rebuilding</b> their lives following interpersonal violence.</p>
+            <div class="mx-auto p-6 grid gap-6 lg:gap-12 max-w-4xl lg:p-0 lg:grid-cols-3">
+                <div class="px-3 py-4 bg-mp-navy rounded shadow-lg">
+                    <div class="my-6 text-center text-2xl text-mp-coral font-display italic">Gain independence from abusers</div>
+                    <p class="mb-4 text-white text-center">We provide transitional housing for survivors 
+                    domestic violence, dating violence, sexual assault, stalking, and/or human trafficking.</p>
+                </div>
+                <div class="px-3 py-4 bg-white rounded shadow-lg">
+                    <div class="my-6 text-center text-2xl text-mp-coral font-display italic">Become self-sufficient</div>
+                    <p class="mb-4 text-mp-navy text-center">We help survivors rebuild their lives through a wide range of flexible and optional 
+                    support services including clinical therapy, emergency financial assistance, housing advocacy, enrichment activities and case management.</p>
+                </div>
+                <div class="px-3 py-4 bg-mp-navy rounded shadow-lg">
+                    <div class="my-6 text-center text-2xl text-mp-coral font-display italic">Secure permanent housing</div>
+                    <p class="mb-4 text-white text-center">We assist survivors in finding permanent housing for themselves and their families.</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="https://www.maryparrish.org" target="_blank"><button class="mt-12 px-4 py-4 border-2 border-solid hover:border-white hover:bg-white border-mp-navy text-xl text-mp-navy hover:text-mp-coral rounded">Visit our website for more information</button></a>
+            </div>
+        </div>
     </div>
 </div>
