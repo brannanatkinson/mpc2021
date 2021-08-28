@@ -26,7 +26,9 @@
                         </a>
                         <div class="">${{ $item->cost }}</div>
                         @if( $item->sponsor )
-                            Matched by {{ $item->sponsor->name }}
+                            <div>Matched by {{ $item->sponsor->name }}</div>
+                            <div>Match used: {{ $item->sales() / $$item->sponsor->match }}</div>
+
                         @endif
                     </div>
                     
