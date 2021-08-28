@@ -41,7 +41,7 @@
             @endif
         </div>
         <div class="my-6">
-                <a href="{{ route('catalog') }}" class="mx-auto px-4 py-3 text-2xl text-white bg-green-500">Shop the Giving Catalog</a>
+                <a href="{{ route('catalog') }}" class="mx-auto inline-block px-4 py-3 text-2xl text-white bg-green-500">Shop the Giving Catalog</a>
         </div>
         <div class="my-6">
             <div class="mb-4 text-3xl">Thanks to my family and friends for giving these gifts</div>
