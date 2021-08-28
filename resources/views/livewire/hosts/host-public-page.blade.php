@@ -40,7 +40,7 @@
             </div>
             @endif
         </div>
-        <div class="mb-8">
+        <div class="mb-12">
             <div class="text-center">
                 <a href="{{ route('catalog') }}" class="inline-block px-4 py-3 text-2xl text-white bg-green-500">Shop the Giving Catalog</a>
             </div>  
