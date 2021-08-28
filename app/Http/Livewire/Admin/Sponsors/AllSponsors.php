@@ -63,6 +63,7 @@ class AllSponsors extends Component
             'img' => $photoPath,
             'website' => $this->website,
         ]);
+        // have to update item as well
 
         $this->resetInput();
         $this->createMode = false;
