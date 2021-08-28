@@ -40,11 +40,11 @@
             </div>
             @endif
         </div>
-        <div class="my-6">
+        <!-- <div class="my-6">
             <div class="text-center">
                 <a href="{{ route('catalog') }}" class="inline-block px-4 py-3 text-2xl text-white bg-green-500">Shop the Giving Catalog</a>
             </div>  
-        </div>
+        </div> -->
         <div class="mt-6">
             <div class="mb-4 text-3xl">Thanks to my family and friends for giving these gifts</div>
             @if( $user->donatedItems()->count() > 0 )
