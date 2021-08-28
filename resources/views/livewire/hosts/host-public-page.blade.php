@@ -46,7 +46,7 @@
             @endif
         </div>
         <div class="mb-12">
-            <div class="mb-4 text-center uppercase">Thanks to my family and friends for giving these gifts</div>
+            <div class="mb-4 text-xl text-center uppercase">Thanks to my family and friends for giving these gifts</div>
             @if( $user->donatedItems()->count() > 0 )
             <div class="mb-6 grid grid-cols-3 gap-6">
                 @foreach ( $user->donatedItems() as $item )

@@ -13,7 +13,17 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                display: ['Playfair Display', 'sans-serif'],
             },
+            colors: {
+                'mp-blue-green': '#539291',
+                'mp-light-lime': '#bad598',
+                'mp-mossy-green': '#b7bd54',
+                'mp-lime-yellow': '#e1e693',
+                'mp-light-gray': '#e5e6e2',
+                'mp-coral': '#f18d79',
+                'mp-navy': '#0c385c' 
+            }
         },
     },
 

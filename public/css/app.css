@@ -1143,10 +1143,6 @@ select {
 	margin-top: 3rem;
 	margin-bottom: 3rem;
 }
-.my-8 {
-	margin-top: 2rem;
-	margin-bottom: 2rem;
-}
 .ml-3 {
 	margin-left: 0.75rem;
 }
@@ -1227,9 +1223,6 @@ select {
 }
 .mb-12 {
 	margin-bottom: 3rem;
-}
-.mb-2 {
-	margin-bottom: 0.5rem;
 }
 .mt-16 {
 	margin-top: 4rem;
@@ -1650,9 +1643,6 @@ select {
 .p-8 {
 	padding: 2rem;
 }
-.p-4 {
-	padding: 1rem;
-}
 .px-4 {
 	padding-left: 1rem;
 	padding-right: 1rem;
@@ -1751,9 +1741,6 @@ select {
 }
 .pb-16 {
 	padding-bottom: 4rem;
-}
-.pb-8 {
-	padding-bottom: 2rem;
 }
 .text-center {
 	text-align: center;
