@@ -45,7 +45,7 @@ class Item extends Model
 
     public function matchToDate()
     {
-        return ( $this->sales()->first()->quantity * $this->cost ) / $this->sponsor->match;
+        return number_format( ( ( $this->sales()->first()->quantity * $this->cost ) / $this->sponsor->match ), 2 );
     }
 
     
