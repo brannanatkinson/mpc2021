@@ -16,7 +16,7 @@
                 @endphp 
             </div>
             @if ( $user->UserMeta->show_goal == true )
-            <div class="my-8">
+            <div class="mb-8">
                 <div class="relative pt-1">
                     <div class="mt-6 mb-4 text-xl text-center">
                         Please help me reach my goal of raising <span class="text-green-700 font-bold">${{ $user->UserMeta->goal }}</span> for The Mary Parrish Center
@@ -40,11 +40,11 @@
             </div>
             @endif
         </div>
-        <!-- <div class="my-6">
+        <div class="mb-8">
             <div class="text-center">
                 <a href="{{ route('catalog') }}" class="inline-block px-4 py-3 text-2xl text-white bg-green-500">Shop the Giving Catalog</a>
             </div>  
-        </div> -->
+        </div>
         <div class="mt-6">
             <div class="mb-4 text-3xl">Thanks to my family and friends for giving these gifts</div>
             @if( $user->donatedItems()->count() > 0 )
@@ -60,7 +60,7 @@
             </div>
             @endif
         </div>
-        <div class="my-6 bg-white rounded-md">
+        <div class="mb-8 bg-white rounded-md">
             <div class="mb-8 text-3xl text-center">Why I'm supporting Housing Hope</div>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed convallis tristique sem.  Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. 
