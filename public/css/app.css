@@ -2258,6 +2258,11 @@ select{
 	color: rgba(12, 56, 92, var(--tw-text-opacity));
 }
 
+.text-mp-blue-green{
+	--tw-text-opacity: 1;
+	color: rgba(83, 146, 145, var(--tw-text-opacity));
+}
+
 .underline{
 	text-decoration: underline;
 }
