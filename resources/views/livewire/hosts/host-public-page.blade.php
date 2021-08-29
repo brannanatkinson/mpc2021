@@ -40,7 +40,7 @@
                         </div>
                         <div class="text-right">
                           <span class="text-xs font-semibold inline-block text-green-600">
-                            @php echo $hostGoalProgress @endphp%
+                            @php echo number_format($hostGoalProgress, 2) @endphp%
                           </span>
                         </div>
                   </div>
