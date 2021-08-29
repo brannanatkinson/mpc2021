@@ -121,7 +121,7 @@
                     $hostGoalProgress = ( App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') / $user->UserMeta->goal ) * 100;
                 }
             @endphp 
-            @if ( $user->UserMeta->show_goal == true )
+            @if ( $user->UserMeta->goal != null )
             <div class="mb-8">
                 <div class="relative pt-1">
                     <div class="mt-6 mb-4 text-xl text-center">
