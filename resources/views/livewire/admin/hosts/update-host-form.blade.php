@@ -32,9 +32,11 @@
         </div>
         <div class="mb-8">
             <div class="text-2xl">Show Your Goal</div>
-            <p class="mb-4">Enter an amount if you would like to set a goal. Please leave blank if you don't want to show a goal.</p>
-            <input class="h-8 w-8" type="checkbox" wire:click.prevent="saveUserShowGoal" value="{{ $show_goal }}" wire:model="show_goal">
-            <label class="" for="">Check to show you goal on your public page</label>
+            <p class="mb-4">Enter an amount if you would like to set a goal. Please leave blank if you don't want to set a goal.</p>
+            <div class="mb-4">
+                <input class="h-8 w-8" type="checkbox" wire:click.prevent="saveUserShowGoal" value="{{ $show_goal }}" wire:model="show_goal">
+                <label class="" for="">Check to show you goal on your public page</label>
+            </div>
             <div class="mb-4">
                 <label for="">Enter your goal amount $</label>
                 <input type="number" wire:model="goal"><br/>
@@ -44,7 +46,7 @@
         <div class="mb-8">
             <div class="text-2xl">Show Donated Items</div>
             <p class="mb-4">This option will show users the items that people have donated when crediting you as the host.</p>
-            <input type="checkbox" wire:click.prevent="saveUserShowItems" value="{{ $show_items }}" wire:model="show_items"><br/>
+            <input class="h-8 w-8" type="checkbox" wire:click.prevent="saveUserShowItems" value="{{ $show_items }}" wire:model="show_items">
             <label for="">Check to show items</label>
         </div>
         <div class="mb-8">
