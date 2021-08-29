@@ -5,9 +5,13 @@ namespace App\Http\Livewire\Admin\Hosts;
 use Livewire\Component;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
+use Livewire\WithFileUploads;
+
 
 class UpdateHostForm extends Component
 {
+    use WithFileUploads;
+
     public $user, $image, $show_total, $goal, $show_goal, $show_items, $rationale, $show_rationale;
     public $show_alert = false;
     public function mount()
