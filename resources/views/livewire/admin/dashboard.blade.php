@@ -125,7 +125,7 @@
             <div class="mb-8">
                 <div class="relative pt-1">
                     <div class="mt-6 mb-4 text-xl text-center">
-                        Your are {{ $hostGoalProgress }}% toward your goal of <span class="text-green-700 font-bold">${{ $user->UserMeta->goal }}</span> for The Mary Parrish Center
+                        Your are {{ number_format( $hostGoalProgress, 0 ) }}% toward your goal of <span class="text-green-700 font-bold">${{ $user->UserMeta->goal }}</span> for The Mary Parrish Center
                     </div>
                     <div class="overflow-hidden h-4 mb-4 text-xs flex rounded-full bg-gray-200">
                         <div style="width:@php echo $hostGoalProgress @endphp%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-mp-blue-green"></div>
