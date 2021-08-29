@@ -17,10 +17,10 @@
             <p>This form will help you update your public Housing Hope profile.</p>
         </div>
         <div class="mb-8">
-            <div class="text-2xl">Add Your Photo</div>
-            <div class="flex flex-col">
-                <label>Add a photo that will show on your public profile</label>
-                <input type="file" wire:model="image">
+            <div class="mb-4 text-2xl">Add Your Photo</div>
+            <div class="mb-4 flex flex-col">
+                <label class="mb-4">Add a photo that will show on your public profile</label>
+                <input type="file" wire:model="image" class="px-4 py-3 text-white bg-mp-blue-green" >
             </div>
             <button wire:click.prevent="saveUserPhoto" class="px-4 py-3 text-white bg-mp-blue-green">Save Your Photo</button>
         </div>
