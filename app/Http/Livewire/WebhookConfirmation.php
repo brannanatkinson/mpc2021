@@ -9,6 +9,7 @@ use App\Models\Gift;
 use App\Models\Item;
 use App\Models\Host;
 use App\Models\User;
+use App\Mail\HostCredited;
 use Illuminate\Support\Facades\Mail;
 
 class WebhookConfirmation extends Component
