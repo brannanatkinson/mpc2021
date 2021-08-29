@@ -17,26 +17,26 @@
             <p>This form will help you update your public Housing Hope profile.</p>
         </div>
         <div class="mb-8">
-            <div class="mb-4 text-2xl">Add Your Photo</div>
+            <div class="text-2xl">Add Your Photo</div>
             <div class="mb-4 flex flex-col">
-                <label class="mb-4">Add a photo that will show on your public profile</label>
+                <label class="mb-4">Add a photo that will show on your public profile.</label>
                 <input type="file" wire:model="image"  >
             </div>
             <button wire:click.prevent="saveUserPhoto" class="px-4 py-3 text-white bg-mp-blue-green">Save Your Photo</button>
         </div>
         <div class="mb-8">
-            <div class="text-2xl">Show Host Totals</div>
-            <p>This is the total amound of donations where users have credited you as the virtual hosts</p>
+            <div class="mb-4 text-2xl">Show Host Totals</div>
+            <p class="mb-4">This will show total amount of donations where users have credited you as the virtual hosts</p>
             <input class="h-8 w-8" wire:click.prevent="saveUserShowTotal" value="{{ $show_total }}" wire:model="show_total" type="checkbox">
             <label for="">Check to show donation total</label>
         </div>
         <div class="mb-8">
             <div class="text-2xl">Show Your Goal</div>
-            <p>Enter an amount if you would like to show a goal on your public profile. Please leave blank if you don't want to show a goal.</p>
-            <label for="">Show your goal on your public page</label>
-            <input type="checkbox" wire:click.prevent="saveUserShowGoal" value="{{ $show_goal }}" wire:model="show_goal"><br/>
+            <p class="mb-4">Enter an amount if you would like to set a goal. Please leave blank if you don't want to show a goal.</p>
+            <label class="" for="">Check to show you goal on your public page</label>
+            <input class="mb-6 h-8 w-8" type="checkbox" wire:click.prevent="saveUserShowGoal" value="{{ $show_goal }}" wire:model="show_goal"><br/>
             <label for="">Enter your goal amount</label>
-            <input type="number" wire:model="goal"><br/>
+            <input class="mb-4" type="number" wire:model="goal"><br/>
             <button wire:click.prevent="saveUserGoal" class="px-4 py-3 text-white bg-mp-blue-green">Save Goal</button>
         </div>
         <div class="mb-8">
