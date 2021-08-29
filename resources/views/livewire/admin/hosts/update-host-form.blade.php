@@ -33,9 +33,9 @@
         <div class="mb-8">
             <div class="text-2xl">Show Your Goal</div>
             <p class="mb-4">Enter an amount if you would like to set a goal. Please leave blank if you don't want to show a goal.</p>
-            <input class="mb-6 h-8 w-8" type="checkbox" wire:click.prevent="saveUserShowGoal" value="{{ $show_goal }}" wire:model="show_goal">
+            <input class="h-8 w-8" type="checkbox" wire:click.prevent="saveUserShowGoal" value="{{ $show_goal }}" wire:model="show_goal">
             <label class="" for="">Check to show you goal on your public page</label>
-            <div class="mb-4" >
+            <div class="mb-4">
                 <label for="">Enter your goal amount $</label>
                 <input type="number" wire:model="goal"><br/>
             </div>
@@ -43,15 +43,17 @@
         </div>
         <div class="mb-8">
             <div class="text-2xl">Show Donated Items</div>
-            <p>This is option will show users the items that people have donated when crediting you as the host.</p>
-             <input type="checkbox" wire:click.prevent="saveUserShowItems" value="{{ $show_items }}" wire:model="show_items"><br/>
+            <p class="mb-4">This option will show users the items that people have donated when crediting you as the host.</p>
+            <input type="checkbox" wire:click.prevent="saveUserShowItems" value="{{ $show_items }}" wire:model="show_items"><br/>
             <label for="">Check to show items</label>
         </div>
         <div class="mb-8">
             <div class="text-2xl">Show Reason for Supporting Housing Hope</div>
-            <p>Write a statement about why you support The Mary Parrish Center or any message you want visitiors to see.</p>
-            <label for="">Show your message of support on your public page</label>
-            <input type="checkbox" wire:click.prevent="saveUserShowRationale" value="{{ $show_rationale }}" wire:model="show_rationale"><br/>
+            <p class="mb-4">Write a statement about why you support The Mary Parrish Center or any message you want visitiors to see.</p>
+            <div class="mb-4">
+                <input class="h-8 w-8" type="checkbox" wire:click.prevent="saveUserShowRationale" value="{{ $show_rationale }}" wire:model="show_rationale">
+                <label for="">Show your message of support on your public page</label>
+            </div>
             <textarea class="w-full" rows="7" wire:model="rationale"></textarea>
             <button wire:click.prevent="saveUserRationale" class="px-4 py-3 text-white bg-mp-blue-green">Save Message</button>
         </div>
