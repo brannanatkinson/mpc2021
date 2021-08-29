@@ -14,7 +14,8 @@
             <div class="text-2xl">Show Your Goal</div>
             <p>Enter an amount if you would like to set a goal for the amount you want to raise. Please leave blank if you don't want to show a goal.</p>
             <label for="">Enter your goal amount</label>
-            <input type="text">
+            <input type="text"><br/>
+            <button class="px-4 py-3 text-white bg-mp-blue-green">Save Goal</button>
         </div>
         <div class="mb-8">
             <div class="text-2xl">Show Donated Items</div>
@@ -26,6 +27,7 @@
             <div class="text-2xl">Show Reason for Supporting Housing Hope</div>
             <p>Write a statement about why you support The Mary Parrish Center or any message you want visitiors to see.</p>
             <textarea class="w-full" rows="7"></textarea>
+            <button class="px-4 py-3 text-white bg-mp-blue-green">Save Message</button>
         </div>
     </div>
     
