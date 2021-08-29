@@ -24,8 +24,8 @@
             </div>
             <button wire:click.prevent="saveUserPhoto" class="px-4 py-3 text-white bg-mp-blue-green">Save Your Photo</button>
         </div>
-        <div class="mb-8">
-            <div class="mb-4 text-2xl">Show Host Totals</div>
+        <div class="mt-4 mb-8">
+            <div class="text-2xl">Show Host Totals</div>
             <p class="mb-4">This will show total amount of donations where users have credited you as the virtual hosts</p>
             <input class="h-8 w-8" wire:click.prevent="saveUserShowTotal" value="{{ $show_total }}" wire:model="show_total" type="checkbox">
             <label for="">Check to show donation total</label>
