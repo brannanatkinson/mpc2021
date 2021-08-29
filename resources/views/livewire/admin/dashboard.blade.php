@@ -149,9 +149,9 @@
         <div class="mt-10 max-w-5xl mx-auto">
             <div class="my-3 text-3xl">Items Donated</div>
             @if( $user->donatedItems()->count() > 0 )
-            <div class="mb-6 grid grid-cols-3 gap-6">
+            <div class="mb-6 grid grid-cols-4 gap-6">
                 @foreach ( $user->donatedItems() as $item )
-                <div class="bg-gray-100 text-center flex flex-col rounded-md overflow-hidden">
+                <div class="bg-white text-center flex flex-col rounded-md overflow-hidden">
                     <div class="mb-6 w-full">
                         <img src="{{ Storage::url( App\Models\Item::find( $item->id )->img ) }}" alt="" class="object-fit">
                     </div>
