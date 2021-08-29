@@ -29,7 +29,7 @@ class UpdateHostForm extends Component
     public function saveUserPhoto()
     {
         $photoPath = $this->image->store('public/photos/users');
-        User::User::find( auth()->user()->id )
+        User::find( auth()->user()->id )
             ->update[(
                 'profile_photo_path' => $this->image,
             )];
