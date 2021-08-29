@@ -21,11 +21,11 @@ class UpdateHostForm extends Component
     }
     public function saveUserShowGoal()
     {
-        $meta = DB::table('user_metas')
-            ->where('user_id', '=', auth()->user()->id )
-            ->update([
-                'show_goal' => $this->show_goal,
-            ]);
+        // $meta = DB::table('user_metas')
+        //     ->where('user_id', '=', auth()->user()->id )
+        //     ->update([
+        //         'show_goal' => $this->show_goal,
+        //     ]);
     }
 
     public function saveUserGoal()
