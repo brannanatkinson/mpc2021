@@ -72,17 +72,20 @@
             <div class="mt-8 mb-6 text-3xl font-bold">
                 2021 Gift Summary
             </div>
-            <div class="grid grid-cols-5 gap-8">
-                <div class="px-4 col-span-2 font-bold">Donor</div>
-                <div class="px-4 font-bold">Amount</div>
-                <!-- add purchase date  -->
-                <div class="px-4"></div>
-                @foreach( App\Models\Gift::orderBy('gift_total', 'DESC')->get() as $gift )
-                <div class="px-4 col-span-2">{{ $gift->donor->full_name }}</div>
-                <div class="px-4">${{ $gift->gift_total }}</div>
-                <div class="px-4"></div>
+            <div class="">
+            @if( $user->donatedItems()->count() > 0 )
+            <div class="mb-6 grid grid-cols-3 gap-6">
+                @foreach ( $user->donatedItems() as $item )
+                <div class="bg-gray-100 text-center flex flex-col rounded-md overflow-hidden">
+                    <div class="mb-6 w-full">
+                        <img src="{{ Storage::url( App\Models\Item::find( $item->id )->img ) }}" alt="" class="object-fit">
+                    </div>
+                    <div class="mb-8 text-3xl">{{ $item->quantity }}</div>
+                </div>
                 @endforeach
             </div>
+            @endif
+        </div>
         </div>
 
 
