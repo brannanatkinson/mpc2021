@@ -3,7 +3,7 @@
     <div>
         Donation Summary
     </div>
-    @foreach( $gift->items() as $item )
+    @foreach( $gift->items as $item )
     <div>{{ $item->item_name }} - {{ $item->quantity }}</div>
     @endforeach
 </div>
