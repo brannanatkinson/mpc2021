@@ -27,7 +27,7 @@
         <div class="mb-8">
             <div class="text-2xl">Show Host Totals</div>
             <p>This is the total amound of donations where users have credited you as the virtual hosts</p>
-            <input wire:click.prevent="saveUserShowTotal" value="{{ $show_total }}" wire:model="show_total" type="checkbox">
+            <input class="h-16 w-16" wire:click.prevent="saveUserShowTotal" value="{{ $show_total }}" wire:model="show_total" type="checkbox">
             <label for="">Check to show donation total</label>
         </div>
         <div class="mb-8">
