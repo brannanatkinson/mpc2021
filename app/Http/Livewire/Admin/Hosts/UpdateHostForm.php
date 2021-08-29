@@ -19,6 +19,7 @@ class UpdateHostForm extends Component
         $this->show_items = $this->user->UserMeta->show_items;
         $this->rationale = $this->user->UserMeta->rationale;
         $this->show_rationale = $this->user->UserMeta->show_rationale;
+        $this->image = $this->user->profile_photo_path;
     }
     public function render()
     {
@@ -28,9 +29,10 @@ class UpdateHostForm extends Component
     public function saveUserPhoto()
     {
         $photoPath = $this->image->store('public/photos/users');
-        User::update[(
-            'profile_photo_path' => $this->image,
-        )];
+        User::User::find( auth()->user()->id )
+            ->update[(
+                'profile_photo_path' => $this->image,
+            )];
     }
 
     public function saveUserShowTotal()

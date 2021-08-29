@@ -1501,6 +1501,10 @@ select{
 	width: 16rem;
 }
 
+.w-24{
+	width: 6rem;
+}
+
 .min-w-0{
 	min-width: 0px;
 }

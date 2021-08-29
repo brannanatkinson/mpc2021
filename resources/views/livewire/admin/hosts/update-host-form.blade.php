@@ -5,6 +5,11 @@
             <div class="p-4 bg-mp-blue-green text-white">Your profile was updated.</div>
         </div>
         @endif
+        @if ( $image )
+        <div class="mb-8 h-24 w-24 rounded-full">
+            <img src="{{ Storage::url( $image ) }}" class="object-cover" alt="">
+        </div>
+        @endif
         <div class="mb-8">
             <div class="text-3xl text-center">Profile for {{ $user->name }}</div>
         </div>
