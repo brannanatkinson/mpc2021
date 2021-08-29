@@ -1,3 +1,3 @@
 <div>
-    {{ auth()->user() }}
+    {{ $user->name }}
 </div>
