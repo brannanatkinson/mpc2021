@@ -94,6 +94,35 @@
                     <div class="mb-6 uppercase">
                         Total Raised
                     </div>
+                    @php
+                        if ( $user->UserMeta->goal  ){
+                            $hostGoalProgress = ( App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') / $user->UserMeta->goal ) * 100;
+                        }
+                    @endphp 
+                    @if ( $user->UserMeta->show_goal == true )
+                    <div class="mb-8">
+                        <div class="relative pt-1">
+                            <div class="mt-6 mb-4 text-xl text-center">
+                                Progress toward my goal of <span class="text-green-700 font-bold">${{ $user->UserMeta->goal }}</span> for The Mary Parrish Center
+                            </div>
+                            <div class="overflow-hidden h-4 mb-4 text-xs flex rounded-full bg-gray-200">
+                                <div style="width:@php echo $hostGoalProgress @endphp%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-mp-blue-green"></div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                  <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-white bg-mp-blue-green">
+                                    Progress Toward My Goal
+                                  </span>
+                                </div>
+                                <div class="text-right">
+                                  <span class="text-xs font-semibold inline-block text-mp-blue-green">
+                                    @php echo number_format($hostGoalProgress, 0) @endphp%
+                                  </span>
+                                </div>
+                          </div>
+                        </div>
+                    </div>
+                    @endif
                     <div class="mb-8 text-4xl font-bold">
                         ${{ App\Models\Gift::where('user_id', '=', auth()->user()->id )->sum('gift_total') }}
                     </div>
