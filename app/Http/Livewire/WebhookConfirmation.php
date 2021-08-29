@@ -9,6 +9,7 @@ use App\Models\Gift;
 use App\Models\Item;
 use App\Models\Host;
 use App\Models\User;
+use Illuminate\Support\Facades\Mail;
 
 class WebhookConfirmation extends Component
 {    
@@ -56,7 +57,7 @@ class WebhookConfirmation extends Component
             if ( $userId != null )
             {
                 User::find( $userId )->items()->attach( [ 'item_id' => $itemToStore->id ], [ 'item_quantity' => $newItem['quantity'] ] );
-                // send Host email about donor gift
+                Mail::to( $user->email )->send(new HostCredited($gift));
             }    
         }
 

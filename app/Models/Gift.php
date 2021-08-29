@@ -28,4 +28,8 @@ class Gift extends Model
     {
         return $this->belongsTo(Sponsor::class);
     }
+
+    public function user(){
+        return $this->hasOne(User::class);
+    }
 }
