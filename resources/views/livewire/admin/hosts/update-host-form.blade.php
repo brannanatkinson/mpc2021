@@ -1,6 +1,8 @@
 <div>
     <div class="max-w-5xl mx-auto">
-        <div class="mb-8">Profile for {{ $user->name }}</div>
+        <div class="mb-8">
+            <div class="text-3xl text-center">Profile for {{ $user->name }}</div>
+        </div>
         <div class="mb-8">
             <p>This form will help you update your public Housing Hope profile.</p>
         </div>
