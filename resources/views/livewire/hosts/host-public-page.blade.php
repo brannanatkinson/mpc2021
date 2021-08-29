@@ -3,6 +3,11 @@
         {{ $user->name }}
     </div>
     <div class="max-w-4xl mx-auto">
+        @if ( $user->profile_photo_path != null )
+        <div class="mb-8 mx-auto h-24 w-24 rounded-full overflow-hidden">
+            <img src="{{ Storage::url( $user->profile_photo_path ) }}" class="object-cover" alt="">
+        </div>
+        @endif
         <div class="mt-6 mb-12">
             @if ( $user->UserMeta->show_total == true )
             <div class="mb-6 text-center uppercase">
