@@ -38,7 +38,7 @@ class UpdateHostForm extends Component
             ->update([
                 'profile_photo_path' => $photoPath,
             ]);
-        render();
+        $this->mount();
     }
 
     public function saveUserShowTotal()
