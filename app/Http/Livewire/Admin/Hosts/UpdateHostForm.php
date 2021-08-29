@@ -12,8 +12,8 @@ class UpdateHostForm extends Component
     public function mount()
     {
         $this->user = User::find( auth()->user()->id );
-        $this->goal = $user->UserMeta->goal;
-        $this->show_goal = $user->UserMeta->show_goal;
+        $this->goal = $this->user->UserMeta->goal;
+        $this->show_goal = $this->user->UserMeta->show_goal;
     }
     public function render()
     {
