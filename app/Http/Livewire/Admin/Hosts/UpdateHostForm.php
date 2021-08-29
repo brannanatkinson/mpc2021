@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 class UpdateHostForm extends Component
 {
     public $user, $show_total, $goal, $show_goal, $show_items, $rationale, $show_rationale;
+    public $show_alert = false;
     public function mount()
     {
         $this->user = User::find( auth()->user()->id );
@@ -32,6 +33,7 @@ class UpdateHostForm extends Component
             ->update([
                 'show_total' => $this->show_total,
             ]);
+        $this->show_alert = true;
     }
 
     public function saveUserShowGoal()

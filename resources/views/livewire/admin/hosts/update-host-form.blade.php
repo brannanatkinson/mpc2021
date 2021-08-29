@@ -1,5 +1,10 @@
 <div>
     <div class="max-w-5xl mx-auto">
+        @if( $show_alert )
+        <div class="mb-8">
+            <div class="py-4 text-3xl bg-mp-blue-green text-white">Profile updated</div>
+        </div>
+        @endif
         <div class="mb-8">
             <div class="text-3xl text-center">Profile for {{ $user->name }}</div>
         </div>
