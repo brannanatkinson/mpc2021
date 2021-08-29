@@ -10,7 +10,7 @@ class UpdateHostForm extends Component
     public $user;
     public function mount()
     {
-        $this->user = User::find( auth()->user()->id );
+        $this->user = User::find( auth()->user->id );
     }
     public function render()
     {
