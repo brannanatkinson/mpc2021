@@ -24,7 +24,7 @@ class UpdateHostForm extends Component
         $meta = DB::table('user_meta')
             ->where('user_id', '=', auth()->user()->id )
             ->update([
-                'show_goal' = $this->show_goal,
+                'show_goal' => $this->show_goal,
             ]);
     }
 
@@ -33,7 +33,7 @@ class UpdateHostForm extends Component
         $meta = DB::table('user_meta')
             ->where('user_id', '=', auth()->user()->id )
             ->update([
-                'goal' = $this->goal,
+                'goal' => $this->goal,
             ]);
     }
 
