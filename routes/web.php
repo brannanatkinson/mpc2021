@@ -6,6 +6,7 @@ use App\Http\Livewire\Catalog;
 use App\Http\Livewire\CatalogItem;
 use App\Http\Livewire\WebhookConfirmation;
 use App\Http\Livewire\Admin\Hosts\AllHosts;
+use App\Http\Livewire\Admin\Hosts\UpdateHostForm;
 use App\Http\Livewire\Admin\Dashboard;
 use App\Http\Livewire\Admin\Items\AllItems;
 use App\Http\Livewire\Admin\Categories\AllCategories;
@@ -34,6 +35,7 @@ Route::get('/catalog/item/{id}', CatalogItem::class);
 Route::post('/webhook', WebhookConfirmation::class);
 
 Route::get('/admin/hosts', AllHosts::class)->middleware(['auth:sanctum', 'verified', 'can:admin'])->name('admin.hosts');
+Route::get('/admin/hosts/update/', UpdateHostForm::class)->middleware(['auth:sanctum', 'verified', 'can:edit host'])->name('admin.update.hosts');
 Route::get('/admin/items', AllItems::class)->middleware(['auth:sanctum', 'verified', 'can:admin'])->name('admin.items');
 Route::get('/admin/categories', AllCategories::class)->middleware(['auth:sanctum', 'verified', 'can:admin'])->name('admin.categories');
 Route::get('/admin/sponsors', AllSponsors::class)->middleware(['auth:sanctum', 'verified', 'can:admin'])->name('admin.sponsors');
