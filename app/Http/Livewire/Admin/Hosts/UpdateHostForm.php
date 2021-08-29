@@ -73,7 +73,7 @@ class UpdateHostForm extends Component
             ]);
     }
 
-    public function saveUserRationle()
+    public function saveUserRationale()
     {
         $meta = DB::table('user_metas')
             ->where('user_id', '=', auth()->user()->id )
