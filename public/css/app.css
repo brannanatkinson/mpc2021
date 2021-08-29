@@ -1345,12 +1345,16 @@ select{
 	margin-bottom: 3rem;
 }
 
-.mt-16{
-	margin-top: 4rem;
+.mb-16{
+	margin-bottom: 4rem;
 }
 
 .mt-12{
 	margin-top: 3rem;
+}
+
+.mt-16{
+	margin-top: 4rem;
 }
 
 .block{
@@ -1595,12 +1599,12 @@ select{
 	grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.grid-cols-3{
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .grid-cols-2{
 	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3{
+	grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .grid-cols-5{
@@ -1651,12 +1655,12 @@ select{
 	gap: 0.25rem;
 }
 
-.gap-8{
-	gap: 2rem;
-}
-
 .gap-12{
 	gap: 3rem;
+}
+
+.gap-8{
+	gap: 2rem;
 }
 
 .space-x-8 > :not([hidden]) ~ :not([hidden]){
@@ -1759,10 +1763,6 @@ select{
 	border-bottom-width: 1px;
 }
 
-.border-r{
-	border-right-width: 1px;
-}
-
 .border-solid{
 	border-style: solid;
 }
@@ -1789,11 +1789,6 @@ select{
 .border-gray-100{
 	--tw-border-opacity: 1;
 	border-color: rgba(243, 244, 246, var(--tw-border-opacity));
-}
-
-.border-gray-400{
-	--tw-border-opacity: 1;
-	border-color: rgba(156, 163, 175, var(--tw-border-opacity));
 }
 
 .border-mp-navy{
@@ -1881,16 +1876,6 @@ select{
 	background-color: rgba(167, 243, 208, var(--tw-bg-opacity));
 }
 
-.bg-green-800{
-	--tw-bg-opacity: 1;
-	background-color: rgba(6, 95, 70, var(--tw-bg-opacity));
-}
-
-.bg-green-100{
-	--tw-bg-opacity: 1;
-	background-color: rgba(209, 250, 229, var(--tw-bg-opacity));
-}
-
 .bg-mp-coral{
 	--tw-bg-opacity: 1;
 	background-color: rgba(241, 141, 121, var(--tw-bg-opacity));
@@ -1899,6 +1884,16 @@ select{
 .bg-mp-navy{
 	--tw-bg-opacity: 1;
 	background-color: rgba(12, 56, 92, var(--tw-bg-opacity));
+}
+
+.bg-green-800{
+	--tw-bg-opacity: 1;
+	background-color: rgba(6, 95, 70, var(--tw-bg-opacity));
+}
+
+.bg-green-100{
+	--tw-bg-opacity: 1;
+	background-color: rgba(209, 250, 229, var(--tw-bg-opacity));
 }
 
 .bg-opacity-25{
@@ -1920,6 +1915,10 @@ select{
 
 .p-8{
 	padding: 2rem;
+}
+
+.p-4{
+	padding: 1rem;
 }
 
 .px-4{
@@ -2157,10 +2156,6 @@ select{
 
 .tracking-widest{
 	letter-spacing: 0.1em;
-}
-
-.tracking-wider{
-	letter-spacing: 0.05em;
 }
 
 .text-gray-500{
@@ -2855,12 +2850,12 @@ select{
 		grid-column: span 4 / span 4;
 	}
 
-	.lg\:grid-cols-4{
-		grid-template-columns: repeat(4, minmax(0, 1fr));
-	}
-
 	.lg\:grid-cols-3{
 		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	.lg\:grid-cols-4{
+		grid-template-columns: repeat(4, minmax(0, 1fr));
 	}
 
 	.lg\:gap-12{
