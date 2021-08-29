@@ -25,7 +25,7 @@
         <div class="mb-8">
             <div class="text-2xl">Show Reason for Supporting Housing Hope</div>
             <p>Write a statement about why you support The Mary Parrish Center or any message you want visitiors to see.</p>
-            <textarea></textarea>
+            <textarea class="w=full h-48"></textarea>
         </div>
     </div>
     
