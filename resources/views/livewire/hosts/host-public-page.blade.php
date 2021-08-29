@@ -73,7 +73,7 @@
         @if ( $user->UserMeta->show_rationale == true )
         <div class="mb-16 bg-white rounded-md">
             <div class="mb-8 text-3xl text-center">Why I'm supporting Housing Hope</div>
-            <p>
+            <p class="text-xl">
                 {!! nl2br(e( $user->UserMeta->rationale )) !!}
             </p>
         </div>
