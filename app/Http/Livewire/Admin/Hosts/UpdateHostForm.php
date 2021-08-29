@@ -36,7 +36,7 @@ class UpdateHostForm extends Component
         $user = DB::table('users')
             ->where('id', '=', $this->user->id )
             ->update([
-                'profile_photo_path' => $this->photoPath,
+                'profile_photo_path' => $photoPath,
             ]);
     }
 
