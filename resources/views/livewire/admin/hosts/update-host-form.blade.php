@@ -6,8 +6,8 @@
         </div>
         @endif
         @if ( $image )
-        <div class="mb-8 h-24 w-24 rounded-full">
-            <img src="{{ Storage::url( $image ) }}" class="object-cover" alt="">
+        <div class="mb-8 h-24 w-24 rounded-full overflow-hidden">
+            <img src="{{ Storage::url( $image ) }}" class="mx-auto object-cover" alt="">
         </div>
         @endif
         <div class="mb-8">
