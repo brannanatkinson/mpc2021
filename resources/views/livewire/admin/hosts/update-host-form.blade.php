@@ -14,10 +14,12 @@
         </div>
         <div class="mb-8">
             <div class="text-2xl">Show Your Goal</div>
-            <p>Enter an amount if you would like to set a goal for the amount you want to raise. Please leave blank if you don't want to show a goal.</p>
+            <p>Enter an amount if you would like to show a goal on your public profile. Please leave blank if you don't want to show a goal.</p>
+            <label for="">Show your goal on your public page</label>
+            <input type="checkbox" wire:click.prevent="saveUserShowGoal" wire:model="show_goal"><br/>
             <label for="">Enter your goal amount</label>
-            <input type="text"><br/>
-            <button class="px-4 py-3 text-white bg-mp-blue-green">Save Goal</button>
+            <input type="number" wire:model="goal"><br/>
+            <button wire:click.prevent="saveUserGoal" class="px-4 py-3 text-white bg-mp-blue-green">Save Goal</button>
         </div>
         <div class="mb-8">
             <div class="text-2xl">Show Donated Items</div>
