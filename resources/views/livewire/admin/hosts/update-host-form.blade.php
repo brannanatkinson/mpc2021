@@ -34,9 +34,11 @@
             <div class="text-2xl">Show Your Goal</div>
             <p class="mb-4">Enter an amount if you would like to set a goal. Please leave blank if you don't want to show a goal.</p>
             <input class="mb-6 h-8 w-8" type="checkbox" wire:click.prevent="saveUserShowGoal" value="{{ $show_goal }}" wire:model="show_goal">
-            <label class="" for="">Check to show you goal on your public page</label><br/>
-            <label for="">Enter your goal amount $</label>
-            <input class="mb-4" type="number" wire:model="goal"><br/>
+            <label class="" for="">Check to show you goal on your public page</label>
+            <div class="mb-4" >
+                <label for="">Enter your goal amount $</label>
+                <input type="number" wire:model="goal"><br/>
+            </div>
             <button wire:click.prevent="saveUserGoal" class="px-4 py-3 text-white bg-mp-blue-green">Save Goal</button>
         </div>
         <div class="mb-8">
