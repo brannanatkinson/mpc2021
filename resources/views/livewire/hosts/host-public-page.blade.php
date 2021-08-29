@@ -14,7 +14,7 @@
                 Amount Raised
             </div>
             
-            <div class="mb-12 text-6xl text-center font-display">
+            <div class="mb-12 text-6xl text-center text-mp-blue-green font-display">
                 ${{ App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') }}
             </div>
             @endif
