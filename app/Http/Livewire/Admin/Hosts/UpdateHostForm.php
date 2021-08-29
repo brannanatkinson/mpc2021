@@ -34,7 +34,7 @@ class UpdateHostForm extends Component
     {
         $photoPath = $this->image->store('public/photos/users');
         $user = DB::table('users')
-            ->where('id', '=', $user->id )
+            ->where('id', '=', $this->user->id )
             ->update([
                 'profile_photo_path' => $this->image,
             ]);
