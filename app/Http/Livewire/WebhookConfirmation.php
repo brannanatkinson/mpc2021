@@ -57,7 +57,8 @@ class WebhookConfirmation extends Component
             if ( $userId != null )
             {
                 User::find( $userId )->items()->attach( [ 'item_id' => $itemToStore->id ], [ 'item_quantity' => $newItem['quantity'] ] );
-                Mail::to( $user->email )->send(new HostCredited($gift));
+                $userEmail = User::where('name', $this->result['content']['items'][0]['customFields'][0]['value'])->first()->email;
+                Mail::to( $userEmail )->send(new HostCredited($gift));
             }    
         }
 
