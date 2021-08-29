@@ -8,20 +8,21 @@
             <div class="mb-6 text-center uppercase">
                 Amount Raised
             </div>
-            @endif
+            
             <div class="mb-12 text-6xl text-center font-display">
                 ${{ App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') }}
-                @php
-                    if ( $user->UserMeta->goal  ){
-                        $hostGoalProgress = ( App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') / $user->UserMeta->goal ) * 100;
-                    }
-                @endphp 
             </div>
+            @endif
             <div class="mb-12">
                 <div class="text-center">
                     <a href="{{ route('catalog') }}" class="inline-block px-4 py-3 text-2xl text-white bg-mp-blue-green">Shop the Giving Catalog</a>
                 </div>  
             </div>
+            @php
+                if ( $user->UserMeta->goal  ){
+                    $hostGoalProgress = ( App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') / $user->UserMeta->goal ) * 100;
+                }
+            @endphp 
             @if ( $user->UserMeta->show_goal == true )
             <div class="mb-8">
                 <div class="relative pt-1">
