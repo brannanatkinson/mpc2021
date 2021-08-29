@@ -4,6 +4,6 @@
         Donation Summary
     </div>
     @foreach( $gift->items as $item )
-    <div>{{ $item->item_name }} - {{ $item->quantity }}</div>
+    <div>{{ $item->name }} - {{ $item->item_quantity }}</div>
     @endforeach
 </div>
