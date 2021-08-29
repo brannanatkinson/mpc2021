@@ -24,14 +24,16 @@
         <div class="mb-8">
             <div class="text-2xl">Show Donated Items</div>
             <p>This is option will show users the items that people have donated when crediting you as the host.</p>
-            <input type="checkbox">
+             <input type="checkbox" wire:click.prevent="saveUserShowItems" value="{{ $show_items }}" wire:model="show_items"><br/>
             <label for="">Check to show items</label>
         </div>
         <div class="mb-8">
             <div class="text-2xl">Show Reason for Supporting Housing Hope</div>
             <p>Write a statement about why you support The Mary Parrish Center or any message you want visitiors to see.</p>
-            <textarea class="w-full" rows="7"></textarea>
-            <button class="px-4 py-3 text-white bg-mp-blue-green">Save Message</button>
+            <label for="">Show your message of support on your public page</label>
+            <input type="checkbox" wire:click.prevent="saveUserShowRationale" value="{{ $show_rationale }}" wire:model="show_rationale"><br/>
+            <textarea class="w-full" rows="7" wire:model="rationale"></textarea>
+            <button wire:click.prevent="saveUserRationale" class="px-4 py-3 text-white bg-mp-blue-green">Save Message</button>
         </div>
     </div>
     
