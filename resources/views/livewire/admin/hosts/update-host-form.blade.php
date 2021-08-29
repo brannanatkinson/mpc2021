@@ -17,7 +17,7 @@
             <p>Enter an amount if you would like to show a goal on your public profile. Please leave blank if you don't want to show a goal.</p>
             <label for="">Show your goal on your public page</label>
             <div>{{ $show_goal }}</div>
-            <input type="checkbox" wire:click.prevent="saveUserShowGoal" wire:model="show_goal"><br/>
+            <input type="checkbox" wire:click.prevent="saveUserShowGoal" value="{{ $show_goal }}" wire:model="show_goal"><br/>
             <label for="">Enter your goal amount</label>
             <input type="number" wire:model="goal"><br/>
             <button wire:click.prevent="saveUserGoal" class="px-4 py-3 text-white bg-mp-blue-green">Save Goal</button>
