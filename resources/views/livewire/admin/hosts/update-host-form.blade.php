@@ -12,6 +12,14 @@
             <p>This form will help you update your public Housing Hope profile.</p>
         </div>
         <div class="mb-8">
+            <div class="flex flex-col">
+                <label>Add your photo</label>
+                <input type="file" wire:model="image">
+                <button wire:click.prevent="saveUserPhoto" class="px-4 py-3 text-white bg-mp-blue-green">Save Your Photo</button>
+                @error('image') <span class="error">{{ $message }}</span> @enderror
+            </div>
+        </div>
+        <div class="mb-8">
             <div class="text-2xl">Show Host Totals</div>
             <p>This is the total amound of donations where users have credited you as the virtual hosts</p>
             <input wire:click.prevent="saveUserShowTotal" value="{{ $show_total }}" wire:model="show_total" type="checkbox">

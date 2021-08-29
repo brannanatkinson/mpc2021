@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class UpdateHostForm extends Component
 {
-    public $user, $show_total, $goal, $show_goal, $show_items, $rationale, $show_rationale;
+    public $user, $image, $show_total, $goal, $show_goal, $show_items, $rationale, $show_rationale;
     public $show_alert = false;
     public function mount()
     {
@@ -23,6 +23,14 @@ class UpdateHostForm extends Component
     public function render()
     {
         return view('livewire.admin.hosts.update-host-form');
+    }
+
+    public function saveUserPhoto()
+    {
+        $photoPath = $this->image->store('public/photos/users');
+        User::update[(
+            'profile_photo_path' => $this->image,
+        )];
     }
 
     public function saveUserShowTotal()
