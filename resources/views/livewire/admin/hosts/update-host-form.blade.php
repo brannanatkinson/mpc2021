@@ -2,7 +2,7 @@
     <div class="max-w-5xl mx-auto">
         @if( $show_alert )
         <div class="mb-8">
-            <div class="py-4 text-3xl bg-mp-blue-green text-white">Profile updated</div>
+            <div class="p-4 bg-mp-blue-green text-white">Your profile was updated.</div>
         </div>
         @endif
         <div class="mb-8">
