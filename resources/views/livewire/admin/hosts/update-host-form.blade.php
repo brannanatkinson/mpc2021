@@ -20,9 +20,8 @@
             <div class="flex flex-col">
                 <label>Add your photo</label>
                 <input type="file" wire:model="image">
-                <button wire:click.prevent="saveUserPhoto" class="px-4 py-3 text-white bg-mp-blue-green">Save Your Photo</button>
-                @error('image') <span class="error">{{ $message }}</span> @enderror
             </div>
+            <button wire:click.prevent="saveUserPhoto" class="px-4 py-3 text-white bg-mp-blue-green">Save Your Photo</button>
         </div>
         <div class="mb-8">
             <div class="text-2xl">Show Host Totals</div>
