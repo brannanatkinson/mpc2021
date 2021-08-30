@@ -14,7 +14,7 @@
             <div class="text-3xl text-center">Profile for {{ $user->name }}</div>
         </div>
         <div class="mb-8">
-            <p>This form will help you update your public Housing Hope profile. You can email <a href="mailto:brannan@amyacommunications.com">Brannan Atkinson</a> any time if you have any questions or issues.</p>
+            <p>This form will help you update your public Housing Hope profile. You can email <a href="mailto:brannan@amyacommunications.com" class="mp-blue-green underline">Brannan Atkinson</a> any time if you have any questions or issues.</p>
         </div>
         <div class="mb-12 p-8 bg-white">
             <div class="text-2xl">Add Your Photo</div>
