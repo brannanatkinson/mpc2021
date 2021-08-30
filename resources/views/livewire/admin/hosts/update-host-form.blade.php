@@ -26,7 +26,9 @@
                 <input type="file" wire:model="image"  >
             </div>
             <button wire:click.prevent="saveUserPhoto" class="mb-8 px-4 py-3 text-white bg-mp-blue-green">Save Your Photo</button>
-            <div wire:click.prevent="removeUserPhoto" class="text-mp-coral float-right">Remove your photo</div>
+            <div>
+                <a wire:click.prevent="removeUserPhoto" class="w-full text-mp-coral float-right">Remove your photo</a>
+            </div>
         </div>
         <div class="mt-4 mb-12 p-8 bg-white">
             <div class="text-2xl">Show Host Totals</div>
