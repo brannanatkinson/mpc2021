@@ -13,7 +13,7 @@
         <div class="mb-8">
             <div class="mb-4 text-3xl text-center">Profile for {{ $user->name }}</div>
             <div>
-                <a class="text-mp-coral" href="/hosts/{{ $user->host_url }}" target="_blank">View your public profile</a> | <a class="text-mp-coral" href="admin.update.hosts">Edit your profile</a>
+                <a class="text-mp-coral" href="/hosts/{{ $user->host_url }}" target="_blank">View your public profile</a> | <a class="text-mp-coral" href="{{ route('admin.update.hosts') }}">Edit your profile</a>
             </div>
         </div>
         <div class="mb-8">
