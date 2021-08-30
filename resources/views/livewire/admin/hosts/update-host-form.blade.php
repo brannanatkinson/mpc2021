@@ -25,7 +25,8 @@
                 <label class="mb-4">Add a photo that will show on your public profile.</label>
                 <input type="file" wire:model="image"  >
             </div>
-            <button wire:click.prevent="saveUserPhoto" class="px-4 py-3 text-white bg-mp-blue-green">Save Your Photo</button>
+            <button wire:click.prevent="saveUserPhoto" class="mb-8 px-4 py-3 text-white bg-mp-blue-green">Save Your Photo</button>
+            <div wire:click.prevent="removeUserPhoto" class="text-mp-coral float-right">Remove your photo</div>
         </div>
         <div class="mt-4 mb-12 p-8 bg-white">
             <div class="text-2xl">Show Host Totals</div>

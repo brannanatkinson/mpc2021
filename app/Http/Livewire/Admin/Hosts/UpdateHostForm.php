@@ -41,6 +41,17 @@ class UpdateHostForm extends Component
         $this->mount();
     }
 
+    public function removeUserPhoto()
+    {
+        $user = DB::table('users')
+            ->where('id', '=', $this->user->id )
+            ->update([
+                'profile_photo_path' => null,
+            ]);
+        $this->image = null;
+        $this->mount();
+    }
+
     public function saveUserShowTotal()
     {
         $this->show_total = !$this->show_total;
