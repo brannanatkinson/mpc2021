@@ -11,7 +11,7 @@
     </div>
     @endforeach
     <div>
-        With this order, you have helped raise {{ $gift->user->totalDonationAmount()->sales }} for The Mary Parrish Center.
+        With this gift, you have helped raise ${{ $gift->user->totalDonationAmount()->sales }} for The Mary Parrish Center.
     </div>
     @if ( $gift->user->UserMeta->goal != null ))
     @php $hostGoalProgress = ( App\Models\Gift::where('user_id', '=', $gift->user->id )->sum('gift_total') / $gift->user->UserMeta->goal ) * 100; @endphp

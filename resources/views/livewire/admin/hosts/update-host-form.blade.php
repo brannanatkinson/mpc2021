@@ -16,7 +16,7 @@
         <div class="mb-8">
             <p>This form will help you update your public Housing Hope profile.</p>
         </div>
-        <div class="mb-8">
+        <div class="mb-8 p-8 bg-white">
             <div class="text-2xl">Add Your Photo</div>
             <div class="mb-4 flex flex-col">
                 <label class="mb-4">Add a photo that will show on your public profile.</label>
