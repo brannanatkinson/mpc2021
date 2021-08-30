@@ -26,7 +26,7 @@
         </div>
         @livewireScripts
         <script async src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
-        <div id="snipcart" data-api-key="YzI0NmM1NGUtMTM1Ny00YmQ0LWJkNzAtMGVlM2Q5MzdjNDFhNjM3Mjk5NDMxMDg0MzAwMzk2" hidden></div>
+        <div hidden id="snipcart" data-api-key="{{ env('SNIPCART_KEY') }}"></div>
         <script>
             document.addEventListener('snipcart.ready', () => {
               Snipcart.events.on('cart.confirmed', (cartConfirmResponse) => {

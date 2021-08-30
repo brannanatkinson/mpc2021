@@ -47,6 +47,7 @@
 
         @livewireScripts
         <script async src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></script>
-        <div hidden id="snipcart" data-api-key="YzI0NmM1NGUtMTM1Ny00YmQ0LWJkNzAtMGVlM2Q5MzdjNDFhNjM3Mjk5NDMxMDg0MzAwMzk2"></div>
+        <div hidden id="snipcart" data-api-key="{{ env('SNIPCART_KEY') }}"></div>
+        
     </body>
 </html>
