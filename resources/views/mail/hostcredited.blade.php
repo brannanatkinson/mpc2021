@@ -10,8 +10,5 @@
         {{ $item->name }} - {{ $item->pivot->item_quantity }}
     </div>
     @endforeach
-    @if ( $gift->user->UserMeta->goal != null ))
-    
-        <div>Your are making progress toward your goal of <span class="text-green-700 font-bold">${{ $gift->user->UserMeta->goal }}</span> for The Mary Parrish Center</div>
-    @endif 
+    user: {{ $gift->user->name }}
 </div>
