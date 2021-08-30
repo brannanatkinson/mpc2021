@@ -10,4 +10,8 @@
         {{ $item->name }} - {{ $item->pivot->item_quantity }}
     </div>
     @endforeach
+    @if ( $gift->user->UserMeta->goal != null ))
+    @php $hostGoalProgress = ( App\Models\Gift::where('user_id', '=', $gift->user->id )->sum('gift_total') / $gift->user->UserMeta->goal ) * 100; @endphp
+        <div>Your are {{ number_format( $hostGoalProgress, 0 ) }}% toward your goal of <span class="text-green-700 font-bold">${{ $gift->user->UserMeta->goal }}</span> for The Mary Parrish Center</div>
+    @endif 
 </div>

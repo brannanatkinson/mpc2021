@@ -31,6 +31,6 @@ class HostCredited extends Mailable
      */
     public function build()
     {
-        return $this->subject('Good news. ' . $this->gift->donor->full_name . ' credited you as a Housing Hope Host')->view('mail.hostcredited');
+        return $this->subject('Hooray! ' . $this->gift->donor->full_name . ' credited you as a Housing Hope Host.')->view('mail.hostcredited');
     }
 }
