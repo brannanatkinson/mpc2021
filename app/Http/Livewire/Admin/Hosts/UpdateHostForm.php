@@ -38,7 +38,6 @@ class UpdateHostForm extends Component
             ->update([
                 'profile_photo_path' => $photoPath,
             ]);
-        $this->mount();
     }
 
     public function removeUserPhoto()
@@ -49,7 +48,6 @@ class UpdateHostForm extends Component
                 'profile_photo_path' => null,
             ]);
         $this->image = null;
-        $this->mount();
     }
 
     public function saveUserShowTotal()
