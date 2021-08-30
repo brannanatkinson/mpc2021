@@ -11,7 +11,10 @@
         </div>
         @endif
         <div class="mb-8">
-            <div class="text-3xl text-center">Profile for {{ $user->name }}</div>
+            <div class="mb-4 text-3xl text-center">Profile for {{ $user->name }}</div>
+            <div>
+                <a class="text-mp-coral" href="/hosts/{{ $user->host_url }}" target="_blank">View your public profile</a> | <a class="text-mp-coral" href="admin.update.hosts">Edit your profile</a>
+            </div>
         </div>
         <div class="mb-8">
             <p>This form will help you update your public Housing Hope profile. You can email <a href="mailto:brannan@amyacommunications.com" class="mp-blue-green underline">Brannan Atkinson</a> any time if you have any questions or issues.</p>
