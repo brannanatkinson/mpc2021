@@ -89,6 +89,7 @@
     @elsecan('edit host')
         <div class="my-6 text-3xl text-center">Housing Hope 2021 Dashboard for {{ auth()->user()->name }}</div>
         <div class="text-center">
+            @php $user = auth()->user() @endphp
             <a class="text-mp-coral" href="/hosts/{{ $user->host_url }}" target="_blank">View your public profile</a> | <a class="text-mp-coral" href="{{ route('admin.update.hosts') }}">Edit your profile</a>
         </div>
         <div class="max-w-5xl mx-auto">
