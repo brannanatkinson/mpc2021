@@ -35,7 +35,7 @@ Route::get('/catalog/item/{id}', CatalogItem::class);
 
 Route::post('/webhook', WebhookConfirmation::class);
 
-Route:get('/thankyou/{order_token}', OrderConfirmation::class);
+Route::get('/thankyou/{order_token}', OrderConfirmation::class);
 
 Route::get('/admin/hosts', AllHosts::class)->middleware(['auth:sanctum', 'verified', 'can:admin'])->name('admin.hosts');
 Route::get('/update/host', UpdateHostForm::class)->middleware(['auth:sanctum', 'verified', 'can:edit host'])->name('admin.update.hosts');
