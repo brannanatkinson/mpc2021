@@ -7,7 +7,7 @@ use App\Models\Gift;
 
 class OrderConfirmation extends Component
 {
-    public $gift
+    public $gift;
     public function mount($order_token)
     {
         $this->gift = Gift::where('order_token', '=', $order_token);
