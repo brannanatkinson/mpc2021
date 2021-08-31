@@ -10,7 +10,7 @@ class OrderConfirmation extends Component
     public $gift;
     public function mount($order_token)
     {
-        $this->gift = $order_token;
+        $this->gift = Gift::where('order_token', '=', $order_token)->first();
     }
     public function render()
     {
