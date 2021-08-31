@@ -25,6 +25,8 @@ class CreateDonorsTable extends Migration
             $table->string('city')->nullable();
             $table->string('state')->nullable();
             $table->string('postal_code')->nullable();
+            $table->boolean('showNameOnWall')->default(0);
+            $table->string('note', 2048)->nullable();
         });
     }
 

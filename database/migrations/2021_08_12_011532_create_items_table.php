@@ -17,10 +17,12 @@ class CreateItemsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
-            $table->integer('cost');
-            $table->string('description');
-            $table->integer('sponsor_id');
-            $table->integer('category_id');
+            $table->float('cost', 6, 2)->default(25.00);
+            $table->string('excerpt', 1024);
+            $table->string('description', 2048);
+            $table->integer('sponsor_id')->nullable();
+            $table->integer('category_id')->default(1);
+            $table->string('img')->nullable();
         });
     }
 

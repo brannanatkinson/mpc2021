@@ -31,8 +31,7 @@
             document.addEventListener('snipcart.ready', () => {
               Snipcart.events.on('cart.confirmed', (cartConfirmResponse) => {
                 setTimeout(function(){
-                    var url = '/catalog';
-                    // var url = '/thankyou?order=' + cartConfirmResponse.token;
+                    var url = '/thankyou/' + cartConfirmResponse.token;
                     window.location.href = url;
                 }, 3000);
               });

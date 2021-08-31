@@ -1,6 +1,13 @@
-<div pagetitle="Dashboard">
+<div>
     @can('admin')
-        <div class="my-6 text-3xl text-center">Housing Hope 2021 Dashboard</div>
+        <x-slot name="title">
+            Love this page
+        </x-slot>
+        <x-slot name="header">
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                {{ __('Housing Hope 2021 Dashboard Test') }}
+            </h2>
+        </x-slot>
         <div class="mb-4 text-center">Manage <a href="{{ route('admin.hosts') }}">Hosts</a> | <a href="{{ route('admin.categories') }}">Categories</a> | <a href="{{ route('admin.items') }}">Items</a> | <a href="{{ route('admin.sponsors') }}">Sponsors</a></div>
         <div class="mb-4 text-center"><a href="{{ route('catalog') }}">Go to Catalog</a></div>
         <div class="max-w-5xl mx-auto">

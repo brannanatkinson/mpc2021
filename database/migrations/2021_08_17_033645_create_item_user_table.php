@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGiftsItemsTable extends Migration
+class CreateHostItemTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateGiftsItemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('gifts_items', function (Blueprint $table) {
+        Schema::create('item_user', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->integer('gift_id');
+            $table->integer('user_id');
             $table->integer('item_id');
             $table->integer('item_quantity');
         });
@@ -29,6 +29,6 @@ class CreateGiftsItemsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gifts_items');
+        Schema::dropIfExists('host_item');
     }
 }
