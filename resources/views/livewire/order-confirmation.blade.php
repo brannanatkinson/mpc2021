@@ -1,3 +1,3 @@
 <div>
-    {{ $gift->full_name }} | {{ $gift->order_token }}
+    {{ $gift->donor->full_name }} | {{ $gift->order_token }}
 </div>
