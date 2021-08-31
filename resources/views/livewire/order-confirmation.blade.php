@@ -1,3 +1,3 @@
 <div>
-    {{ $gift->id }} | {{ $gift->order_token }}
+    {{ $gift }}
 </div>
