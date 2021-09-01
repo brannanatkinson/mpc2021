@@ -5,7 +5,7 @@
         </x-slot>
         <x-slot name="header">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('Housing Hope 2021 Dashboard Test') }}
+                {{ __('Housing Hope 2021 Dashboard') }}
             </h2>
         </x-slot>
         <div class="mb-4 text-center">Manage <a href="{{ route('admin.hosts') }}">Hosts</a> | <a href="{{ route('admin.categories') }}">Categories</a> | <a href="{{ route('admin.items') }}">Items</a> | <a href="{{ route('admin.sponsors') }}">Sponsors</a></div>

@@ -27,7 +27,7 @@
                         <div class="">${{ $item->cost }}</div>
                         @if( $item->sponsor )
                             <div>Matched by {{ $item->sponsor->name }}</div>
-                            <div>Match used: {{ $item->matchToDate() }}%</div>
+                            <!-- <div>Match used: {{ $item->matchToDate() }}%</div> -->
                         @endif
                     </div>
                     

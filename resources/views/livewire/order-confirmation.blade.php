@@ -1,10 +1,10 @@
 <div>
     <x-slot name="title">
-        Order Confirmation
+        Thank you
     </x-slot>
     <div class="max-w-5xl mx-auto mt-12">
-        <div class="mb-6 text-center text-4xl">You're a lifesaver.</div>
-        <p class="mb-12 text-xl">Thank you for supporting Housing Hope. Your gift helps ensure that residents of The Mary Parrish Center and other survivors of interpersonal violence have an opportunity to be safe, find healing and rebuild their lives.</p>
+        <div class="mb-6 text-center text-4xl">You're a hero and a lifesaver. Literally.</div>
+        <p class="mb-12 text-xl">Thank you for supporting Housing Hope. Your gift helps ensure that residents of The Mary Parrish Center and other survivors of interpersonal violence have an opportunity finally to be safe, heal from the trauma they've experienced, and rebuild their lives.</p>
         <div class="mb-12 bg-gray-100 p-8">
             <div class="mb-3 text-2xl">
                 Would you like to add your name to the Giving Wall?
