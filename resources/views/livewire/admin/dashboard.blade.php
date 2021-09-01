@@ -1,7 +1,7 @@
 <div>
     @can('admin')
         <x-slot name="title">
-            Love this page
+            Dashboard
         </x-slot>
         <x-slot name="header">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -94,6 +94,9 @@
 
 
     @elsecan('edit host')
+        <x-slot name="title">
+            Dashboard for {{ auth()->user()->name }}
+        </x-slot>
         <div class="my-6 text-3xl text-center">Housing Hope 2021 Dashboard for {{ auth()->user()->name }}</div>
         <div class="mb-10 text-center">
             @php $user = auth()->user() @endphp
