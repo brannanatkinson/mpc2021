@@ -72,7 +72,7 @@ class AllSponsors extends Component
         if ( $this->category == 'matching'){
            Item::find( $this->item )-update([
               'sponsor_id' => $sponsor->id,
-           ])
+           ]);
         }
 
         $this->resetInput();
