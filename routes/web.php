@@ -29,6 +29,9 @@ use App\Http\Livewire\Hosts\HostPublicPage;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/sponsors', function(){
+    return view('sponsors');
+});
 Route::get('/hosts/{url}', HostPublicPage::class);
 Route::get('/catalog', Catalog::class)->name('catalog');
 Route::get('/catalog/item/{id}', CatalogItem::class);
