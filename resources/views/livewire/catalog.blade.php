@@ -22,12 +22,14 @@
                     <div class="mb-8">
                          <a href="/catalog/item/{{ $item->id}}">
                             <div class="text-2xl">{{ $item->name }}</div>
-                            <div class="text-xl h-16">{{ $item->excerpt }}</div>
+                            <div class="text-xl flex-grow">{{ $item->excerpt }}</div>
                         </a>
                         <div class="">${{ $item->cost }}</div>
+                        <div>
                         @if ( $item->sponsor_id )
-                            <div><i class="fa fa-trophy mr-4"></i>Sponsor Match Doubles Your Gift</div>
+                            <i class="fa fa-trophy mr-4"></i>Sponsor Match Doubles Your Gift
                         @endif 
+                        </div>
                     </div>
                     
                     <div class="mb-6 self-end">
