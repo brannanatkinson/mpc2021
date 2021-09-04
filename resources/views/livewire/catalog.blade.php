@@ -19,9 +19,9 @@
                             <img src="{{ Storage::url( $item->img ) }}" alt="">
                         </a>
                     </div>
-                    <div class="mb-4 h-12 text-center">
+                    <div class="h-8 text-center">
                         @if ( $item->sponsor_id )
-                            <i class="fa fa-trophy mr-4"></i>Sponsor Match Doubles Your Gift
+                            <i class="fa fa-trophy pr-4"></i>Sponsor Match Doubles Your Gift
                         @endif 
                     </div>
                     <div class="mb-2 text-2xl">
