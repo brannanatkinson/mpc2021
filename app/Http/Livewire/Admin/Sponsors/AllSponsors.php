@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Admin\Sponsors;
 
 use Livewire\Component;
 use App\Models\Sponsor;
+use App\Models\Item;
 use Livewire\WithFileUploads;
 
 
@@ -59,7 +60,7 @@ class AllSponsors extends Component
             $this->item = null;
         }
        
-        Sponsor::create([
+        $sponsor = Sponsor::create([
             'name' => $this->name,
             'category' => $this->category,
             'amount' => $this->amount,
@@ -67,7 +68,12 @@ class AllSponsors extends Component
             'img' => $photoPath,
             'website' => $this->website,
         ]);
-        // have to update item as well
+
+        if ( $this->category == 'matching'){
+           Item::find( $this->item )-update([
+              'sponsor_id' => $sponsor->id,
+           ])
+        }
 
         $this->resetInput();
         $this->createMode = false;
