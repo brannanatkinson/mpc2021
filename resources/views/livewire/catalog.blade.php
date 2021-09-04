@@ -20,13 +20,13 @@
                         </a>
                     </div>
                     <div class="mb-8">
-                        facilis rerum iure et
+                        {{ $item->name }}
                     </div>
                     <div class="mb-8 flex-grow">
                         {{ $item->excerpt }}
                     </div>
                     <div class="mb-8 "></div>
-                    <div class="justify-self-end mb-8">
+                    <div class="self-end mb-8">
                         <button class="px-4 py-4 text-white bg-green-800">Save</button>
                     </div>
                 </div>
