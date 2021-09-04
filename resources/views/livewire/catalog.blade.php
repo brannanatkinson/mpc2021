@@ -25,10 +25,10 @@
                             <i class="fa fa-trophy pr-4"></i>Sponsor Match Doubles Your Gift
                         @endif 
                     </div>
-                    <div class="mb-2 text-2xl">
+                    <div class="mb-2 h-16 text-2xl ">
                         {{ $item->name }}
                     </div>
-                    <div class="mb-4 text-xl flex-grow">
+                    <div class="mb-4 flex-grow">
                         {{ $item->excerpt }}
                     </div>
                     <div class="mb-4 text-3xl">${{ $item->cost }}</div>
@@ -40,7 +40,7 @@
                 @endforeach
             </div>
         </div>
-        <div>{{ $category->description }}</div>
+        <!-- <div>{{ $category->description }}</div> -->
     </div>
     @endforeach
 </div>
