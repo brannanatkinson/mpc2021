@@ -12,7 +12,7 @@
         </div>
         <div class="w-3/4">
             <div class="mt-8 grid grid-cols-2 gap-12 mb-4">
-                 @foreach ( $category->items as $item)
+                 @foreach ( $category->items as $item )
                 <div class="overflow-hidden rounded-md">
                     <div class="mb-4">
                          <a href="/catalog/item/{{ $item->id}}">
@@ -25,7 +25,10 @@
                             <div class="text-xl">{{ $item->excerpt }}</div>
                         </a>
                         <div class="">${{ $item->cost }}</div>
-                        
+                        @if( !is_null( $item->sponsor_id ) )
+                            <div>Matched by {{ $item->sponsor->name }}</div>
+                            <!-- <div>Match used: {{ $item->matchToDate() }}%</div> -->
+                        @endif
                     </div>
                     
                     <div class="mb-6">
