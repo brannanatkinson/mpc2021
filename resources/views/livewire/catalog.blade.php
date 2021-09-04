@@ -19,12 +19,13 @@
                             <img src="{{ Storage::url( $item->img ) }}" alt="">
                         </a>
                     </div>
-                    <div class="mb-8">
+                    <div class="mb-2 text-2xl">
                         {{ $item->name }}
                     </div>
-                    <div class="mb-8 flex-grow">
+                    <div class="mb-4 text-xl flex-grow">
                         {{ $item->excerpt }}
                     </div>
+                    <div class="mb-4 text-3xl"> {{ $item->cost }}</div>
                     <div class="mb-8 "></div>
                     <div class="justify-self-end mb-8">
                         <button class="px-4 py-4 text-white bg-green-800">Save</button>
