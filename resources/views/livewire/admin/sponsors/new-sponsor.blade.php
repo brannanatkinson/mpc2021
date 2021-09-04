@@ -10,7 +10,9 @@
                 @error('name') <span class="error">{{ $message }}</span> @enderror
             </div>
             <div class="mb-6 flex flex-col">
+                {{ $category }}
                 <label>Sponsor Category</label>
+
                 <select name="" id="" wire:model="category">
                     <option value="title">Title</option>
                     <option value="catalog">Giving Catalog</option>

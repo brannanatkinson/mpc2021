@@ -54,11 +54,15 @@ class AllSponsors extends Component
         } else {
             $photoPath = null;
         }
+
+        if ( $this->category != 'matching'){
+            $this->item = null;
+        }
        
         Sponsor::create([
             'name' => $this->name,
             'category' => $this->category,
-            'match' => $this->match,
+            'amount' => $this->amount,
             'item_id' => $this->item,
             'img' => $photoPath,
             'website' => $this->website,
