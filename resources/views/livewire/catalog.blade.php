@@ -26,7 +26,7 @@
                         {{ $item->excerpt }}
                     </div>
                     <div class="mb-8 "></div>
-                    <div class="justify-self-end">
+                    <div class="justify-self-end mb-8">
                         <button class="px-4 py-4 text-white bg-green-800">Save</button>
                     </div>
                 </div>
