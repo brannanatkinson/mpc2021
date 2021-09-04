@@ -11,7 +11,7 @@
     <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-2 mb-8">
             <div>  
-                <div class="mb-4 text-center font-display text-3xl">Giving Catalog Sponsor</div>
+                <div class="mb-4 text-center font-display text-3xl text-mp-blue-green">Giving Catalog Sponsor</div>
                 <div>
                     @php 
                         $sponsor = App\Models\Sponsor::where('category', '=', 'catalog')->first()
@@ -23,7 +23,7 @@
             </div>
             <div>
                 <div>
-                    <div class="mb-4 text-center font-display text-3xl">Giving Wall Sponsor</div>
+                    <div class="mb-4 text-center font-display text-3xl text-mp-blue-green">Giving Wall Sponsor</div>
                 </div>
                 <div>
                     @php 
@@ -35,7 +35,7 @@
                 </div>
             </div>
         </div>
-        <div class="mb-4 text-center font-display text-3xl">Champions of Hope</div>
+        <div class="mb-4 text-center font-display text-3xl text-mp-blue-green">Champions of Hope</div>
         <div class="grid grid-cols-2 mb-8">
             @foreach ( App\Models\Sponsor::where('category', '=', 'champion')->orderBy('name')->get() as $sponsor)
             <div>  
@@ -45,7 +45,7 @@
             </div>
             @endforeach
         </div>
-        <!-- <div class="mb-4 text-center font-display text-2xl">Promoters of Hope</div>
+        <!-- <div class="mb-4 text-center font-display text-2xl text-mp-coral">Promoters of Hope</div>
         <div class="grid grid-cols-3 mb-8">
             @foreach ( App\Models\Sponsor::where('category', '=', 'promoter')->orderBy('name')->get() as $sponsor)
             <div>  
@@ -55,7 +55,7 @@
             </div>
             @endforeach
         </div> -->
-        <div class="mb-4 text-center font-display text-2xl">Matching Sponsors</div>
+        <div class="mb-4 text-center font-display text-2xl text-mp-coral">Matching Sponsors</div>
         <div class="grid grid-cols-3 mb-8">
             @foreach ( App\Models\Sponsor::where('category', '=', 'matching')->orderBy('name')->get() as $sponsor)
             <div class="text-center text-xl">  
@@ -67,7 +67,7 @@
             </div>
             @endforeach
         </div>
-        <div class="mb-4 text-center font-display text-2xl">Advocates of Hope</div>
+        <div class="mb-4 text-center font-display text-2xl text-mp-coral">Advocates of Hope</div>
         <div class="grid grid-cols-3 mb-8">
             @foreach ( App\Models\Sponsor::where('category', '=', 'advocate')->orderBy('name')->get() as $sponsor)
             <div class="text-center">  
@@ -77,7 +77,7 @@
             </div>
             @endforeach
         </div>
-        <div class="mb-4 text-center font-display text-2xl">Bearers of Hope</div>
+        <div class="mb-4 text-center font-display text-2xl text-mp-coral">Bearers of Hope</div>
         <div class="grid grid-cols-3 mb-8">
             @foreach ( App\Models\Sponsor::where('category', '=', 'bearer')->orderBy('name')->get() as $sponsor)
             <div class="text-center">  
@@ -87,7 +87,7 @@
             </div>
             @endforeach
         </div>
-        <div class="mb-4 text-center font-display text-2xl">Supporters of Hope</div>
+        <div class="mb-4 text-center font-display text-2xl text-mp-coral">Supporters of Hope</div>
         <div class="grid grid-cols-3 mb-8">
             @foreach ( App\Models\Sponsor::where('category', '=', 'bearer')->orderBy('name')->get() as $sponsor)
             <div class="text-center">  
