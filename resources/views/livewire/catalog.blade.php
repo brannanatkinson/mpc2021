@@ -22,7 +22,7 @@
                     <div class="mb-8">
                          <a href="/catalog/item/{{ $item->id}}">
                             <div class="text-2xl">{{ $item->name }}</div>
-                            <div class="text-xl">{{ $item->excerpt }}</div>
+                            <div class="text-xl h-16">{{ $item->excerpt }}</div>
                         </a>
                         <div class="">${{ $item->cost }}</div>
                         @if ( $item->sponsor_id )
