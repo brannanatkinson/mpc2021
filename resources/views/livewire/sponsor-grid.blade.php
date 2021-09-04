@@ -60,7 +60,7 @@
             @foreach ( App\Models\Sponsor::where('category', '=', 'matching')->orderBy('name')->get() as $sponsor)
             <div>  
                 <a href="#">
-                    <img src="{{ Storage::url( $sponsor->img ) }}" alt="">
+                    {{ $sponsor->name }}
                 </a>
             </div>
             @endforeach
