@@ -19,13 +19,13 @@
                             <img src="{{ Storage::url( $item->img ) }}" alt="">
                         </a>
                     </div>
-                    <div class="mb-8 ">
+                    <div class="">
                         <a href="/catalog/item/{{ $item->id}}">
                             <div class="text-2xl">{{ $item->name }}</div>
                             
                         </a>
                     </div>
-                    <div class="flex-grow"><div class="text-xl ">{{ $item->excerpt }}</div></div>
+                    <div class="flex-grow">{{ $item->excerpt }}></div>
                     <div class="">${{ $item->cost }}</div>
                     <div>
                         @if ( $item->sponsor_id )
