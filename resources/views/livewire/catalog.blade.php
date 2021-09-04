@@ -14,11 +14,10 @@
             <div class="mt-8 grid grid-cols-2 gap-12 mb-4">
                  @foreach ( $category->items as $item )
                 <div class="flex flex-col overflow-hidden rounded-md">
-                    <div class="mb-4">
-                         <a href="/catalog/item/{{ $item->id}}">
+                    <a href="/catalog/item/{{ $item->id}}">
                             <img src="{{ Storage::url( $item->img ) }}" alt="">
                         </a>
-                    </div>
+                    
                     <a href="/catalog/item/{{ $item->id}}">
                         <div class="text-2xl">{{ $item->name }}</div>
                         <div class="text-xl ">{{ $item->excerpt }}</div>
