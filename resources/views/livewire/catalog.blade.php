@@ -14,20 +14,25 @@
             <div class="mt-8 grid grid-cols-2 gap-12 mb-4">
                  @foreach ( $category->items as $item )
                 <div class="flex flex-col overflow-hidden rounded-md">
-                    <a href="/catalog/item/{{ $item->id}}">
+                    <div class="mb-4">
+                         <a href="/catalog/item/{{ $item->id}}">
                             <img src="{{ Storage::url( $item->img ) }}" alt="">
                         </a>
-                    
-                    <a href="/catalog/item/{{ $item->id}}">
-                        <div class="text-2xl">{{ $item->name }}</div>
-                        <div class="text-xl flex-grow ">{{ $item->excerpt }}</div>
-                    </a>
+                    </div>
+                    <div class="mb-8 flex-grow">
+                        <a href="/catalog/item/{{ $item->id}}">
+                            <div class="text-2xl">{{ $item->name }}</div>
+                            
+                        </a>
+                    </div>
+                    <div class="flex-grow"><div class="text-xl ">{{ $item->excerpt }}</div></div>
                     <div class="">${{ $item->cost }}</div>
                     <div>
-                    @if ( $item->sponsor_id )
-                        <i class="fa fa-trophy mr-4"></i>Sponsor Match Doubles Your Gift
-                    @endif 
+                        @if ( $item->sponsor_id )
+                            <i class="fa fa-trophy mr-4"></i>Sponsor Match Doubles Your Gift
+                        @endif 
                     </div>
+                    
                     <div class="mb-6 self-end">
                         <a href="/catalog/item/{{ $item->id}}" class="px-4 py-3 bg-green-500 text-white">
                             Details
