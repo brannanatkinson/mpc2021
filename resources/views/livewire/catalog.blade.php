@@ -26,7 +26,7 @@
                         </a>
                         <div class="">${{ $item->cost }}</div>
                         @if ( $item->sponsor_id )
-                            <div>{{ $item->sponsor }}</div>
+                            <div>{{ $item->sponsor->name }}</div>
                         @endif 
                         
                     </div>
