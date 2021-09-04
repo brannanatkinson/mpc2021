@@ -77,6 +77,7 @@ class AllSponsors extends Component
 
         $this->resetInput();
         $this->createMode = false;
+        $this->mount();
 
     }
 }
