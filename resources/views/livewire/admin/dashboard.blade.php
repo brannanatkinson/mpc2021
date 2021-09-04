@@ -89,7 +89,6 @@
                         </div>
                         <div class="mb-8 text-sm">
                             {{ $item->sponsor ? $item->sponsor->name : '' }}<br>
-                            {{ $item->sponsor ? $item->matchToDate() . '%' : '' }}
                         </div>
                     </div>
                     
