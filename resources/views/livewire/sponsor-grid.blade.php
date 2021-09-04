@@ -59,9 +59,11 @@
         <div class="grid grid-cols-3 mb-8">
             @foreach ( App\Models\Sponsor::where('category', '=', 'matching')->orderBy('name')->get() as $sponsor)
             <div class="text-center text-xl">  
-                <a href="#" class="mb-4">
-                    {{ $sponsor->name }}
-                </a>
+                <div class="mb-4">
+                    <a href="#">
+                        {{ $sponsor->name }}
+                    </a>
+                </div>
             </div>
             @endforeach
         </div>
