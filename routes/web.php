@@ -32,6 +32,9 @@ Route::get('/', function () {
 Route::get('/sponsors', function(){
     return view('sponsors');
 });
+Route::get('/givingwall', function(){
+    return view('wall');
+});
 Route::get('/hosts/{url}', HostPublicPage::class);
 Route::get('/catalog', Catalog::class)->name('catalog');
 Route::get('/catalog/item/{id}', CatalogItem::class);
