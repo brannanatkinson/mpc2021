@@ -23,7 +23,7 @@
                         facilis rerum iure et
                     </div>
                     <div class="mb-8 flex-grow">
-                        Ut expedita pariatur nihil consectetur minima qui ut quidem ullam non et enim mollitia aliquam. Dicta cupiditate voluptatum delectus voluptates praesentium. Magni praesentium saepe quam sed provident doloribus dignissimos.
+                        {{ $item->exceprt }}
                     </div>
                     <div class="mb-8 "></div>
                     <div class="justify-self-end">
