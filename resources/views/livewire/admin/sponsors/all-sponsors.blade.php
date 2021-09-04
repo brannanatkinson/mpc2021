@@ -1,11 +1,15 @@
 <div>
-    <div class="my-12 max-w-5xl mx-auto">
+    <div class="my-12 max-w-7xl mx-auto">
         <div class="mb-8 text-3xl">
             Housing Hope Sponsors
         </div>
-        <div class="grid grid-cols-4 gap-8">
+        <div class="mb-8 text-2xl">
+            Sponsor total = ${{ App\Models\Sponsor::all()->sum('amount') }}
+        </div>
+        <div class="grid grid-cols-5 gap-8">
                 <div class="font-bold"></div>
                 <div class="font-bold">Sponsor</div>
+                <div class="font-bold">Amount</div>
                 <div class="font-bold">Category</div>
                 <div class="font-bold">Item matched</div>
             @foreach ( $sponsors as $sponsor )
@@ -17,9 +21,10 @@
                 <div class="">
                     <a wire:click.prevent="edit({{ $sponsor->id }})"><span clsss="text-2xl">{{ $sponsor->name }}</span></a>
                 </div>
+                <div class="">${{ $sponsor->amount }}</div>
                 <div class="">{{ $sponsor->category }}</div>
                 <div>
-                     @if( $sponsor->match > 0 )
+                     @if( $sponsor->category == 'matching' )
                         {{ App\Models\Item::where('sponsor_id', '=', $sponsor->id)->first()->name }}
                     @endif
                 </div>

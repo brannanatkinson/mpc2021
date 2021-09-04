@@ -12,7 +12,7 @@ class AllSponsors extends Component
     use WithFileUploads;
 
     public $sponsors;
-    public $name, $category, $match, $item, $image, $website;
+    public $name, $category, $amount, $item, $image, $website;
     public $createMode = false;
     public $updateMode = false;
 
@@ -23,7 +23,7 @@ class AllSponsors extends Component
 
     public function mount()
     {
-        $this->sponsors = Sponsor::orderBy('id')->get();
+        $this->sponsors = Sponsor::orderBy('amount', 'desc')->get();
     }
     public function render()
     {

@@ -5,6 +5,9 @@ namespace App\Http\Livewire\Admin\Hosts;
 use Livewire\Component;
 use App\Models\Host;
 use App\Models\User;
+use App\Models\UserMeta;
+use App\Mail\NewHost;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Hash;
 
 
@@ -16,19 +19,19 @@ class AllHosts extends Component
     public $updateMode = false;
 
     protected $rules = [
-        'name' => 'required|min:6',
+        'name' => 'required|unique:users|min:6',
         'email' => 'required|email',
     ];
 
 
     public function mount()
     {
-        $this->hosts = User::permission('edit host')->get();
+        $this->hosts = User::permission('edit host')->orderBy('name')->get();
     }
 
     public function render()
     {
-        return view('livewire.admin.hosts.all-hosts')->layout('layouts.guest');
+        return view('livewire.admin.hosts.all-hosts');
     }
 
     private function resetInput()
@@ -39,14 +42,23 @@ class AllHosts extends Component
     public function store()
     {
         $this->validate();
-        $newHost = User::create([
+        // $password_array = array("maryparrish2021","isupporthh2021","isupportmpc","mpcthanksyou");
+        // $random_password = array_rad( $password_array, 1);
+        $user = User::create([
             'name' => $this->name,
             'email' => $this->email,
-            'password' => Hash::make('password'),
-            'host_url' => strtolower( preg_replace('/[[:space:]]+/', '-', $this->name) )
+            'password' => Hash::make( 'HousingHope2021' ),
+            'host_url' => strtolower( preg_replace('/[[:space:]]+/', '-', $this->name) ),
         ]);
-        $newHost->assignRole('host');
-        $newHost->givePermissionTo('edit host');
+        $user->assignRole('host');
+        $user->givePermissionTo('edit host');
+        $userMeta = UserMeta::create([
+            'user_id' => $user->id,
+        ]);
+
+        Mail::to( $user->email )->send(new NewHost($user));
+
         $this->resetInput();
+        $this->mount();
     }
 }

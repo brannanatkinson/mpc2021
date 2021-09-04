@@ -23,13 +23,14 @@
                     <option value="supporter">Supporter of Hope</option>
                 </select>
             </div>
+            <div class="mb-6 flex flex-col">
+                <label>Sponsor Amount</label>
+                <input type="number" class="h-8 bg-green-100 rounded-md w-full" wire:model="amount">
+            </div>
             <div class="mb-6 text-2xl">
                 Add the Sponsor Match
             </div>
-            <div class="mb-6 flex flex-col">
-                <label>Sponsor Match Amount</label>
-                <input type="number" class="h-8 bg-green-100 rounded-md w-full" wire:model="match">
-            </div>
+            
             <div class="mb-6 flex flex-col">
                 <label>Matched Catalog Item</label>
                 <select name="" id="" wire:model="item">

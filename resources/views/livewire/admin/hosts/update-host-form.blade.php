@@ -65,6 +65,24 @@
             <textarea class="w-full" rows="7" wire:model="rationale"></textarea>
             <button wire:click.prevent="saveUserRationale" class="px-4 py-3 text-white bg-mp-blue-green">Save Message</button>
         </div>
+        <div class="mb-12 p-8 bg-white">
+            <div class="text-2xl">Update Your Password</div>
+            <p class="mb-4">Please enter and confirm your new password. You will have to log in again following the password reset.</p>
+            @error('password') <div><span class="error">{{ $message }}</span></div> @enderror
+            @if( $msg_password_updated ) 
+                <div>Your password has been updateed</div> 
+            @else
+                <div class="mb-4">
+                    <label for="">New Password</label><br/>
+                    <input type="password" wire:model="password">
+                </div>
+                <div class="mb-4">
+                    <label for="">Confirm Password</label><br/>
+                    <input type="password" wire:model="password_confirmation">
+                </div>
+                <button wire:click.prevent="saveNewPassword" class="px-4 py-3 text-white bg-mp-blue-green">Save Message</button>
+            @endif
+        </div>
     </div>
     
 </div>

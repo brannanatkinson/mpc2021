@@ -6,13 +6,16 @@ use Livewire\Component;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Livewire\WithFileUploads;
-
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class UpdateHostForm extends Component
 {
     use WithFileUploads;
 
     public $user, $image, $show_total, $goal, $show_goal, $show_items, $rationale, $show_rationale;
+    public $password, $password_confirmation;
+    public $msg_password_updated;
     public $show_alert = false;
     public function mount()
     {
@@ -109,6 +112,18 @@ class UpdateHostForm extends Component
             ->update([
                 'rationale' => $this->rationale,
             ]);
+    }
+
+    public function saveNewPassword()
+    {
+        $this->validate([
+            'password' => 'required|confirmed',
+        ]);
+        $user = User::find( $this->user->id )->update([
+            'password' => Hash::make( $this->password ),
+        ]);
+        $this->msg_password_updated = 1;
+        return redirect('login');
     }
 
 
