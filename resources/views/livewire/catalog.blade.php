@@ -25,7 +25,7 @@
                             <div class="text-xl">{{ $item->excerpt }}</div>
                         </a>
                         <div class="">${{ $item->cost }}</div>
-                        @if( !is_empty( $item->sponsor_id ) )
+                        @if( !  $item->sponsor_id->isEmpty() ) )
                             <div>Matched by {{ $item->sponsor->name }}</div>
                             <!-- <div>Match used: {{ $item->matchToDate() }}%</div> -->
                         @endif
