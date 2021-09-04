@@ -33,7 +33,7 @@
                     <div class="mb-4 text-3xl">${{ $item->cost }}</div>
                     
                     <div class="justify-self-end mb-8">
-                        <button class="px-4 py-4 text-white bg-green-800">Save</button>
+                        <button class="px-4 py-4 text-white bg-mp-blue-green">Details</button>
                     </div>
                 </div>
                 @endforeach
