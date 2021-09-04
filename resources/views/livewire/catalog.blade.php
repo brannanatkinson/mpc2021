@@ -1,5 +1,8 @@
-<div class="py-12 container mx-auto">
-    <h1 class="text-3xl">2021 Giving Catalog</h1>
+<x-public-navigation/>
+<div class="container mx-auto">
+    <div class="mb-12">
+        <img src="{{ Storage::url('/logos/giving_catalog_banner.jpg') }}" class="w-1/3 mx-auto" alt="">
+    </div>
     @foreach ( App\Models\Category::orderBy('id')->get() as $category )
     <div class="max-w-7xl mx-auto flex flex-col">
         <div class="">

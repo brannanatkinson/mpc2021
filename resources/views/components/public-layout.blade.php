@@ -20,6 +20,7 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body>
+        <x-public-navigation/>
         {{ $slot }}
     </body>
 </html>
