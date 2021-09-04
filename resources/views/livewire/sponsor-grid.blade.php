@@ -58,8 +58,8 @@
         <div class="mb-4 text-center font-display text-2xl">Matching Sponsors</div>
         <div class="grid grid-cols-3 mb-8">
             @foreach ( App\Models\Sponsor::where('category', '=', 'matching')->orderBy('name')->get() as $sponsor)
-            <div class="text-center">  
-                <a href="#">
+            <div class="text-center text-xl">  
+                <a href="#" class="mb-4">
                     {{ $sponsor->name }}
                 </a>
             </div>
