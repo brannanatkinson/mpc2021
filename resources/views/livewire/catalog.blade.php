@@ -19,10 +19,10 @@
                             <img src="{{ Storage::url( $item->img ) }}" alt="">
                         </a>
                     </div>
-                    <div class="mb-8">
+                    <div class="mb-8 flex-grow">
                          <a href="/catalog/item/{{ $item->id}}">
                             <div class="text-2xl">{{ $item->name }}</div>
-                            <div class="text-xl flex-grow">{{ $item->excerpt }}</div>
+                            <div class="text-xl ">{{ $item->excerpt }}</div>
                         </a>
                         <div class="">${{ $item->cost }}</div>
                         <div>
