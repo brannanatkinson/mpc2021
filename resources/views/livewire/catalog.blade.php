@@ -23,7 +23,7 @@
                         facilis rerum iure et
                     </div>
                     <div class="mb-8 flex-grow">
-                        {{ $item->exceprt }}
+                        {{ $item->excerpt }}
                     </div>
                     <div class="mb-8 "></div>
                     <div class="justify-self-end">
