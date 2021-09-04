@@ -40,7 +40,7 @@ class AllSponsors extends Component
     {
         $this->name = null;
         $this->catetory = null;
-        $this->match = null;
+        $this->amount = null;
         $this->item = null;
         $this->image = null;
         $this->website = null;
