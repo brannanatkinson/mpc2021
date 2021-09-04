@@ -19,21 +19,10 @@
                             <img src="{{ Storage::url( $item->img ) }}" alt="">
                         </a>
                     </div>
-                    <div class="">
-                        <a href="/catalog/item/{{ $item->id}}">
-                            <div class="text-2xl">{{ $item->name }}</div>
-                            
-                        </a>
+                    <div class="flex-grow">
+                        {{ $item->excerpt }}
                     </div>
-                    <div class="flex-grow">{{ $item->excerpt }}></div>
-                    <div class="">${{ $item->cost }}</div>
                     <div>
-                        @if ( $item->sponsor_id )
-                            <i class="fa fa-trophy mr-4"></i>Sponsor Match Doubles Your Gift
-                        @endif 
-                    </div>
-                    
-                    <div class="mb-6 self-end">
                         <a href="/catalog/item/{{ $item->id}}" class="px-4 py-3 bg-green-500 text-white">
                             Details
                         </a>
