@@ -13,7 +13,7 @@
         <div class="w-3/4">
             <div class="mt-8 grid grid-cols-2 gap-12 mb-4">
                  @foreach ( $category->items as $item )
-                <div class="overflow-hidden rounded-md">
+                <div class="flex flex-col overflow-hidden rounded-md">
                     <div class="mb-4">
                          <a href="/catalog/item/{{ $item->id}}">
                             <img src="{{ Storage::url( $item->img ) }}" alt="">
@@ -28,10 +28,9 @@
                         @if ( $item->sponsor_id )
                             <div><i class="fa fa-trophy mr-4"></i>Sponsor Match Doubles Your Gift</div>
                         @endif 
-                        
                     </div>
                     
-                    <div class="mb-6">
+                    <div class="mb-6 self-end">
                         <a href="/catalog/item/{{ $item->id}}" class="px-4 py-3 bg-green-500 text-white">
                             Details
                         </a>
