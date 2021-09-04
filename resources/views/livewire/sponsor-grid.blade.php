@@ -58,7 +58,7 @@
         <div class="mb-4 text-center">Matching Sponsors</div>
         <div class="grid grid-cols-3">
             @foreach ( App\Models\Sponsor::where('category', '=', 'matching')->orderBy('name')->get() as $sponsor)
-            <div>  
+            <div class="text-center">  
                 <a href="#">
                     {{ $sponsor->name }}
                 </a>
@@ -70,7 +70,7 @@
             @foreach ( App\Models\Sponsor::where('category', '=', 'advocate')->orderBy('name')->get() as $sponsor)
             <div>  
                 <a href="#">
-                    <img src="{{ Storage::url( $sponsor->img ) }}" alt="">
+                    {{ $sponsor->name }}
                 </a>
             </div>
             @endforeach
@@ -80,7 +80,7 @@
             @foreach ( App\Models\Sponsor::where('category', '=', 'bearer')->orderBy('name')->get() as $sponsor)
             <div>  
                 <a href="#">
-                    <img src="{{ Storage::url( $sponsor->img ) }}" alt="">
+                    {{ $sponsor->name }}
                 </a>
             </div>
             @endforeach
@@ -90,7 +90,7 @@
             @foreach ( App\Models\Sponsor::where('category', '=', 'bearer')->orderBy('name')->get() as $sponsor)
             <div>  
                 <a href="#">
-                    <img src="{{ Storage::url( $sponsor->img ) }}" alt="">
+                    {{ $sponsor->name }}
                 </a>
             </div>
             @endforeach
