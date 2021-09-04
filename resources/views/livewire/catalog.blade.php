@@ -23,9 +23,9 @@
                         {{ $item->excerpt }}
                     </div>
                     <div>
-                        <a href="/catalog/item/{{ $item->id}}" class="px-4 py-3 bg-green-500 text-white">
+                        <button href="/catalog/item/{{ $item->id}}" class="px-4 py-3 bg-green-500 text-white">
                             Details
-                        </a>
+                        </button>
                     </div>
                 </div>
                 @endforeach
