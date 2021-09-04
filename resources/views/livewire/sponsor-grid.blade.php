@@ -46,7 +46,7 @@
             @endforeach
         </div>
         <!-- <div class="mb-4 text-center font-display text-2xl">Promoters of Hope</div>
-        <div class="grid grid-cols-3">
+        <div class="grid grid-cols-3 mb-8">
             @foreach ( App\Models\Sponsor::where('category', '=', 'promoter')->orderBy('name')->get() as $sponsor)
             <div>  
                 <a href="#">
@@ -56,7 +56,7 @@
             @endforeach
         </div> -->
         <div class="mb-4 text-center font-display text-2xl">Matching Sponsors</div>
-        <div class="grid grid-cols-3">
+        <div class="grid grid-cols-3 mb-8">
             @foreach ( App\Models\Sponsor::where('category', '=', 'matching')->orderBy('name')->get() as $sponsor)
             <div class="text-center">  
                 <a href="#">
@@ -66,7 +66,7 @@
             @endforeach
         </div>
         <div class="mb-4 text-center font-display text-2xl">Advocates of Hope</div>
-        <div class="grid grid-cols-3">
+        <div class="grid grid-cols-3 mb-8">
             @foreach ( App\Models\Sponsor::where('category', '=', 'advocate')->orderBy('name')->get() as $sponsor)
             <div class="text-center">  
                 <a href="#">
@@ -76,7 +76,7 @@
             @endforeach
         </div>
         <div class="mb-4 text-center font-display text-2xl">Bearers of Hope</div>
-        <div class="grid grid-cols-3">
+        <div class="grid grid-cols-3 mb-8">
             @foreach ( App\Models\Sponsor::where('category', '=', 'bearer')->orderBy('name')->get() as $sponsor)
             <div class="text-center">  
                 <a href="#">
@@ -86,7 +86,7 @@
             @endforeach
         </div>
         <div class="mb-4 text-center font-display text-2xl">Supporters of Hope</div>
-        <div class="grid grid-cols-3">
+        <div class="grid grid-cols-3 mb-8">
             @foreach ( App\Models\Sponsor::where('category', '=', 'bearer')->orderBy('name')->get() as $sponsor)
             <div class="text-center">  
                 <a href="#">
