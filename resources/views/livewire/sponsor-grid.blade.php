@@ -17,7 +17,7 @@
                         $sponsor = App\Models\Sponsor::where('category', '=', 'catalog')->first()
                     @endphp
                     <a href="#">
-                        <img src="{{ Storage::url( $sponsor->img ) }}" alt="">
+                        <img src="{{ Storage::url( $sponsor->img ) }}" class="w-1/2 mx-auto" alt="">
                     </a>
                 </div>
             </div>
@@ -30,7 +30,7 @@
                         $sponsor = App\Models\Sponsor::where('category', '=', 'wall')->first()
                     @endphp
                     <a href="#">
-                        <img src="{{ Storage::url( $sponsor->img ) }}" alt="">
+                        <img src="{{ Storage::url( $sponsor->img ) }}" class="w-1/2 mx-auto" alt="">
                     </a>
                 </div>
             </div>
@@ -40,14 +40,54 @@
             @foreach ( App\Models\Sponsor::where('category', '=', 'champion')->orderBy('name')->get() as $sponsor)
             <div>  
                 <a href="#">
+                    <img src="{{ Storage::url( $sponsor->img ) }}" class="w-1/2 mx-auto" alt="">
+                </a>
+            </div>
+            @endforeach
+        </div>
+        <!-- <div class="mb-4 text-center">Promoters of Hope</div>
+        <div class="grid grid-cols-3">
+            @foreach ( App\Models\Sponsor::where('category', '=', 'promoter')->orderBy('name')->get() as $sponsor)
+            <div>  
+                <a href="#">
+                    <img src="{{ Storage::url( $sponsor->img ) }}" alt="">
+                </a>
+            </div>
+            @endforeach
+        </div> -->
+        <div class="mb-4 text-center">Matching Sponsors</div>
+        <div class="grid grid-cols-3">
+            @foreach ( App\Models\Sponsor::where('category', '=', 'matching')->orderBy('name')->get() as $sponsor)
+            <div>  
+                <a href="#">
                     <img src="{{ Storage::url( $sponsor->img ) }}" alt="">
                 </a>
             </div>
             @endforeach
         </div>
-        <div class="mb-4 text-center">Promoters of Hope</div>
+        <div class="mb-4 text-center">Advocates of Hope</div>
         <div class="grid grid-cols-3">
-            @foreach ( App\Models\Sponsor::where('category', '=', 'promoter')->orderBy('name')->get() as $sponsor)
+            @foreach ( App\Models\Sponsor::where('category', '=', 'advocate')->orderBy('name')->get() as $sponsor)
+            <div>  
+                <a href="#">
+                    <img src="{{ Storage::url( $sponsor->img ) }}" alt="">
+                </a>
+            </div>
+            @endforeach
+        </div>
+        <div class="mb-4 text-center">Bearers of Hope</div>
+        <div class="grid grid-cols-3">
+            @foreach ( App\Models\Sponsor::where('category', '=', 'bearer')->orderBy('name')->get() as $sponsor)
+            <div>  
+                <a href="#">
+                    <img src="{{ Storage::url( $sponsor->img ) }}" alt="">
+                </a>
+            </div>
+            @endforeach
+        </div>
+        <div class="mb-4 text-center">Supporters of Hope</div>
+        <div class="grid grid-cols-3">
+            @foreach ( App\Models\Sponsor::where('category', '=', 'bearer')->orderBy('name')->get() as $sponsor)
             <div>  
                 <a href="#">
                     <img src="{{ Storage::url( $sponsor->img ) }}" alt="">
