@@ -19,7 +19,7 @@
                             <img src="{{ Storage::url( $item->img ) }}" alt="">
                         </a>
                     </div>
-                    <div class="h-8 text-center">
+                    <div class="h-6 text-center text-sm">
                         @if ( $item->sponsor_id )
                             <i class="fa fa-trophy pr-4"></i>Sponsor Match Doubles Your Gift
                         @endif 
@@ -30,7 +30,7 @@
                     <div class="mb-4 text-xl flex-grow">
                         {{ $item->excerpt }}
                     </div>
-                    <div class="mb-4 text-3xl"> {{ $item->cost }}</div>
+                    <div class="mb-4 text-3xl">${{ $item->cost }}</div>
                     
                     <div class="justify-self-end mb-8">
                         <button class="px-4 py-4 text-white bg-green-800">Save</button>
