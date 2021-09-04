@@ -19,13 +19,15 @@
                             <img src="{{ Storage::url( $item->img ) }}" alt="">
                         </a>
                     </div>
-                    <div class="flex-grow">
-                        {{ $item->excerpt }}
+                    <div class="mb-8">
+                        facilis rerum iure et
                     </div>
-                    <div>
-                        <button href="/catalog/item/{{ $item->id}}" class="px-4 py-3 bg-green-500 text-white">
-                            Details
-                        </button>
+                    <div class="mb-8 flex-grow">
+                        Ut expedita pariatur nihil consectetur minima qui ut quidem ullam non et enim mollitia aliquam. Dicta cupiditate voluptatum delectus voluptates praesentium. Magni praesentium saepe quam sed provident doloribus dignissimos.
+                    </div>
+                    <div class="mb-8 "></div>
+                    <div class="justify-self-end">
+                        <button class="px-4 py-4 text-white bg-green-800">Save</button>
                     </div>
                 </div>
                 @endforeach
