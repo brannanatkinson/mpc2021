@@ -18,6 +18,7 @@
         @livewireStyles
 
         <!-- Scripts -->
+        <script src="https://kit.fontawesome.com/29c2ffedae.js" crossorigin="anonymous"></script>
         <script src="{{ mix('js/app.js') }}" defer></script>
         <link rel="preconnect" href="https://app.snipcart.com">
         <link rel="preconnect" href="https://cdn.snipcart.com">

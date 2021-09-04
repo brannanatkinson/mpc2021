@@ -26,7 +26,7 @@
                         </a>
                         <div class="">${{ $item->cost }}</div>
                         @if ( $item->sponsor_id )
-                            <div>{{ $item->sponsor->name }}</div>
+                            <div><i class="fa fa-trophy mr-4"></i>Sponsor Match Doubles Your Gift</div>
                         @endif 
                         
                     </div>
