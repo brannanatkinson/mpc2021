@@ -25,7 +25,9 @@
                             <div class="text-xl">{{ $item->excerpt }}</div>
                         </a>
                         <div class="">${{ $item->cost }}</div>
-                        {{ $item->sponsor_id ? 'yes' : 'no'}}
+                        @if ( $item->sponsor_id )
+                            <div>Has sponsor</div>
+                        @endif 
                         
                     </div>
                     
