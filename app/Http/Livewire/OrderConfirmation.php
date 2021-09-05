@@ -9,7 +9,7 @@ use App\Models\Donor;
 class OrderConfirmation extends Component
 {
     public $gift, $showNameOnWall, $note, $donorUpdatedName, $hostToCredit;
-    public $noteConfirmation = false;
+    public $noteConfirmation = 0;
     public function mount($order_token)
     {
         $this->gift = Gift::where('order_token', '=', $order_token)->first();
