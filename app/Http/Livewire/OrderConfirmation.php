@@ -39,7 +39,7 @@ class OrderConfirmation extends Component
     {
         Gift::where('id', '=', $this->gift->id)
             ->update([
-                'host_id' => $this->hostToCredit,
+                'user_id' => $this->hostToCredit,
             ]);
         $this->noteConfirmation = true;
     }
