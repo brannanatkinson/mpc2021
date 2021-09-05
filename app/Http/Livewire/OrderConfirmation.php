@@ -37,7 +37,7 @@ class OrderConfirmation extends Component
 
     public function creditHost()
     {
-        Gift::where('gift_id', '=', $this->gift->id)
+        Gift::where('id', '=', $this->gift->id)
             ->update([
                 'host_id' => $this->hostToCredit,
             ]);
