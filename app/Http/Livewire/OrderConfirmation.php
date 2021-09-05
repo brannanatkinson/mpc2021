@@ -18,8 +18,17 @@ class OrderConfirmation extends Component
     {
         return view('livewire.order-confirmation')->layout('layouts.guest');
     }
+    
     public function showDonorName()
     {
         $this->showNameOnWall = !$this->showNameOnWall;
+    }
+
+    public function saveDonorNote()
+    {
+        Donor::where('gift_id', '=', $this->gift->id)
+            ->update([
+                'note' => $this->note,
+            ])
     }
 }
