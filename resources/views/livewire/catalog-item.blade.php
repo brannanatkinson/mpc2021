@@ -1,3 +1,4 @@
+<x-public-navigation/>
 <div class="container mx-auto">
     <div class="max-w-7xl mx-auto">
         <div class="flex flex-row">
