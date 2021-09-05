@@ -41,6 +41,5 @@ class OrderConfirmation extends Component
             ->update([
                 'user_id' => $this->hostToCredit,
             ]);
-        $this->noteConfirmation = true;
     }
 }
