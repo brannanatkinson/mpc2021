@@ -29,6 +29,6 @@ class OrderConfirmation extends Component
         Donor::where('gift_id', '=', $this->gift->id)
             ->update([
                 'note' => $this->note,
-            ])
+            ]);
     }
 }
