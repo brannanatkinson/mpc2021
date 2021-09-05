@@ -40,11 +40,12 @@
             </div>
             <p class="mb-4">We noticed you left the virtual host blank at checkout. Virtual hosts are friends of The Mary Parrish Center helping us spread the word about Housing Hope.</p>
             <p class="mb-6">You can still credit your virtual host. Please select his or her name from the list below. (Hosts listed alphabetically by first name) </p>
-            <select name="" id="" wire:model="hostToCredit">
+            <select name="" id="" wire:model="hostToCredit" class="mb-4">
                 @foreach( App\Models\User::permission('edit host')->orderBy('name')->get() as $host)
                 <option value="{{ $host->id }}">{{ $host->name }}</option>
                 @endforeach
             </select>
+            <button wire:click.prevent="creditHost" class="px-4 py-3 text-white bg-mp-blue-green">Yes, credit my host</button>
         </div>
         @endif
     </div>

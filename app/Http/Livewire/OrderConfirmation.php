@@ -34,4 +34,13 @@ class OrderConfirmation extends Component
             ]);
         $this->noteConfirmation = true;
     }
+
+    public function creditHost()
+    {
+        Gift::where('gift_id', '=', $this->gift->id)
+            ->update([
+                'host_id' => $this->hostToCredit,
+            ]);
+        $this->noteConfirmation = true;
+    }
 }
