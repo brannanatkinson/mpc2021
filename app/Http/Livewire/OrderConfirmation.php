@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Gift;
+use App\Models\Donor;
 
 class OrderConfirmation extends Component
 {
