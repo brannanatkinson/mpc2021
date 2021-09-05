@@ -27,6 +27,9 @@
                 Would you like to write a note of support?
             </div>
             <p class="mb-6">The Mary Parrish Center clients would love to hear from you. Your anonymous note will also appear on the Giving Wall.</p>
+            @if ( $noteConfirmation )
+                <div class="mb-4 text-mp-coral text-xl">Thank you for your kind note.</div>
+            @endif
             <textarea name="" id="" class="w-full mb-4" rows="5" wire:model="note"></textarea>
             <button wire:click.prevent="saveDonorNote" class="px-4 py-3 text-white bg-mp-blue-green">Save My Note</button>
         </div>
