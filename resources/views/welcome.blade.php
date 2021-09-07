@@ -38,7 +38,7 @@
                             Please look for an announcement from us soon and thank you for supporting The Mary Parrish Center.
                         </p>
                         <div class="mt-8">
-                            <a href="/catalog" class="px-4 py-4 text-white border border-2 border-white">Shop the Giving Catalog</a>
+                            <a href="/catalog" class="px-4 py-4 text-white border border-2 border-white rounded-full hover:bg-mp-light-lime hover:text-black">Shop the Giving Catalog</a>
                         </div>
                         <div class="clearfix"></div>
                    </div>
@@ -51,30 +51,10 @@
 
         <div class="container mb-12 mx-auto text-center">
           <div class="mt-8 mb-4 text-4xl font-display leading-tight text-mp-blue-green">Housing Hope 2021 Results</div>
-          <p class="w-full lg:mx-auto lg:max-w-4xl text-xl text-center px-6">
-            Thank you to everyone for supporting Housing Hope!
+          <p class="w-full mb-4 lg:mx-auto lg:max-w-4xl text-xl text-center px-6">
+            Thank you to everyone for supporting Housing Hope!<br/> Visit the <a href="/givingwall" class="text-mp-blue-green">Giving Wall</a> presented by Pinnacle to see donors and notes. 
           </p>
-          <div class="max-w-4xl mx-auto">
-            <div class="grid grid-cols-3 gap-8">
-                <div class="flex flex-col p-8 text-center text-white bg-mp-blue-green rounded-lg">
-                    <div class="mb-6 font-display"><i class="fa fa-star fa-2x"></i></div>
-                    <div class="mb-6 text-5xl font-bold">{{ App\Models\Gift::all()->count() }}</div>
-                    <div class="mb-4 text-xl uppercase">Donors</div>
-                </div>
-                <div class="flex flex-col p-8 text-center text-white bg-mp-blue-green rounded-lg">
-                    <div class="mb-6 font-display"><i class="fa fa-gift fa-2x"></i></div>
-                    <div class="mb-6 text-5xl font-bold">{{ DB::table('gift_item')->select(DB::raw('SUM(item_quantity) as quantity'))->first()->quantity }}</div>
-                    <div class="mb-4 text-xl uppercase">Items Given</div>
-                </div>
-                <div class="flex flex-col p-8 text-center text-white bg-mp-blue-green rounded-lg">
-                    <div class="mb-6 font-display"><i class="fa fa-heart fa-2x"></i></div>
-                    <div class="mb-6 text-5xl font-bold">${{ number_format( App\Models\Gift::all()->sum('gift_total') + App\Models\Sponsor::all()->sum('amount'), 0, ',' ) }}</div>
-                    <div class="mb-4 text-xl uppercase">
-                        Total Raised
-                    </div>
-                </div>
-            </div>
-          </div>
+          @livewire('results')
         </div>
 
         <!-- stat  -->

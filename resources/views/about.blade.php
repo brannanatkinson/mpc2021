@@ -68,9 +68,9 @@
                 <div class="px-4 lg:w-3/5 mx-auto">
                     <div class="pt-8 pb-4 text-3xl font-display text-center">About The Mary Parrish Center</div>
                     <p class="mb-4 text-xl text-center text-mp-blue-green"><a href="https://www.maryparrish.org" >www.MaryParrish.org</a></p>
-                    <p class="mb-6">Since 2002, The Mary Parrish Center has provided a full array of no-cost, 
+                    <p class="mb-6 text-xl">Since 2002, The Mary Parrish Center has provided a full array of no-cost, 
                     comprehensive services to over 7,000 survivors domestic violence, dating violence, sexual assault, stalking, and/or human trafficking.</p>
-                    <p class="mb-6">Our survivor-focused program enhances our residents’ autonomy by nurturing their capacity to live independently from their abusers, establish self-sufficiency, and secure permanent housing.</p>    
+                    <p class="mb-6 text-xl">Our survivor-focused program enhances our residents’ autonomy by nurturing their capacity to live independently from their abusers, establish self-sufficiency, and secure permanent housing.</p>    
                 </div>
             </div>
         </div>
