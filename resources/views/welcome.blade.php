@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <!-- <link rel="stylesheet" href="{{ mix('css/app.css') }}"> -->
 
         <!-- Scripts  -->
         <script src="https://kit.fontawesome.com/29c2ffedae.js" crossorigin="anonymous"></script>
