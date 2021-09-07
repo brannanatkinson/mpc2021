@@ -1,5 +1,8 @@
 <x-public-navigation/>
 <div class="container mx-auto">
+    <x-slot name="title">
+            Giving Catalog
+        </x-slot>
     <div class="mb-12">
         <img src="{{ Storage::url('/logos/giving_catalog_banner.jpg') }}" class="w-1/3 mx-auto" alt="">
     </div>
@@ -8,10 +11,9 @@
         <div class="">
             <div class="text-center">
                 <div class="text-sm uppercase">category</div>
-                <div class="text-3xl">
+                <div class="text-5xl text-mp-blue-green font-display">
                     {{ $category->name }}
                 </div>
-                
             </div>
         </div>
         <div class="">
@@ -42,8 +44,11 @@
                 </div>
                 @endforeach
             </div>
+
         </div>
         <!-- <div>{{ $category->description }}</div> -->
     </div>
+    <div class="mb-12"><img src="{{ Storage::url('/graphics/flourish.png') }}" class="w-64 mx-auto" alt=""></div>
     @endforeach
+
 </div>
