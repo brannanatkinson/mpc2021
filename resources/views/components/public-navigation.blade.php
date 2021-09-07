@@ -15,7 +15,9 @@
             <li class="inline-block mr-8">
                 <a href="/sponsors">Sponsors</a>
             </li>
-            <li class="inline-block mr-8">About Housing Hope</li>
+            <li class="inline-block mr-8">
+                <a href="/about">About Housing Hope</a>
+            </li>
             <li class="inline-block">The Mary Parrish Center</li>
         </ul>
     </div>

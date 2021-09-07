@@ -22,6 +22,7 @@
         </style>
     </head>
     <body class="antialiased">
+        <x-public-navigation/>
         <div class="relative bg-mp-blue-green">
             <main class="lg:relative">
                 <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-24 lg:text-left">
@@ -36,6 +37,9 @@
                             We hope that everyone who helped make Housing Hope a huge success in 2020 will participate again this year. 
                             Please look for an announcement from us soon and thank you for supporting The Mary Parrish Center.
                         </p>
+                        <div class="mt-8">
+                            <a href="/catalog" class="px-4 py-4 text-white border border-2 border-white">Shop the Giving Catalog</a>
+                        </div>
                         <div class="clearfix"></div>
                    </div>
                 </div>
@@ -46,7 +50,7 @@
         </div>
 
         <div class="container mb-12 mx-auto text-center">
-          <div class="mt-8 mb-4 text-4xl font-display leading-tight">Housing Hope 2021 Results</div>
+          <div class="mt-8 mb-4 text-4xl font-display leading-tight text-mp-blue-green">Housing Hope 2021 Results</div>
           <p class="w-full lg:mx-auto lg:max-w-4xl text-xl text-center px-6">
             Thank you to everyone for supporting Housing Hope!
           </p>

@@ -1241,6 +1241,11 @@ select{
 	margin-bottom: 3rem;
 }
 
+.mx-6{
+	margin-left: 1.5rem;
+	margin-right: 1.5rem;
+}
+
 .ml-3{
 	margin-left: 0.75rem;
 }
@@ -2133,6 +2138,18 @@ select{
 
 .pt-8{
 	padding-top: 2rem;
+}
+
+.pb-8{
+	padding-bottom: 2rem;
+}
+
+.pb-6{
+	padding-bottom: 1.5rem;
+}
+
+.pb-12{
+	padding-bottom: 3rem;
 }
 
 .text-center{
@@ -3037,6 +3054,14 @@ select{
 		width: 60%;
 	}
 
+	.lg\:w-2\/3{
+		width: 66.666667%;
+	}
+
+	.lg\:w-1\/2{
+		width: 50%;
+	}
+
 	.lg\:max-w-4xl{
 		max-width: 56rem;
 	}
@@ -3047,6 +3072,14 @@ select{
 
 	.lg\:grid-cols-3{
 		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	.lg\:flex-row{
+		flex-direction: row;
+	}
+
+	.lg\:flex-wrap{
+		flex-wrap: wrap;
 	}
 
 	.lg\:gap-12{
