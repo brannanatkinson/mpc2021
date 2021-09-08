@@ -7,6 +7,8 @@
     * Advocate
     * Bearer
     * Supporter
+
+    making some comments
     -->
     <div class="max-w-6xl mx-auto">
         <div class="container grid grid-cols-1 md:grid-cols-2 mb-8">
