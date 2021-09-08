@@ -36,9 +36,9 @@
             </div>
         </div>
         <div class="mb-4 text-center font-display text-3xl text-mp-blue-green">Champions of Hope</div>
-        <div class="grid grid-cols-2 mb-8">
+        <div class="grid mb-8">
             @foreach ( App\Models\Sponsor::where('category', '=', 'champion')->orderBy('name')->get() as $sponsor)
-            <div>  
+            <div class="flex justify-center">  
                 <a href="#">
                     <img src="{{ Storage::url( $sponsor->img ) }}" class="w-1/2 mx-auto" alt="">
                 </a>
