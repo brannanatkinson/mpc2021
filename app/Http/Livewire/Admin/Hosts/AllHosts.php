@@ -64,6 +64,7 @@ class AllHosts extends Component
 
     public function sendInviteEmail( $id )
     {
-         Mail::to( User::where('id', '=', $id)->first()->email )->send(new NewHost( $user ));
+        $user = User::where('id', '=', $id)->first();
+        Mail::to( $user->email )->send(new NewHost( $user ));
     }
 }
