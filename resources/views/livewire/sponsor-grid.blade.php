@@ -58,13 +58,13 @@
         <div class="mb-4 text-center font-display text-2xl text-mp-coral">Matching Sponsors</div>
         <div class="grid grid-cols-3 mb-8">
             @foreach ( App\Models\Sponsor::where('category', '=', 'matching')->orderBy('name')->get() as $sponsor)
-            <div class="text-center text-xl h-64 w-full">  
+            <div class=" h-64 w-full">  
                 <div class="flex justify-center items-center mb-4">
                     @if( $sponsor->img != null)
-                        <img src="{{ Storage::url( $sponsor->img )}}" class="object-fit" alt="">
+                        <img src="{{ Storage::url( $sponsor->img )}}" class="object-con" alt="">
                     @else
                     <a href="#">
-                        {{ $sponsor->name }}
+                        <span class="text-center text-xl">{{ $sponsor->name }}</span>
                     </a>
                     @endif
                 </div>
