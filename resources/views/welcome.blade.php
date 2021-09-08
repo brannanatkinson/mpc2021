@@ -32,7 +32,6 @@
             $myDateTime->add($myInterval);
             $result = $myDateTime->format('Y-m-d H:i:s');
             $showOnPage = $result > date( env('START_DATE') );
-            echo $showOnPage;
         @endphp
         <div class="relative bg-mp-blue-green">
             <main class="lg:relative">
