@@ -45,7 +45,7 @@
             </div>
             @endforeach
         </div>
-        <!-- <div class="mb-4 text-center font-display text-2xl text-mp-coral">Promoters of Hope</div>
+        <div class="mb-4 text-center font-display text-2xl text-mp-coral">Promoters of Hope</div>
         <div class="grid grid-cols-3 mb-8">
             @foreach ( App\Models\Sponsor::where('category', '=', 'promoter')->orderBy('name')->get() as $sponsor)
             <div>  
@@ -54,7 +54,7 @@
                 </a>
             </div>
             @endforeach
-        </div> -->
+        </div>
         <div class="mb-4 text-center font-display text-2xl text-mp-coral">Matching Sponsors</div>
         <div class="grid grid-cols-3 mb-8">
             @foreach ( App\Models\Sponsor::where('category', '=', 'matching')->orderBy('name')->get() as $sponsor)
