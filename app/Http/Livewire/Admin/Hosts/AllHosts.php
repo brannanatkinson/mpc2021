@@ -56,7 +56,7 @@ class AllHosts extends Component
             'user_id' => $user->id,
         ]);
 
-        Mail::to( $user->email )->send(new NewHost($user));
+        Mail::to( $user->email )->send(new NewHost( $user ));
 
         $this->resetInput();
         $this->mount();
