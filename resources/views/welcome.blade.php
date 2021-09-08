@@ -63,7 +63,7 @@
 
         <div class="container mb-12 mx-auto">
         @if ( $showOnPage == 1 )
-          <div class="mt-8 mb-4 text-5xl font-display leading-tight text-mp-blue-green  text-center">Housing Hope 2021 Results</div>
+          <div class="mt-8 mb-4 text-4xl font-display leading-tight text-mp-blue-green  text-center">Housing Hope 2021 Results</div>
           <div class="mb-8">
                @livewire('results')
           </div>
@@ -72,7 +72,7 @@
           </p>
         @else
         <div class="py-16 max-w-5xl mx-auto">
-            <div class="mb-6 text-3xl font-display text-mp-blue-green text-center">Housing Hope Returns Next Monday</div>
+            <div class="mb-6 text-5xl font-display text-mp-blue-green text-center">Housing Hope Returns Next Monday</div>
             <p class="mb-4 text-xl">Housing Hope will take place Monday, September 13, through Friday, September 17. We look forward to your participation and another record-breaking event raising money to support the survivors of interpersonal violence.</p>
             <p class="mb-4 text-xl">This year's event will feature the <b>Giving Catalog presented by HCA/Tristar Health</b>, where you will be able to select from 16 gifts for The Mary Parrish Center residents, and the <b>Giving Wall presesnted by Pinnacle Financial Partners</b>.</p>
             <p class="mb-4 text-xl">Follow The Mary Parrish Center on <a href="https://www.facebook.com/themaryparrishcenter/" class="text-mp-blue-green">Facebook</a> and <a href="https://www.instagram.com/themaryparrishcenter/" class="text-mp-blue-green">Instagram</a> to keep up with all the latest news.</p>
