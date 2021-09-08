@@ -59,9 +59,9 @@
         <div class="grid grid-cols-3 mb-8">
             @foreach ( App\Models\Sponsor::where('category', '=', 'matching')->orderBy('name')->get() as $sponsor)
             <div class="text-center text-xl">  
-                <div class="flex justify-center items-center mb-4">
+                <div class="flex justify-center items-center h-64 w-full mb-4">
                     @if( $sponsor->img != null)
-                        <img src="{{ Storage::url( $sponsor->img )}}" class="h-64 w-full" alt="">
+                        <img src="{{ Storage::url( $sponsor->img )}}" class="object-contain" alt="">
                     @else
                     <a href="#">
                         {{ $sponsor->name }}
