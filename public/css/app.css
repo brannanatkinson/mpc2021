@@ -1550,6 +1550,10 @@ select{
 	width: 50%;
 }
 
+.w-96{
+	width: 24rem;
+}
+
 .min-w-0{
 	min-width: 0px;
 }

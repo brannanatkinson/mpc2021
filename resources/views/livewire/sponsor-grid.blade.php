@@ -61,7 +61,7 @@
             <div class=" h-64 w-full">  
                 <div class="flex justify-center h-full items-center mb-4">
                     @if( $sponsor->img != null)
-                        <img src="{{ Storage::url( $sponsor->img )}}" class="object-contain h-64" alt="">
+                        <img src="{{ Storage::url( $sponsor->img )}}" class="object-contain h-64 w-96" alt="">
                     @else
                     <a href="#">
                         <span class="text-center text-xl">{{ $sponsor->name }}</span>
