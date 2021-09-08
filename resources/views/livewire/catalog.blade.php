@@ -4,7 +4,7 @@
             Giving Catalog
         </x-slot>
     <div class="mb-12">
-        <img src="{{ Storage::url('/logos/giving_catalog_banner.jpg') }}" class="w-1/3 mx-auto" alt="">
+        <img src="{{ Storage::url('/logos/giving_catalog_banner.jpg') }}" class="w-1/2 mx-auto" alt="">
     </div>
     @foreach ( App\Models\Category::orderBy('id')->get() as $category )
     <div class="max-w-7xl mx-auto flex flex-col">
