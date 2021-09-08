@@ -8,7 +8,6 @@
         $myDateTime->add($myInterval);
         $result = $myDateTime->format('Y-m-d H:i:s');
         $showOnPage = $result > date( env('START_DATE') );
-        echo $showOnPage;
     @endphp
     <div class="max-w-7xl mx-auto mt-4 mb-12">
         <ul class="flex items-center list-type-none text-mp-blue-green">
