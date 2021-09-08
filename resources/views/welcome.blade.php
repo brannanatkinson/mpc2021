@@ -63,7 +63,7 @@
 
         <div class="container mb-12 mx-auto">
         @if ( $showOnPage == 1 )
-          <div class="mt-8 mb-4 text-4xl font-display leading-tight text-mp-blue-green  text-center">Housing Hope 2021 Results</div>
+          <div class="mt-8 mb-4 text-5xl font-display leading-tight text-mp-blue-green  text-center">Housing Hope 2021 Results</div>
           <div class="mb-8">
                @livewire('results')
           </div>
