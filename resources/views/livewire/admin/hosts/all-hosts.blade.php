@@ -29,7 +29,7 @@
             <h3 class="mb-4 text-2xl font-bold text-center">${{ App\Models\Gift::where('user_id', '=', $hostId )->sum('gift_total') }}</h3>
             <h3 class="mb-4 text-xl text-center">{{ App\Models\Gift::where('user_id', '=', $hostId )->count() }} Gifts</h3>
             <h3 class="mb-4 text-xl text-center">{{ $host->items->sum('pivot.item_quantity') }} Items</h3>
-            <p wire:click.prevent="sendInviteEmail( {{ $host->id }} )" class="text-right text-mp-navy">Resend invite link</p>
+            <p wire:click.prevent="sendInviteEmail( {{ $host->id }} )" class="text-right text-mp-coral">Resend invite link</p>
         </div> <!-- end card  -->
         @endforeach
     </div> <!-- end grid  -->
