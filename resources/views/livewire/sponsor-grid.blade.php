@@ -38,7 +38,7 @@
         <div class="mb-4 text-center font-display text-3xl text-mp-blue-green">Champions of Hope</div>
         <div class="grid mb-8">
             @foreach ( App\Models\Sponsor::where('category', '=', 'champion')->orderBy('name')->get() as $sponsor)
-            <div class="flex justify-center">  
+            <div class="flex justify-center w-1/">  
                 <a href="#">
                     <img src="{{ Storage::url( $sponsor->img ) }}" class="w-1/2 mx-auto" alt="">
                 </a>
@@ -67,7 +67,7 @@
             </div>
             @endforeach
         </div>
-        <div class="mb-4 text-center font-display text-2xl text-mp-coral">Advocates of Hope</div>
+        <!-- <div class="mb-4 text-center font-display text-2xl text-mp-coral">Advocates of Hope</div>
         <div class="grid grid-cols-3 mb-8">
             @foreach ( App\Models\Sponsor::where('category', '=', 'advocate')->orderBy('name')->get() as $sponsor)
             <div class="text-center">  
@@ -76,7 +76,7 @@
                 </a>
             </div>
             @endforeach
-        </div>
+        </div> -->
         <div class="mb-4 text-center font-display text-2xl text-mp-coral">Bearers of Hope</div>
         <div class="grid grid-cols-3 mb-8">
             @foreach ( App\Models\Sponsor::where('category', '=', 'bearer')->orderBy('name')->get() as $sponsor)
