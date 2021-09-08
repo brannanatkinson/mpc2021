@@ -1,6 +1,9 @@
 <div>
-    <div class="max-w-4xl mx-auto">
-        <div class="grid grid-cols-3 gap-8">
+    <div class="max-w-6xl mx-auto">
+        <p class="text-center text-xl mb-2">Thank you for helping us raise</p>
+        <div class="mb-2 text-6xl text-center font-bold text-mp-blue-green">${{ number_format( App\Models\Gift::all()->sum('gift_total') + App\Models\Sponsor::all()->sum('amount'), 0, ',' ) }}</div>
+        <p class="text-center text-xl mb-8">to support the survivors of interpersonal violence</p>
+        <div class="grid md:grid-cols-4 gap-8">
             <div class="flex flex-col p-8 text-center text-white bg-mp-coral rounded-lg shadow-md">
                 <div class="mb-6 font-display"><i class="fa fa-star fa-2x"></i></div>
                 <div class="mb-6 text-5xl font-bold">{{ App\Models\Gift::all()->count() }}</div>
@@ -13,9 +16,16 @@
             </div>
             <div class="flex flex-col p-8 text-center text-white bg-mp-blue-green rounded-lg shadow-md">
                 <div class="mb-6 font-display"><i class="fa fa-heart fa-2x"></i></div>
-                <div class="mb-6 text-5xl font-bold">${{ number_format( App\Models\Gift::all()->sum('gift_total') + App\Models\Sponsor::all()->sum('amount'), 0, ',' ) }}</div>
+                <div class="mb-6 text-5xl font-bold">${{ number_format( App\Models\Gift::all()->sum('gift_total') ) }}</div>
                 <div class="mb-4 text-xl uppercase">
-                    Total Raised
+                    Donations
+                </div>
+            </div>
+            <div class="flex flex-col p-8 text-center text-white bg-mp-navy rounded-lg shadow-md">
+                <div class="mb-6 font-display"><i class="fa fa-trophy fa-2x"></i></div>
+                <div class="mb-6 text-5xl font-bold">${{ number_format( App\Models\Sponsor::all()->sum('amount'), 0, ',' ) }}</div>
+                <div class="mb-4 text-xl uppercase">
+                    Sponsors
                 </div>
             </div>
         </div>

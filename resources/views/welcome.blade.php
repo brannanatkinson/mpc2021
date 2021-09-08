@@ -23,6 +23,17 @@
     </head>
     <body class="antialiased">
         <x-public-navigation/>
+        @php
+            $userTimezone = new DateTimeZone('America/Chicago');
+            $gmtTimezone = new DateTimeZone('GMT');
+            $myDateTime = new DateTime( date('Y-m-d H:i:s'), $gmtTimezone);
+            $offset = $userTimezone->getOffset($myDateTime);
+            $myInterval=DateInterval::createFromDateString((string)$offset . 'seconds');
+            $myDateTime->add($myInterval);
+            $result = $myDateTime->format('Y-m-d H:i:s');
+            $showOnPage = $result > date( env('START_DATE') );
+            echo $showOnPage;
+        @endphp
         <div class="relative bg-mp-blue-green">
             <main class="lg:relative">
                 <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-24 lg:text-left">
@@ -33,13 +44,14 @@
                         </h1>
                         <p class="mb-6 text-white text-center uppercase tracking-wide">A unique online fundraiser to help survivors of interpersonal violence</p>
                         <p class="mt-4 max-w-md mx-auto text-lg text-gray-100 sm:text-xl md:mt-8 md:max-w-3xl">
-                            The Housing Hope virtual fundraiser will happen again in mid-September. 
+                            The Housing Hope virtual fundraiser will return again this year. 
                             We hope that everyone who helped make Housing Hope a huge success in 2020 will participate again this year. 
-                            Please look for an announcement from us soon and thank you for supporting The Mary Parrish Center.
                         </p>
+                        @if ( $showOnPage == 1 )
                         <div class="mt-8">
                             <a href="/catalog" class="px-4 py-4 text-white border border-2 border-white rounded-full hover:bg-mp-light-lime hover:text-black">Shop the Giving Catalog</a>
                         </div>
+                        @endif
                         <div class="clearfix"></div>
                    </div>
                 </div>
@@ -49,14 +61,32 @@
             </main>
         </div>
 
-        <div class="container mb-12 mx-auto text-center">
-          <div class="mt-8 mb-4 text-4xl font-display leading-tight text-mp-blue-green">Housing Hope 2021 Results</div>
+        <div class="container mb-12 mx-auto">
+        @if ( $showOnPage == 1 )
+          <div class="mt-8 mb-4 text-4xl font-display leading-tight text-mp-blue-green  text-center">Housing Hope 2021 Results</div>
+          <div class="mb-8">
+               @livewire('results')
+          </div>
           <p class="w-full mb-4 lg:mx-auto lg:max-w-4xl text-xl text-center px-6">
-            Thank you to everyone for supporting Housing Hope!<br/> Visit the <a href="/givingwall" class="text-mp-blue-green">Giving Wall</a> presented by Pinnacle to see donors and notes. 
+            Visit the <a href="/givingwall" class="text-mp-blue-green">Housing Hope Giving Wall</a> presented by Pinnacle to see donors and notes. 
           </p>
-          @livewire('results')
+        @else
+        <div class="py-16 max-w-5xl mx-auto">
+            <div class="mb-6 text-3xl font-display text-mp-blue-green text-center">Housing Hope Returns Next Monday</div>
+            <p class="mb-4 text-xl">Housing Hope will take place Monday, September 13, through Friday, September 17. We look forward to your participation and another record-breaking event raising money to support the survivors of interpersonal violence.</p>
+            <p class="mb-4 text-xl">This year's event will feature the <b>Giving Catalog presented by HCA/Tristar Health</b>, where you will be able to select from 16 gifts for The Mary Parrish Center residents, and the <b>Giving Wall presesnted by Pinnacle Financial Partners</b>.</p>
+            <p class="mb-4 text-xl">Follow The Mary Parrish Center on <a href="https://www.facebook.com/themaryparrishcenter/" class="text-mp-blue-green">Facebook</a> and <a href="https://www.instagram.com/themaryparrishcenter/" class="text-mp-blue-green">Instagram</a> to keep up with all the latest news.</p>
+            <div class="grid lg:grid-cols-2">
+                <div class="flex justify-center p-8">
+                    <img src="{{ Storage::url('/logos/giving_catalog_banner.jpg') }}" alt="">
+                </div>
+                <div class="flex justify-center p-8">
+                    <img src="{{ Storage::url('/logos/giving_wall_banner.jpg') }}" alt="">
+                </div>
+            </div>
         </div>
-
+        @endif
+        </div>
         <!-- stat  -->
         <div class="bg-mp-blue-green">
             <div class="pt-16 pb-20 flex flex-col items-center justify-center">
