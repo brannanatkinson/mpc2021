@@ -61,4 +61,9 @@ class AllHosts extends Component
         $this->resetInput();
         $this->mount();
     }
+
+    public function sendInviteEmail( $id )
+    {
+         Mail::to( User::where('id', '=', $id)->first()->email )->send(new NewHost( $user ));
+    }
 }
