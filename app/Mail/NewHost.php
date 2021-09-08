@@ -29,6 +29,6 @@ class NewHost extends Mailable
      */
     public function build()
     {
-        return $this->subject('You\'re invited to be a Housing Hope Host')->view('mail.newhostcreated');
+        return $this->from('office@maryparrish.org')->subject('You\'re invited to be a Housing Hope Host')->view('mail.newhostcreated');
     }
 }
