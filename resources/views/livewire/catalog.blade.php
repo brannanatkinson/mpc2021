@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="">
-            <div class="container mt-8 grid grid-col-1 md:grid-cols-4 gap-12 mb-4">
+            <div class="container px-4 md:px-0 mt-8 grid grid-col-1 md:grid-cols-4 gap-12 mb-4">
                  @foreach ( $category->items as $item )
                 <div class="flex flex-col overflow-hidden rounded-md">
                     <div class="mb-4">
