@@ -29,8 +29,10 @@
             <h3 class="mb-4 text-2xl font-bold text-center">${{ App\Models\Gift::where('user_id', '=', $hostId )->sum('gift_total') }}</h3>
             <h3 class="mb-4 text-xl text-center">{{ App\Models\Gift::where('user_id', '=', $hostId )->count() }} Gifts</h3>
             <h3 class="mb-4 text-xl text-center">{{ $host->items->sum('pivot.item_quantity') }} Items</h3>
-            <a href="/hosts/{{ $host->host_url }}class="text-left text-mp-coral">View Public Page</a>
-            <p wire:click.prevent="sendInviteEmail( {{ $host->id }} )" class="text-right text-mp-coral">Resend invite link</p>
+            <div class="flex flex-row space-between">
+                <a href="/hosts/{{ $host->host_url }}" class="text-left text-mp-navy">View Public Page</a>
+                <p wire:click.prevent="sendInviteEmail( {{ $host->id }} )" class="text-right text-mp-coral">Resend invite link</p>
+            </div>
         </div> <!-- end card  -->
         @endforeach
     </div> <!-- end grid  -->
