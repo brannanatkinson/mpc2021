@@ -30,7 +30,7 @@
                             <i class="fa fa-trophy pr-4"></i>Sponsor Match Doubles Your Gift
                         @endif 
                     </div>
-                    <div class="mb-2 h-16 text-2xl ">
+                    <div class="mb-2 md:h-16 text-2xl ">
                         {{ $item->name }}
                     </div>
                     <div class="mb-4 md:flex-grow">
