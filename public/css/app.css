@@ -2977,12 +2977,20 @@ select{
 		height: 24rem;
 	}
 
+	.md\:h-16{
+		height: 4rem;
+	}
+
 	.md\:w-1\/2{
 		width: 50%;
 	}
 
 	.md\:max-w-3xl{
 		max-width: 48rem;
+	}
+
+	.md\:flex-grow{
+		flex-grow: 1;
 	}
 
 	.md\:grid-cols-3{
@@ -3007,6 +3015,11 @@ select{
 
 	.md\:border-l{
 		border-left-width: 1px;
+	}
+
+	.md\:px-0{
+		padding-left: 0px;
+		padding-right: 0px;
 	}
 }
 
