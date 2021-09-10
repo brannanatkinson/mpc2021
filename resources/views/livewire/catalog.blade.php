@@ -26,8 +26,16 @@
                         </a>
                     </div>
                     <div class="h-6 text-center text-sm">
-                        
-                        @if ( $item->sponsor_id )
+                        @php
+                            $sponsorTotal = $item->sponsor->matchTotal()->first()->total;
+                            if( $sponsorTotal != 0 ){
+                                $matchProgress = $item->sponsor->amount / $sponsorTotal;
+                            } else {
+                                $matchProgress = 0;
+                            }
+                            
+                        @endphp
+                        @if ( $matchProgess < 1 )
                             <i class="fa fa-trophy pr-4"></i>Sponsor Match Doubles Your Gift
                         @endif 
                     </div>
