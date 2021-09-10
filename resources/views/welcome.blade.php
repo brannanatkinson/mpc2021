@@ -15,6 +15,15 @@
         <!-- Scripts  -->
         <script src="https://kit.fontawesome.com/29c2ffedae.js" crossorigin="anonymous"></script>
 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173249724-2"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-173249724-2');
+        </script>
+
         <style>
             body {
                 font-family: 'Nunito', sans-serif;
