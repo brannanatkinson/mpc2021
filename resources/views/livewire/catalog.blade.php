@@ -35,7 +35,7 @@
                             }
                             
                         @endphp
-                        @if ( $matchProgess < 1 )
+                        @if ( $matchProgress < 1 )
                             <i class="fa fa-trophy pr-4"></i>Sponsor Match Doubles Your Gift
                         @endif 
                     </div>
