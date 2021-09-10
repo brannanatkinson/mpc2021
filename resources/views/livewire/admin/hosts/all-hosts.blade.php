@@ -27,25 +27,25 @@
         <div class="p-6 bg-white rounded-md shadow-lg">
             <div class="mb-6 flex justify-between">
                 
-                @if( $host->userMeta->show_total == 1)
+                @if( $host->userMeta->show_total == '1')
                 <i class="text-gray-200 fa fa-dollar-sign"></i>
                 @else
                 <i class="text-mp-blue-green fa fa-dollar-sign"></i>
                 @endif
 
-                @if( $host->userMeta->show_goal == 1)
+                @if( $host->userMeta->show_goal == '1')
                 <i class="text-gray-200 fa fa-bullseye"></i>
                 @else
                 <i class="text-mp-blue-green fa fa-bullseye"></i>
                 @endif
 
-                @if( $host->userMeta->show_items == 1)
+                @if( $host->userMeta->show_items == '1')
                 <i class="text-gray-200 fa fa-gift"></i>
                 @else
                 <i class="text-mp-blue-green fa fa-gift"></i>
                 @endif
 
-                @if( $host->userMeta->show_rationale == 1)
+                @if( $host->userMeta->show_rationale == '1')
                 <i class="text-gray-200 fa fa-comment-alt-edit"></i>
                 @else
                 <i class="text-mp-blue-green fa fa-comment-alt-edit"></i>
