@@ -42,7 +42,7 @@
                      <div style="width:{{ $matchProgress }}%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-mp-blue-green"></div>
                 </div>
             </div>
-            @if( $showOnPage = 1)
+            @if( $showOnPage == 1)
             <div><a href="/catalog/item/{{ App\Models\Item::where('sponsor_id', '=', $sponsor->id)->first()->id }}"><button class="py-3 px-4 bg-mp-blue-green text-white">Buy This Item</button></a></div>
             @endif
         </div>
