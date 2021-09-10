@@ -11,7 +11,7 @@
             <div class="my-4 flex-grow">
                 <div class="flex flex-col h-full justify-center">
                     @if( $sponsor->img )
-                        <img src="{{ Storage::url( $sponsor->img ) }}" class="h-48"alt="">
+                        <img src="{{ Storage::url( $sponsor->img ) }}" class="h-36"alt="">
                     @else
                         <span class="text-3xl">{{ $sponsor->name }}</span>
                     @endif
