@@ -1,7 +1,7 @@
 <x-public-navigation/>
 <div class="container mx-auto">
     <x-slot name="title">
-            Giving Catalog
+            Giving Catalog - Test
         </x-slot>
     <div class="mb-12">
         <img src="{{ Storage::url('/logos/giving_catalog_banner.jpg') }}" class="w-full md:w-1/2 mx-auto" alt="">
