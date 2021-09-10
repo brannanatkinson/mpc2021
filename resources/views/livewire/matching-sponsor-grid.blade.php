@@ -6,7 +6,6 @@
         <div class="flex flex-col p-4 items-center">
             <div class="mb-4"><i class="fa fa-trophy"></i></div>
             <div class="text-center mb-6">
-                {{ App\Models\Item::where('sponsor_id', '=', $sponsor->id )->first()->name }}
             </div>
             <div class="my-4 flex-grow">
                 <div class="flex flex-col h-full justify-center">
