@@ -25,6 +25,12 @@
                 $hostId = App\Models\User::where('name', '=', $host->name)->first()->id 
             @endphp
         <div class="p-6 bg-white rounded-md shadow-lg">
+            <div class="mb-6 flex justify-between">
+                <i class="text-gray-100 fa fa-dollar_sign"></i>
+                <i class="text-gray-100 fa fa-bullseye"></i>
+                <i class="text-gray-100 fa fa-gift"></i>
+                <i class="text-gray-100 fa fa-comment-alt-edit"></i>
+            </div>
             <h2 class="mb-6 text-3xl text-center">{{ $host->name }}</h2>
             <h3 class="mb-4 text-2xl font-bold text-center">${{ App\Models\Gift::where('user_id', '=', $hostId )->sum('gift_total') }}</h3>
             <h3 class="mb-4 text-xl text-center">{{ App\Models\Gift::where('user_id', '=', $hostId )->count() }} Gifts</h3>
