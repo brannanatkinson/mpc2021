@@ -20,6 +20,14 @@
         <!-- Scripts -->
         <script src="https://kit.fontawesome.com/29c2ffedae.js" crossorigin="anonymous"></script>
         <script src="{{ mix('js/app.js') }}" defer></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173249724-2"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-173249724-2');
+        </script>
     </head>
     <body>
         <div class="font-sans text-gray-900 antialiased">

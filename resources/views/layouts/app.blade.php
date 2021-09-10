@@ -22,6 +22,16 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
         <link rel="preconnect" href="https://app.snipcart.com">
         <link rel="preconnect" href="https://cdn.snipcart.com">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173249724-2"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-173249724-2');
+        </script>
+
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />

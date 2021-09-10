@@ -82,6 +82,8 @@
                 </div>
                 @endforeach
             </div>
+            @else
+                <div class="mb-8 font-display"></div>
             @endif
         </div>
         @endif
