@@ -23,6 +23,11 @@
                     <a href="{{ route('catalog') }}" class="inline-block px-4 py-3 text-2xl text-white bg-mp-blue-green">Shop the Giving Catalog</a>
                 </div>  
             </div>
+            <div class="mb-12">
+                <div class="text-center font-display text-mp-blue-green text-xl">
+                    <a href="/">Learn more about Housing Hope Nashville, a unique fundraiser for The Mary Parrish Center</a>
+                </div>  
+            </div>
             @php
                 if ( $user->UserMeta->goal  ){
                     $hostGoalProgress = ( App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') / $user->UserMeta->goal ) * 100;
