@@ -33,7 +33,7 @@
                      <div style="width:{{ $matchProgress }}%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-mp-blue-green"></div>
                 </div>
             </div>
-            <div><button class="py-3 px-4 bg-mp-blue-green text-white">Buy This Item</button></div>
+            <div><a href="/catalog/{{ App\Models\Item::where('sponsor_id', '=', $sponsor->id)->first()->id }}"><button class="py-3 px-4 bg-mp-blue-green text-white">Buy This Item</button></a></div>
         </div>
     </div>
     @endforeach
