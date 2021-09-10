@@ -19,7 +19,13 @@
                 </div>
             </div>
             @php
-                $matchProgress = $sponsor->amount  /  $sponsor->matchTotal()->first()->total;
+                $sponsorTotal = $sponsor->matchTotal()->first()->total;
+                if( $sponsorTotal != 0 ){
+                    $matchProgress = $sponsor->amount / $sponsorTotal;
+                } else {
+                    $matchProgress = 0;
+                }
+                
             @endphp
             
             <div class="justify-self-end w-full py-4">
