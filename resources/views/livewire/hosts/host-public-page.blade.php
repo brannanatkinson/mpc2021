@@ -24,7 +24,7 @@
                 </div>  
             </div>
             <div class="mb-12">
-                <div class="text-center font-display text-mp-blue-green text-xl">
+                <div class="text-center font-display text-mp-navy text-xl">
                     <a href="/">Learn more about Housing Hope Nashville, a unique fundraiser for The Mary Parrish Center</a>
                 </div>  
             </div>
