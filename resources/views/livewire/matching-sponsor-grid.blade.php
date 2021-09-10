@@ -38,6 +38,7 @@
             @endphp
             
             <div class="justify-self-end w-full py-4">
+                <div class="mb-2 text-sm">Match Progress</div>
                 <div class="overflow-hidden h-4 mb-4 text-xs flex rounded-full bg-gray-200">
                      <div style="width:{{ $matchProgress }}%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-mp-blue-green"></div>
                 </div>
