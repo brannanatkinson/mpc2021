@@ -28,6 +28,8 @@
 
           gtag('config', 'UA-173249724-2');
         </script>
+
+        {!! OpenGraph::generate() !!}
     </head>
     <body>
         <div class="font-sans text-gray-900 antialiased">
