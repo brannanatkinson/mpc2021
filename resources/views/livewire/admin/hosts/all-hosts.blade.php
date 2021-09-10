@@ -27,6 +27,12 @@
         <div class="p-6 bg-white rounded-md shadow-lg">
             <div class="mb-6 flex justify-between">
                 
+                @if( $host->profile_photo_patch )
+                <i class="text-gray-200 fa fa-user-circle"></i>
+                @else
+                <i class="text-mp-blue-green fa fa-user-circle"></i>
+                @endif
+
                 @if( $host->userMeta->show_total == 0)
                 <i class="text-gray-200 fa fa-dollar-sign"></i>
                 @else
