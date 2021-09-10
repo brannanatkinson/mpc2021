@@ -12,7 +12,7 @@
                     @if( $sponsor->img )
                         <img src="{{ Storage::url( $sponsor->img ) }}" alt="">
                     @else
-                        <span class="text-3xl">Name</span>
+                        <span class="text-3xl">{{ sponsor->name }}</span>
                     @endif
                     
                 </div>
