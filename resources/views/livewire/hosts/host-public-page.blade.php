@@ -1,3 +1,4 @@
+<x-public-layout>
 <div>
     @php
         $userTimezone = new DateTimeZone('America/Chicago');
@@ -124,3 +125,4 @@
         </div>
     </div>
 </div>
+</x-public-layout>
