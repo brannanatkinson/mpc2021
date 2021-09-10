@@ -26,10 +26,14 @@
             @endphp
         <div class="p-6 bg-white rounded-md shadow-lg">
             <div class="mb-6 flex justify-between">
-                <i class="text-gray-100 fa fa-dollar_sign"></i>
-                <i class="text-gray-100 fa fa-bullseye"></i>
-                <i class="text-gray-100 fa fa-gift"></i>
-                <i class="text-gray-100 fa fa-comment-alt-edit"></i>
+                @if( $host->userMeta->show_total == 1)
+                <i class="text-gray-200 fa fa-dollar-sign"></i>
+                @else
+                <i class="text-mp-blue-green fa fa-dollar-sign"></i>
+                @endif
+                <i class="text-gray-200 fa fa-bullseye"></i>
+                <i class="text-gray-200 fa fa-gift"></i>
+                <i class="text-gray-200 fa fa-comment-alt-edit"></i>
             </div>
             <h2 class="mb-6 text-3xl text-center">{{ $host->name }}</h2>
             <h3 class="mb-4 text-2xl font-bold text-center">${{ App\Models\Gift::where('user_id', '=', $hostId )->sum('gift_total') }}</h3>
