@@ -15,6 +15,7 @@ class OrderConfirmation extends Component
     {
         $this->gift = Gift::where('order_token', '=', $order_token)->first();
         $this->showNameOnWall = Donor::where('gift_id', '=', $this->gift->id)->first()->showNameOnWall;
+        $this->note = Donor::where('gift_id', '=', $this->gift->id)->first()->note;
         $this->donorUpdatedName = $this->gift->donor->full_name;
     }
     public function render()
@@ -47,6 +48,7 @@ class OrderConfirmation extends Component
                 'full_name' => $this->donorUpdatedName,
             ]);
         $this->nameConfirmation = true;
+        $this->mount();
     }
 
     public function creditHost()
