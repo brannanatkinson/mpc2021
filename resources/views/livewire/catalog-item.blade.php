@@ -43,8 +43,8 @@
                 <div class="mb-6 lg:mt-0 text-4xl font-bold font-display leading-none">{{ $CatalogItem->name }}</div>
                 <!-- pricing  -->
                 <div class="mb-6 flex flex-row items-baseline">
-                    @if( $CatalogItem->sponsor )
-                    <div class="text-sm text-gray-500"><i class="fa fa-trophy"></i> Your gift will be matched by {{ $CatalogItem->sponsor->name }}</div>
+                    @if( $CatalogItem->sponsor_id != null AND $CatalogItem->sponsor->hasAvailableMatch() == true )
+                    <div class="text-sm"><i class="fa fa-trophy text-mp-light-lime"></i> <spon class="text-mp-navy">Your gift will be matched by {{ $CatalogItem->sponsor->name }}</spon></div>
                     @endif
                 </div>
                 <div class="mb-6 text-3xl">
@@ -68,7 +68,7 @@
                 *   determine how to do bullets
                 -->
                 <ul class="mt-4 list-disc ml-8 text-mp-blue-green">
-                    @if( $CatalogItem->sponsor )
+                    @if( $CatalogItem->sponsor_id != null AND $CatalogItem->sponsor->hasAvailableMatch() )
                         <li>Double your gift with match</li>
                     @endif  
                         <li>Gift is 100% tax-deductible</li>
@@ -76,4 +76,38 @@
             </div>
         </div>
     </div>
-</div>    
+</div>
+@if( $CatalogItem->sponsor_id != null AND $CatalogItem->sponsor->hasAvailableMatch() )
+<div class="mt-8 max-w-5xl mx-auto">
+    <div class="flex flex-row items-center p-8 bg-white border border-2 shadow-lg">
+        <div class="w-1/3">
+            <img src="{{ Storage::url( $CatalogItem->sponsor->img ) }}" class="h-48 object-contain" alt="">
+        </div>
+        <div class="w-2/3 px-12">
+            <div class="mb-4 text-center">
+                <i class="fa fa-trophy text-mp-light-lime"></i><span class="ml-4 text-mp-navy">Matching Sponsor</span>
+            </div>
+            <span class="text-xl">This item has been generously matched by {{ $CatalogItem->sponsor->name }}</span>
+        </div>
+    </div>
+</div>
+@endif
+ <!-- 
+** other gifts in this category
+-->
+<div class="mx-auto px-8 lg:px-0 max-w-4xl">
+    <div class="mt-10 mb-4 text-3xl text-center font-display leading-tight">Other gifts in this category</div>
+    <div class="grid gap-10 lg:grid-cols-3">
+        @foreach( App\Models\Item::where('category_id', '=', $CatalogItem->category_id )->get() as $CategoryItem )
+        @if( $CategoryItem->id != $CatalogItem->id )
+        <div>
+            <a href="/catalog/item/{{ $CategoryItem->id }}`"><img class="w-full bg-yellow-300 object-cover" src="{{ Storage::url( $CategoryItem->img ) }}"></a>
+            <p class="mt-2 text-2xl leading-tight">{{ $CategoryItem->name }}</p>
+        </div>
+        @endif
+        @endforeach
+        <div class="-mt-4 text-center lg:col-span-3 mb-6">
+            <a href="/catalog" class="text-xl text-mp-blue-green ">View Entire Giving Catalog</a>
+        </div>
+    </div>
+</div>
