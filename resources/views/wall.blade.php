@@ -5,10 +5,12 @@
 	@livewire('results')
 	<div class="mt-12 py-10 bg-mp-light-lime">
 		<div class="mb-16 max-w-6xl mx-auto mt-12">
-			<div class="mb-8 text-4xl text-center text-mp-navy font-display">
+			<div class="mb-3 text-4xl text-center text-mp-navy font-display">
 				2021 Housing Hope Donor Roll
 			</div>
-			<div class="grid grid-cols-5">
+			<p class="text-mp-blue-green text-center text-xl">Thanks to these Housing Hope donors who have chosen to be featured on the Donor Wall.</p>
+
+			<div class="mt-9 grid grid-cols-5">
 				@foreach( App\Models\Donor::where('showNameOnWall', '=', 1)->orderBy('full_name')->get() as $donor )
 				<div class="py-2">
 					<spon class="text-xl">{{ $donor->full_name }}</spon>
@@ -23,7 +25,7 @@
 			<div class="mb-3 text-4xl text-center text-mp-coral font-display">
 				2021 Housing Donor Notes
 			</div>
-			<p class="text-mp-light-gray text-center">Thanks to our donors for writing these wonderful notes to The Mary Parrish Center residents and alumni. </p>
+			<p class="text-mp-light-gray text-center text-xl">The Mary Parrish Center residents and alumni are grateful for your wonderful notes. </p>
 			<div class="mt-9 box-border md:masonry before:box-inherit after:box-inherit">
 				@foreach( App\Models\Donor::where('note', '!=', null)->get() as $donor )
 					@if( $donor->first() )
