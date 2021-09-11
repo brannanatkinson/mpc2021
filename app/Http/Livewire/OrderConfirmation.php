@@ -24,6 +24,10 @@ class OrderConfirmation extends Component
     public function showDonorName()
     {
         $this->showNameOnWall = !$this->showNameOnWall;
+        Donor::where('gift_id', '=', $this->gift->id)
+            ->update([
+                'showNameOnWall' => $this->showNameOnWall,
+            ]);
     }
 
     public function saveDonorNote()
