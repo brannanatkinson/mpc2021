@@ -21,9 +21,8 @@
         </div>
         <div class="mb-12 p-8 bg-white">
             <div class="text-2xl">Add Your Photo</div>
-            <div class="">Your photo must be a JPG, JPEG, or PNG that is less than 1MB in size.</div>
             <div class="mb-4 flex flex-col">
-                <label class="mb-4">Add a photo that will show on your public profile.</label>
+                <label class="mb-4">Add a photo that will show on your public profile. Your photo must be a JPG, JPEG, or PNG that is less than 1MB in size.</label>
                 @error('image') <div class="pb-4"><span class="text-red-500">{{ $message }}</span></div> @enderror
                 <input type="file" wire:model="image"  >
             </div>
