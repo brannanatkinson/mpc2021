@@ -77,7 +77,7 @@
         </div>
     </div>
 </div>
-@if( $CatalogItem->sponsor_id != null AND $CatalogItem->sponsor->hasAvailableMatch() )
+@if( $CatalogItem->sponsor_id != null  )
 <div class="mt-8 max-w-5xl mx-auto">
     <div class="flex flex-col md:flex-row items-center p-8 bg-white border border-2 shadow-lg">
         <div class="w-full md:w-1/3">
