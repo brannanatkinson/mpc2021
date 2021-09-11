@@ -25,7 +25,7 @@
 			<div class="mb-3 text-4xl text-center text-mp-coral font-display">
 				2021 Housing Donor Notes
 			</div>
-			<p class="text-mp-light-gray text-center text-xl">The Mary Parrish Center residents and alumni are grateful for your wonderful notes. </p>
+			<p class="text-mp-light-gray text-center text-xl">The Mary Parrish Center residents, alumni, and staff are grateful for your wonderful notes. </p>
 			<div class="mt-9 box-border md:masonry before:box-inherit after:box-inherit">
 				@foreach( App\Models\Donor::where('note', '!=', null)->get() as $donor )
 					@if( $donor->first() )
