@@ -60,7 +60,7 @@
         <div class="mb-4 text-center font-display text-2xl text-mp-coral">Matching Sponsors</div>
         <div class="container grid grid-cols-1 md:grid-cols-3 mb-8">
             @foreach ( App\Models\Sponsor::where('category', '=', 'matching')->orderBy('name')->get() as $sponsor)
-            <div class=" h-64 w-full">  
+            <div class=" h-64 w-full bg-white shadow-md">  
                 <div class="flex justify-center h-full items-center mb-4">
                     @if( $sponsor->img != null)
                         <img src="{{ Storage::url( $sponsor->img )}}" class="object-contain h-64 w-64" alt="">
