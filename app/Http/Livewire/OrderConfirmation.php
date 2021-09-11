@@ -46,6 +46,7 @@ class OrderConfirmation extends Component
             ->update([
                 'full_name' => $this->donorUpdatedName,
             ]);
+        $this->nameConfirmation = true;
     }
 
     public function creditHost()
