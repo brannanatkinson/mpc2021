@@ -1,4 +1,4 @@
-<div>
+<x-public-layout>
     <x-slot name="title">
         Thank you
     </x-slot>
@@ -56,4 +56,4 @@
         @endif
     </div>
 
-</div>
+</x-public-layout>
