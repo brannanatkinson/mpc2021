@@ -1,18 +1,21 @@
 <x-public-layout>
-	<div class="mb-12">
-		<img src="{{ Storage::url('/logos/giving_wall_banner.jpg') }}" class="w-full md:w-1/2 mx-auto" alt="">
+	<div class="max-w-4xl mx-auto mb-12 flex flex-col items-center md:flex-row md:justify-center">
+        <img src="{{ Storage::url('/logos/giving_wall_icon.png')}} " class="h-32 z-20" alt="">
+        <img src="{{ Storage::url('/logos/giving_wall_name.png')}}" class="h-32 md:h-40 md:self-center -mt-8 md:mt-0 " alt="">
+        <img src="{{ Storage::url('/logos/giving_wall_sponsor.png')}}" class="h-24 md:h-24 self-center z-10 -mt-8 md:mt-0 md:self-center" alt="">
+    </div>
 	</div>
 	@livewire('results')
-	<div class="mt-12 py-10 bg-mp-light-lime">
+	<div class="mt-12 px-6 md:px-0 py-10 bg-mp-light-lime">
 		<div class="mb-16 max-w-6xl mx-auto mt-12">
 			<div class="mb-3 text-4xl text-center text-mp-navy font-display">
 				2021 Housing Hope Donor Roll
 			</div>
 			<p class="text-mp-blue-green text-center text-xl">Thanks to these Housing Hope donors who have chosen to be featured on the Donor Wall.</p>
 
-			<div class="mt-9 grid grid-cols-5">
+			<div class="mt-9 grid grid-cols-1 md:grid-cols-5">
 				@foreach( App\Models\Donor::where('showNameOnWall', '=', 1)->orderBy('full_name')->get() as $donor )
-				<div class="py-2">
+				<div class="text-center py-2">
 					<spon class="text-xl font-display">{{ $donor->full_name }}</spon>
 				</div>
 				@endforeach
@@ -20,7 +23,7 @@
 			
 		</div>
 	</div>
-	<div class="py-10 bg-mp-navy">
+	<div class="px-6 md:px-0 py-10 bg-mp-navy">
 		<div class="mb-16 max-w-6xl mx-auto mt-12">
 			<div class="mb-3 text-4xl text-center text-mp-coral font-display">
 				2021 Housing Donor Notes

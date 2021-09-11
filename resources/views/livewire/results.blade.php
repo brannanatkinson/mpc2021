@@ -1,5 +1,5 @@
 <div>
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-6xl px-6 md:px-0 mx-auto">
         <p class="text-center text-xl mb-2">Thank you for helping us raise</p>
         <div class="mb-2 text-6xl text-center font-bold text-mp-blue-green">${{ number_format( App\Models\Gift::all()->sum('gift_total') + App\Models\Sponsor::all()->sum('amount'), 0, ',' ) }}</div>
         <p class="text-center text-xl mb-8">to support the survivors of interpersonal violence</p>

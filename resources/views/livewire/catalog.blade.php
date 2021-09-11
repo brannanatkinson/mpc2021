@@ -3,8 +3,10 @@
     <x-slot name="title">
             Giving Catalog - Test
         </x-slot>
-    <div class="mb-12">
-        <img src="{{ Storage::url('/logos/giving_catalog_banner.jpg') }}" class="w-full md:w-1/2 mx-auto" alt="">
+    <div class="max-w-4xl mx-auto mb-12 flex flex-col items-center md:flex-row md:justify-center">
+        <img src="{{ Storage::url('/logos/giving_catalog_icon.png')}} " class="h-32 z-20" alt="">
+        <img src="{{ Storage::url('/logos/giving_catalog_name.png')}}" class="h-40 md:h-48 md:self-center -mt-12 md:mt-0 " alt="">
+        <img src="{{ Storage::url('/logos/giving_catalog_sponsor.png')}}" class="h-24 md:h-24 self-center z-10 -mt-12 md:mt-0 md:self-center" alt="">
     </div>
     @foreach ( App\Models\Category::orderBy('id')->get() as $category )
     <div class="max-w-7xl mx-auto flex flex-col">

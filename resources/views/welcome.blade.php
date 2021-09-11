@@ -14,7 +14,7 @@
 
         <!-- Scripts  -->
         <script src="https://kit.fontawesome.com/29c2ffedae.js" crossorigin="anonymous"></script>
-
+        <script src="//unpkg.com/alpinejs" defer></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173249724-2"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
@@ -42,7 +42,7 @@
             $result = $myDateTime->format('Y-m-d H:i:s');
             $showOnPage = $result > date( env('START_DATE') );
         @endphp
-        <div class="relative bg-mp-blue-green">
+        <div class=" bg-mp-blue-green">
             <main class="lg:relative">
                 <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-24 lg:text-left">
                     <div class="px-4 lg:w-2/5 sm:px-8 xl:pr-16">

@@ -1,5 +1,5 @@
 <div class="mb-8 text-3xl text-center font-display text-mp-blue-green">Matching Sponsors</div>
-<div class="container mb-16  mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="container mb-16  px-6 md:px-0 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
     @php
         $userTimezone = new DateTimeZone('America/Chicago');
         $gmtTimezone = new DateTimeZone('GMT');
