@@ -14,12 +14,24 @@ class Sponsor extends Model
 
     public function matchTotal()
     {
-         $progress = DB::table('items')
+        $progress = DB::table('items')
             ->join('gift_item', 'items.id', '=', 'gift_item.item_id')
             ->join('gifts', 'gifts.id', '=', 'gift_item.gift_id')
             ->select(DB::raw('SUM(gifts.gift_total) as total') )
             ->where('items.sponsor_id', '=', $this->id )
             ->get();
+        return $progress;
+    }
+
+    public function isItemMatched()
+    {
+        $itemTotal = DB::table('items')
+            ->join('gift_item', 'items.id', '=', 'gift_item.item_id')
+            ->join('gifts', 'gifts.id', '=', 'gift_item.gift_id')
+            ->select(DB::raw('SUM(gifts.gift_total) as total') )
+            ->where('items.sponsor_id', '=', $this->id )
+            ->get();
+        $progress = $itemTotal < $this->amount;
         return $progress;
     }
 

@@ -1226,9 +1226,9 @@ select{
 	margin-right: auto;
 }
 
-.my-16{
-	margin-top: 4rem;
-	margin-bottom: 4rem;
+.my-4{
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
 .mx-6{
@@ -1343,6 +1343,14 @@ select{
 	margin-bottom: 1rem;
 }
 
+.mb-8{
+	margin-bottom: 2rem;
+}
+
+.mb-16{
+	margin-bottom: 4rem;
+}
+
 .mb-12{
 	margin-bottom: 3rem;
 }
@@ -1355,8 +1363,8 @@ select{
 	margin-bottom: 2.5rem;
 }
 
-.mb-8{
-	margin-bottom: 2rem;
+.ml-8{
+	margin-left: 2rem;
 }
 
 .mt-12{
@@ -1373,10 +1381,6 @@ select{
 
 .mt-16{
 	margin-top: 4rem;
-}
-
-.mb-16{
-	margin-bottom: 4rem;
 }
 
 .-mt-px{
@@ -1447,16 +1451,16 @@ select{
 	height: 5rem;
 }
 
+.h-full{
+	height: 100%;
+}
+
 .h-24{
 	height: 6rem;
 }
 
 .h-64{
 	height: 16rem;
-}
-
-.h-full{
-	height: 100%;
 }
 
 .h-32{
@@ -1595,6 +1599,10 @@ select{
 	flex-shrink: 0;
 }
 
+.flex-grow{
+	flex-grow: 1;
+}
+
 .origin-top-left{
 	transform-origin: top left;
 }
@@ -1691,6 +1699,10 @@ select{
 
 .items-center{
 	align-items: center;
+}
+
+.items-baseline{
+	align-items: baseline;
 }
 
 .justify-end{
@@ -1936,11 +1948,6 @@ select{
 	background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
 }
 
-.bg-green-600{
-	--tw-bg-opacity: 1;
-	background-color: rgba(5, 150, 105, var(--tw-bg-opacity));
-}
-
 .bg-mp-blue-green{
 	--tw-bg-opacity: 1;
 	background-color: rgba(83, 146, 145, var(--tw-bg-opacity));
@@ -1949,6 +1956,11 @@ select{
 .bg-mp-light-lime{
 	--tw-bg-opacity: 1;
 	background-color: rgba(186, 213, 152, var(--tw-bg-opacity));
+}
+
+.bg-yellow-300{
+	--tw-bg-opacity: 1;
+	background-color: rgba(252, 211, 77, var(--tw-bg-opacity));
 }
 
 .bg-indigo-700{
@@ -2082,6 +2094,16 @@ select{
 .py-10{
 	padding-top: 2.5rem;
 	padding-bottom: 2.5rem;
+}
+
+.px-8{
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.px-16{
+	padding-left: 4rem;
+	padding-right: 4rem;
 }
 
 .py-16{
@@ -2269,6 +2291,10 @@ select{
 
 .leading-none{
 	line-height: 1;
+}
+
+.leading-snug{
+	line-height: 1.375;
 }
 
 .tracking-widest{
@@ -3065,6 +3091,10 @@ select{
 		margin-right: auto;
 	}
 
+	.lg\:mt-0{
+		margin-top: 0px;
+	}
+
 	.lg\:mb-12{
 		margin-bottom: 3rem;
 	}
@@ -3126,14 +3156,19 @@ select{
 		padding-right: 2rem;
 	}
 
+	.lg\:px-0{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
 	.lg\:py-24{
 		padding-top: 6rem;
 		padding-bottom: 6rem;
 	}
 
-	.lg\:px-0{
-		padding-left: 0px;
-		padding-right: 0px;
+	.lg\:px-16{
+		padding-left: 4rem;
+		padding-right: 4rem;
 	}
 
 	.lg\:text-left{
