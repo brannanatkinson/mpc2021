@@ -16,8 +16,11 @@
                 <form action="" class="mt-6">
                     <label for="">The name that will appear on the Giving Wall is <i>{{ $gift->donor->full_name }}</i>. To change your name on the Giving Wall, enter a new name in the box and click the 'Update Name' button.</label>
                     <div class="mt-4">
-                    <input type="text" class="w-full md:w-1/2" value="{{ $gift->donor->full_name }}" wire:model="donorUpdatedName">
-                    <button wire:click.prevent="updateDonorName" class="md:ml-4 px-4 py-3 text-white bg-mp-blue-green">Update Name</button>
+                        <input type="text" class="w-full md:w-1/2" value="{{ $gift->donor->full_name }}" wire:model="donorUpdatedName">
+                        <button wire:click.prevent="updateDonorName" class="md:ml-4 px-4 py-3 text-white bg-mp-blue-green">Update Name</button>
+                        @if( $noteConfirmation == 1 )
+                        <div class="mt-4 text-mp-blue-green">Your name has been updated.</div>
+                        @endif
                     </div>
                 </form>
             @endif
