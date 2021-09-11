@@ -35,4 +35,16 @@ class Sponsor extends Model
         return $progress;
     }
 
+    public function matchProgress()
+    {
+        $itemTotal = DB::table('items')
+            ->join('gift_item', 'items.id', '=', 'gift_item.item_id')
+            ->join('gifts', 'gifts.id', '=', 'gift_item.gift_id')
+            ->select(DB::raw('SUM(gifts.gift_total) as total') )
+            ->where('items.sponsor_id', '=', $this->id )
+            ->get();
+        $progress = $itemTotal->first()->total / $this->amount;
+        return $progress;
+    }
+
 }

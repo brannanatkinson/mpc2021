@@ -13,7 +13,7 @@
 			<div class="mt-9 grid grid-cols-5">
 				@foreach( App\Models\Donor::where('showNameOnWall', '=', 1)->orderBy('full_name')->get() as $donor )
 				<div class="py-2">
-					<spon class="text-xl">{{ $donor->full_name }}</spon>
+					<spon class="text-xl font-display">{{ $donor->full_name }}</spon>
 				</div>
 				@endforeach
 			</div>
