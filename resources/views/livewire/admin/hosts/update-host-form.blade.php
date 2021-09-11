@@ -7,7 +7,7 @@
         @endif
         @if ( $image )
         <div class="mb-8 mx-auto h-24 w-24 rounded-full overflow-hidden">
-            <img src="{{ Storage::url( $image ) }}" class="object-cover" alt="">
+            <img src="{{ Storage::url( $image ) }}" class="h-24 object-cover" alt="">
         </div>
         @endif
         <div class="mb-8">
@@ -23,6 +23,7 @@
             <div class="text-2xl">Add Your Photo</div>
             <div class="mb-4 flex flex-col">
                 <label class="mb-4">Add a photo that will show on your public profile.</label>
+                @error('image') <div class="pb-4"><span class="text-red-500">{{ $message }}</span></div> @enderror
                 <input type="file" wire:model="image"  >
             </div>
             <button wire:click.prevent="saveUserPhoto" class="mb-8 px-4 py-3 text-white bg-mp-blue-green">Save Your Photo</button>

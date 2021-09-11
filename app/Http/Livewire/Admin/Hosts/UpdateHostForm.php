@@ -35,6 +35,9 @@ class UpdateHostForm extends Component
 
     public function saveUserPhoto()
     {
+        $this->validate([
+            'image' => 'image|mimes:jpeg,jpg,png,gif|max:1024',
+        ]);
         $photoPath = $this->image->store('public/photos/users');
         $user = DB::table('users')
             ->where('id', '=', $this->user->id )
