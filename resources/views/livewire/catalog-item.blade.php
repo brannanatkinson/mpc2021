@@ -87,7 +87,7 @@
             <div class="mb-4 text-center">
                 <i class="fa fa-trophy text-mp-light-lime"></i><span class="ml-4 text-mp-navy">Matching Sponsor</span>
             </div>
-            <span class="text-xl">This item has been generously matched by {{ $CatalogItem->sponsor->name }}</span>
+            <span class="text-xl">The Mary Parrish Center is grateful to <b>{{ $CatalogItem->sponsor->name }}</b> for being a Matching Sponsor.</span>
         </div>
     </div>
 </div>
