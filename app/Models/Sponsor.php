@@ -31,7 +31,7 @@ class Sponsor extends Model
             ->select(DB::raw('SUM(gifts.gift_total) as total') )
             ->where('items.sponsor_id', '=', $this->id )
             ->get();
-        $progress = $itemTotal < $this->amount;
+        $progress = $itemTotal->first()->total < $this->amount;
         return $progress;
     }
 
