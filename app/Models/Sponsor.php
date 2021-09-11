@@ -23,7 +23,7 @@ class Sponsor extends Model
         return $progress;
     }
 
-    public function hasFullMatch()
+    public function hasAvailableMatch()
     {
         $itemTotal = DB::table('items')
             ->join('gift_item', 'items.id', '=', 'gift_item.item_id')
