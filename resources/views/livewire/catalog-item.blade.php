@@ -79,11 +79,11 @@
 </div>
 @if( $CatalogItem->sponsor_id != null AND $CatalogItem->sponsor->hasAvailableMatch() )
 <div class="mt-8 max-w-5xl mx-auto">
-    <div class="flex flex-row items-center p-8 bg-white border border-2 shadow-lg">
-        <div class="w-1/3">
+    <div class="flex flex-col md:flex-row items-center p-8 bg-white border border-2 shadow-lg">
+        <div class="w-full md:w-1/3">
             <img src="{{ Storage::url( $CatalogItem->sponsor->img ) }}" class="h-48 object-contain" alt="">
         </div>
-        <div class="w-2/3 px-12">
+        <div class="w-full md:w-2/3 px-12">
             <div class="mb-4 text-center">
                 <i class="fa fa-trophy text-mp-light-lime"></i><span class="ml-4 text-mp-navy">Matching Sponsor</span>
             </div>
