@@ -88,16 +88,17 @@
                 <i class="fa fa-trophy text-mp-light-lime"></i><span class="ml-4 text-mp-navy">Matching Sponsor</span>
             </div>
             <span class="text-xl">The Mary Parrish Center is grateful to <b>{{ $CatalogItem->sponsor->name }}</b> for being a Matching Sponsor.</span>
-            @if( $CatalogItem->sponsor->matchProgress() < 100 )
+            @if( $CatalogItem->sponsor->matchProgress() == 0 )
+            <div class="mt-6 text-mp-blue-green text-center">Be the first donor to match this gift!</div>
+            
+            @elseif ( $CatalogItem->sponsor->matchProgress() < 100 )
             <div class="justify-self-end w-full py-4">
                 <div class="mb-2 text-sm text-center">Match Progress - {{ number_format( $CatalogItem->sponsor->matchProgress(), 0) }}%</div>
                 
                 <div class="overflow-hidden h-4 mb-4 text-xs flex rounded-full bg-gray-200">
                      <div style="width:{{ $CatalogItem->sponsor->matchProgress() }}%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-mp-blue-green"></div>
                 </div>
-            </div>
-            @elseif ( $CatalogItem->sponsor->matchProgress() == 0 )
-                <div class="mt-6 text-mp-blue-green text-center">Be the first donor to match this gift!</div>
+            </div>    
             @else 
                 <div class="mt-6 text-mp-blue-green text-center">Match Fully Fulfilled!</div>
             @endif
