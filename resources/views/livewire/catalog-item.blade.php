@@ -91,7 +91,7 @@
             <div class="justify-self-end w-full py-4">
                 <div class="mb-2 text-sm text-center">Match Progress - {{ number_format( $CatalogItem->sponsor->matchProgress(), 0) }}%</div>
                 <div class="overflow-hidden h-4 mb-4 text-xs flex rounded-full bg-gray-200">
-                     <div style="width: {{ $CatalogItem->sponsor->matchProgress() }} %" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-mp-blue-green"></div>
+                     <div style="width:{{ $CatalogItem->sponsor->matchProgress() }}%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-mp-blue-green"></div>
                 </div>
             </div>
         </div>
