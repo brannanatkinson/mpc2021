@@ -1,3 +1,4 @@
+<div>
 <x-public-layout>
     <x-slot name="title">
         Thank you
@@ -58,3 +59,4 @@
     </div>
 
 </x-public-layout>
+</div>
