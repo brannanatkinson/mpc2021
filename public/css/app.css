@@ -1904,6 +1904,11 @@ select{
 	border-color: rgba(156, 163, 175, var(--tw-border-opacity));
 }
 
+.border-mp-blue-green{
+	--tw-border-opacity: 1;
+	border-color: rgba(83, 146, 145, var(--tw-border-opacity));
+}
+
 .bg-white{
 	--tw-bg-opacity: 1;
 	background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
@@ -2569,6 +2574,10 @@ select{
       -moz-column-break-inside: avoid;
            break-inside: avoid;
     }
+
+.hover\:border-0:hover{
+	border-width: 0px;
+}
 
 .hover\:border-gray-300:hover{
 	--tw-border-opacity: 1;

@@ -51,13 +51,19 @@
                             <span class="text-mp-light-lime">2021</span>
                         </h1>
                         <p class="mb-6 text-white text-center uppercase tracking-wide">A unique online fundraiser to help survivors of interpersonal violence</p>
+                        @if ( $showOnPage == 0 )
                         <p class="mt-4 max-w-md mx-auto text-lg text-gray-100 sm:text-xl md:mt-8 md:max-w-3xl">
                             The Housing Hope virtual fundraiser will return again this year. 
                             We hope that everyone who helped make Housing Hope a huge success in 2020 will participate again this year. 
                         </p>
+                        @else
+                        <p class="mt-4 max-w-md mx-auto text-lg text-gray-100 sm:text-xl md:mt-8 md:max-w-3xl">
+                            Welcome to Housing Hope 2021, a unique online fundraiser benefitting the survivors of interpersonal violence at The Mary Parrish Center.
+                        </p>
+                        @endif
                         @if ( $showOnPage == 1 )
                         <div class="mt-8">
-                            <a href="/catalog" class="px-4 py-4 text-white border border-2 border-white rounded-full hover:bg-mp-light-lime hover:text-black">Shop the Giving Catalog</a>
+                            <a href="/catalog" class="px-4 py-4 text-white border border-2 border-white hover:border-0 rounded-full hover:bg-mp-light-lime hover:text-black">Shop the Giving Catalog</a>
                         </div>
                         @endif
                         <div class="clearfix"></div>
