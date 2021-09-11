@@ -49,6 +49,7 @@
                 <option value="{{ $host->id }}">{{ $host->name }}</option>
                 @endforeach
             </select>
+            {{ $hostToCredit }}
             @if ( $hostToCredit != 0)
             <button wire:click.prevent="creditHost" class="px-4 py-3 text-white bg-mp-blue-green">Yes, credit my host</button>
             @endif
