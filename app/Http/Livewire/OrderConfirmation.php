@@ -11,6 +11,7 @@ class OrderConfirmation extends Component
     public $gift, $showNameOnWall, $note, $donorUpdatedName, $hostToCredit;
     public $noteConfirmation = 0;
     public $nameConfirmation = 0;
+    public $hostConfirmation = 0;
     public function mount($order_token)
     {
         $this->gift = Gift::where('order_token', '=', $order_token)->first();
@@ -57,5 +58,6 @@ class OrderConfirmation extends Component
             ->update([
                 'user_id' => $this->hostToCredit,
             ]);
+        $this->hostConfirmation = true;
     }
 }

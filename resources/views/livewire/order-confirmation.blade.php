@@ -53,6 +53,9 @@
             @if ( $hostToCredit != 0)
             <button wire:click.prevent="creditHost" class="px-4 py-3 text-white bg-mp-blue-green">Yes, credit my host</button>
             @endif
+            @if( $hostConfirmation == 1 )
+            <div class="mt-4 text-mp-blue-green">Thank you for crediting your hosts.</div>
+            @endif
         </div>
         @endif
     </div>
