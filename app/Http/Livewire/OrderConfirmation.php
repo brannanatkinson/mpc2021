@@ -39,6 +39,14 @@ class OrderConfirmation extends Component
         $this->noteConfirmation = true;
     }
 
+    public function updateDonorName()
+    {
+        Donor::where('gift_id', '=', $this->gift->id)
+            ->update([
+                'full_name' => $this->donorUpdatedName,
+            ]);
+    }
+
     public function creditHost()
     {
         Gift::where('id', '=', $this->gift->id)
