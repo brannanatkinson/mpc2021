@@ -97,7 +97,7 @@
                 </div>
             </div>
             @else
-                <div class="text-mp-blue-green">Match Fulfilled!</div>
+                <div class="mt-6 text-mp-blue-green text-center">Match Fully Fulfilled!</div>
             @endif
            
         </div>
