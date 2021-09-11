@@ -48,7 +48,7 @@ class OrderConfirmation extends Component
                 'full_name' => $this->donorUpdatedName,
             ]);
         $this->nameConfirmation = true;
-        $this->mount();
+        $this->mount($this->gift->order_token);
     }
 
     public function creditHost()
