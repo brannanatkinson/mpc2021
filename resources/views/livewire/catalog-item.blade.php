@@ -90,9 +90,15 @@
             <span class="text-xl">The Mary Parrish Center is grateful to <b>{{ $CatalogItem->sponsor->name }}</b> for being a Matching Sponsor.</span>
             <div class="justify-self-end w-full py-4">
                 <div class="mb-2 text-sm text-center">Match Progress - {{ number_format( $CatalogItem->sponsor->matchProgress(), 0) }}%</div>
+                @if( $CatalogItem->sponsor->matchProgress() < 100 )
                 <div class="overflow-hidden h-4 mb-4 text-xs flex rounded-full bg-gray-200">
                      <div style="width:{{ $CatalogItem->sponsor->matchProgress() }}%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-mp-blue-green"></div>
                 </div>
+                @else
+                <div class="overflow-hidden h-4 mb-4 text-xs flex rounded-full bg-gray-200">
+                    <div class="text-mp-blue-green">Match Fulfilled!</div>
+                </div>
+                @endif
             </div>
         </div>
     </div>
