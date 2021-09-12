@@ -10,6 +10,7 @@ use App\Models\Item;
 use App\Models\Host;
 use App\Models\User;
 use App\Mail\HostCredited;
+use App\Mail\OrderConfirmation;
 use Illuminate\Support\Facades\Mail;
 
 class WebhookConfirmation extends Component
@@ -45,6 +46,8 @@ class WebhookConfirmation extends Component
             'gift_total' => $this->result['content']['finalGrandTotal'],
             'user_id' => $userId,
         ]);
+
+        Mail::to( $this->result['content']['email'] )->send(new HostCredited($gift));
 
         $donor->gift_id = $gift->id;
         $donor->save();
