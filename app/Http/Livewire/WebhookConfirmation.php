@@ -47,7 +47,7 @@ class WebhookConfirmation extends Component
             'user_id' => $userId,
         ]);
 
-        Mail::to( $this->result['content']['email'] )->send(new OrderConfirmation($gift));
+       // Mail::to( $this->result['content']['email'] )->send(new OrderConfirmation($gift));
 
         $donor->gift_id = $gift->id;
         $donor->save();
