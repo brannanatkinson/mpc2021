@@ -81,7 +81,7 @@
             <div class="mb-4 text-5xl text-center text-mp-blue-green font-display">How to Participate in Housing Hope</div>
             <p class="">The Mary Parrish Center depends on amazing donors to support our work. This unique online fundraiser features a fun <a href="/catalog" class="text-mp-blue-green hover:text-mp-coral">Giving Catalog</a> where you can select gifts that support the survivors of interpersonal violence and have the most meaning to you.</p>
         </div>
-        <div class="mb-12 max-w-7xl mx-auto bg-gray-50">
+        <div class="mb-12 max-w-7xl mx-auto">
             <div class="mb-8 grid grid-cols-1 md:grid-cols-3 gap-8 px-6 lg:px-0">
                 <a href="/catalog">
                 <div class="bg-mp-light-lime p-8 space-y-4 rounded-md shadow-lg">
