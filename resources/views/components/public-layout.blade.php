@@ -31,5 +31,7 @@
     <body>
         <x-public-navigation/>
         {{ $slot }}
+    <script async src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
+    <div hidden id="snipcart" data-api-key="{{ env('SNIPCART_KEY') }}"></div>
     </body>
 </html>
