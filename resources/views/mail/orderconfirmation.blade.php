@@ -172,7 +172,7 @@ a[x-apple-data-detectors] {
                       <td align="left" style="padding:0;Margin:0;padding-bottom:20px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#333333;font-size:16px"><br></p><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#333333;font-size:16px">Please visit personal Thank You page on our website to find out how you can share information about Housing Hope 2021.</p></td> 
                      </tr> 
                      <tr style="border-collapse:collapse"> 
-                      <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:40px"><span class="es-button-border" style="border-style:solid;border-color:#2cb543;background:#539291;border-width:0px;display:inline-block;border-radius:1730px;width:auto"><a href="https://mpc2021.brannanatkinson.com/thankyou/{{ $gift->order_token }}" class="es-button es-button-1" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#FFFFFF;font-size:18px;border-style:solid;border-color:#539291;border-width:20px;display:inline-block;background:#539291;border-radius:1730px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:22px;width:auto;text-align:center">Go to Your Thank You Page </a></span></td> 
+                      <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:40px"><span class="es-button-border" style="border-style:solid;border-color:#2cb543;background:#539291;border-width:0px;display:inline-block;border-radius:1730px;width:auto"><a href="https://housinghopenashville.org/thankyou/{{ $gift->order_token }}" class="es-button es-button-1" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#FFFFFF;font-size:18px;border-style:solid;border-color:#539291;border-width:20px;display:inline-block;background:#539291;border-radius:1730px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:22px;width:auto;text-align:center">Go to Your Thank You Page </a></span></td> 
                      </tr> 
                    </table></td> 
                  </tr> 
@@ -192,7 +192,7 @@ a[x-apple-data-detectors] {
                   <td align="center" valign="top" style="padding:0;Margin:0;width:630px"> 
                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                      <tr style="border-collapse:collapse"> 
-                      <td align="center" style="padding:0;Margin:0;padding-top:15px;padding-left:30px;padding-right:30px"><h1 style="Margin:0;line-height:36px;mso-line-height-rule:exactly;font-family:'playfair display', georgia, 'times new roman', serif;font-size:30px;font-style:normal;font-weight:normal;color:#539291">Thanks to Our&nbsp;Sponsors</h1></td> 
+                      <td align="center" style="padding:0;Margin:0;padding-top:15px;padding-left:30px;padding-right:30px"><h1 style="Margin:0;line-height:36px;mso-line-height-rule:exactly;font-family:'playfair display', georgia, 'times new roman', serif;font-size:30px;font-style:normal;font-weight:normal;color:#539291">Titled Sponsors</h1></td> 
                      </tr> 
                    </table></td> 
                  </tr> 
@@ -208,9 +208,6 @@ a[x-apple-data-detectors] {
                      <tr style="border-collapse:collapse"> 
                       <td align="center" style="padding:0;Margin:0;font-size:0px"><img class="adapt-img" src="https://ieseof.stripocdn.email/content/guids/CABINET_5119714f609cd212afa0899d1971a6fd/images/65791599529239710.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="275"></td> 
                      </tr> 
-                     <tr style="border-collapse:collapse"> 
-                      <td align="center" style="padding:0;Margin:0"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#333333;font-size:16px">Giving Catalog Sponsor</p></td> 
-                     </tr> 
                    </table></td> 
                  </tr> 
                </table> 
@@ -222,9 +219,6 @@ a[x-apple-data-detectors] {
                      <tr style="border-collapse:collapse"> 
                       <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:20px;font-size:0px"><img class="adapt-img" src="https://ieseof.stripocdn.email/content/guids/CABINET_5119714f609cd212afa0899d1971a6fd/images/91491599529239539.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="270"></td> 
                      </tr> 
-                     <tr style="border-collapse:collapse"> 
-                      <td align="center" style="padding:0;Margin:0"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#333333;font-size:16px">Giving Wall Sponsor</p></td> 
-                     </tr> 
                    </table></td> 
                  </tr> 
                </table> 
@@ -232,84 +226,16 @@ a[x-apple-data-detectors] {
              </tr> 
              <tr style="border-collapse:collapse"> 
               <td align="left" style="Margin:0;padding-bottom:15px;padding-top:20px;padding-left:20px;padding-right:20px"> 
-               <!--[if mso]><table style="width:630px" cellpadding="0" cellspacing="0"><tr><td style="width:305px" valign="top"><![endif]--> 
-               <table cellpadding="0" cellspacing="0" class="es-left" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left"> 
+               <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                  <tr style="border-collapse:collapse"> 
-                  <td class="es-m-p20b" align="left" style="padding:0;Margin:0;width:305px"> 
+                  <td align="left" style="padding:0;Margin:0;width:630px"> 
                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                      <tr style="border-collapse:collapse"> 
-                      <td align="center" style="padding:0;Margin:0;padding-bottom:15px;font-size:0px"><img class="adapt-img" src="https://ieseof.stripocdn.email/content/guids/CABINET_e81672b205d4d74ed656dee132a1e925/images/32981631456505205.jpg" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="305"></td> 
-                     </tr> 
-                     <tr style="border-collapse:collapse"> 
-                      <td align="center" style="padding:0;Margin:0"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#333333;font-size:16px">Champion of Hope</p></td> 
+                      <td align="center" style="padding:0;Margin:0;padding-bottom:15px;font-size:0px"><img class="adapt-img" src="https://ieseof.stripocdn.email/content/guids/CABINET_e81672b205d4d74ed656dee132a1e925/images/32981631456505205.jpg" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="350"></td> 
                      </tr> 
                    </table></td> 
                  </tr> 
-               </table> 
-               <!--[if mso]></td><td style="width:20px"></td><td style="width:305px" valign="top"><![endif]--> 
-               <table cellpadding="0" cellspacing="0" class="es-right" align="right" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:right"> 
-                 <tr style="border-collapse:collapse"> 
-                  <td align="left" style="padding:0;Margin:0;width:305px"> 
-                   <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
-                     <tr style="border-collapse:collapse"> 
-                      <td align="center" style="padding:0;Margin:0;font-size:0px"><img class="adapt-img" src="https://ieseof.stripocdn.email/content/guids/CABINET_e81672b205d4d74ed656dee132a1e925/images/97521631458931604.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="200"></td> 
-                     </tr> 
-                   </table></td> 
-                 </tr> 
-               </table> 
-               <!--[if mso]></td></tr></table><![endif]--></td> 
-             </tr> 
-             <tr style="border-collapse:collapse"> 
-              <td align="left" style="Margin:0;padding-bottom:15px;padding-top:20px;padding-left:20px;padding-right:20px"> 
-               <!--[if mso]><table style="width:630px" cellpadding="0" cellspacing="0"><tr><td style="width:305px" valign="top"><![endif]--> 
-               <table cellpadding="0" cellspacing="0" class="es-left" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left"> 
-                 <tr style="border-collapse:collapse"> 
-                  <td class="es-m-p20b" align="left" style="padding:0;Margin:0;width:305px"> 
-                   <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
-                     <tr style="border-collapse:collapse"> 
-                      <td align="center" style="padding:0;Margin:0;padding-top:10px;font-size:0px"><img class="adapt-img" src="https://ieseof.stripocdn.email/content/guids/CABINET_5119714f609cd212afa0899d1971a6fd/images/46701599529239539.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="275"></td> 
-                     </tr> 
-                   </table></td> 
-                 </tr> 
-               </table> 
-               <!--[if mso]></td><td style="width:20px"></td><td style="width:305px" valign="top"><![endif]--> 
-               <table cellpadding="0" cellspacing="0" class="es-right" align="right" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:right"> 
-                 <tr style="border-collapse:collapse"> 
-                  <td align="left" style="padding:0;Margin:0;width:305px"> 
-                   <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
-                     <tr style="border-collapse:collapse"> 
-                      <td align="center" style="padding:0;Margin:0;padding-top:10px;font-size:0px"><img class="adapt-img" src="https://ieseof.stripocdn.email/content/guids/CABINET_e81672b205d4d74ed656dee132a1e925/images/83081631458931561.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="275"></td> 
-                     </tr> 
-                   </table></td> 
-                 </tr> 
-               </table> 
-               <!--[if mso]></td></tr></table><![endif]--></td> 
-             </tr> 
-             <tr style="border-collapse:collapse"> 
-              <td align="left" style="Margin:0;padding-bottom:15px;padding-top:20px;padding-left:20px;padding-right:20px"> 
-               <!--[if mso]><table style="width:630px" cellpadding="0" cellspacing="0"><tr><td style="width:305px" valign="top"><![endif]--> 
-               <table cellpadding="0" cellspacing="0" class="es-left" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left"> 
-                 <tr style="border-collapse:collapse"> 
-                  <td class="es-m-p20b" align="left" style="padding:0;Margin:0;width:305px"> 
-                   <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
-                     <tr style="border-collapse:collapse"> 
-                      <td align="center" style="padding:0;Margin:0;padding-top:10px;font-size:0px"><img class="adapt-img" src="https://ieseof.stripocdn.email/content/guids/CABINET_e81672b205d4d74ed656dee132a1e925/images/64291631458931570.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="275"></td> 
-                     </tr> 
-                   </table></td> 
-                 </tr> 
-               </table> 
-               <!--[if mso]></td><td style="width:20px"></td><td style="width:305px" valign="top"><![endif]--> 
-               <table cellpadding="0" cellspacing="0" class="es-right" align="right" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:right"> 
-                 <tr style="border-collapse:collapse"> 
-                  <td align="left" style="padding:0;Margin:0;width:305px"> 
-                   <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
-                     <tr style="border-collapse:collapse"> 
-                      <td align="left" style="padding:0;Margin:0;padding-top:40px"><h2 style="Margin:0;line-height:29px;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-size:24px;font-style:normal;font-weight:normal;color:#333333;text-align:center">Ceildeck Corporation</h2></td> 
-                     </tr> 
-                   </table></td> 
-                 </tr> 
-               </table> 
-               <!--[if mso]></td></tr></table><![endif]--></td> 
+               </table></td> 
              </tr> 
              <tr style="border-collapse:collapse"> 
               <td align="left" style="Margin:0;padding-bottom:15px;padding-top:20px;padding-left:20px;padding-right:20px"> 
