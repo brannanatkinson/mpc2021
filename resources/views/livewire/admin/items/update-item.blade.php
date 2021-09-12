@@ -34,7 +34,7 @@
                 <input type="file" wire:model="image"></textarea>
                 @error('image') <span class="error">{{ $message }}</span> @enderror
             </div>
-            <button type="submit" class="inline-flex px-4 py-3 bg-green-800 text-white">Update Item</button>
+            <button type="submit" wire:click.prevent="update" class="inline-flex px-4 py-3 bg-green-800 text-white">Update Item</button>
         </form>
     </div>
 </div>
