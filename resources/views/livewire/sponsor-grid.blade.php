@@ -19,7 +19,7 @@
                         $sponsor = App\Models\Sponsor::where('category', '=', 'catalog')->first()
                     @endphp
                     <a href="#">
-                        <img src="{{ Storage::url( $sponsor->img ) }}" class="w-1/2 mx-auto" alt="">
+                        <img src="{{ Storage::url( $sponsor->img ) }}" class="w-3/4 mx-auto" alt="">
                     </a>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                         $sponsor = App\Models\Sponsor::where('category', '=', 'wall')->first()
                     @endphp
                     <a href="#">
-                        <img src="{{ Storage::url( $sponsor->img ) }}" class="w-1/2 mx-auto" alt="">
+                        <img src="{{ Storage::url( $sponsor->img ) }}" class="w-3/4 mx-auto" alt="">
                     </a>
                 </div>
             </div>
