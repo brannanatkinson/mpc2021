@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<x-public-layout>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,7 +34,6 @@
         </style>
     </head>
     <body class="antialiased">
-        <x-public-navigation/>
         @php
             $userTimezone = new DateTimeZone('America/Chicago');
             $gmtTimezone = new DateTimeZone('GMT');
@@ -144,6 +142,7 @@
         <div class="bg-mp-blue-green">
             <div class="pt-16 pb-20 flex flex-col items-center justify-center">
                 <p class="mb-6 lg:mb-12 text-white lg:text-xl text-center uppercase">Why The Mary Parrish Center needs your support</p>
+                <iframe src="{{ url('https://youtu.be/h7w3s7D71i8') }}" width="560" height="315" frameborder="0" allowfullscreen></iframe>
                 <div class="w-3/5 text-3xl lg:text-5xl text-mp-light-lime text-center leading-none font-display">
                     Domestic violence is 
                     <span class="text-white italic">a leading cause of homelessness</span> 
@@ -195,4 +194,4 @@
         <script async src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
         <div hidden id="snipcart" data-api-key="{{ env('SNIPCART_KEY') }}"></div>
     </body>
-</html>
+</x-public-layout>
