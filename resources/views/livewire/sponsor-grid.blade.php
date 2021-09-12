@@ -65,9 +65,9 @@
                     @if( $sponsor->img != null)
                         <img src="{{ Storage::url( $sponsor->img )}}" class="object-contain h-64 w-64" alt="">
                     @else
-                    <a href="#">
+                    
                         <span class="text-center text-xl">{{ $sponsor->name }}</span>
-                    </a>
+                    
                     @endif
                 </div>
             </div>
