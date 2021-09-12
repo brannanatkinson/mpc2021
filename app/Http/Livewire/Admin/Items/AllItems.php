@@ -76,28 +76,27 @@ class AllItems extends Component
         $this->description = $item->description;
         $this->category = $item->category_id;
         $this->updateMode = true;
-        $this->createeMode = false;
+        $this->createMode = false;
     }
 
-    public function update()
+    public function update( $id )
     {
         $this->createMode = false;
-        if ($this->selected_id) {
-            $record = Item::find($this->selected_id);
-            if ( $this->image ){
-                $photoPath = $this->image->store('public/photos/gifts');
-                $record->update([
-                    'img' => $photoPath,
-                ]);
-            } 
+        $record = Item::find( $id );
+        if ( $this->image ){
+            $photoPath = $this->image->store('public/photos/gifts');
             $record->update([
-                'name' => $this->name,
-                'description' => $this->description,
-                'excerpt' => $this->excerpt,
-                'category_id' => $this->category
+                'img' => $photoPath,
             ]);
-            $this->resetInput();
-            $this->updateMode = false;
-        }
+        } 
+        $record->update([
+            'name' => $this->name,
+            'description' => $this->description,
+            'excerpt' => $this->excerpt,
+            'category_id' => $this->category
+        ]);
+        $this->resetInput();
+        $this->updateMode = false;
+
     }
 }
