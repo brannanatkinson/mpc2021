@@ -51,6 +51,7 @@
                     </li>
                 </ul>
             </div>
+            @if ( $showOnPage == 1 )
             <div class="pl-24">
                 
                 <div class="snipcart-summary">
@@ -59,7 +60,7 @@
                     <span class="snipcart-total-price"></span>
                 </div>
             </div>
-            
+            @endif
             
 
             <!-- mobile navbar -->
