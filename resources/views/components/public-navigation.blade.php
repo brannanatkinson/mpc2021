@@ -52,7 +52,12 @@
                 </ul>
             </div>
             <div class="pl-24">
-                <a href="#" class="snipcart-checkout justify-self-end"><i class="fa fa-shopping-cart text-mp-blue-green"></i></a>
+                
+                <div class="snipcart-summary">
+                    <a href="#" class="snipcart-checkout justify-self-end"><i class="fa fa-shopping-cart text-mp-blue-green"></i></a>
+                    <span class="snipcart-total-items text-mp-coral"></span>
+                    <span class="snipcart-total-price"></span>
+                </div>
             </div>
             
             
