@@ -1,7 +1,7 @@
 <div class="container">
     <div class="max-w-5xl mx-auto">
         <div class="text-3xl">
-            Update Item - {{ $selected_id }}
+            Update {{ $item->name }}
         </div>
         <form wire:submit.prevent="update( {{ $selected_id }} )" class="flex flex-col">
             <div class="flex flex-col">
@@ -10,7 +10,6 @@
                 @error('name') <span class="error">{{ $message }}</span> @enderror
             </div>
             <div class="flex flex-col">
-                {{ $excerpt }}
                 <label>Item Excerpt</label>
                 <textarea class="mb-8 h-32 bg-green-100 rounded-md w-full" wire:model="excerpt"></textarea>
                 @error('excerpt') <span class="error">{{ $message }}</span> @enderror
