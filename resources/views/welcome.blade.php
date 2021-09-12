@@ -77,13 +77,47 @@
 
         <div class="container mb-12 mx-auto">
         @if ( $showOnPage == 1 )
-          <div class="mt-8 mb-4 text-4xl font-display leading-tight text-mp-blue-green  text-center">Housing Hope 2021 Results</div>
-          <div class="mb-8">
-               @livewire('results')
-          </div>
-          <p class="w-full mb-4 lg:mx-auto lg:max-w-4xl text-xl text-center px-6">
-            Visit the <a href="/givingwall" class="text-mp-blue-green">Housing Hope Giving Wall</a> presented by Pinnacle to see donors and notes. 
-          </p>
+        <div class="mt-12 max-w-4xl mx-auto mb-8 px-6 md:px-0">
+            <div class="mb-4 text-5xl text-center text-mp-blue-green font-display">How to Participate in Housing Hope</div>
+            <p class="">The Mary Parrish Center depends on amazing donors to support our work. This unique online fundraiser features a fun <a href="/catalog" class="text-mp-blue-green hover:text-mp-coral">Giving Catalog</a> where you can select gifts that support the survivors of interpersonal violence and have the most meaning to you.</p>
+        </div>
+        <div class="mb-12 max-w-7xl mx-auto bg-gray-50">
+            <div class="mb-8 grid grid-cols-1 md:grid-cols-3 gap-8 px-6 lg:px-0">
+                <a href="/catalog">
+                <div class="bg-mp-light-lime p-8 space-y-4 rounded-md shadow-lg">
+                    <div class="text-center"><i class="fad fa-gift fa-2x text-mp-navy"></i></div>
+                    <div class="text-center text-2xl font-display font-bolc">Shop The Giving Catalog</div>
+                    <p class="text-xl">Browse the 16 Giving Catalog items that help survivors of interpersonal violence rebuild their lives and reclaim hope. Matching sponsors will double your gift for certain items.</p>
+                </div>
+                </a>
+                <div class="bg-mp-navy p-8 space-y-4 rounded-md shadow-lg">
+                    <div class="text-center"><i class="fad fa-shopping-cart fa-2x text-mp-coral"></i></div>
+                    <div class="text-center text-2xl font-display font-bolc text-white">Purchase A Gift</div>
+                    <p class="text-xl text-white">Purchase a single item or multiple items. Every purchase is 100% tax-deductible.</p>
+                    
+                </div>
+                <div class="bg-mp-blue-green p-8 space-y-4 rounded-md shadow-lg">
+                    <div class="text-center"><i class="fad fa-envelope-open fa-2x text-mp-light-gray"></i></div>
+                    <div class="text-center text-2xl font-display font-bolc text-mp-light-gray">Share</div>
+                    <p class="text-xl text-mp-light-gray">Add your name to the Donor Roll and write a note of support, if you would like. Of course, we hope you share your gift on social media.</p>
+                </div>
+            </div>
+            <div class="mb-4 text-2xl text-center font-display text-mp-blue-green">
+                Follow The Mary Parrish Center
+            </div>
+            <div class="flex flex-row justify-center space-x-10">
+                <a href="https://www.facebook.com/themaryparrishcenter" target="_blank"><i class="fa fa-facebook fa-2x text-mp-blue-green"></i></a>
+                <a href="https://www.instagram.com/themaryparrishcenter/" target="_blank"><i class="fa fa-instagram fa-2x text-mp-blue-green"></i></a>
+                <a href="https://twitter.com/MaryParrishCntr" target="_blank"><i class="fa fa-twitter fa-2x text-mp-blue-green"></i></a>
+            </div>
+        </div>
+        <div class="mt-8 mb-4 text-4xl font-display leading-tight text-mp-blue-green  text-center">Housing Hope 2021 Results</div>
+            <div class="mb-8">
+                 @livewire('results')
+            </div>
+            <p class="w-full mb-4 lg:mx-auto lg:max-w-4xl text-xl text-center px-6">
+                Visit the <a href="/givingwall" class="text-mp-blue-green">Housing Hope Giving Wall</a> presented by Pinnacle to see donors and notes. 
+            </p>
         @else
         <div class="container py-16 max-w-5xl mx-auto">
             <div class="mb-6 text-5xl font-display text-mp-blue-green text-center">Housing Hope Returns Next Monday</div>

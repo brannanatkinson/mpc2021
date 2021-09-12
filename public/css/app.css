@@ -1197,18 +1197,6 @@ select{
 	top: 0px;
 }
 
-.top-16{
-	top: 4rem;
-}
-
-.top-32{
-	top: 8rem;
-}
-
-.top-48{
-	top: 12rem;
-}
-
 .top-40{
 	top: 10rem;
 }
@@ -1219,10 +1207,6 @@ select{
 
 .z-50{
 	z-index: 50;
-}
-
-.z-40{
-	z-index: 40;
 }
 
 .z-20{
@@ -1407,6 +1391,10 @@ select{
 	margin-top: 3rem;
 }
 
+.-mt-12{
+	margin-top: -3rem;
+}
+
 .mr-8{
 	margin-right: 2rem;
 }
@@ -1415,24 +1403,16 @@ select{
 	margin-top: 4rem;
 }
 
+.-mt-8{
+	margin-top: -2rem;
+}
+
 .mt-9{
 	margin-top: 2.25rem;
 }
 
 .-mt-px{
 	margin-top: -1px;
-}
-
-.-mt-12{
-	margin-top: -3rem;
-}
-
-.-mt-8{
-	margin-top: -2rem;
-}
-
-.-mt-20{
-	margin-top: -5rem;
 }
 
 .box-border{
@@ -1519,16 +1499,16 @@ select{
 	height: 6rem;
 }
 
-.h-64{
-	height: 16rem;
-}
-
 .h-32{
 	height: 8rem;
 }
 
 .h-40{
 	height: 10rem;
+}
+
+.h-64{
+	height: 16rem;
 }
 
 .min-h-screen{
@@ -1811,6 +1791,18 @@ select{
 	margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
+.space-y-4 > :not([hidden]) ~ :not([hidden]){
+	--tw-space-y-reverse: 0;
+	margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+	margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.space-x-10 > :not([hidden]) ~ :not([hidden]){
+	--tw-space-x-reverse: 0;
+	margin-right: calc(2.5rem * var(--tw-space-x-reverse));
+	margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .space-x-6 > :not([hidden]) ~ :not([hidden]){
 	--tw-space-x-reverse: 0;
 	margin-right: calc(1.5rem * var(--tw-space-x-reverse));
@@ -2052,11 +2044,6 @@ select{
 .bg-green-100{
 	--tw-bg-opacity: 1;
 	background-color: rgba(209, 250, 229, var(--tw-bg-opacity));
-}
-
-.bg-gray-600{
-	--tw-bg-opacity: 1;
-	background-color: rgba(75, 85, 99, var(--tw-bg-opacity));
 }
 
 .bg-opacity-25{
@@ -3115,20 +3102,20 @@ select{
 		display: none;
 	}
 
-	.md\:h-16{
-		height: 4rem;
-	}
-
-	.md\:h-96{
-		height: 24rem;
-	}
-
 	.md\:h-48{
 		height: 12rem;
 	}
 
 	.md\:h-24{
 		height: 6rem;
+	}
+
+	.md\:h-16{
+		height: 4rem;
+	}
+
+	.md\:h-96{
+		height: 24rem;
 	}
 
 	.md\:h-40{
@@ -3173,10 +3160,6 @@ select{
 
 	.md\:flex-row{
 		flex-direction: row;
-	}
-
-	.md\:items-center{
-		align-items: center;
 	}
 
 	.md\:justify-center{
@@ -3255,10 +3238,6 @@ select{
 		display: inline-block;
 	}
 
-	.lg\:hidden{
-		display: none;
-	}
-
 	.lg\:h-full{
 		height: 100%;
 	}
@@ -3309,10 +3288,6 @@ select{
 
 	.lg\:p-0{
 		padding: 0px;
-	}
-
-	.lg\:p-8{
-		padding: 2rem;
 	}
 
 	.lg\:px-8{

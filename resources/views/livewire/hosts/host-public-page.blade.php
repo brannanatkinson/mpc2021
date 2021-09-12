@@ -36,7 +36,7 @@
             </div>
             <div class="mb-12">
                 <div class="text-center font-display text-mp-navy text-xl">
-                    <a href="/">Learn more about Housing Hope Nashville, a unique fundraiser for The Mary Parrish Center</a>
+                    <a href="/" class="hover:text-mp-coral">Learn more about Housing Hope Nashville, a unique fundraiser for The Mary Parrish Center</a>
                 </div>  
             </div>
             @php
@@ -72,6 +72,10 @@
         @if ( $user->UserMeta->show_items == true )
         <div class="mb-12">
             <div class="mb-4 text-xl text-center uppercase">Thanks to my family and friends for giving these gifts</div>
+            @if( $user->donatedItems()->count() == 0 )
+                <div class="mb-8 text-center text-mp-coral font-display text-xl">Be the first to purchase a gift and credit this host</div>
+                
+            @endif
             @if( $user->donatedItems()->count() > 0 )
             <div class="mb-6 grid grid-cols-3 gap-6">
                 @foreach ( $user->donatedItems() as $item )
