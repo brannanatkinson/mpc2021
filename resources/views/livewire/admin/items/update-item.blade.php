@@ -10,6 +10,7 @@
                 @error('name') <span class="error">{{ $message }}</span> @enderror
             </div>
             <div class="flex flex-col">
+                {{ $excerpt }}
                 <label>Item Excerpt</label>
                 <textarea class="mb-8 h-32 bg-green-100 rounded-md w-full" wire:model="excerpt"></textarea>
                 @error('excerpt') <span class="error">{{ $message }}</span> @enderror
