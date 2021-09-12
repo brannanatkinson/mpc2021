@@ -1415,6 +1415,10 @@ select{
 	margin-top: -1px;
 }
 
+.ml-20{
+	margin-left: 5rem;
+}
+
 .box-border{
 	box-sizing: border-box;
 }
@@ -2235,6 +2239,14 @@ select{
 
 .pb-20{
 	padding-bottom: 5rem;
+}
+
+.pl-20{
+	padding-left: 5rem;
+}
+
+.pl-24{
+	padding-left: 6rem;
 }
 
 .text-left{

@@ -19,7 +19,7 @@
             <a href="/"><img src="{{ Storage::url('/logos/housing_hope_stacked.png')}}" class="w-64 md:mr-8" alt=""></a>
         </div>
         <!-- left header section -->
-        <div class="flex items-center ">
+        <div class="flex items-center">
             <div>
                 <button @click="isOpen = !isOpen" type="submit">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10  md:hidden" fill="none"
@@ -51,6 +51,11 @@
                     </li>
                 </ul>
             </div>
+            <div class="pl-24">
+                <a href="#/cart" class="snipcart-checkout justify-self-end"><i class="fa fa-shopping-cart text-mp-blue-green"></i></a>
+            </div>
+            
+            
 
             <!-- mobile navbar -->
             <div class="mobile-navbar">
