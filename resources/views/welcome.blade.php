@@ -90,19 +90,20 @@
                 <a href="/catalog">
                 <div class="bg-mp-light-lime p-8 space-y-4 rounded-md shadow-lg">
                     <div class="text-center"><i class="fad fa-gift fa-2x text-mp-navy"></i></div>
-                    <div class="text-center text-2xl font-display font-bolc">Shop The Giving Catalog</div>
+                    <div class="text-center text-2xl font-display font-bold">Shop The Giving Catalog</div>
                     <p class="text-xl">Browse the 16 Giving Catalog items that help survivors of interpersonal violence rebuild their lives and reclaim hope. Matching sponsors will double your gift for certain items.</p>
+                    <div class="px-4 py-3 rounded-full border border-2 border-white text-center bg-mp-navy text-white">Shop The Giving Catalog</div>
                 </div>
                 </a>
                 <div class="bg-mp-navy p-8 space-y-4 rounded-md shadow-lg">
                     <div class="text-center"><i class="fad fa-shopping-cart fa-2x text-mp-coral"></i></div>
-                    <div class="text-center text-2xl font-display font-bolc text-white">Purchase A Gift</div>
+                    <div class="text-center text-2xl font-display font-bold text-white">Purchase A Gift</div>
                     <p class="text-xl text-white">Purchase a single item or multiple items. Every purchase is 100% tax-deductible.</p>
                     
                 </div>
                 <div class="bg-mp-blue-green p-8 space-y-4 rounded-md shadow-lg">
                     <div class="text-center"><i class="fad fa-envelope-open fa-2x text-mp-light-gray"></i></div>
-                    <div class="text-center text-2xl font-display font-bolc text-mp-light-gray">Share</div>
+                    <div class="text-center text-2xl font-display font-bold text-mp-light-gray">Share</div>
                     <p class="text-xl text-mp-light-gray">Add your name to the Donor Roll and write a note of support, if you would like. Of course, we hope you share your gift on social media.</p>
                 </div>
             </div>
