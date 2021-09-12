@@ -42,7 +42,7 @@
             @foreach ( App\Models\Sponsor::where('category', '=', 'champion')->orderBy('name')->get() as $sponsor)
             <div class="flex justify-center w-1/">  
                 <a href="#">
-                    <img src="{{ Storage::url( $sponsor->img ) }}" class="w-1/2 mx-auto" alt="">
+                    <img src="{{ Storage::url( $sponsor->img ) }}" class="w-3/5 mx-auto" alt="">
                 </a>
             </div>
             @endforeach
