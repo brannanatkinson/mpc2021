@@ -1,7 +1,7 @@
 <div class="container">
     <div class="max-w-5xl mx-auto">
         <div class="text-3xl">
-            Update {{ $item->name }}
+            Update Item
         </div>
         <form wire:submit.prevent="update( {{ $selected_id }} )" class="flex flex-col">
             <div class="flex flex-col">
