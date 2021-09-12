@@ -1,7 +1,7 @@
 <div class="container">
     <div class="max-w-5xl mx-auto">
         <div class="text-3xl">
-            Update Item - {{ $selected_item }}
+            Update Item - {{ $selected_id }}
         </div>
         <form wire:submit.prevent="update" class="flex flex-col">
             <div class="flex flex-col">
