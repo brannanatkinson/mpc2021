@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
+
+
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
@@ -14,3 +16,18 @@
     }
   }
 }
+
+@screen sm {
+  .homepage_video{
+    width: 400;
+    height: 225;
+  }
+}
+@screen lg {
+  .homepage_video{
+    width: 980;
+    height: 551;
+  }
+}
+
+

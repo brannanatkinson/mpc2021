@@ -110,13 +110,12 @@
             <div class="mx-auto p-6 grid gap-6 lg:gap-12 max-w-4xl lg:p-0 lg:grid-cols-3">
                 <div class="px-3 py-4 bg-mp-navy rounded shadow-lg">
                     <div class="my-6 text-center text-2xl text-mp-coral font-display italic">Gain independence from abusers</div>
-                    <p class="mb-4 text-white text-center">We provide transitional housing for survivors 
-                    domestic violence, dating violence, sexual assault, stalking, and/or human trafficking.</p>
+                    <p class="mb-4 text-white text-center">We provide transitional housing to survivors of interpersonal violence including domestic violence, dating violence, sexual assault, stalking, and/or human trafficking.</p>
                 </div>
                 <div class="px-3 py-4 bg-white rounded shadow-lg">
                     <div class="my-6 text-center text-2xl text-mp-coral font-display italic">Become self-sufficient</div>
                     <p class="mb-4 text-mp-navy text-center">We help survivors rebuild their lives through a wide range of flexible and optional 
-                    support services including clinical therapy, emergency financial assistance, housing advocacy, enrichment activities and case management.</p>
+                    support services, including clinical therapy, emergency financial assistance, housing advocacy, enrichment activities, case management and financial advocacy.</p>
                 </div>
                 <div class="px-3 py-4 bg-mp-navy rounded shadow-lg">
                     <div class="my-6 text-center text-2xl text-mp-coral font-display italic">Secure permanent housing</div>

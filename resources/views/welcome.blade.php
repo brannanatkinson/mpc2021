@@ -52,7 +52,6 @@
                             Housing Hope<br/> 
                             <span class="text-mp-light-lime">2021</span>
                         </h1>
-                        <p class="mb-6 text-white text-center uppercase tracking-wide">A unique online fundraiser to help survivors of interpersonal violence</p>
                         @if ( $showOnPage == 0 )
                         <p class="mt-4 max-w-md mx-auto text-lg text-gray-100 sm:text-xl md:mt-8 md:max-w-3xl">
                             The Housing Hope virtual fundraiser will return again this year. 
@@ -60,7 +59,7 @@
                         </p>
                         @else
                         <p class="mt-4 max-w-md mx-auto text-lg text-gray-100 sm:text-xl md:mt-8 md:max-w-3xl">
-                            Welcome to Housing Hope 2021, a unique online fundraiser benefitting the survivors of interpersonal violence at The Mary Parrish Center.
+                            Welcome to Housing Hope 2021, a unique online fundraiser benefitting survivors of interpersonal violence at The Mary Parrish Center.
                         </p>
                         @endif
                         @if ( $showOnPage == 1 )
@@ -142,7 +141,9 @@
         <div class="bg-mp-blue-green">
             <div class="pt-16 pb-20 flex flex-col items-center justify-center">
                 <p class="mb-6 lg:mb-12 text-white lg:text-xl text-center uppercase">Why The Mary Parrish Center needs your support</p>
-                <iframe src="{{ url('https://www.youtube.com/embed/VaGG0-_OeO8') }}" class="mb-8" width="980" height="551" frameborder="0" allowfullscreen></iframe>
+                <div class="homepage_video mb-8">
+                <iframe src="{{ url('https://www.youtube.com/embed/VaGG0-_OeO8') }}" class="h-full w-full" class="homepage_video" frameborder="0" allowfullscreen></iframe>
+                </div>
                 <div class="w-3/5 text-3xl lg:text-5xl text-mp-light-lime text-center leading-none font-display">
                     Domestic violence is 
                     <span class="text-white italic">a leading cause of homelessness</span> 
@@ -173,13 +174,12 @@
                 <div class="mx-auto p-6 grid gap-6 lg:gap-12 max-w-4xl lg:p-0 lg:grid-cols-3">
                     <div class="px-3 py-4 bg-mp-navy rounded shadow-lg">
                         <div class="my-6 text-center text-2xl text-mp-coral font-display italic">Gain independence from abusers</div>
-                        <p class="mb-4 text-white text-center">We provide transitional housing for survivors 
-                        domestic violence, dating violence, sexual assault, stalking, and/or human trafficking.</p>
+                        <p class="mb-4 text-white text-center">We provide transitional housing to survivors of interpersonal violence including domestic violence, dating violence, sexual assault, stalking, and/or human trafficking.</p>
                     </div>
                     <div class="px-3 py-4 bg-white rounded shadow-lg">
                         <div class="my-6 text-center text-2xl text-mp-coral font-display italic">Become self-sufficient</div>
                         <p class="mb-4 text-mp-navy text-center">We help survivors rebuild their lives through a wide range of flexible and optional 
-                        support services including clinical therapy, emergency financial assistance, housing advocacy, enrichment activities and case management.</p>
+                        support services, including clinical therapy, emergency financial assistance, housing advocacy, enrichment activities, case management and financial advocacy.</p>
                     </div>
                     <div class="px-3 py-4 bg-mp-navy rounded shadow-lg">
                         <div class="my-6 text-center text-2xl text-mp-coral font-display italic">Secure permanent housing</div>
