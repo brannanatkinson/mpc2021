@@ -38,16 +38,18 @@
             <label for="">Check to show donation total</label>
         </div>
         <div class="mb-12 p-8 bg-white">
-            <div class="text-2xl">Show Your Goal</div>
+            <div class="text-2xl">Add a Goal</div>
             <p class="mb-4">Enter an amount if you would like to set a goal. Please leave blank if you don't want to set a goal.</p>
-            <div class="mb-4">
-                <input class="h-8 w-8" type="checkbox" wire:click.prevent="saveUserShowGoal" value="{{ $show_goal }}" wire:model="show_goal">
-                <label class="" for="">Check to show you goal on your public page</label>
-            </div>
             <div class="mb-4">
                 <label for="">Enter your goal amount $</label>
                 <input type="number" class="border border-2 py-2 px-3 bg-gray-50" wire:model="goal"><br/>
             </div>
+            @if ( $goal != null OR $goal != 0 )
+            <div class="mb-4">
+                <input class="h-8 w-8" type="checkbox" wire:click.prevent="saveUserShowGoal" value="{{ $show_goal }}" wire:model="show_goal">
+                <label class="" for="">Check to show you goal on your public page</label>
+            </div>
+            @endif
             <button wire:click.prevent="saveUserGoal" class="px-4 py-3 text-white bg-mp-blue-green">Save Goal</button>
         </div>
         <div class="mb-12 p-8 bg-white">
