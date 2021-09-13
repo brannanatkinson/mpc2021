@@ -3397,6 +3397,12 @@ video {
 
 
 
+	.sm\:invisible{
+		visibility: hidden;
+	}
+
+
+
 	.sm\:col-span-4{
 		grid-column: span 4 / span 4;
 	}
@@ -3691,6 +3697,12 @@ video {
 
 
 
+	.md\:invisible{
+		visibility: hidden;
+	}
+
+
+
 	.md\:col-span-2{
 		grid-column: span 2 / span 2;
 	}
@@ -3723,6 +3735,12 @@ video {
 
 	.md\:mr-8{
 		margin-right: 2rem;
+	}
+
+
+
+	.md\:block{
+		display: block;
 	}
 
 
