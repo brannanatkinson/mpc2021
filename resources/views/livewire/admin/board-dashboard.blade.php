@@ -1,6 +1,7 @@
 <div>
+    <x-public-navigation>
     <x-slot name="title">
-        Dashboard
+        Board Dashboard
     </x-slot>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
