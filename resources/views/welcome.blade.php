@@ -118,7 +118,7 @@
                  @livewire('results')
             </div>
             <p class="w-full mb-4 lg:mx-auto lg:max-w-4xl text-xl text-center px-6">
-                Visit the <a href="/givingwall" class="text-mp-blue-green">Housing Hope Giving Wall</a> presented by Pinnacle to see donors and notes. 
+                Visit the <a href="/givingwall" class="text-mp-blue-green">Housing Hope Giving Wall</a> presented by Pinnacle Financial Partners to see donors and notes. 
             </p>
         @else
         <div class="container py-16 max-w-5xl mx-auto">
