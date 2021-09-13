@@ -24,7 +24,7 @@
              </div>
              <div class="p-8 text-center bg-gray-200 rounded-md flex flex-col justify-center items-center">
                 <div class="mb-6 uppercase">
-                    Total Gifts by Hosts
+                    Total Gifts Credited To Hosts
                 </div>
                 <div class="mb-8 text-4xl font-bold">
                     {{ App\Models\Gift::where('user_id','!=', null)->count() }}
