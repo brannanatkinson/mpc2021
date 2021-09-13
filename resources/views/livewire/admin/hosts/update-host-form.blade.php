@@ -47,7 +47,7 @@
             @if ( $goal != null OR $goal != 0 )
             <div class="mb-4">
                 <input class="h-8 w-8" type="checkbox" wire:click.prevent="saveUserShowGoal" value="{{ $show_goal }}" wire:model="show_goal">
-                <label class="" for="">Check to show you goal on your public page</label>
+                <label class="" for="">Check to show you goal on your public page. Your goal will remoain private if you don't check this box.</label>
             </div>
             @endif
             <button wire:click.prevent="saveUserGoal" class="px-4 py-3 text-white bg-mp-blue-green">Save Goal</button>
