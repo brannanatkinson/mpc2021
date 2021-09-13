@@ -1,5 +1,5 @@
 <div>
-    <div class="max-w-6xl px-6 md:px-0 mx-auto">
+    <div class="mt-12 max-w-6xl px-6 md:px-0 mx-auto">
         <p class="text-center text-xl mb-2">Housing Hope Has Raised</p>
         <div class="mb-2 text-6xl text-center font-bold text-mp-blue-green">${{ number_format( App\Models\Gift::all()->sum('gift_total') + App\Models\Sponsor::all()->sum('amount') + 1000 , 0, ',' ) }}</div>
         <p class="text-center text-xl mb-8"></p>
@@ -28,9 +28,6 @@
                     Sponsors
                 </div>
             </div>
-        </div>
-        <div class="mt-8 text-center">
-            <a href="/catalog" class="mx-auto px-4 py-4 text-mp-blue-green border border-mp-blue-green border-2 hover:border-0 border-white rounded-full hover:bg-mp-light-lime hover:text-black">Shop the Giving Catalog</a>
         </div>
     </div>
 </div>
