@@ -89,7 +89,7 @@
             </div>
             <span class="text-xl">The Mary Parrish Center is grateful to <b>{{ $CatalogItem->sponsor->name }}</b> for being a Matching Sponsor.</span>
             @if( $CatalogItem->sponsor->matchProgress() == 0 )
-            <div class="mt-6 text-mp-blue-green text-center">Be the first donor to match this gift!</div>
+            <div class="mt-6 text-mp-blue-green text-center">Be the first to get this matched gift!</div>
             
             @elseif ( $CatalogItem->sponsor->matchProgress() < 100 )
             <div class="justify-self-end w-full py-4">
