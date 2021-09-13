@@ -60,7 +60,7 @@
             <div class="container mx-auto pb-8">
                 <div class="pt-8 pb-4 text-4xl font-display text-center">Housing Hope 2021</div>
                 <div class="px-4 w-full lg:w-3/5 mx-auto">
-                    <p class="pb-6 text-xl text-center text-mp-blue-green font-display italic">Housing Hope raises funds to help victims of interpersonal violence escape their abusers, rebuild their lives and, ultimately, find permanent housing.</p>
+                    <p class="pb-6 text-xl text-center text-mp-blue-green font-display italic">Housing Hope raises funds to help survivors of interpersonal violence escape their abusers, rebuild their lives and, ultimately, find permanent housing.</p>
                     <p class="pb-6 text-xl">The event is an online fundraiser featuring a Giving Catalog where donors pick from 16 gifts they want to give to current and future residents at The Mary Parrish Center. </p>
                     <p class="pb-6 text-xl">Residents who take the risk of leaving abusive situations often have only the clothes on their backs and what they can carry in their arms. Their abusers often still control their bank accounts, car leases, and other important parts of their lives. Even after escaping, survivors face ongoing harassment and stalking every single day. </p>
                     <p class="pb-6 text-xl">All Housing Hope 2021 gifts reflect goods and services that residents need to start a new life — for themselves and their families — free from abuse. All gifts are also 100 percent tax deductible.</p>
@@ -73,7 +73,7 @@
                     <div class="pt-8 pb-4 text-3xl font-display text-center">About The Mary Parrish Center</div>
                     <p class="mb-4 text-xl text-center text-mp-blue-green"><a href="https://www.maryparrish.org" >www.MaryParrish.org</a></p>
                     <p class="mb-6 text-xl">Since 2002, The Mary Parrish Center has provided a full array of no-cost, 
-                    comprehensive services to over 7,000 survivors domestic violence, dating violence, sexual assault, stalking, and/or human trafficking.</p>
+                    comprehensive services to over 7,000 survivors of interpersonal violence including domestic violence, dating violence, sexual assault, stalking, and/or human trafficking.</p>
                     <p class="mb-6 text-xl">Our survivor-focused program enhances our residents’ autonomy by nurturing their capacity to live independently from their abusers, establish self-sufficiency, and secure permanent housing.</p>    
                 </div>
             </div>
