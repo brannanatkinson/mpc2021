@@ -55,7 +55,7 @@
                     data-item-id="{{ $CatalogItem->name}}"
                     data-item-price="{{ $CatalogItem->cost }}"
                     data-item-url="/catalog/item/{{ $CatalogItem->id }}"
-                    data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+                    data-item-description="{{ $CatalogItem->excerpt }}"
                     data-item-name="{{ $CatalogItem->name }}"
                     data-item-custom1-name="Credit your virtual host"
                     data-item-custom1-options="@php echo $hostNames @endphp"
