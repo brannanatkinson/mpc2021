@@ -8,34 +8,7 @@
         </h2>
     </x-slot>
     
-    <div class="max-w-5xl mx-auto">
-        <div class="grid grid-cols-3 gap-8 mb-10">
-            <div class="p-8 text-center bg-gray-200 rounded-md flex flex-col justify-center items-center">
-                <div class="mb-6 uppercase">
-                    Total Dollars Raised
-                </div>
-                <div class="mb-8 text-4xl font-bold">
-                    ${{ App\Models\Gift::all()->sum('gift_total') }}
-                </div>
-             </div>
-             <div class="p-8 text-center bg-gray-200 rounded-md flex flex-col justify-center items-center">
-                <div class="mb-6 uppercase">
-                    Total Gifts
-                </div>
-                <div class="mb-8 text-4xl font-bold">
-                    {{ App\Models\Gift::all()->count() }}
-                </div>
-             </div>
-            <div class="p-8 text-center bg-gray-200 rounded-md flex flex-col justify-center items-center">
-                <div class="mb-6 uppercase">
-                    Total Number of Donors
-                </div>
-                <div class="mb-8 text-4xl font-bold">
-                    {{ App\Models\Donor::all()->count() }}
-                </div>
-             </div>
-        </div>
-    </div>
+    @livewire('board-results')
     <div class="mt-8 max-w-5xl mx-auto">
         <div class="my-3 text-3xl font-bold">
             2021 Host Summary
