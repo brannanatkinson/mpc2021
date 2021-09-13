@@ -1,5 +1,4 @@
 <div>
-    <x-public-navigation>
     <x-slot name="title">
         Board Dashboard
     </x-slot>
