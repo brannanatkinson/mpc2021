@@ -9,6 +9,7 @@ use App\Http\Livewire\WebhookConfirmation;
 use App\Http\Livewire\Admin\Hosts\AllHosts;
 use App\Http\Livewire\Admin\Hosts\UpdateHostForm;
 use App\Http\Livewire\Admin\Dashboard;
+use App\Http\Livewire\Admin\BoardDashboard;
 use App\Http\Livewire\Admin\Items\AllItems;
 use App\Http\Livewire\Admin\Categories\AllCategories;
 use App\Http\Livewire\Admin\Sponsors\AllSponsors;
@@ -55,3 +56,4 @@ Route::get('/admin/sponsors', AllSponsors::class)->middleware(['auth:sanctum', '
 Route::get('/items', Items::class)->middleware(['auth:sanctum', 'verified', 'can:admin']);
 
 Route::get('/dashboard', Dashboard::class)->middleware(['auth:sanctum', 'verified'])->name('dashboard');
+oute::get('/mpc-board-dashboard', BoardDashboard::class);
