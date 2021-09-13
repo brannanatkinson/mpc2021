@@ -63,7 +63,7 @@
                 <input class="h-8 w-8" type="checkbox" wire:click.prevent="saveUserShowRationale" value="{{ $show_rationale }}" wire:model="show_rationale">
                 <label for="">Show your message of support on your public page</label>
             </div>
-            <textarea class="w-full" rows="7" wire:model="rationale"></textarea>
+            <textarea class="w-full" class="border border-2 py-2 px-3 bg-gray-50" rows="7" wire:model="rationale"></textarea>
             <button wire:click.prevent="saveUserRationale" class="px-4 py-3 text-white bg-mp-blue-green">Save Message</button>
         </div>
         <div class="mb-12 p-8 bg-white">
@@ -75,11 +75,11 @@
             @else
                 <div class="mb-4">
                     <label for="">New Password</label><br/>
-                    <input type="password" wire:model="password">
+                    <input type="password" class="border border-2 py-2 px-3 bg-gray-50" wire:model="password">
                 </div>
                 <div class="mb-4">
                     <label for="">Confirm Password</label><br/>
-                    <input type="password" wire:model="password_confirmation">
+                    <input type="password" class="border border-2 py-2 px-3 bg-gray-50" wire:model="password_confirmation">
                 </div>
                 <button wire:click.prevent="saveNewPassword" class="px-4 py-3 text-white bg-mp-blue-green">Save Message</button>
             @endif
