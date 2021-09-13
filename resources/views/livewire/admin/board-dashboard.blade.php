@@ -9,7 +9,7 @@
     </x-slot>
     
     @livewire('board-results')
-    <div class="mt-8 max-w-5xl mx-auto">
+    <div class="mt-8 max-w-6xl mx-auto">
         <div class="my-3 text-3xl font-bold">
             2021 Host Summary
         </div>
