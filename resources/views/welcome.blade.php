@@ -142,7 +142,7 @@
             <div class="pt-16 pb-20 flex flex-col items-center justify-center">
                 <p class="mb-6 lg:mb-12 text-white lg:text-xl text-center uppercase">Why The Mary Parrish Center needs your support</p>
                 <div class="hidden md:block mb-8">
-                     <iframe src="{{ url('https://www.youtube.com/embed/VaGG0-_OeO8') }}" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+                     <iframe src="{{ url('https://www.youtube.com/embed/VaGG0-_OeO8') }}" width="750" height="423" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="block md:hidden mb-8 ">
                      <iframe src="{{ url('https://www.youtube.com/embed/VaGG0-_OeO8') }}" width="400" height="225" frameborder="0" allowfullscreen></iframe>
