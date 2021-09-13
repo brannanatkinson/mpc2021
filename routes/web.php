@@ -56,4 +56,4 @@ Route::get('/admin/sponsors', AllSponsors::class)->middleware(['auth:sanctum', '
 Route::get('/items', Items::class)->middleware(['auth:sanctum', 'verified', 'can:admin']);
 
 Route::get('/dashboard', Dashboard::class)->middleware(['auth:sanctum', 'verified'])->name('dashboard');
-oute::get('/mpc-board-dashboard', BoardDashboard::class);
+Route::get('/mpc-board-dashboard', BoardDashboard::class);
