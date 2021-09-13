@@ -27,15 +27,7 @@
                     
                 </div>
             </div>
-            @php
-                $sponsorTotal = $sponsor->matchTotal()->first()->total;
-                if( $sponsorTotal != 0 ){
-                    $matchProgress = $sponsor->amount / $sponsorTotal;
-                } else {
-                    $matchProgress = 0;
-                }
-                
-            @endphp
+            
             
             <div class="justify-self-end w-full py-4">
                 <div class="mb-2 text-sm text-center">Match Progress - {{ number_format( $sponsor->matchProgress(), 0) }}%</div>
