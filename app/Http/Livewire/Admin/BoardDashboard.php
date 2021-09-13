@@ -8,6 +8,6 @@ class BoardDashboard extends Component
 {
     public function render()
     {
-        return view('livewire.admin.board-dashboard');
+        return view('livewire.admin.board-dashboard') ->layout('layouts.guest');
     }
 }
