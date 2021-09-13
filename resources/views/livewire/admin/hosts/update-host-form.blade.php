@@ -46,7 +46,7 @@
             </div>
             <div class="mb-4">
                 <label for="">Enter your goal amount $</label>
-                <input type="number" wire:model="goal"><br/>
+                <input type="number" class="border border-2 py-2 px-3 bg-gray-50" wire:model="goal"><br/>
             </div>
             <button wire:click.prevent="saveUserGoal" class="px-4 py-3 text-white bg-mp-blue-green">Save Goal</button>
         </div>

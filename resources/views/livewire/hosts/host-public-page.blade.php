@@ -40,7 +40,7 @@
                 </div>  
             </div>
             @php
-                if ( $user->UserMeta->goal  ){
+                if ( $user->UserMeta->goal != null  ){
                     $hostGoalProgress = ( App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') / $user->UserMeta->goal ) * 100;
                 }
             @endphp 
