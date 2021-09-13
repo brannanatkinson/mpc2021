@@ -45,7 +45,7 @@
             @endforeach
         </div>
     </div>
-    <div class="mt-10 max-w-5xl mx-auto">
+    <div class="mt-10 max-w-6xl mx-auto">
         <div class="my-3 text-3xl font-bold">
             2021 Giving Catalog Item Summary
         </div>
@@ -66,7 +66,7 @@
             @endforeach
         </div>
     </div>
-    <div class="pb-16 max-w-5xl mx-auto">
+    <div class="pb-16 max-w-6xl mx-auto">
         <div class="mt-8 mb-6 text-3xl font-bold">
             2021 Gift Summary
         </div>
