@@ -24,8 +24,8 @@
 @if ($counter == 1)
 <div class="bg-mp-blue-green">
     <div class="max-w-5xl mx-auto py-16 space-y-4">
-        <div class="text-center text-white text-mp-blue text-3xl font-display">Make a General Donation to Housing Hope</div>
-        <p class="text-center text-xl text-white">We are also accepting general donations to Housing Hope 2021 if you would prefer.</p>
+        <div class="text-center text-white text-mp-blue text-3xl font-display">Make a General Donation</div>
+        <p class="text-center text-xl text-white">The Mary Parrish Center is accepting general donations to Housing Hope 2021 if you would prefer that option.</p>
         <div class="text-center">
             <a href="https://maryparrish.kindful.com/" target="_blank"><button class="px-4 py-3 hover:bg-white bg-mp-light-lime text-mp-navy rounded-full mx-auto">Visit our Donation Page</a>
         </div>
@@ -84,11 +84,11 @@
     <!-- <div class="mb-12"><img src="{{ Storage::url('/graphics/flourish.png') }}" class="w-64 mx-auto" alt=""></div> -->
 @endforeach
 <div class="bg-mp-navy">
-    <div class="max-w-5xl mx-auto py-12 space-y-4">
+    <div class="max-w-5xl mx-auto py-12 space-y-4 px-6 md:px-0">
         <div class="text-center uppercase text-white">Major Gift</div>
         <div class="-mt-6 text-3xl font-display text-white text-center">Furnish a Newly Renovated Apartment at The Mary Parrish Center</div>
         <div class="text-5xl font-display text-white text-mp-light-lime text-center">$7,500</div>
-        <p class="text-center text-white pb-6 text-xl">The Mary Parrish Center is renovating and updating half of our apartments. Of course, we believe new digs deserve new furniture. The special gift includes naming rights for one of the renovated apartments. If you are interested, please email Mary Katherine Rand at marykatherine@maryparrish.org</p>
+        <p class="text-center text-white pb-6 text-xl">The Mary Parrish Center is renovating and updating half of our apartments. Of course, we believe new digs deserve new furniture. The special gift includes naming rights for one of the renovated apartments. If you are interested, please email Mary Katherine Rand at marykatherine@maryparrish.org.</p>
         <div class="mt-10 aspect-w-16 aspect-h-9">
             <img src="{{ Storage::url('photos/website/mpc_apartment.jpg') }}" alt="">
         </div>

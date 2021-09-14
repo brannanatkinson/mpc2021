@@ -28,23 +28,26 @@
     <body class="antialiased">
         <div>
             <x-public-navigation/>
+            <div class="aspect-w-16 aspect-h-5 ">
+                <img src="{{ Storage::url('photos/website/mpc_bed_time.jpg') }}" alt="" class="object-cover">
+            </div>
             <div class="bg-mp-blue-green py-8 text-white">
                 <div class="container mx-auto ">
                     <div class="px-4 lg:w-2/3 mx-auto">
                         <div class="pt-8 pb-8 text-3xl font-display text-center">Thanks to Our Supporters</div>
                         <p class="text-xl text-center">The Mary Parrish Center is immensely grateful to the following people for their contributions to the success of Housing Hope 2021.</p>
                         <div class="flex flex-col justify-center lg:flex-row lg:flex-wrap">
-                            <div class="lg:w-1/2 pb-8">
+                            <div class="lg:w-3/4 pb-8">
                                 <p class="mt-6 mb-3 text-2xl text-mp-navy font-display text-center">Event Committee</p>
-                                <ul class="text-center">
-                                    <li class="inline-block text-2xl text-white mx-6">Tammy Kaminski, Chair</li>
-                                    <li class="inline-block text-2xl text-white mx-6">Keri Adams</li>
-                                    <li class="inline-block text-2xl text-white mx-6">Kate King</li>
-                                    <li class="inline-block text-2xl text-white mx-6">Cyndi Lockyear</li>
-                                    <li class="inline-block text-2xl text-white mx-6">Brittany Moon</li>
-                                    <li class="inline-block text-2xl text-white mx-6">DenEllen Sutherland</li>
-                                    <li class="inline-block text-2xl text-white mx-6">Jeff Teague</li>
-                                    <li class="inline-block text-2xl text-white mx-6">Emily Waltenbaugh</li>
+                                <ul class="flex flex-col md:flex-row flex-wrap justify-center">
+                                    <li class="w-full md:w-1/3 text-center inline-block text-2xl text-white mx-6">Tammy Kaminski, Chair</li>
+                                    <li class="w-full md:w-1/3 text-center inline-block text-2xl text-white mx-6">Keri Adams</li>
+                                    <li class="w-full md:w-1/3 text-center inline-block text-2xl text-white mx-6">Kate King</li>
+                                    <li class="w-full md:w-1/3 text-center inline-block text-2xl text-white mx-6">Cyndi Lockyear</li>
+                                    <li class="w-full md:w-1/3 text-center inline-block text-2xl text-white mx-6">Brittany Moon</li>
+                                    <li class="w-full md:w-1/3 text-center inline-block text-2xl text-white mx-6">DenEllen Sutherland</li>
+                                    <li class="w-full md:w-1/3 text-center inline-block text-2xl text-white mx-6">Jeff Teague</li>
+                                    <li class="w-full md:w-1/3 text-center inline-block text-2xl text-white mx-6">Emily Waltenbaugh</li>
                                 </ul>
                                 <p class="mt-6 mb-3 text-2xl text-mp-navy font-display text-center">2021 Virtual Hosts</p>
                                 <ul class="text-center">
@@ -70,6 +73,9 @@
             
             <div class="container mx-auto pb-12">
                 <div class="px-4 lg:w-3/5 mx-auto">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="{{ Storage::url('photos/website/mpc_moms_talking.jpg') }}" alt="" class="object-cover">
+                    </div>
                     <div class="pt-8 pb-4 text-3xl font-display text-center">About The Mary Parrish Center</div>
                     <p class="mb-4 text-xl text-center text-mp-blue-green"><a href="https://www.maryparrish.org" >www.MaryParrish.org</a></p>
                     <p class="mb-6 text-xl">Since 2002, The Mary Parrish Center has provided a full array of no-cost, 

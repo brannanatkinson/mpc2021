@@ -101,7 +101,7 @@
                 <div class="bg-mp-blue-green p-8 space-y-4 rounded-md shadow-lg">
                     <div class="text-center"><i class="fad fa-envelope-open fa-2x text-mp-light-gray"></i></div>
                     <div class="text-center text-2xl font-display font-bold text-mp-light-gray">Share</div>
-                    <p class="text-xl text-mp-light-gray">Add your name to the Donor Roll and write a note of support, if you would like. Of course, we hope you share your gift on social media.</p>
+                    <p class="text-xl text-mp-light-gray">Add your name to the Donor Wall and write a note of support, if you would like. Of course, we hope you share your gift on social media.</p>
                 </div>
             </div>
             <div class="mb-4 text-2xl text-center font-display text-mp-blue-green">

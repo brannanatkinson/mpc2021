@@ -9,7 +9,7 @@
 	<div class="mt-12 px-6 md:px-0 py-10 bg-mp-light-lime">
 		<div class="mb-16 max-w-6xl mx-auto mt-12">
 			<div class="mb-3 text-4xl text-center text-mp-navy font-display">
-				2021 Housing Hope Donor Roll
+				2021 Housing Hope Donor Wall
 			</div>
 			<p class="text-mp-blue-green text-center text-xl">Thanks to these Housing Hope donors who have chosen to be featured on the Donor Wall.</p>
 
