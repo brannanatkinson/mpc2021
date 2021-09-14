@@ -33,26 +33,26 @@
             </div>
             <div class="bg-mp-blue-green py-8 text-white">
                 <div class="container mx-auto ">
-                    <div class="px-4 lg:w-2/3 mx-auto">
+                    <div class="px-4 mx-auto">
                         <div class="pt-8 pb-8 text-3xl font-display text-center">Thanks to Our Supporters</div>
                         <p class="text-xl text-center">The Mary Parrish Center is immensely grateful to the following people for their contributions to the success of Housing Hope 2021.</p>
                         <div class="flex flex-col justify-center lg:flex-row lg:flex-wrap">
-                            <div class="lg:w-3/4 pb-8">
+                            <div class="pb-8">
                                 <p class="mt-6 mb-3 text-2xl text-mp-navy font-display text-center">Event Committee</p>
                                 <ul class="flex flex-col md:flex-row flex-wrap justify-center">
-                                    <li class="w-full md:w-1/3 text-center inline-block text-2xl text-white mx-6">Tammy Kaminski, Chair</li>
-                                    <li class="w-full md:w-1/3 text-center inline-block text-2xl text-white mx-6">Keri Adams</li>
-                                    <li class="w-full md:w-1/3 text-center inline-block text-2xl text-white mx-6">Kate King</li>
-                                    <li class="w-full md:w-1/3 text-center inline-block text-2xl text-white mx-6">Cyndi Lockyear</li>
-                                    <li class="w-full md:w-1/3 text-center inline-block text-2xl text-white mx-6">Brittany Moon</li>
-                                    <li class="w-full md:w-1/3 text-center inline-block text-2xl text-white mx-6">DenEllen Sutherland</li>
-                                    <li class="w-full md:w-1/3 text-center inline-block text-2xl text-white mx-6">Jeff Teague</li>
-                                    <li class="w-full md:w-1/3 text-center inline-block text-2xl text-white mx-6">Emily Waltenbaugh</li>
+                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">Tammy Kaminski, Chair</li>
+                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">Keri Adams</li>
+                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">Kate King</li>
+                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">Cyndi Lockyear</li>
+                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">Brittany Moon</li>
+                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">DenEllen Sutherland</li>
+                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">Jeff Teague</li>
+                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">Emily Waltenbaugh</li>
                                 </ul>
-                                <p class="mt-6 mb-3 text-2xl text-mp-navy font-display text-center">2021 Virtual Hosts</p>
-                                <ul class="text-center">
+                                <p class="mt-6 mb-3 text-2xl text-mp-navy font-display text-center">2021 Events Hosts</p>
+                                <ul class="flex flex-col md:flex-row flex-wrap justify-center">
                                     @foreach( App\Models\User::permission('edit host')->orderBy('name')->get() as $host   )
-                                    <li class="inline-block text-2xl text-white mx-6">{{ $host->name}} </li>
+                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">{{ $host->name}} </li>
                                     @endforeach
                                 </ul>
                             </div>
@@ -81,6 +81,59 @@
                     <p class="mb-6 text-xl">Since 2002, The Mary Parrish Center has provided a full array of no-cost, 
                     comprehensive services to over 7,000 survivors of interpersonal violence including domestic violence, dating violence, sexual assault, stalking, and/or human trafficking.</p>
                     <p class="mb-6 text-xl">Our survivor-focused program enhances our residents’ autonomy by nurturing their capacity to live independently from their abusers, establish self-sufficiency, and secure permanent housing.</p>    
+                </div>
+            </div>
+        </div>
+        <div class="mb-16 max-w-4xl mx-auto">
+            <div class="mb-8 text-3xl font-display text-center">Frequently Asked Questions</div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 lg:px-0">
+                <div>
+                    <div class="mb-4 text-2xl font-display text-mp-blue-green italic">
+                        Is my gift anonymous? 
+                    </div>
+                    <div class="text-xl">
+                        Yes, of course. The Mary Parrish Center respects your privacy. That said, if you give us permission, we will share your name on the Housing Hope 2021 Giving Wall
+                    </div>
+                </div>
+                <div>
+                    <div class="mb-4 text-2xl font-display text-mp-blue-green italic">
+                        Can give multiple gifts? 
+                    </div>
+                    <div class="text-xl">
+                        Of course. The gift catalog functions like any online store. You can select multiple items and even multiple quantities of items.
+                    </div>
+                </div>
+                <div>
+                    <div class="mb-4 text-2xl font-display text-mp-blue-green italic">
+                        Can make a donation without purchasing a gift? 
+                    </div>
+                    <div class="text-xl">
+                       Yes, you can. You can make a one-time or recuring donation on The Mary Parrish Center website at www.maryparrish.org/donate
+                    </div>
+                </div>
+                <div>
+                    <div class="mb-4 text-2xl font-display text-mp-blue-green italic">
+                        Are purchases secure? 
+                    </div>
+                    <div class="text-xl">
+                        Yes. Purchases are processed though Stripe, reputable payment processor. The Mary Parrish Center does not have access to or store your credit card number.
+                    </div>
+                </div>
+                <div>
+                    <div class="mb-4 text-2xl font-display text-mp-blue-green italic">
+                        How did The Mary Parrish Center choose the gifts in the catalog? 
+                    </div>
+                    <div class="text-xl">
+                        Each gift is product and service that The Mary Parrish Center clients need every day to build self-sufficiency and begin restoring normalcy their lives. Each gift helps residents feel ownership over their new lives.
+                    </div>
+                </div>
+                <div>
+                    <div class="mb-4 text-2xl font-display text-mp-blue-green italic">
+                        Will The Mary Parrish Center spend donations for selected gifts? 
+                    </div>
+                    <div class="text-xl">
+                        As mentioned, the gifts are products and services The Mary Parrish Center clients need every day. The staff will make every effort to honor the spirit of every gift given during Housing Hope 2021. The Mary Parrish Center will spend 100% of proceeds directly helping residents. Our top priority is fulfilling the current needs of clients. We reserve the right to use donations for clients* immediate needs and priorities.
+                    </div>
                 </div>
             </div>
         </div>

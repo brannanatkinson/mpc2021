@@ -3811,6 +3811,12 @@ video {
 
 
 
+	.md\:w-1\/4{
+		width: 25%;
+	}
+
+
+
 	.md\:max-w-3xl{
 		max-width: 48rem;
 	}
