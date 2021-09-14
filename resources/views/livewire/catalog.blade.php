@@ -88,7 +88,7 @@
         <div class="text-center uppercase text-white">Major Gift</div>
         <div class="-mt-6 text-3xl font-display text-white text-center">Furnish a Newly Renovated Apartment at The Mary Parrish Center</div>
         <div class="text-5xl font-display text-white text-mp-light-lime text-center">$7,500</div>
-        <p class="text-center text-white pb-6 text-xl">The Mary Parrish Center is renovating and updating half of our apartments. Of course, we believe new digs deserve new furniture. The special gift includes naming rights for one of the renovated apartments.</p>
+        <p class="text-center text-white pb-6 text-xl">The Mary Parrish Center is renovating and updating half of our apartments. Of course, we believe new digs deserve new furniture. The special gift includes naming rights for one of the renovated apartments. If you are interested, please email Mary Katherine Rand at marykatherine@maryparrish.org</p>
         <div class="mt-10 aspect-w-16 aspect-h-9">
             <img src="{{ Storage::url('photos/website/mpc_apartment.jpg') }}" alt="">
         </div>
