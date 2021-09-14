@@ -54,7 +54,7 @@
                     </div>
                     <div class="h-6 text-center text-sm">
 
-                        @if ( $item->sponsor_id != null AND $item->sponsor->hasAvailableMatch() == true )
+                        @if ( $item->sponsor_id != null AND $item->sponsor->matchProgress() < 100 )
                             <i class="fa fa-trophy pr-4 text-mp-light-lime "></i><spon class="text-mp-navy">Sponsor Match Doubles Your Gift</spon>
                         @endif 
                     </div>
