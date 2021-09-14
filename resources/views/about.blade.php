@@ -31,6 +31,36 @@
             <div class="aspect-w-16 aspect-h-5 ">
                 <img src="{{ Storage::url('photos/website/mpc_bed_time.jpg') }}" alt="" class="object-cover">
             </div>
+
+            <div class="py-16 mb-16 max-w-4xl mx-auto">
+                <div class="mb-2 text-3xl font-display text-center">
+                    2021 Champion of Hope
+                </div>
+                 <div class="text-sm font-display text-center uppercase">
+                    presented by
+                </div>
+                <img src="{{ Storage::url('/sponsors/bridgestone.jpg') }}" class="mb-6 w-48 md:w-72 mx-auto" alt="">
+                <div class="mb-2 text-5xl font-display text-center">
+                    Abraham Switters
+                </div>
+                <div class="mt-8 flex flex-col lg:flex-row px-6 md:px-0">
+                    <div class="w-full md:w-1/3">
+                        <img src="{{ Storage::url('/photos/website/abe_switters.jpg') }}" class="object-cover mb-8" alt="">
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <div class="md:px-12  space-y-4">
+                            <p class="text-xl">Abraham Switters is a Nashville resident and philanthropist who raises money through social media in honor of Mr. Puckett, his recently deceased dog. Mr. Puckett was Abe's constant companion for many years including 4 years of homelessness. </p>
+                             
+                            <p class="text-xl">Mr. Puckett became famous online through the telling of Abe's story of addiction, hitting rock bottom, and redemption. He became the face of all Abe's charitable endeavors once they were back on their feet.</p>
+                             
+                            <p class="text-xl">Today, Puckett Week, as it has become known, has touched people all around the world. As Abe's chosen charity in 2020, The Mary Parrish Center received more than $17,000 in donations and another estimated  $15,000 in goods donated in-kind.  </p>
+
+                            <p class="text-xl">We are so excited for you all to meet Abraham Switters on Wednesday, September 15 when we present him with the Champion of Hope Award. This award is given to an individual in the Nashville Community who has made a significant effort in support of survivors of interpersonal violence. When we were deciding who should receive this year’s award our choice was clear, Abraham Switters and, of course, Mr. Puckett. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="bg-mp-blue-green py-8 text-white">
                 <div class="container mx-auto ">
                     <div class="px-4 mx-auto">
