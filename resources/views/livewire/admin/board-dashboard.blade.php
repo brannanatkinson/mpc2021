@@ -49,7 +49,7 @@
         <div class="my-3 text-3xl font-bold">
             2021 Giving Catalog Item Summary
         </div>
-        <div class="mb-6 grid grid-cols-4 gap-6">
+        <div class="mb-6 grid grid-cols-1 md:grid-cols-4 gap-6 px-6 md:py-0">
             @foreach ( App\Models\Item::all() as $item )
                 <div class="bg-white text-center flex flex-col rounded-md overflow-hidden">
                     <div class="mb-6 w-full">
