@@ -25,6 +25,12 @@ module.exports = {
                 'mp-navy': '#0c385c' 
             }
         },
+        aspectRatio: {
+          1: '1',
+          2: '2',
+          3: '3',
+          4: '4',
+        }
     },
 
     variants: {
@@ -33,5 +39,7 @@ module.exports = {
         },
     },
 
-    plugins: [ require('@tailwindcss/aspect-ratio') ]
+    plugins: [ 
+        require('@tailwindcss/aspect-ratio') 
+    ]
 };

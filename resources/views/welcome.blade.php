@@ -71,7 +71,7 @@
                    </div>
                 </div>
                 <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-3/5 lg:h-full">
-                    <img class="absolute inset-0 w-full h-full object-cover" src="{{ Storage::url('/photos/website/mpc_reading.jpeg')  }}" alt="Woman on her phone">
+                    <img class="absolute inset-0 w-full h-full object-cover" src="{{ Storage::url('/photos/website/mpc_three_families.jpg')  }}" alt="Woman on her phone">
                 </div>
             </main>
         </div>
