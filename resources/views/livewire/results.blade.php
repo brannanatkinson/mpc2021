@@ -16,7 +16,7 @@
             </div>
             <div class="flex flex-col p-8 text-center text-white bg-mp-blue-green rounded-lg shadow-md">
                 <div class="mb-6 font-display"><i class="fa fa-heart fa-2x"></i></div>
-                <div class="mb-6 text-5xl font-bold">${{ number_format( App\Models\Gift::all()->sum('gift_total') ) }}</div>
+                <div class="mb-6 text-5xl font-bold">${{ number_format( App\Models\Gift::all()->sum('gift_total') + env('DONATIONS') ) }}</div>
                 <div class="mb-4 text-xl uppercase">
                     Donations
                 </div>
