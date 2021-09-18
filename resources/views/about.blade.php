@@ -31,7 +31,16 @@
             <div class="aspect-w-16 aspect-h-5 ">
                 <img src="{{ Storage::url('photos/website/mpc_bed_time.jpg') }}" alt="" class="object-cover">
             </div>
-
+            @php
+                $userTimezone = new DateTimeZone('America/Chicago');
+                $gmtTimezone = new DateTimeZone('GMT');
+                $myDateTime = new DateTime( date('Y-m-d H:i:s'), $gmtTimezone);
+                $offset = $userTimezone->getOffset($myDateTime);
+                $myInterval=DateInterval::createFromDateString((string)$offset . 'seconds');
+                $myDateTime->add($myInterval);
+                $result = $myDateTime->format('Y-m-d H:i:s');
+                $showOnPage = $result < date( env('END_DATE') );
+            @endphp
             <div class="py-16 mb-16 max-w-4xl mx-auto">
                 <div class="mb-2 text-3xl font-display text-center">
                     2021 Champion of Hope
@@ -114,6 +123,7 @@
                 </div>
             </div>
         </div>
+        @if ( $showOnPage == 1 )
         <div class="mb-16 max-w-4xl mx-auto">
             <div class="mb-8 text-3xl font-display text-center">Frequently Asked Questions</div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 lg:px-0">
@@ -167,6 +177,7 @@
                 </div>
             </div>
         </div>
+        @endif
         <div class="py-12 bg-mp-navy text-white text-sm text-center">Housing Hope Nashville - &copy; 2021 The Mary Parrish Center - Photo Credit: Peyton Hoge - Website Development: Amy Atkinson Communications</div>
         <script async src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
         <div hidden id="snipcart" data-api-key="{{ env('SNIPCART_KEY') }}"></div>
