@@ -1,4 +1,5 @@
-<x-public-layout>
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,8 +43,9 @@
             $myInterval=DateInterval::createFromDateString((string)$offset . 'seconds');
             $myDateTime->add($myInterval);
             $result = $myDateTime->format('Y-m-d H:i:s');
-            $showOnPage = $result > date( env('START_DATE') );
+            $showOnPage = $result < date( env('END_DATE') );
         @endphp
+        <x-public-navigation/>
         <div class=" bg-mp-blue-green">
             <main class="lg:relative">
                 <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-24 lg:text-left">
@@ -54,8 +56,8 @@
                         </h1>
                         @if ( $showOnPage == 0 )
                         <p class="mt-4 max-w-md mx-auto text-lg text-gray-100 sm:text-xl md:mt-8 md:max-w-3xl">
-                            The Housing Hope virtual fundraiser will return again this year. 
-                            We hope that everyone who helped make Housing Hope a huge success in 2020 will participate again this year. 
+                            Thank you to everyone who supported Housing Hope again this year. 
+                            We are overwhelmed by the response and humbled by the support from around the world.
                         </p>
                         @else
                         <p class="mt-4 max-w-md mx-auto text-lg text-gray-100 sm:text-xl md:mt-8 md:max-w-3xl">
@@ -77,65 +79,65 @@
         </div>
 
         <div class="container mb-12 mx-auto">
-        @if ( $showOnPage == 1 )
-        <div class="mt-12 max-w-4xl mx-auto mb-8 px-6 md:px-0">
-            <div class="mb-4 text-5xl text-center text-mp-blue-green font-display">How to Participate in Housing Hope</div>
-            <p class="">The Mary Parrish Center depends on amazing donors to support our work. This unique online fundraiser features a fun <a href="/catalog" class="text-mp-blue-green hover:text-mp-coral">Giving Catalog</a> where you can select gifts that support the survivors of interpersonal violence and have the most meaning to you.</p>
-        </div>
-        <div class="mb-12 max-w-7xl mx-auto">
-            <div class="mb-8 grid grid-cols-1 md:grid-cols-3 gap-8 px-6 lg:px-0">
-                <a href="/catalog">
-                <div class="bg-mp-light-lime p-8 space-y-4 rounded-md shadow-lg">
-                    <div class="text-center"><i class="fad fa-gift fa-2x text-mp-navy"></i></div>
-                    <div class="text-center text-2xl font-display font-bold">Shop The Giving Catalog</div>
-                    <p class="text-xl">Browse the 16 Giving Catalog items that help survivors of interpersonal violence rebuild their lives and reclaim hope. Matching sponsors will double your gift for certain items.</p>
-                    <div class="px-4 py-3 rounded-full border border-2 border-white text-center bg-mp-navy text-white">Shop The Giving Catalog</div>
-                </div>
-                </a>
-                <div class="bg-mp-navy p-8 space-y-4 rounded-md shadow-lg">
-                    <div class="text-center"><i class="fad fa-shopping-cart fa-2x text-mp-coral"></i></div>
-                    <div class="text-center text-2xl font-display font-bold text-white">Purchase A Gift</div>
-                    <p class="text-xl text-white">Purchase a single item or multiple items. Every purchase is 100% tax-deductible.</p>
-                    
-                </div>
-                <div class="bg-mp-blue-green p-8 space-y-4 rounded-md shadow-lg">
-                    <div class="text-center"><i class="fad fa-envelope-open fa-2x text-mp-light-gray"></i></div>
-                    <div class="text-center text-2xl font-display font-bold text-mp-light-gray">Share</div>
-                    <p class="text-xl text-mp-light-gray">Add your name to the Donor Wall and write a note of support, if you would like. Of course, we hope you share your gift on social media.</p>
-                </div>
+            @if ( $showOnPage == 1 )
+            <div class="mt-12 max-w-4xl mx-auto mb-8 px-6 md:px-0">
+                <div class="mb-4 text-5xl text-center text-mp-blue-green font-display">How to Participate in Housing Hope</div>
+                <p class="">The Mary Parrish Center depends on amazing donors to support our work. This unique online fundraiser features a fun <a href="/catalog" class="text-mp-blue-green hover:text-mp-coral">Giving Catalog</a> where you can select gifts that support the survivors of interpersonal violence and have the most meaning to you.</p>
             </div>
-            <div class="mb-4 text-2xl text-center font-display text-mp-blue-green">
-                Follow The Mary Parrish Center
-            </div>
-            <div class="flex flex-row justify-center space-x-10">
-                <a href="https://www.facebook.com/themaryparrishcenter" target="_blank"><i class="fa fa-facebook fa-2x text-mp-blue-green"></i></a>
-                <a href="https://www.instagram.com/themaryparrishcenter/" target="_blank"><i class="fa fa-instagram fa-2x text-mp-blue-green"></i></a>
-                <a href="https://twitter.com/MaryParrishCntr" target="_blank"><i class="fa fa-twitter fa-2x text-mp-blue-green"></i></a>
-            </div>
-        </div>
-        <div class="mt-8 mb-4 text-4xl font-display leading-tight text-mp-blue-green  text-center">Housing Hope 2021 Results</div>
-            <div class="mb-8">
-                 @livewire('results')
-            </div>
-            <p class="w-full mb-4 lg:mx-auto lg:max-w-4xl text-xl text-center px-6">
-                Visit the <a href="/givingwall" class="text-mp-blue-green">Housing Hope Giving Wall</a> presented by Pinnacle Financial Partners to see donors and notes. 
-            </p>
-        @else
-        <div class="container py-16 max-w-5xl mx-auto">
-            <div class="mb-6 text-5xl font-display text-mp-blue-green text-center">Housing Hope Returns Next Monday</div>
-            <p class="mb-4 text-xl">Housing Hope will take place Monday, September 13, through Friday, September 17. We look forward to your participation and another record-breaking event raising money to support the survivors of interpersonal violence.</p>
-            <p class="mb-4 text-xl">This year's event will feature the <b>Giving Catalog presented by HCA/Tristar Health</b>, where you will be able to select from 16 gifts for The Mary Parrish Center residents, and the <b>Giving Wall presesnted by Pinnacle Financial Partners</b>.</p>
-            <p class="mb-4 text-xl">Follow The Mary Parrish Center on <a href="https://www.facebook.com/themaryparrishcenter/" class="text-mp-blue-green">Facebook</a> and <a href="https://www.instagram.com/themaryparrishcenter/" class="text-mp-blue-green">Instagram</a> to keep up with all the latest news.</p>
-            <div class="grid lg:grid-cols-2">
-                <div class="flex justify-center p-8">
-                    <img src="{{ Storage::url('/logos/giving_catalog_banner.jpg') }}" alt="">
+            <div class="mb-12 max-w-7xl mx-auto">
+                <div class="mb-8 grid grid-cols-1 md:grid-cols-3 gap-8 px-6 lg:px-0">
+                    <a href="/catalog">
+                    <div class="bg-mp-light-lime p-8 space-y-4 rounded-md shadow-lg">
+                        <div class="text-center"><i class="fad fa-gift fa-2x text-mp-navy"></i></div>
+                        <div class="text-center text-2xl font-display font-bold">Shop The Giving Catalog</div>
+                        <p class="text-xl">Browse the 16 Giving Catalog items that help survivors of interpersonal violence rebuild their lives and reclaim hope. Matching sponsors will double your gift for certain items.</p>
+                        <div class="px-4 py-3 rounded-full border border-2 border-white text-center bg-mp-navy text-white">Shop The Giving Catalog</div>
+                    </div>
+                    </a>
+                    <div class="bg-mp-navy p-8 space-y-4 rounded-md shadow-lg">
+                        <div class="text-center"><i class="fad fa-shopping-cart fa-2x text-mp-coral"></i></div>
+                        <div class="text-center text-2xl font-display font-bold text-white">Purchase A Gift</div>
+                        <p class="text-xl text-white">Purchase a single item or multiple items. Every purchase is 100% tax-deductible.</p>
+                        
+                    </div>
+                    <div class="bg-mp-blue-green p-8 space-y-4 rounded-md shadow-lg">
+                        <div class="text-center"><i class="fad fa-envelope-open fa-2x text-mp-light-gray"></i></div>
+                        <div class="text-center text-2xl font-display font-bold text-mp-light-gray">Share</div>
+                        <p class="text-xl text-mp-light-gray">Add your name to the Donor Wall and write a note of support, if you would like. Of course, we hope you share your gift on social media.</p>
+                    </div>
                 </div>
-                <div class="flex justify-center p-8">
-                    <img src="{{ Storage::url('/logos/giving_wall_banner.jpg') }}" alt="">
+                <div class="mb-4 text-2xl text-center font-display text-mp-blue-green">
+                    Follow The Mary Parrish Center
+                </div>
+                <div class="flex flex-row justify-center space-x-10">
+                    <a href="https://www.facebook.com/themaryparrishcenter" target="_blank"><i class="fa fa-facebook fa-2x text-mp-blue-green"></i></a>
+                    <a href="https://www.instagram.com/themaryparrishcenter/" target="_blank"><i class="fa fa-instagram fa-2x text-mp-blue-green"></i></a>
+                    <a href="https://twitter.com/MaryParrishCntr" target="_blank"><i class="fa fa-twitter fa-2x text-mp-blue-green"></i></a>
                 </div>
             </div>
-        </div>
-        @endif
+            
+            @else
+            <div class="container py-16 max-w-5xl mx-auto">
+                <div class="mt-8 mb-4 text-4xl font-display leading-tight text-mp-blue-green  text-center">
+                    Housing Hope 2021 Final Results
+                </div>
+                <div class="mb-8">
+                     @livewire('results')
+                </div>
+                <p class="w-full mb-4 lg:mx-auto lg:max-w-4xl text-xl text-center px-6">
+                    Visit the <a href="/givingwall" class="text-mp-blue-green">Housing Hope Giving Wall</a> presented by Pinnacle Financial Partners to see donors and notes. 
+                </p>
+                <p class="mb-4 text-xl text-center">Follow The Mary Parrish Center on <a href="https://www.facebook.com/themaryparrishcenter/" class="text-mp-blue-green">Facebook</a> and <a href="https://www.instagram.com/themaryparrishcenter/" class="text-mp-blue-green">Instagram</a> to keep up with all the latest news.</p>
+                <div class="grid lg:grid-cols-2">
+                    <div class="flex justify-center p-8">
+                        <a href='/catalog'><img src="{{ Storage::url('/logos/giving_catalog_banner.jpg') }}" alt=""></a>
+                    </div>
+                    <div class="flex justify-center p-8">
+                         <a href='/givingwall'><img src="{{ Storage::url('/logos/giving_wall_banner.jpg') }}" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            @endif
         </div>
         <!-- stat  -->
         <div class="bg-mp-blue-green">
@@ -197,4 +199,4 @@
         <script async src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
         <div hidden id="snipcart" data-api-key="{{ env('SNIPCART_KEY') }}"></div>
     </body>
-</x-public-layout>
+</html>

@@ -1,4 +1,14 @@
 <div>
+    @php
+        $userTimezone = new DateTimeZone('America/Chicago');
+        $gmtTimezone = new DateTimeZone('GMT');
+        $myDateTime = new DateTime( date('Y-m-d H:i:s'), $gmtTimezone);
+        $offset = $userTimezone->getOffset($myDateTime);
+        $myInterval=DateInterval::createFromDateString((string)$offset . 'seconds');
+        $myDateTime->add($myInterval);
+        $result = $myDateTime->format('Y-m-d H:i:s');
+        $showOnPage = $result < date( env('END_DATE') );
+    @endphp
     <div class="max-w-6xl px-6 md:px-0 mx-auto">
         <p class="text-center text-xl mb-2">Thank you for helping us raise</p>
         <div class="mb-2 text-6xl text-center font-bold text-mp-blue-green">${{ number_format( App\Models\Gift::all()->sum('gift_total') + App\Models\Sponsor::all()->sum('amount') + 1000 + env('DONATIONS')  , 0, ',' ) }}</div>
@@ -30,7 +40,9 @@
             </div>
         </div>
         <div class="mt-8 text-center">
+            @if ( $showOnPage == 1 )
             <a href="/catalog" class="mx-auto px-4 py-4 text-mp-blue-green border border-mp-blue-green border-2 hover:border-0 border-white rounded-full hover:bg-mp-light-lime hover:text-black">Shop the Giving Catalog</a>
+            @endif
         </div>
     </div>
 </div>

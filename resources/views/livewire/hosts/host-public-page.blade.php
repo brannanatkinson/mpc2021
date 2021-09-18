@@ -8,7 +8,7 @@
         $myInterval=DateInterval::createFromDateString((string)$offset . 'seconds');
         $myDateTime->add($myInterval);
         $result = $myDateTime->format('Y-m-d H:i:s');
-        $showOnPage = $result > date( env('START_DATE') );
+        $showOnPage = $result < date( env('END_DATE') );
     @endphp
     <div class="my-12 text-3xl text-center">
         {{ $user->name }}

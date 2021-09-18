@@ -7,7 +7,7 @@
         $myInterval=DateInterval::createFromDateString((string)$offset . 'seconds');
         $myDateTime->add($myInterval);
         $result = $myDateTime->format('Y-m-d H:i:s');
-        $showOnPage = $result > date( env('START_DATE') );
+        $showOnPage = $result < date( env('END_DATE') );
     @endphp
    
     <!-- 
@@ -21,25 +21,24 @@
         <!-- left header section -->
         <div class="flex items-center">
             <div>
-                <button @click="isOpen = !isOpen" type="submit">
+                <button @click="isOpen = true">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10  md:hidden" fill="none"
                         viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
+
             </div>
             <div class="hidden space-x-6 lg:inline-block">
                 <ul class="list-type-none text-mp-blue-green">
                    
-                    @if ( $showOnPage == 1 )
                     <li class="inline-block mr-8">
                         <a href="/catalog">Giving Catalog</a>
                     </li>
                     <li class="inline-block mr-8">
                         <a href="/givingwall">Giving Wall</a>
                     </li>
-                    @endif
                     <li class="inline-block mr-8">
                         <a href="/sponsors">Sponsors</a>
                     </li>
@@ -53,7 +52,6 @@
             </div>
             @if ( $showOnPage == 1 )
             <div class="pl-24">
-                
                 <div class="snipcart-summary">
                     <a href="#" class="snipcart-checkout justify-self-end"><i class="fa fa-shopping-cart text-mp-blue-green"></i></a>
                     <span class="snipcart-total-items text-mp-coral"></span>

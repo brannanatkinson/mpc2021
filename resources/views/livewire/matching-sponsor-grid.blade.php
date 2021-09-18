@@ -8,7 +8,7 @@
         $myInterval=DateInterval::createFromDateString((string)$offset . 'seconds');
         $myDateTime->add($myInterval);
         $result = $myDateTime->format('Y-m-d H:i:s');
-        $showOnPage = $result > date( env('START_DATE') );
+        $showOnPage = $result < date( env('END_DATE') );
     @endphp
     @foreach( $MatchingSponsors as $sponsor )
     <div class="p-3 bg-white border border-2 shadow-lg">
