@@ -17,7 +17,7 @@
             <td>{{ $donor->full_name  }}</td>
             <td>{{ $donor->email_address  }}</td>
          
-            <td>${{ $donor->gift  }}</td>
+            <td>${{ $donor->gift->gift_total  }}</td>
             <td>{{ $donor->address  }}</td>
             <td>{{ $donor->address_2  }}</td>
             <td>{{ $donor->city  }}</td>
