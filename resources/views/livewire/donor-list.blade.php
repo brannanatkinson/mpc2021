@@ -1,16 +1,16 @@
 <div>
     <table>
-        <th>
-            <td>ID</td>
-            <td>Name</td>
-            <td>Email</td>
-            <td>Gift Total</td>
-            <td>Address</td>
-            <td>Address 2</td>
-            <td>City</td>
-            <td>State</td>
-            <td>Zip</td>
-        </th>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Gift Total</th>
+            <th>Address</th>
+            <th>Address 2</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+        </tr>
         @foreach ($donors as $donor)
         <tr>
             <td>{{ $donor->id }}</td>
