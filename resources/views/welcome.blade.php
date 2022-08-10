@@ -56,7 +56,7 @@
                         </h1>
                         @if ( $showOnPage == 0 )
                         <p class="mt-4 max-w-md mx-auto text-lg text-gray-100 sm:text-xl md:mt-8 md:max-w-3xl">
-                            Housing Hope is coming Monday, September 12! The Mary Parrish Center looks forward to your participation again this year in this unique, important fundraiser to help surivors of interpersonal violence.
+                            Housing Hope is coming Monday, September 12! The Mary Parrish Center looks forward to your participation again this year in this unique, important fundraiser to help surivors of interpersonal violence. Look for exciting updates and news soon.
                         </p>
                         @else
                         <p class="mt-4 max-w-md mx-auto text-lg text-gray-100 sm:text-xl md:mt-8 md:max-w-3xl">
