@@ -141,6 +141,11 @@
                 
             </div>
         </div>
+        <div class="py-12 bg-mp-light-lime">
+            <div class="container mx-auto text-center text-2xl font-display text-mp-navy">
+                <span class="font-bold">Want to sponsor Housing Hope or become an event host?</span> <a class="underline hover:text-black" href="mailto:merrill@maryparrish.org">Email Merrick Cope</a> today for more information.
+            </div>
+        </div>
 
 
 
