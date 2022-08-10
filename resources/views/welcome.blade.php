@@ -52,12 +52,11 @@
                     <div class="px-4 lg:w-2/5 sm:px-8 xl:pr-16">
                         <h1 class="mb-8 text-6xl text-white text-center font-display leading-none tracking-tight">
                             Housing Hope<br/> 
-                            <span class="text-mp-light-lime">2021</span>
+                            <span class="text-mp-light-lime">2022</span>
                         </h1>
                         @if ( $showOnPage == 0 )
                         <p class="mt-4 max-w-md mx-auto text-lg text-gray-100 sm:text-xl md:mt-8 md:max-w-3xl">
-                            Thank you to everyone who supported Housing Hope again this year. 
-                            We are overwhelmed by the response and humbled by the support from around the world.
+                            Housing Hope is coming Monday, September 12! The Mary Parrish Center looks forward to your participation again this year in this unique, important fundraiser to help surivors of interpersonal violence.
                         </p>
                         @else
                         <p class="mt-4 max-w-md mx-auto text-lg text-gray-100 sm:text-xl md:mt-8 md:max-w-3xl">
@@ -78,7 +77,7 @@
             </main>
         </div>
 
-        <div class="container mb-12 mx-auto">
+        <div class="container mx-auto">
             @if ( $showOnPage == 1 )
             <div class="mt-12 max-w-4xl mx-auto mb-8 px-6 md:px-0">
                 <div class="mb-4 text-5xl text-center text-mp-blue-green font-display">How to Participate in Housing Hope</div>
@@ -115,28 +114,7 @@
                     <a href="https://twitter.com/MaryParrishCntr" target="_blank"><i class="fa fa-twitter fa-2x text-mp-blue-green"></i></a>
                 </div>
             </div>
-            
-            @else
-            <div class="container py-16 max-w-5xl mx-auto">
-                <div class="mt-8 mb-4 text-4xl font-display leading-tight text-mp-blue-green  text-center">
-                    Housing Hope 2021 Final Results
-                </div>
-                <div class="mb-8">
-                     @livewire('results')
-                </div>
-                <p class="w-full mb-4 lg:mx-auto lg:max-w-4xl text-xl text-center px-6">
-                    Visit the <a href="/givingwall" class="text-mp-blue-green">Housing Hope Giving Wall</a> presented by Pinnacle Financial Partners to see donors and notes. 
-                </p>
-                <p class="mb-4 text-xl text-center">Follow The Mary Parrish Center on <a href="https://www.facebook.com/themaryparrishcenter/" class="text-mp-blue-green">Facebook</a> and <a href="https://www.instagram.com/themaryparrishcenter/" class="text-mp-blue-green">Instagram</a> to keep up with all the latest news.</p>
-                <div class="grid lg:grid-cols-2">
-                    <div class="flex justify-center p-8">
-                        <a href='/catalog'><img src="{{ Storage::url('/logos/giving_catalog_banner.jpg') }}" alt=""></a>
-                    </div>
-                    <div class="flex justify-center p-8">
-                         <a href='/givingwall'><img src="{{ Storage::url('/logos/giving_wall_banner.jpg') }}" alt=""></a>
-                    </div>
-                </div>
-            </div>
+
             @endif
         </div>
         <!-- stat  -->
@@ -164,11 +142,7 @@
             </div>
         </div>
 
-        <!-- Sponsor  -->
-            <div class="bg-white">
-                <div class="my-12 text-4xl text-mp-blue-green text-center font-display">2021 Housing Hope Sponsors</div>
-                @livewire('sponsor-grid')
-            </div>
+
 
         <div id="mpc" class="bg-mp-coral py-16">
             <div class="container mx-auto px-4 lg:px-0">

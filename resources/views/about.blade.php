@@ -41,71 +41,14 @@
                 $result = $myDateTime->format('Y-m-d H:i:s');
                 $showOnPage = $result < date( env('END_DATE') );
             @endphp
-            <div class="py-16 mb-16 max-w-4xl mx-auto">
-                <div class="mb-2 text-3xl font-display text-center">
-                    2021 Champion of Hope
-                </div>
-                 <div class="text-sm font-display text-center uppercase">
-                    presented by
-                </div>
-                <img src="{{ Storage::url('/sponsors/bridgestone.jpg') }}" class="mb-6 w-48 md:w-72 mx-auto" alt="">
-                <div class="mb-2 text-5xl font-display text-center">
-                    Abraham Switters
-                </div>
-                <div class="mt-8 flex flex-col lg:flex-row px-6 md:px-0">
-                    <div class="w-full md:w-1/3">
-                        <img src="{{ Storage::url('/photos/website/abe_switters.jpg') }}" class="object-cover mb-8" alt="">
-                    </div>
-                    <div class="w-full md:w-2/3">
-                        <div class="md:px-12  space-y-4">
-                            <p class="text-xl">Abraham Switters is a Nashville resident and philanthropist who raises money through social media in honor of Mr. Puckett, his recently deceased dog. Mr. Puckett was Abe's constant companion for many years including 4 years of homelessness. </p>
-                             
-                            <p class="text-xl">Mr. Puckett became famous online through the telling of Abe's story of addiction, hitting rock bottom, and redemption. He became the face of all Abe's charitable endeavors once they were back on their feet.</p>
-                             
-                            <p class="text-xl">Today, Puckett Week, as it has become known, has touched people all around the world. As Abe's chosen charity in 2020, The Mary Parrish Center received more than $17,000 in donations and another estimated  $15,000 in goods donated in-kind.  </p>
-
-                            <p class="text-xl">We are so excited for you all to meet Abraham Switters on Wednesday, September 15 when we present him with the Champion of Hope Award. This award is given to an individual in the Nashville Community who has made a significant effort in support of survivors of interpersonal violence. When we were deciding who should receive this year’s award our choice was clear, Abraham Switters and, of course, Mr. Puckett. </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-mp-blue-green py-8 text-white">
-                <div class="container mx-auto ">
-                    <div class="px-4 mx-auto">
-                        <div class="pt-8 pb-8 text-3xl font-display text-center">Thanks to Our Supporters</div>
-                        <p class="text-xl text-center">The Mary Parrish Center is immensely grateful to the following people for their contributions to the success of Housing Hope 2021.</p>
-                        <div class="flex flex-col justify-center lg:flex-row lg:flex-wrap">
-                            <div class="pb-8">
-                                <p class="mt-6 mb-3 text-2xl text-mp-navy font-display text-center">Event Committee</p>
-                                <ul class="flex flex-col md:flex-row flex-wrap justify-center">
-                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">Tammy Kaminski, Chair</li>
-                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">Keri Adams</li>
-                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">Kate King</li>
-                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">Cyndi Lockyear</li>
-                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">Brittany Moon</li>
-                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">DenEllen Sutherland</li>
-                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">Jeff Teague</li>
-                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">Emily Waltenbaugh</li>
-                                </ul>
-                                <p class="mt-6 mb-3 text-2xl text-mp-navy font-display text-center">2021 Events Hosts</p>
-                                <ul class="flex flex-col md:flex-row flex-wrap justify-center">
-                                    @foreach( App\Models\User::permission('edit host')->orderBy('name')->get() as $host   )
-                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">{{ $host->name}} </li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>  
+            
             <div class="container mx-auto pb-8">
-                <div class="pt-8 pb-4 text-4xl font-display text-center">Housing Hope 2021</div>
+                <div class="pt-8 pb-4 text-4xl font-display text-center">Housing Hope 2022</div>
                 <div class="px-4 w-full lg:w-3/5 mx-auto">
                     <p class="pb-6 text-xl text-center text-mp-blue-green font-display italic">Housing Hope raises funds to help survivors of interpersonal violence escape their abusers, rebuild their lives and, ultimately, find permanent housing.</p>
                     <p class="pb-6 text-xl">The event is an online fundraiser featuring a Giving Catalog where donors pick from 16 gifts they want to give to current and future residents at The Mary Parrish Center. </p>
                     <p class="pb-6 text-xl">Residents who take the risk of leaving abusive situations often have only the clothes on their backs and what they can carry in their arms. Their abusers often still control their bank accounts, car leases, and other important parts of their lives. Even after escaping, survivors face ongoing harassment and stalking every single day. </p>
-                    <p class="pb-6 text-xl">All Housing Hope 2021 gifts reflect goods and services that residents need to start a new life — for themselves and their families — free from abuse. All gifts are also 100 percent tax deductible.</p>
+                    <p class="pb-6 text-xl">All Housing Hope gifts reflect goods and services that residents need to start a new life — for themselves and their families — free from abuse. All gifts are also 100 percent tax deductible.</p>
                 </div>
             </div>
             
