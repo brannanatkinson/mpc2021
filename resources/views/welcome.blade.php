@@ -43,6 +43,13 @@
             $myInterval=DateInterval::createFromDateString((string)$offset . 'seconds');
             $myDateTime->add($myInterval);
             $result = $myDateTime->format('Y-m-d H:i:s');
+            if ( ( $result > date( env('START_DATE') ) ) AND ( $result < date( env('END_DATE') ) ) )  {
+                $currentPeriod = "during";
+            } elseif ( $result < env('START_DATE') ){
+                $currentPeriod = "before";
+            } else {
+                $currentPeriod = "after";
+            }
             $showOnPage = $result < date( env('END_DATE') );
         @endphp
         <x-public-navigation/>
@@ -54,16 +61,16 @@
                             Housing Hope<br/> 
                             <span class="text-mp-light-lime">2022</span>
                         </h1>
-                        @if ( $showOnPage == 0 )
+                        @if ( $currentPeriod == "before" )
                         <p class="mt-4 max-w-md mx-auto text-lg text-gray-100 sm:text-xl md:mt-8 md:max-w-3xl">
                             Housing Hope is coming Monday, September 12! The Mary Parrish Center looks forward to your participation again this year in this unique, important fundraiser to help surivors of interpersonal violence. Look for exciting updates and news soon.
                         </p>
-                        @else
+                        @elseif ( $currentPeriod == "during")
                         <p class="mt-4 max-w-md mx-auto text-lg text-gray-100 sm:text-xl md:mt-8 md:max-w-3xl">
-                            Welcome to Housing Hope 2021, a unique online fundraiser benefitting survivors of interpersonal violence at The Mary Parrish Center.
+                            Welcome to Housing Hope 2022, a unique online fundraiser benefitting survivors of interpersonal violence at The Mary Parrish Center.
                         </p>
                         @endif
-                        @if ( $showOnPage == 1 )
+                        @if ( $currentPeriod == "during")
                         <div class="mt-8">
                             <a href="/catalog" class="px-4 py-4 text-white border border-2 border-white hover:border-0 rounded-full hover:bg-mp-light-lime hover:text-black">Shop the Giving Catalog</a>
                         </div>
@@ -78,7 +85,7 @@
         </div>
 
         <div class="container mx-auto">
-            @if ( $showOnPage == 1 )
+            @if ( $currentPeriod == "during" )
             <div class="mt-12 max-w-4xl mx-auto mb-8 px-6 md:px-0">
                 <div class="mb-4 text-5xl text-center text-mp-blue-green font-display">How to Participate in Housing Hope</div>
                 <p class="">The Mary Parrish Center depends on amazing donors to support our work. This unique online fundraiser features a fun <a href="/catalog" class="text-mp-blue-green hover:text-mp-coral">Giving Catalog</a> where you can select gifts that support the survivors of interpersonal violence and have the most meaning to you.</p>
@@ -141,12 +148,13 @@
                 
             </div>
         </div>
+        @if ( $currentPeriod == "before " ) 
         <div class="py-12 bg-mp-light-lime">
             <div class="container mx-auto text-center text-2xl font-display text-mp-navy">
                 <span class="font-bold">Want to sponsor Housing Hope or become an event host?</span> <a class="underline hover:text-black" href="mailto:merrill@maryparrish.org">Email Merrick Cope</a> today for more information.
             </div>
         </div>
-
+        @endif
 
 
         <div id="mpc" class="bg-mp-coral py-16">
