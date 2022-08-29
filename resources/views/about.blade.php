@@ -29,18 +29,9 @@
         <div>
             <x-public-navigation/>
             <div class="aspect-w-16 aspect-h-5 ">
-                <img src="{{ Storage::url('photos/website/mpc_bed_time.jpg') }}" alt="" class="object-cover">
+                <img src="{{ Storage::url('photos/website/livingroom1.jpg') }}" alt="" class="object-cover">
             </div>
-            @php
-                $userTimezone = new DateTimeZone('America/Chicago');
-                $gmtTimezone = new DateTimeZone('GMT');
-                $myDateTime = new DateTime( date('Y-m-d H:i:s'), $gmtTimezone);
-                $offset = $userTimezone->getOffset($myDateTime);
-                $myInterval=DateInterval::createFromDateString((string)$offset . 'seconds');
-                $myDateTime->add($myInterval);
-                $result = $myDateTime->format('Y-m-d H:i:s');
-                $showOnPage = $result < date( env('END_DATE') );
-            @endphp
+            
             
             <div class="container mx-auto pb-8">
                 <div class="pt-8 pb-4 text-4xl font-display text-center">Housing Hope 2022</div>
@@ -66,7 +57,7 @@
                 </div>
             </div>
         </div>
-        @if ( $showOnPage == 1 )
+        @if ( getCurrentPeriod() == "during" )
         <div class="mb-16 max-w-4xl mx-auto">
             <div class="mb-8 text-3xl font-display text-center">Frequently Asked Questions</div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 lg:px-0">

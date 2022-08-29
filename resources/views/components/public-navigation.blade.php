@@ -16,7 +16,7 @@
 
     <div x-data="{ isOpen: false }" class="max-w-7xl mx-auto flex flex-col items-center md:flex-row py-8 bg-white">
         <div class="">
-            <a href="/"><img src="{{ Storage::url('/logos/housing_hope_stacked.png')}}" class="w-64 md:mr-8" alt=""></a>
+            <a href="/"><img src="{{ Storage::url('/logos/housing_hope_stacked_pinnacle.png')}}" class="w-64 md:mr-8" alt=""></a>
         </div>
         <!-- left header section -->
         <div class="flex items-center">
@@ -33,7 +33,7 @@
             <div class="hidden space-x-6 lg:inline-block">
                 <ul class="list-type-none text-mp-blue-green">
                    
-                    <!-- <li class="inline-block mr-8">
+                    <li class="inline-block mr-8">
                         <a href="/catalog">Giving Catalog</a>
                     </li>
                     <li class="inline-block mr-8">
@@ -41,7 +41,7 @@
                     </li>
                     <li class="inline-block mr-8">
                         <a href="/sponsors">Sponsors</a>
-                    </li> -->
+                    </li>
                     <li class="inline-block mr-8">
                         <a href="/about">About Housing Hope</a>
                     </li>
