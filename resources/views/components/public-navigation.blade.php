@@ -32,8 +32,8 @@
             </div>
             <div class="hidden space-x-6 lg:inline-block">
                 <ul class="list-type-none text-mp-blue-green">
-                   
-                    <!-- <li class="inline-block mr-8">
+                   @if ( getCurrentPeriod() == 'during')
+                    <li class="inline-block mr-8">
                         <a href="/catalog">Giving Catalog</a>
                     </li>
                     <li class="inline-block mr-8">
@@ -41,7 +41,8 @@
                     </li>
                     <li class="inline-block mr-8">
                         <a href="/sponsors">Sponsors</a>
-                    </li> -->
+                    </li> 
+                    @endif
                     <li class="inline-block mr-8">
                         <a href="/about">About Housing Hope</a>
                     </li>

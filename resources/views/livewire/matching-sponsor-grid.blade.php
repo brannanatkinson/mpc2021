@@ -1,15 +1,6 @@
 <div class="mb-8 text-3xl text-center font-display text-mp-blue-green">Matching Sponsors</div>
 <div class="container mb-16  px-6 md:px-0 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-    @php
-        $userTimezone = new DateTimeZone('America/Chicago');
-        $gmtTimezone = new DateTimeZone('GMT');
-        $myDateTime = new DateTime( date('Y-m-d H:i:s'), $gmtTimezone);
-        $offset = $userTimezone->getOffset($myDateTime);
-        $myInterval=DateInterval::createFromDateString((string)$offset . 'seconds');
-        $myDateTime->add($myInterval);
-        $result = $myDateTime->format('Y-m-d H:i:s');
-        $showOnPage = $result < date( env('END_DATE') );
-    @endphp
+
     @foreach( $MatchingSponsors as $sponsor )
     <div class="p-3 bg-white border border-2 shadow-lg">
         <div class="flex flex-col p-4 items-center">
@@ -35,7 +26,7 @@
                      <div style="width:{{ $sponsor->matchProgress() }}%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-mp-blue-green"></div>
                 </div>
             </div>
-            @if( $showOnPage == 1)
+            @if( getCurrentPeriod() == 'during' )
             <div><a href="/catalog/item/{{ App\Models\Item::where('sponsor_id', '=', $sponsor->id)->first()->id }}"><button class="py-3 px-4 bg-mp-blue-green text-white">Buy This Item</button></a></div>
             @endif
         </div>
