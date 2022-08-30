@@ -5,16 +5,16 @@
 	<div class="max-w-4xl mx-auto mb-12 flex flex-col items-center md:flex-row md:justify-center">
         <img src="{{ Storage::url('/logos/giving_wall_icon.png')}} " class="h-32 z-20" alt="">
         <img src="{{ Storage::url('/logos/giving_wall_name.png')}}" class="h-32 md:h-40 md:self-center -mt-8 md:mt-0 " alt="">
-        <img src="{{ Storage::url('/logos/giving_wall_sponsor.png')}}" class="h-24 md:h-24 self-center z-10 -mt-8 md:mt-0 md:self-center" alt="">
+        <!-- <img src="{{ Storage::url('/logos/giving_wall_sponsor.png')}}" class="h-24 md:h-24 self-center z-10 -mt-8 md:mt-0 md:self-center" alt=""> -->
     </div>
 	</div>
 	@livewire('results')
 	<div class="mt-12 px-6 md:px-0 py-10 bg-mp-light-lime">
 		<div class="mb-16 max-w-6xl mx-auto mt-12">
 			<div class="mb-3 text-4xl text-center text-mp-navy font-display">
-				2021 Housing Hope Donor Wall
+				2022 Housing Hope Donor Roll
 			</div>
-			<p class="text-mp-blue-green text-center text-xl">Thanks to these Housing Hope donors who have chosen to be featured on the Donor Wall.</p>
+			<p class="text-mp-blue-green text-center text-xl">Thanks to these Housing Hope donors who have chosen to be featured on the Donor Roll.</p>
 
 			<div class="mt-9 grid grid-cols-1 md:grid-cols-5">
 				@foreach( App\Models\Donor::where('showNameOnWall', '=', 1)->orderBy('full_name')->get() as $donor )
@@ -29,7 +29,7 @@
 	<div class="px-6 md:px-0 py-10 bg-mp-navy">
 		<div class="mb-16 max-w-6xl mx-auto mt-12">
 			<div class="mb-3 text-4xl text-center text-mp-coral font-display">
-				2021 Housing Donor Notes
+				2022 Housing Donor Notes
 			</div>
 			<p class="text-mp-light-gray text-center text-xl">The Mary Parrish Center residents, alumni, and staff are grateful for your wonderful notes. </p>
 			<div class="mt-9 box-border md:masonry before:box-inherit after:box-inherit">
