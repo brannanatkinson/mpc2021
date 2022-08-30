@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
         <!-- Scripts -->
-        <script src="https://kit.fontawesome.com/29c2ffedae.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/556cea7374.js" crossorigin="anonymous"></script>
         <script src="{{ mix('js/app.js') }}" defer></script>
         <script src="//unpkg.com/alpinejs" defer></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173249724-2"></script>
