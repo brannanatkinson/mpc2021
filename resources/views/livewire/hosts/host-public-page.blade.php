@@ -1,15 +1,5 @@
 <x-public-layout>
 <div>
-    @php
-        $userTimezone = new DateTimeZone('America/Chicago');
-        $gmtTimezone = new DateTimeZone('GMT');
-        $myDateTime = new DateTime( date('Y-m-d H:i:s'), $gmtTimezone);
-        $offset = $userTimezone->getOffset($myDateTime);
-        $myInterval=DateInterval::createFromDateString((string)$offset . 'seconds');
-        $myDateTime->add($myInterval);
-        $result = $myDateTime->format('Y-m-d H:i:s');
-        $showOnPage = $result < date( env('END_DATE') );
-    @endphp
     <div class="my-12 text-3xl text-center">
         {{ $user->name }}
     </div>

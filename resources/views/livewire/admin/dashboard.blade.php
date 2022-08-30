@@ -5,7 +5,7 @@
         </x-slot>
         <x-slot name="header">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('Housing Hope 2021 Dashboard') }}
+                {{ __('Housing Hope 2022 Dashboard') }}
             </h2>
         </x-slot>
         <div class="mb-4 text-center">Manage <a href="{{ route('admin.hosts') }}">Hosts</a> | <a href="{{ route('admin.categories') }}">Categories</a> | <a href="{{ route('admin.items') }}">Items</a> | <a href="{{ route('admin.sponsors') }}">Sponsors</a></div>
@@ -40,7 +40,7 @@
         </div>
         <div class="mt-8 max-w-5xl mx-auto">
             <div class="my-3 text-3xl font-bold">
-                2021 Host Summary
+                2022 Host Summary
             </div>
             <div class="grid grid-cols-3 gap-8 mb-10">
                 <div class="p-8 text-center bg-gray-200 rounded-md flex flex-col justify-center items-center">
@@ -76,7 +76,7 @@
         </div>
         <div class="mt-10 max-w-5xl mx-auto">
             <div class="my-3 text-3xl font-bold">
-                2021 Giving Catalog Item Summary
+                2022 Giving Catalog Item Summary
             </div>
             <div class="mb-6 grid grid-cols-4 gap-6">
                 @foreach ( App\Models\Item::all() as $item )
@@ -97,7 +97,7 @@
         </div>
         <div class="pb-16 max-w-5xl mx-auto">
             <div class="mt-8 mb-6 text-3xl font-bold">
-                2021 Gift Summary
+                2022 Gift Summary
             </div>
             <div class="grid grid-cols-5 gap-4">
                 <div class=" col-span-2 font-bold">Donor</div>
@@ -123,7 +123,7 @@
         <x-slot name="title">
             Dashboard for {{ auth()->user()->name }}
         </x-slot>
-        <div class="my-6 text-3xl text-center">Housing Hope 2021 Dashboard for {{ auth()->user()->name }}</div>
+        <div class="my-6 text-3xl text-center">Housing Hope 2022 Dashboard for {{ auth()->user()->name }}</div>
         <div class="mb-10 text-center">
             @php $user = auth()->user() @endphp
             <a class="text-mp-coral" href="/hosts/{{ $user->host_url }}" target="_blank">View your public profile</a> | <a class="text-mp-coral" href="{{ route('admin.update.hosts') }}">Edit your profile</a>
@@ -192,7 +192,7 @@
         </div>
         <div class="mt-10 max-w-5xl mx-auto">
             <div class="my-3 text-3xl">
-                2021 Donor Summary
+                2022 Donor Summary
             </div>
             <div class="grid grid-cols-3 gap-8">
                 <div class="font-bold">Donor Name</div>
