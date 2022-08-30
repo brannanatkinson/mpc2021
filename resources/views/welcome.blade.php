@@ -1,6 +1,7 @@
 <x-public-layout>
-    <div class=" bg-mp-blue-green">
-            <main class="lg:relative">
+    <main class="">
+        <div class=" bg-mp-blue-green">
+            <div class="lg:relative">
                 <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-24 lg:text-left">
                     <div class="px-4 lg:w-2/5 sm:px-8 xl:pr-16">
                         <h1 class="mb-8 text-6xl text-white text-center font-display leading-none tracking-tight">
@@ -18,7 +19,7 @@
                         @endif
                         @if ( getCurrentPeriod() == "during")
                         <div class="mt-8">
-                            <a href="/catalog" class="px-4 py-4 text-white border border-2 border-white hover:border-0 rounded-full hover:bg-mp-light-lime hover:text-black">Shop the Giving Catalog</a>
+                            <a href="/catalog" class="px-4 py-4 text-white border border-2 border-white rounded-full hover:bg-mp-light-lime hover:text-black">Shop the Giving Catalog</a>
                         </div>
                         @endif
                         <div class="clearfix"></div>
@@ -27,50 +28,65 @@
                 <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-3/5 lg:h-full">
                     <img class="absolute inset-0 w-full h-full object-cover" src="{{ Storage::url('/photos/website/mpc_three_families.jpg')  }}" alt="Woman on her phone">
                 </div>
-            </main>
-        </div>
-
-        <div class="container mx-auto">
-            @if ( getCurrentPeriod() == "during" )
-            <div class="mt-12 max-w-4xl mx-auto mb-8 px-6 md:px-0">
-                <div class="mb-4 text-5xl text-center text-mp-blue-green font-display">How to Participate in Housing Hope</div>
-                <p class="">The Mary Parrish Center depends on amazing donors to support our work. This unique online fundraiser features a fun <a href="/catalog" class="text-mp-blue-green hover:text-mp-coral">Giving Catalog</a> where you can select gifts that support the survivors of interpersonal violence and have the most meaning to you.</p>
             </div>
-            <div class="mb-12 max-w-7xl mx-auto">
-                <div class="mb-8 grid grid-cols-1 md:grid-cols-3 gap-8 px-6 lg:px-0">
-                    <a href="/catalog">
-                    <div class="bg-mp-light-lime p-8 space-y-4 rounded-md shadow-lg">
-                        <div class="text-center"><i class="fad fa-gift fa-2x text-mp-navy"></i></div>
-                        <div class="text-center text-2xl font-display font-bold">Shop The Giving Catalog</div>
-                        <p class="text-xl">Browse the 16 Giving Catalog items that help survivors of interpersonal violence rebuild their lives and reclaim hope. Matching sponsors will double your gift for certain items.</p>
-                        <div class="px-4 py-3 rounded-full border border-2 border-white text-center bg-mp-navy text-white">Shop The Giving Catalog</div>
-                    </div>
-                    </a>
-                    <div class="bg-mp-navy p-8 space-y-4 rounded-md shadow-lg">
-                        <div class="text-center"><i class="fad fa-shopping-cart fa-2x text-mp-coral"></i></div>
-                        <div class="text-center text-2xl font-display font-bold text-white">Purchase A Gift</div>
-                        <p class="text-xl text-white">Purchase a single item or multiple items. Every purchase is 100% tax-deductible.</p>
-                        
-                    </div>
-                    <div class="bg-mp-blue-green p-8 space-y-4 rounded-md shadow-lg">
-                        <div class="text-center"><i class="fad fa-envelope-open fa-2x text-mp-light-gray"></i></div>
-                        <div class="text-center text-2xl font-display font-bold text-mp-light-gray">Share</div>
-                        <p class="text-xl text-mp-light-gray">Add your name to the Donor Wall and write a note of support, if you would like. Of course, we hope you share your gift on social media.</p>
-                    </div>
+        </div>
+        <!-- 
+        ** Results
+        -->
+        @if ( getCurrentPeriod() == "during" )
+        <div class="py-16">
+        @livewire('results')
+        </div>
+        @endif
+
+        <!-- 
+        ** How to particpate
+        -->
+        @if ( getCurrentPeriod() == "during" )
+        <div class="bg-mp-light-gray">
+             <div class="container mx-auto py-16">
+               
+                <div class="mt-12 max-w-4xl mx-auto mb-8 px-6 md:px-0">
+                    <div class="mb-4 text-5xl text-center text-mp-blue-green font-display">How to Participate in Housing Hope</div>
+                    <p class="">The Mary Parrish Center depends on amazing donors to support our work. This unique online fundraiser features a fun <a href="/catalog" class="text-mp-blue-green hover:text-mp-coral">Giving Catalog</a> where you can select gifts that support the survivors of interpersonal violence and have the most meaning to you.</p>
                 </div>
-                <div class="mb-4 text-2xl text-center font-display text-mp-blue-green">
-                    Follow The Mary Parrish Center
-                </div>
-                <div class="flex flex-row justify-center space-x-10">
-                    <a href="https://www.facebook.com/themaryparrishcenter" target="_blank"><i class="fa fa-facebook fa-2x text-mp-blue-green"></i></a>
-                    <a href="https://www.instagram.com/themaryparrishcenter/" target="_blank"><i class="fa fa-instagram fa-2x text-mp-blue-green"></i></a>
-                    <a href="https://twitter.com/MaryParrishCntr" target="_blank"><i class="fa fa-twitter fa-2x text-mp-blue-green"></i></a>
+                <div class="mb-12 max-w-7xl mx-auto">
+                    <div class="mb-8 grid grid-cols-1 md:grid-cols-3 gap-8 px-6 lg:px-0">
+                        <a href="/catalog">
+                        <div class="bg-mp-light-lime p-8 space-y-4 rounded-md shadow-lg">
+                            <div class="text-center"><i class="fad fa-gift fa-2x text-mp-navy"></i></div>
+                            <div class="text-center text-2xl font-display font-bold">Shop The Giving Catalog</div>
+                            <p class="text-xl">Browse the 16 Giving Catalog items that help survivors of interpersonal violence rebuild their lives and reclaim hope. Matching sponsors will double your gift for certain items.</p>
+                            <div class="px-4 py-3 rounded-full border border-2 border-white text-center bg-mp-navy text-white">Shop The Giving Catalog</div>
+                        </div>
+                        </a>
+                        <div class="bg-mp-navy p-8 space-y-4 rounded-md shadow-lg">
+                            <div class="text-center"><i class="fad fa-shopping-cart fa-2x text-mp-coral"></i></div>
+                            <div class="text-center text-2xl font-display font-bold text-white">Purchase A Gift</div>
+                            <p class="text-xl text-white">Purchase a single item or multiple items. Every purchase is 100% tax-deductible.</p>
+                            
+                        </div>
+                        <div class="bg-mp-blue-green p-8 space-y-4 rounded-md shadow-lg">
+                            <div class="text-center"><i class="fad fa-envelope-open fa-2x text-mp-light-gray"></i></div>
+                            <div class="text-center text-2xl font-display font-bold text-mp-light-gray">Share</div>
+                            <p class="text-xl text-mp-light-gray">Add your name to the Donor Wall and write a note of support, if you would like. Of course, we hope you share your gift on social media.</p>
+                        </div>
+                    </div>
+                    <div class="mb-4 text-2xl text-center font-display text-mp-blue-green">
+                        Follow The Mary Parrish Center
+                    </div>
+                    <div class="flex flex-row justify-center space-x-10">
+                        <a href="https://www.facebook.com/themaryparrishcenter" target="_blank"><i class="fa fa-facebook fa-2x text-mp-blue-green"></i></a>
+                        <a href="https://www.instagram.com/themaryparrishcenter/" target="_blank"><i class="fa fa-instagram fa-2x text-mp-blue-green"></i></a>
+                        <a href="https://twitter.com/MaryParrishCntr" target="_blank"><i class="fa fa-twitter fa-2x text-mp-blue-green"></i></a>
+                    </div>
                 </div>
             </div>
-
-            @endif
         </div>
-        <!-- stat  -->
+        @endif
+        <!-- 
+        ** Stat
+        -->
         <div class="bg-mp-blue-green">
             <div class="pt-16 pb-20 flex flex-col items-center justify-center">
                 <p class="mb-6 lg:mb-12 text-white lg:text-xl text-center uppercase">Why The Mary Parrish Center needs your support</p>
@@ -94,6 +110,9 @@
                 
             </div>
         </div>
+        <!-- 
+        ** Sponsor
+        -->
         @if ( getCurrentPeriod() == "before " ) 
         <div class="py-12 bg-mp-light-lime">
             <div class="container mx-auto text-center text-2xl font-display text-mp-navy">
@@ -102,10 +121,12 @@
         </div>
         @endif
 
-
+        <!-- 
+        ** About MPC
+        -->
         <div id="mpc" class="bg-mp-coral py-16">
             <div class="container mx-auto px-4 lg:px-0">
-                <img src="{{ Storage::url('/logos/mp_green_logo.png') }}" class="mx-auto w-64 mb-8" alt="">
+                <img src="{{ Storage::url('/logos/20years-final-horizontal-rgb.png') }}" class="mx-auto w-96 mb-8" alt="">
                 <div class="mb-4 text-3xl lg:text-4xl text-center text-navy font-display italic leading-tight">About The Mary Parrish Center</div>
                 <p class="mb-12 max-w-4xl mx-auto text-xl lg:text-2xl text-white text-center leading-tight">The Mary Parrish Center provides vital services that help survivors through <b>the stages of
                             rebuilding</b> their lives following interpersonal violence.</p>
@@ -129,4 +150,5 @@
                 </div>
             </div>
         </div>
-        </x-public-layout>
+    </main>
+</x-public-layout>

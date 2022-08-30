@@ -49,7 +49,10 @@
                     <div class="aspect-w-16 aspect-h-9">
                         <img src="{{ Storage::url('photos/website/mpc_moms_talking.jpg') }}" alt="" class="object-cover">
                     </div>
-                    <div class="pt-8 pb-4 text-3xl font-display text-center">About The Mary Parrish Center</div>
+                    <div class="pt-12">
+                        <img src="{{ Storage::url('/logos/20years-final-vertical-rgb.png') }}" class="mx-auto w-64 mb-8" alt="">
+                    </div>
+                    <div class="pt-4 pb-4 text-3xl font-display text-center">About The Mary Parrish Center</div>
                     <p class="mb-4 text-xl text-center text-mp-blue-green"><a href="https://www.maryparrish.org" >www.MaryParrish.org</a></p>
                     <p class="mb-6 text-xl">Since 2002, The Mary Parrish Center has provided a full array of no-cost, 
                     comprehensive services to over 7,000 survivors of interpersonal violence including domestic violence, dating violence, sexual assault, stalking, and/or human trafficking.</p>
