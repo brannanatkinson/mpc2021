@@ -1,19 +1,10 @@
 <x-public-navigation/>
-@php
-    $userTimezone = new DateTimeZone('America/Chicago');
-    $gmtTimezone = new DateTimeZone('GMT');
-    $myDateTime = new DateTime( date('Y-m-d H:i:s'), $gmtTimezone);
-    $offset = $userTimezone->getOffset($myDateTime);
-    $myInterval=DateInterval::createFromDateString((string)$offset . 'seconds');
-    $myDateTime->add($myInterval);
-    $result = $myDateTime->format('Y-m-d H:i:s');
-    $showOnPage = $result < date( env('END_DATE') );
-@endphp
+
 <div class="container mx-auto">
     <x-slot name="title">
-            Giving Catalog - Test
-        </x-slot>
-        @if ( $showOnPage == 0)
+            Giving Catalog
+    </x-slot>
+    @if ( getCurrentPeriod() == 'after')
 <div class="py-6 mb-6 text-center font-display bg-mp-light-lime text-mp-navy">Housing Hope 2021 has ended. Thank you for supporting The Mary Parrish Center.</div>
 @endif
     <div class="max-w-4xl mx-auto flex flex-col items-center md:flex-row md:justify-center">

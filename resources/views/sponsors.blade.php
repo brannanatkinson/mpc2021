@@ -1,6 +1,6 @@
 <x-public-layout>
 	<x-slot name="title">
-        Housing Hope Sponsors - A fundraiser for The Mary Parrish Center
+        Housing Hope Sponsors
     </x-slot>
 	<div class="mb-6 text-center text-4xl font-display">Housing Hope Sponsors</div>
 	<div class="max-w-4xl mx-auto mb-12 px-6 md:px-0 text-xl">

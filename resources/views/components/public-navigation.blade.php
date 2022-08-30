@@ -1,15 +1,5 @@
 <div>
-     @php
-        $userTimezone = new DateTimeZone('America/Chicago');
-        $gmtTimezone = new DateTimeZone('GMT');
-        $myDateTime = new DateTime( date('Y-m-d H:i:s'), $gmtTimezone);
-        $offset = $userTimezone->getOffset($myDateTime);
-        $myInterval=DateInterval::createFromDateString((string)$offset . 'seconds');
-        $myDateTime->add($myInterval);
-        $result = $myDateTime->format('Y-m-d H:i:s');
-        $showOnPage = $result < date( env('END_DATE') );
-    @endphp
-   
+
     <!-- 
     * mobile
     -->
@@ -51,7 +41,7 @@
                     </li>
                 </ul>
             </div>
-            @if ( $showOnPage == 1 )
+            @if ( getCurrentPeriod() == 'during' )
             <div class="pl-24">
                 <div class="snipcart-summary">
                     <a href="#" class="snipcart-checkout justify-self-end"><i class="fa fa-shopping-cart text-mp-blue-green"></i></a>

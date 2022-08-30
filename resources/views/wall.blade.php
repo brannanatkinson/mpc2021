@@ -1,4 +1,7 @@
 <x-public-layout>
+	<x-slot name="title">
+        Sponsors
+    </x-slot>
 	<div class="max-w-4xl mx-auto mb-12 flex flex-col items-center md:flex-row md:justify-center">
         <img src="{{ Storage::url('/logos/giving_wall_icon.png')}} " class="h-32 z-20" alt="">
         <img src="{{ Storage::url('/logos/giving_wall_name.png')}}" class="h-32 md:h-40 md:self-center -mt-8 md:mt-0 " alt="">
