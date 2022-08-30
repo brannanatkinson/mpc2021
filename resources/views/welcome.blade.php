@@ -1,43 +1,5 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Welcome to Housing Hope - A fundraiser for The Mary Parrish Center</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-   
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-        <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css" />
-        <link rel="preconnect" href="https://app.snipcart.com">
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-
-        <!-- Scripts  -->
-        <script src="https://kit.fontawesome.com/29c2ffedae.js" crossorigin="anonymous"></script>
-        <script src="//unpkg.com/alpinejs" defer></script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173249724-2"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'UA-173249724-2');
-        </script>
-
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
-    </head>
-    <body class="antialiased">
-
-        <x-public-navigation/>
-        <div class=" bg-mp-blue-green">
+<x-public-layout>
+    <div class=" bg-mp-blue-green">
             <main class="lg:relative">
                 <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-24 lg:text-left">
                     <div class="px-4 lg:w-2/5 sm:px-8 xl:pr-16">
@@ -167,7 +129,4 @@
                 </div>
             </div>
         </div>
-        <script async src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
-        <div hidden id="snipcart" data-api-key="{{ env('SNIPCART_KEY') }}"></div>
-    </body>
-</html>
+        </x-public-layout>

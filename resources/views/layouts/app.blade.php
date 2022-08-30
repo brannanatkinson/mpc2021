@@ -18,7 +18,7 @@
         @livewireStyles
 
         <!-- Scripts -->
-        <script src="https://kit.fontawesome.com/29c2ffedae.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/556cea7374.js" crossorigin="anonymous"></script>
         <script src="{{ mix('js/app.js') }}" defer></script>
         
         <link rel="preconnect" href="https://app.snipcart.com">
@@ -53,12 +53,13 @@
             <main class="mt-8">
                 {{ $slot }}
             </main>
+            <div class="py-12 bg-mp-navy text-white text-sm text-center">Housing Hope Nashville - &copy; 2021 The Mary Parrish Center - Photo Credit: Peyton Hoge - Website</div>
         </div>
+
 
         @stack('modals')
 
         @livewireScripts
-        <div class="py-12 bg-mp-navy text-white text-sm text-center">Housing Hope Nashville - &copy; 2021 The Mary Parrish Center - Photo Credit: Peyton Hoge - Website 
         <script async src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></script>
         <div hidden id="snipcart" data-api-key="{{ env('SNIPCART_KEY') }}"></div>
         <script src="//unpkg.com/alpinejs" defer></script>
