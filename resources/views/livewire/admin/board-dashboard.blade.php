@@ -4,14 +4,14 @@
     </x-slot>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Housing Hope 2021 Dashboard') }}
+            {{ __('Housing Hope 2022 Dashboard') }}
         </h2>
     </x-slot>
     
     @livewire('board-results')
     <div class="mt-8 max-w-6xl mx-auto">
         <div class="my-3 text-3xl font-bold">
-            2021 Host Summary
+            2022 Host Summary
         </div>
         <div class="grid grid-cols-3 gap-8 mb-10">
             <div class="p-8 text-center bg-gray-200 rounded-md flex flex-col justify-center items-center">
@@ -47,7 +47,7 @@
     </div>
     <div class="mt-10 max-w-6xl mx-auto">
         <div class="my-3 text-3xl font-bold">
-            2021 Giving Catalog Item Summary
+            2022 Giving Catalog Item Summary
         </div>
         <div class="mb-6 grid grid-cols-1 md:grid-cols-4 gap-6 px-6 md:py-0">
             @foreach ( App\Models\Item::all() as $item )
