@@ -21,8 +21,10 @@
 @php 
         if($counter % 2 != 0){
             $background = 'py-16 bg-mp-light-gray';
+            $bundleBackground = 'bg-white';
         } else {
             $background = 'py-12 bg-white';
+            $bundleBackground = 'bg-mp-light-gray';
         }
     @endphp 
 @if ($counter == 1)
@@ -46,10 +48,11 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="">
             <div class="container px-4 lg:px-0 mt-8 grid grid-col-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-4">
-                @foreach ( $category->items as $item )
+                @php $itemsToShow = App\Models\Item::where( 'category_id','=', $category->id)->where('bundle','=', null)->get() @endphp
+                @foreach ( $itemsToShow as $item )
                 <div class="flex flex-col overflow-hidden rounded-md">
                     <div class="mb-4">
                          <a href="/catalog/item/{{ $item->id}}">
@@ -57,7 +60,6 @@
                         </a>
                     </div>
                     <div class="h-6 text-center text-sm">
-
                         @if ( $item->sponsor_id != null AND $item->sponsor->matchProgress() < 100 )
                             <i class="fa fa-trophy pr-4 text-mp-light-lime "></i><spon class="text-mp-navy">Sponsor Match Doubles Your Gift</spon>
                         @endif 
@@ -80,23 +82,32 @@
         @php
             $counter++
         @endphp 
-        
+        @php $itemsToShow = App\Models\Item::where( 'category_id','=', $category->id)->where('bundle','=', 1)->get() @endphp
+        @foreach ( $itemsToShow as $item )
+        <div class="container max-w-4xl mx-auto border border-2 p-8 rounded-md @php echo $bundleBackground @endphp">
+            <div class="flex flex-col md:flex-row">
+                <div class="w-full md:w-1/2">
+                    <a href="/catalog/item/{{ $item->id}}">
+                        <img src="{{ Storage::url( $item->img ) }}" alt="">
+                    </a>
+                </div>
+                <div class="w-full md:w-1/2 px-8">
+                    <div class="text-4xl font-display mb-2">{{ $item->name }}</div>
+                     <div class="mb-4 text-3xl">${{ $item->cost }}</div>
+                    <p class="mb-6">{{ $item->description }}</p>
+                    <div class="justify-self-end">
+                        <a href="/catalog/item/{{ $item->id }}"><button class="px-4 py-4 text-white bg-mp-blue-green">Details</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endforeach
         <!-- <div>{{ $category->description }}</div> -->
     </div>
     
 </div>
     <!-- <div class="mb-12"><img src="{{ Storage::url('/graphics/flourish.png') }}" class="w-64 mx-auto" alt=""></div> -->
+
 @endforeach
-<div class="bg-mp-navy">
-    <div class="max-w-5xl mx-auto py-12 space-y-4 px-6 md:px-0">
-        <div class="text-center uppercase text-white">Major Gift</div>
-        <div class="-mt-6 text-3xl font-display text-white text-center">Furnish a Newly Renovated Apartment at The Mary Parrish Center</div>
-        <div class="text-5xl font-display text-white text-mp-light-lime text-center">$7,500</div>
-        <p class="text-center text-white pb-6 text-xl">The Mary Parrish Center is renovating and updating half of our apartments. Of course, we believe new digs deserve new furniture. The special gift includes naming rights for one of the renovated apartments. If you are interested, please email Mary Katherine Rand at marykatherine@maryparrish.org.</p>
-        <div class="mt-10 aspect-w-16 aspect-h-9">
-            <img src="{{ Storage::url('photos/website/mpc_apartment.jpg') }}" alt="">
-        </div>
-    </div>
-</div>
 </div>
 

@@ -110,9 +110,9 @@
  <!-- 
 ** other gifts in this category
 -->
-<div class="mx-auto px-8 lg:px-0 max-w-4xl">
+<div class="mx-auto px-8 lg:px-0 max-w-6xl">
     <div class="mt-10 mb-4 text-3xl text-center font-display leading-tight">Other gifts in this category</div>
-    <div class="grid gap-10 lg:grid-cols-3">
+    <div class="grid gap-10 lg:grid-cols-4">
         @foreach( App\Models\Item::where('category_id', '=', $CatalogItem->category_id )->get() as $CategoryItem )
         @if( $CategoryItem->id != $CatalogItem->id )
         <div>
