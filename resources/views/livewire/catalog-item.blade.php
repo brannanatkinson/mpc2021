@@ -48,7 +48,7 @@
                     @endif
                 </div>
                 <div class="mb-6 text-3xl">
-                    ${{ $CatalogItem->cost }}
+                    ${{number_format( $item->cost, 0 ,',' ) }}
                 </div>
                 @if( $showOnPage == 1 )
                 <button class="snipcart-add-item px-4 py-3 bg-mp-blue-green text-white"
