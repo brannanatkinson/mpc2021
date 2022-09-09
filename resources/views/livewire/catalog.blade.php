@@ -70,7 +70,7 @@
                     <div class="mb-4 md:flex-grow">
                         {{ $item->excerpt }}
                     </div>
-                    <div class="mb-4 text-3xl">${{ $item->cost }}</div>
+                    <div class="mb-4 text-3xl">${{number_format( $item->cost, 0 ,',' ) }}</div>
                     
                     <div class="justify-self-end mb-8">
                         <a href="/catalog/item/{{ $item->id }}"><button class="px-4 py-4 text-white bg-mp-blue-green">Details</button></a>
@@ -93,7 +93,7 @@
                 </div>
                 <div class="w-full md:w-1/2 px-8">
                     <div class="text-4xl font-display mb-2">{{ $item->name }}</div>
-                     <div class="mb-4 text-3xl">${{ $item->cost }}</div>
+                     <div class="mb-4 text-3xl">${{number_format( $item->cost, 0 ,',' ) }}</div>
                     <p class="mb-6">{{ $item->description }}</p>
                     <div class="justify-self-end">
                         <a href="/catalog/item/{{ $item->id }}"><button class="px-4 py-4 text-white bg-mp-blue-green">Details</button></a>
