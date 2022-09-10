@@ -49,7 +49,7 @@
                 </div>
                 <div>
                     <a href="http://{{ $sponsor->website }}">
-                        <img src="{{ Storage::url( $sponsor->img ) }}" class="w-3/4 mx-auto" alt="">
+                        <img src="{{ Storage::url( $sponsor->img ) }}" class="w-64 mx-auto" alt="">
                     </a>
                 </div>
                 @endif
