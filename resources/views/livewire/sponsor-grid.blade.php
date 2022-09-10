@@ -31,7 +31,6 @@
                 @if ( $sponsor )
                 <div class="mb-4 text-center font-display text-3xl text-mp-blue-green">Giving Catalog Sponsor</div>
                     <div>
-                   
                         <a href="http://{{ $sponsor->website }}">
                             <img src="{{ Storage::url( $sponsor->img ) }}" class="w-3/4 mx-auto" alt="">
                         </a>
@@ -84,9 +83,11 @@
             <div class=" h-64 w-full bg-white ">  
                 <div class="flex justify-center h-full items-center mb-4">
                     @if( $sponsor->img != null)
-                        <img src="{{ Storage::url( $sponsor->img )}}" class="object-contain h-64 w-64" alt="">
+                        <a href="http://{{ $sponsor->website }}">
+                            <img src="{{ Storage::url( $sponsor->img )}}" class="object-contain h-64 w-64" alt="">
+                        </a>
                     @else
-                    
+                        
                         <span class="text-center text-xl">{{ $sponsor->name }}</span>
                     
                     @endif
