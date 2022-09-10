@@ -42,7 +42,35 @@
                     <p class="pb-6 text-xl">All Housing Hope gifts reflect goods and services that residents need to start a new life — for themselves and their families — free from abuse. All gifts are also 100 percent tax deductible.</p>
                 </div>
             </div>
-            
+            <div class="bg-mp-blue-green py-8 text-white">
+                <div class="container mx-auto ">
+                    <div class="px-4 mx-auto">
+                        <div class="pt-8 pb-8 text-3xl font-display text-center">Thanks to Our Supporters</div>
+                        <p class="text-xl text-center">The Mary Parrish Center is immensely grateful to the following people for their contributions to the success of Housing Hope 2021.</p>
+                        <div class="flex flex-col justify-center lg:flex-row lg:flex-wrap">
+                            <div class="pb-8">
+                                <!-- <p class="mt-6 mb-3 text-2xl text-mp-navy font-display text-center">Event Committee</p>
+                                <ul class="flex flex-col md:flex-row flex-wrap justify-center">
+                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">Tammy Kaminski, Chair</li>
+                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">Keri Adams</li>
+                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">Kate King</li>
+                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">Cyndi Lockyear</li>
+                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">Brittany Moon</li>
+                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">DenEllen Sutherland</li>
+                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">Jeff Teague</li>
+                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">Emily Waltenbaugh</li>
+                                </ul> -->
+                                <p class="mt-6 mb-3 text-2xl text-mp-navy font-display text-center">2021 Events Hosts</p>
+                                <ul class="flex flex-col md:flex-row flex-wrap justify-center">
+                                    @foreach( App\Models\User::permission('edit host')->orderBy('name')->get() as $host   )
+                                    <li class="w-full md:w-1/4 text-center text-2xl text-white">{{ $host->name}} </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
             
             <div class="container mx-auto pb-12">
                 <div class="px-4 lg:w-3/5 mx-auto">
