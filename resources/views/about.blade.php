@@ -46,7 +46,7 @@
                 <div class="container mx-auto ">
                     <div class="px-4 mx-auto">
                         <div class="pt-8 pb-8 text-3xl font-display text-center">Thanks to Our Supporters</div>
-                        <p class="text-xl text-center">The Mary Parrish Center is immensely grateful to the following people for their contributions to the success of Housing Hope 2021.</p>
+                        <p class="text-xl text-center">The Mary Parrish Center is immensely grateful to the following people for their contributions to the success of Housing Hope 2022.</p>
                         <div class="flex flex-col justify-center lg:flex-row lg:flex-wrap">
                             <div class="pb-8">
                                 <!-- <p class="mt-6 mb-3 text-2xl text-mp-navy font-display text-center">Event Committee</p>
@@ -60,7 +60,7 @@
                                     <li class="w-full md:w-1/4 text-center text-2xl text-white">Jeff Teague</li>
                                     <li class="w-full md:w-1/4 text-center text-2xl text-white">Emily Waltenbaugh</li>
                                 </ul> -->
-                                <p class="mt-6 mb-3 text-2xl text-mp-navy font-display text-center">2021 Events Hosts</p>
+                                <p class="mt-6 mb-3 text-2xl text-mp-navy font-display text-center">2022 Events Hosts</p>
                                 <ul class="flex flex-col md:flex-row flex-wrap justify-center">
                                     @foreach( App\Models\User::permission('edit host')->orderBy('name')->get() as $host   )
                                     <li class="w-full md:w-1/4 text-center text-2xl text-white">{{ $host->name}} </li>
