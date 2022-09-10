@@ -63,7 +63,7 @@
         <div class="container max-w-3xl mx-auto grid mb-8">
             <div class="flex justify-center">  
                 <a href="http://{{ $sponsor->website }}">
-                    <img src="{{ Storage::url( $sponsor->img ) }}" class="w-2/5 mx-auto" alt="">
+                    <img src="{{ Storage::url( $sponsor->img ) }}" class="w-2/3 mx-auto" alt="">
                 </a>
             </div>
         </div>
