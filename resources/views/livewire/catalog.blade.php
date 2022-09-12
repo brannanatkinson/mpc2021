@@ -109,5 +109,20 @@
     <!-- <div class="mb-12"><img src="{{ Storage::url('/graphics/flourish.png') }}" class="w-64 mx-auto" alt=""></div> -->
 
 @endforeach
+<!-- Gingko Society  -->
+<div class="bg-mp-light-lime">
+    <div class="containter max-w-4xl mx-auto pb-12">
+        <div class="text-center">
+            <img src="{{ Storage::url( '/logos/gingko-society-logo.png' ) }}" class="mx-auto" alt="">
+        </div>
+        <div class="-mt-8 mb-8 text-center text-mp-navy text-4xl font-display">
+            Join The Gingko Society
+        </div>
+        <div class="text-xl">
+        <p class="mb-8">The Gingko Society at The Mary Parrish Center has been established to honor individuals contributing at the $2,500 level or above during our 20th Anniversary.</p>
+        <p>Supporters making a qualifying gift during our 20th fiscal year (July 1, 2022 thru June 30, 2023) will be extended an invitation into the Gingko Society. Gingko society members will be recognized at a special ceremony held during our 20th Anniversary Celebration being held in April 2023.</p>
+        </div>
+    </div>
+</div>
 </div>
 
