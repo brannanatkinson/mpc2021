@@ -97,7 +97,7 @@
                         Is my gift anonymous? 
                     </div>
                     <div class="text-xl">
-                        Yes, of course. The Mary Parrish Center respects your privacy. That said, if you give us permission, we will share your name on the Housing Hope 2021 Giving Wall
+                        Yes, of course. The Mary Parrish Center respects your privacy. That said, if you give us permission, we will share your name on the Housing Hope 2022 Giving Wall
                     </div>
                 </div>
                 <div>
@@ -137,13 +137,13 @@
                         Will The Mary Parrish Center spend donations for selected gifts? 
                     </div>
                     <div class="text-xl">
-                        As mentioned, the gifts are products and services The Mary Parrish Center clients need every day. The staff will make every effort to honor the spirit of every gift given during Housing Hope 2021. The Mary Parrish Center will spend 100% of proceeds directly helping residents. Our top priority is fulfilling the current needs of clients. We reserve the right to use donations for clients* immediate needs and priorities.
+                        As mentioned, the gifts are products and services The Mary Parrish Center clients need every day. The staff will make every effort to honor the spirit of every gift given during Housing Hope 2022. The Mary Parrish Center will spend 100% of proceeds directly helping residents. Our top priority is fulfilling the current needs of clients. We reserve the right to use donations for clients* immediate needs and priorities.
                     </div>
                 </div>
             </div>
         </div>
         @endif
-        <div class="py-12 bg-mp-navy text-white text-sm text-center">Housing Hope Nashville - &copy; 2021 The Mary Parrish Center - Photo Credit: Peyton Hoge - Website Development: Amy Atkinson Communications</div>
+        <div class="py-12 bg-mp-navy text-white text-sm text-center">Housing Hope Nashville - &copy; 2022 The Mary Parrish Center - Photo Credit: Peyton Hoge - Website Development: Amy Atkinson Communications</div>
         <script async src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
         <div hidden id="snipcart" data-api-key="{{ env('SNIPCART_KEY') }}"></div>
     </body>

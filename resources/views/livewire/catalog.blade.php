@@ -5,7 +5,7 @@
             Giving Catalog
     </x-slot>
     @if ( getCurrentPeriod() == 'after')
-<div class="py-6 mb-6 text-center font-display bg-mp-light-lime text-mp-navy">Housing Hope 2021 has ended. Thank you for supporting The Mary Parrish Center.</div>
+<div class="py-6 mb-6 text-center font-display bg-mp-light-lime text-mp-navy">Housing Hope 2022 has ended. Thank you for supporting The Mary Parrish Center.</div>
 @endif
     <div class="max-w-4xl mx-auto flex flex-col items-center md:flex-row md:justify-center">
         <img src="{{ Storage::url('/logos/giving_catalog_icon.png')}} " class="h-32 z-20" alt="">
@@ -31,7 +31,7 @@
 <div class="bg-mp-blue-green">
     <div class="max-w-5xl mx-auto py-16 space-y-4">
         <div class="text-center text-white text-mp-blue text-3xl font-display">Make a General Donation</div>
-        <p class="text-center text-xl text-white">The Mary Parrish Center is accepting general donations to Housing Hope 2021 if you would prefer that option.</p>
+        <p class="text-center text-xl text-white">The Mary Parrish Center is accepting general donations to Housing Hope 2022 if you would prefer that option.</p>
         <div class="text-center">
             <a href="https://maryparrish.kindful.com/" target="_blank"><button class="px-4 py-3 hover:bg-white bg-mp-light-lime text-mp-navy rounded-full mx-auto">Visit our Donation Page</a>
         </div>

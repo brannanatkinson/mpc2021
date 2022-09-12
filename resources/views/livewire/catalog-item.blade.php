@@ -30,7 +30,7 @@
     }
 @endphp
 @if ( $showOnPage == 0)
-<div class="py-6 mb-6 text-center font-display bg-mp-light-lime text-mp-navy">Housing Hope 2021 has ended. Thank you for supporting The Mary Parrish Center.</div>
+<div class="py-6 mb-6 text-center font-display bg-mp-light-lime text-mp-navy">Housing Hope 2022 has ended. Thank you for supporting The Mary Parrish Center.</div>
 @endif
 <div class="container mx-auto">
     <div class="container mx-auto px-8 lg:px-0">

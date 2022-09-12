@@ -1,5 +1,5 @@
 <div class="container mx-auto">
-    <div class="mb-4 text-4xl text-center">Housing Hope 2021 Hosts</div>
+    <div class="mb-4 text-4xl text-center">Housing Hope 2022 Hosts</div>
     <div class="mb-4 text-3xl">Create a new host</div>
     <div>
         <form wire:submit.prevent="store" class="flex items-start mb-8">
