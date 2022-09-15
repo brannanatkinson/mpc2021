@@ -23,7 +23,7 @@
             </div>
             <div class="flex flex-col p-8 text-center text-white bg-mp-navy rounded-lg shadow-md">
                 <div class="mb-6 font-display"><i class="fa fa-trophy fa-2x"></i></div>
-                <div class="mb-6 text-5xl font-bold">${{ number_format( App\Models\Sponsor::all()->sum('amount') + 1000, 0, ',' ) }}</div>
+                <div class="mb-6 text-5xl font-bold">${{ number_format( App\Models\Sponsor::all()->sum('amount'), 0, ',' ) }}</div>
                 <div class="mb-4 text-xl uppercase">
                     Sponsors
                 </div>
