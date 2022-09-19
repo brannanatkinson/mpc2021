@@ -51,7 +51,7 @@ return [
         'defaults' => [
             //'card'        => 'summary',
             //'site'        => '@LuizVinicius73',
-        ],
+        ],w
     ],
     'json-ld' => [
         /*
