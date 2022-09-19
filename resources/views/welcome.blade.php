@@ -143,6 +143,13 @@
         </div>
         @endif
 
+        @if ( getCurrentPeriod() == "after" ) 
+        <div class="bg-white">
+            <div class="my-12 text-4xl text-mp-blue-green text-center font-display">2022 Housing Hope Sponsors</div>
+            @livewire('sponsor-grid')
+        </div>
+        @endif
+
         <!-- 
         ** About MPC
         -->
