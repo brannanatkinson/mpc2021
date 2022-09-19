@@ -56,14 +56,7 @@
                 Visit the <a href="/givingwall" class="text-mp-blue-green">Housing Hope Giving Wall</a> presented by Delek US to see donors and notes. 
             </p>
             <p class="mb-4 text-xl text-center">Follow The Mary Parrish Center on <a href="https://www.facebook.com/themaryparrishcenter/" class="text-mp-blue-green">Facebook</a> and <a href="https://www.instagram.com/themaryparrishcenter/" class="text-mp-blue-green">Instagram</a> to keep up with all the latest news.</p>
-            <div class="grid lg:grid-cols-2">
-                <div class="flex justify-center p-8">
-                    <a href='/catalog'><img src="{{ Storage::url('/logos/giving_catalog_banner.jpg') }}" alt=""></a>
-                </div>
-                <div class="flex justify-center p-8">
-                     <a href='/givingwall'><img src="{{ Storage::url('/logos/giving_wall_banner.jpg') }}" alt=""></a>
-                </div>
-            </div>
+            
         </div>
         @endif
 
